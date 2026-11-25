@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#F3F5F8">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Lernen">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<title>Lernen</title>
+<style>
+:root{--bg:#F3F5F8;--card:#fff;--ink:#1F2328;--sub:#5B6470;--line:#E6E9EE;--blue:#2F5FB3;--blue-d:#1C3F7A;--blue-l:#DCE8FB;--blue-xl:#EAF1FC;--red:#C8553D;--red-d:#9A2E22;--red-l:#FCEBEA;--red-b:#F0C4BE}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",Inter,system-ui,sans-serif;-webkit-text-size-adjust:100%}
+body{padding:env(safe-area-inset-top) 0 0}
+#app{max-width:760px;margin:0 auto;padding:20px 18px 110px;display:flex;flex-direction:column;gap:14px}
+h1{margin:0;font-size:28px}
+h2{margin:6px 0 0;font-size:16px}
+.muted{color:var(--sub);font-size:13px}
+.card{background:var(--card);border-radius:16px;padding:14px 16px}
+.row{display:flex;align-items:center;gap:10px}
+.between{justify-content:space-between}
+.pill{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-l);padding:6px 10px;border-radius:999px;white-space:nowrap}
+.pill.red{color:var(--red-d);background:var(--red-l)}
+button,.btn{font:inherit;cursor:pointer;border:none;border-radius:14px;min-height:48px;padding:12px 16px;font-weight:600;font-size:15px;background:var(--card);color:var(--ink);border:1px solid #D5DAE1}
+.btn-p{background:var(--blue);color:#fff;border:none}
+.btn-w{background:#fff;color:var(--blue-d);border:none}
+.hero{background:var(--blue);color:#fff;border-radius:18px;padding:16px 18px;display:flex;flex-direction:column;gap:8px}
+.hero .big{font-size:34px;font-weight:700}
+.bar{height:6px;background:var(--line);border-radius:3px;overflow:hidden}.bar>div{height:6px;background:var(--blue)}
+.list>.item{padding:11px 0;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:6px;cursor:pointer}
+.list>.item:last-child{border-bottom:none}
+.sugg{display:flex;gap:12px;align-items:center;background:#fff;border-radius:14px;padding:12px 14px;cursor:pointer;border:none;text-align:left;width:100%;min-height:60px;font-weight:400}
+.ico{width:36px;height:36px;border-radius:10px;background:var(--blue-l);display:flex;align-items:center;justify-content:center;flex:none}
+.ico.red{background:var(--red-l)}
+nav{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid #E1E5EA;display:flex;justify-content:space-around;padding:8px 0 calc(8px + env(safe-area-inset-bottom));z-index:5}
+nav button{border:none;background:none;min-height:44px;display:flex;flex-direction:column;align-items:center;gap:3px;font-size:11px;color:var(--sub);font-weight:500;padding:4px 18px}
+nav button.on{color:var(--blue);font-weight:600}
+.stages{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;font-size:11px;font-weight:600;text-align:center}
+.stages span{padding:7px 0;border-radius:8px;background:#fff;color:var(--sub)}
+.stages .done{background:var(--blue-l);color:var(--blue-d)}.stages .cur{background:var(--blue);color:#fff}
+.formel{background:var(--blue-xl);border:1px solid #BCD0EE;border-radius:8px;padding:8px 10px;font-weight:700;color:var(--blue-d);white-space:pre-line;font-size:14px}
+table{width:100%;border-collapse:collapse;font-size:14px}
+td,th{padding:8px 6px 8px 0;border-top:1px solid var(--line);vertical-align:top;text-align:left;line-height:1.4}
+th{color:var(--blue);font-size:13px;border-top:none}
+td:first-child{font-weight:600;width:36%}
+.txt{font-size:15px;line-height:1.5;margin:0}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.match{min-height:52px;font-size:14px;padding:8px;line-height:1.3}
+.match.sel{border:2px solid var(--blue-d)}
+.match.ok{border:2px solid var(--blue);background:var(--blue-xl);color:var(--blue-d)}
+.match.bad{border:2px solid var(--red);background:var(--red-l)}
+.gap{display:inline-block;min-width:80px;max-width:100%;height:34px;border:none;border-bottom:2px solid var(--blue);background:var(--blue-xl);border-radius:6px 6px 0 0;padding:0 8px;font-weight:600;font-size:15px;font-family:inherit;color:var(--blue-d);margin:2px 0}
+.gap.ok{background:var(--blue-xl);border-color:var(--blue)}
+.gap.bad{background:var(--red-l);border-color:var(--red);color:var(--red-d)}
+.cloze{font-size:16px;line-height:2.2}
+.fb{border-radius:14px;padding:12px 14px;font-size:14px;line-height:1.45}
+.fb.ok{background:var(--blue-xl);color:var(--blue-d);border:1px solid #BCD0EE}
+.fb.bad{background:var(--red-l);color:#5A1C15;border:1px solid var(--red-b)}
+textarea{width:100%;min-height:130px;border:1px solid #D5DAE1;border-radius:12px;padding:10px;font-size:15px;line-height:1.45;font-family:inherit;color:var(--ink);resize:vertical}
+input[type=text],input[type=number]{font-family:inherit}
+.numin{width:100%;height:50px;border:1px solid #D5DAE1;border-radius:12px;padding:0 12px;font-size:18px}
+.kp{display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:1.4;padding:6px 0}
+.kp input{width:22px;height:22px;margin:0;accent-color:var(--blue);flex:none}
+.rate{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+.rate button{min-height:58px;padding:6px;font-size:14px;line-height:1.2}
+.rate small{display:block;font-weight:400;font-size:11px;margin-top:2px}
+.rate .again{background:var(--red-l);color:var(--red-d);border-color:var(--red-b)}
+.rate .sug{background:var(--blue);color:#fff;border-color:var(--blue)}
+.back{width:44px;height:44px;min-height:44px;padding:0;display:flex;align-items:center;justify-content:center;border:none}
+.stagebadge{font-size:11px;font-weight:600;padding:4px 8px;border-radius:999px;background:var(--blue-l);color:var(--blue-d);white-space:nowrap}
+.steps{margin:0;padding-left:20px;font-size:14px;line-height:1.5}
+details summary{cursor:pointer;font-weight:600;color:var(--blue);font-size:14px;min-height:32px}
+.toast{position:fixed;left:50%;bottom:90px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:10px 16px;border-radius:12px;font-size:14px;z-index:9}
+</style>
+</head>
+<body>
+<input type="file" id="file" accept="application/json,.json" style="display:none">
+<div id="app"><p class="muted">Lade Inhalte …</p></div>
+<nav id="nav">
+<button data-act="tab" data-tab="home"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="3"/><path d="M3 9h18M8 2v4M16 2v4"/></svg>Heute</button>
+<button data-act="tab" data-tab="faecher"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 5h6v14H4zM14 5h6v14h-6z"/></svg>Fächer</button>
+<button data-act="tab" data-tab="daten"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg>Lernstand</button>
+</nav>
+<script>
+"use strict";
+/* ============ Grundlagen ============ */
+const KEY="lernapp.v1";
+const STAGES=["Ansehen","Zuordnen","Lückentext","Erklären"];
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const pad=n=>String(n).padStart(2,"0");
+const ymd=d=>d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate());
+const today=()=>ymd(new Date());
+const addDays=(s,n)=>{const d=new Date(s+"T12:00:00");d.setDate(d.getDate()+n);return ymd(d)};
+const daysBetween=(a,b)=>Math.round((new Date(b+"T12:00:00")-new Date(a+"T12:00:00"))/864e5);
+const fmtDate=s=>{const d=new Date(s+"T12:00:00");return pad(d.getDate())+"."+pad(d.getMonth()+1)+"."};
+const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+function toast(t){const e=document.createElement("div");e.className="toast";e.textContent=t;document.body.appendChild(e);setTimeout(()=>e.remove(),2200)}
+
+let store=load();
+function load(){try{const s=JSON.parse(localStorage.getItem(KEY));if(s&&s.p)return s}catch(e){}return{p:{},device:"",lastExport:null,rechnenTag:null,dirty:0}}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(store))}catch(e){toast("Speichern nicht möglich")}}
+
+/* ============ Inhalte laden ============ */
+let F=[]; // Fächer mit .data
+async function loadContent(){
+  const idx=await (await fetch("content/index.json",{cache:"no-cache"})).json();
+  F=idx.faecher.map(f=>({...f,data:null}));
+  await Promise.all(F.map(async f=>{
+    if(!f.datei)return;
+    try{f.data=await (await fetch("content/"+f.datei,{cache:"no-cache"})).json()}catch(e){f.fehler=true}
+  }));
+}
+const fach=id=>F.find(f=>f.id===id);
+const themaKey=(fid,tid)=>fid+":"+tid;
+const aufgKey=(fid,aid)=>fid+":a:"+aid;
+function P(k){return store.p[k]||{stage:1,streak:0,ivl:0,due:null,reps:0,lapses:0,last:null}}
+const isDue=k=>{const p=store.p[k];return !p||!p.due||p.due<=today()};
+
+function capDue(fid,date){
+  const ex=fach(fid)?.klausur; if(!ex)return date;
+  const lim=addDays(ex,-1);
+  if(date>lim){return lim>today()?lim:addDays(today(),1)}
+  return date;
+}
+/* Bewertung: again | hard | good | easy */
+function rate(k,fid,r,istAufgabe){
+  const p={...P(k)}; p.reps++; p.last=new Date().toISOString();
+  let requeue=false;
+  if(r==="again"){p.lapses++;p.streak=0;p.ivl=0;if(!istAufgabe&&p.stage>1)p.stage--;p.due=today();requeue=true}
+  else if(r==="hard"){p.streak=0;p.ivl=1}
+  else{
+    p.streak+= r==="easy"?2:1;
+    if(!istAufgabe&&p.stage<4){
+      if(p.streak>=2){p.stage++;p.streak=0;p.ivl=1}else p.ivl=1;
+    }else p.ivl = r==="easy"?Math.max(4,Math.round(p.ivl*3)):Math.max(2,Math.round(p.ivl*2));
+  }
+  if(r!=="again")p.due=capDue(fid,addDays(today(),p.ivl));
+  store.p[k]=p; markDirty(); return requeue;
+}
+
+/* ============ Kennzahlen ============ */
+function themen(f){return f.data?.themen||[]}
+function aufgaben(f){return f.data?.aufgaben||[]}
+function faelligThemen(){const out=[];F.forEach(f=>themen(f).forEach(t=>{const k=themaKey(f.id,t.id);if(isDue(k))out.push({kind:"t",fid:f.id,id:t.id})}));return out}
+function faelligAufgaben(fid){const out=[];F.filter(f=>!fid||f.id===fid).forEach(f=>aufgaben(f).forEach(a=>{const k=aufgKey(f.id,a.id);if(isDue(k))out.push({kind:"a",fid:f.id,id:a.id})}));return out}
+function fortschritt(f){
+  const ts=themen(f); if(!ts.length)return 0;
+  let s=0; ts.forEach(t=>{const p=P(themaKey(f.id,t.id));s+=(p.stage-1)+(p.stage===4&&p.ivl>=2?1:0)});
+  return Math.round(100*s/(ts.length*4));
+}
+function stufeText(f){
+  const ts=themen(f); if(!ts.length)return "noch nicht gestartet";
+  const c=[0,0,0,0]; ts.forEach(t=>c[P(themaKey(f.id,t.id)).stage-1]++);
+  const m=c.indexOf(Math.max(...c));
+  return "meist Stufe "+(m+1)+" von 4 · "+STAGES[m];
+}
+
+/* ============ Ansichten ============ */
+let view={tab:"home"}; let S=null; // S = Lernsitzung
+const app=$("#app");
+const IC={
+ back:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1F2328" stroke-width="2" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>',
+ lines:'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2F5FB3" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h10M4 17h7"/></svg>',
+ plus:'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C8553D" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>',
+ calc:'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2F5FB3" stroke-width="2" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8M8 12h2M14 12h2M8 16h2M14 16h2"/></svg>'
+};
+function render(){
+  document.querySelectorAll("nav button").forEach(b=>b.classList.toggle("on",b.dataset.tab===view.tab));
+  $("#nav").style.display=S?"none":"flex";
+  if(S)return renderSession();
+  if(view.tab==="home")return renderHome();
+  if(view.tab==="faecher")return view.fach?renderFach(view.fach):renderFaecher();
+  if(view.tab==="daten")return renderDaten();
+}
+function renderHome(){
+  const t=today(); const dt=new Date();
+  const wd=dt.toLocaleDateString("de-DE",{weekday:"long",day:"numeric",month:"long"});
+  const next=F.map(f=>f.klausur).filter(k=>k&&k>=t).sort()[0];
+  const due=faelligThemen(); const dueA=faelligAufgaben();
+  const perF={}; due.forEach(d=>perF[d.fid]=(perF[d.fid]||0)+1);
+  const mins=Math.max(1,Math.round(due.length*1.5));
+  let h=`<div class="row between" style="align-items:flex-end"><div><div class="muted">${esc(wd)}</div><h1>Heute</h1></div>${next?`<span class="pill">${daysBetween(t,next)} Tage bis ${fmtDate(next)}</span>`:""}</div>`;
+  h+=syncBanner();
+  h+=`<div class="hero"><div style="font-size:13px;opacity:.85">Fällig zum Wiederholen</div>
+  <div class="row" style="align-items:baseline;gap:8px"><span class="big">${due.length}</span><span>Karten · ca. ${mins} Min.</span></div>
+  ${due.length?`<button class="btn-w" data-act="start" data-what="due">Jetzt wiederholen</button>`:`<div style="font-size:14px">Alles erledigt für heute.</div>`}</div>`;
+  h+=`<h2>Fächer</h2><div class="card list" style="padding:2px 16px">`;
+  F.forEach(f=>{
+    const pr=fortschritt(f); const n=perF[f.id]||0;
+    const note=!f.datei?`<span style="color:var(--red);font-weight:600">Inhalte fehlen</span>`:f.fehler?`<span style="color:var(--red);font-weight:600">Datei fehlerhaft</span>`:`<span style="color:var(--blue);font-weight:600">${n} fällig</span>`;
+    h+=`<div class="item" data-act="openfach" data-fid="${esc(f.id)}"><div class="row between" style="font-size:14px"><b>${esc(f.name)}</b><span class="muted" style="font-size:12px">${f.klausur?fmtDate(f.klausur):""}</span></div>
+    <div class="bar"><div style="width:${pr}%"></div></div><div class="row between" style="font-size:12px;color:var(--sub)"><span>${esc(stufeText(f))}</span>${note}</div></div>`;
+  });
+  h+=`</div><h2>Vorschläge</h2><div style="display:flex;flex-direction:column;gap:8px">`;
+  // Vorschläge
+  const sug=[];
+  if(dueA.length&&store.rechnenTag!==t) sug.push(`<button class="sugg" data-act="start" data-what="rechnen"><span class="ico">${IC.calc}</span><span style="flex:1;font-size:13px;line-height:1.35"><b>Tägliches Rechentraining</b><br><span class="muted">${dueA.length} Rechenaufgaben fällig – damit das Rechnen flüssig wird</span></span></button>`);
+  const weak=[];F.forEach(f=>themen(f).forEach(th=>{const p=store.p[themaKey(f.id,th.id)];if(p&&p.lapses>0)weak.push({f,th,p})}));
+  weak.sort((a,b)=>b.p.lapses-a.p.lapses).slice(0,2).forEach(w=>sug.push(`<button class="sugg" data-act="start" data-what="thema" data-fid="${esc(w.f.id)}" data-tid="${esc(w.th.id)}"><span class="ico">${IC.lines}</span><span style="flex:1;font-size:13px;line-height:1.35"><b>${esc(w.th.titel)} · ${STAGES[w.p.stage-1]}</b><br><span class="muted">${w.p.lapses}× nicht gewusst – nochmal festigen</span></span></button>`));
+  F.filter(f=>!f.datei).sort((a,b)=>(a.klausur||"").localeCompare(b.klausur||"")).slice(0,2).forEach(f=>sug.push(`<div class="sugg" style="cursor:default"><span class="ico red">${IC.plus}</span><span style="flex:1;font-size:13px;line-height:1.35"><b>${esc(f.name)}: keine Inhalte</b><br><span class="muted">Mit Claude erzeugen und in den Ordner content legen</span></span></div>`));
+  h+=sug.join("")||`<div class="muted">Keine Vorschläge.</div>`;
+  h+=`</div>`;
+  app.innerHTML=h;
+}
+function renderFaecher(){
+  let h=`<h1>Fächer</h1><div class="card list" style="padding:2px 16px">`;
+  F.forEach(f=>{h+=`<div class="item" data-act="openfach" data-fid="${esc(f.id)}"><div class="row between"><b style="font-size:15px">${esc(f.name)}</b><span class="muted">${f.datei?themen(f).length+" Themen":"keine Inhalte"}</span></div><div class="bar"><div style="width:${fortschritt(f)}%"></div></div></div>`});
+  app.innerHTML=h+`</div>`;
+}
+function renderFach(fid){
+  const f=fach(fid);
+  let h=`<div class="row"><button class="back" data-act="closefach" aria-label="Zurück">${IC.back}</button><div style="flex:1"><div class="muted">Klausur ${f.klausur?fmtDate(f.klausur):"–"}</div><h1 style="font-size:22px">${esc(f.name)}</h1></div></div>`;
+  if(!f.datei||!f.data){
+    h+=`<div class="card"><b>Noch keine Inhalte.</b><p class="txt muted" style="margin-top:6px">Lass Claude aus den Folien eine Datei im gleichen Format wie <i>steuerlehre.json</i> erzeugen, leg sie in den Ordner <i>content</i> und trag den Dateinamen in <i>content/index.json</i> bei diesem Fach ein. Die App selbst bleibt unverändert.</p></div>`;
+    app.innerHTML=h;return;
+  }
+  const dueT=themen(f).filter(t=>isDue(themaKey(fid,t.id))).length, dueA=faelligAufgaben(fid).length;
+  if(f.data.hinweis)h+=`<div class="muted">${esc(f.data.hinweis)}</div>`;
+  h+=`<div class="grid2"><button class="btn-p" data-act="start" data-what="fach" data-fid="${esc(fid)}" ${dueT?"":"disabled style='opacity:.5'"}>${dueT} fällige Themen</button><button data-act="start" data-what="rechnen" data-fid="${esc(fid)}">Rechnen (${aufgaben(f).length})</button></div>`;
+  let ast=null;
+  h+=`<div class="card list" style="padding:2px 16px">`;
+  themen(f).forEach(t=>{
+    const p=P(themaKey(fid,t.id));
+    if(t.ast!==ast){ast=t.ast;h+=`<div style="padding:12px 0 2px;font-size:12px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.04em">${esc(ast)}</div>`}
+    const d=store.p[themaKey(fid,t.id)]?.due;
+    h+=`<div class="item" data-act="start" data-what="thema" data-fid="${esc(fid)}" data-tid="${esc(t.id)}"><div class="row between"><span style="font-size:14px;font-weight:600">${esc(t.titel)}</span><span class="stagebadge">${p.stage} · ${STAGES[p.stage-1]}</span></div><div class="muted" style="font-size:12px">Folie ${esc(t.folien)} · ${t.art==="rechnen"?"Rechnen":"Wissen"} · ${!d||d<=today()?"heute fällig":"wieder am "+fmtDate(d)}</div></div>`;
+  });
+  app.innerHTML=h+`</div>`;
+}
+function renderDaten(){
+  const n=Object.keys(store.p).length;
+  app.innerHTML=`<h1>Lernstand</h1>
+  <div class="card" style="display:flex;flex-direction:column;gap:10px">
+   <b>Zwischen Mac und iPhone abgleichen</b>
+   <p class="txt muted">Eine Datei <i>lernstand.json</i> im iCloud-Ordner ist der gemeinsame Stand. Am Mac (Chrome) liest und speichert die App sie automatisch. Am iPhone lädst du sie beim Start und sicherst nach dem Lernen über „Exportieren“. Pro Karte gewinnt der zuletzt gelernte Stand.</p>
+   <label class="muted">Gerätename (steht im Dateinamen)<input type="text" id="dev" value="${esc(store.device)}" placeholder="z. B. iPhone oder Mac" style="display:block;width:100%;height:44px;margin-top:6px;border:1px solid #D5DAE1;border-radius:10px;padding:0 12px;font-size:15px"></label>
+   <div class="grid2"><button class="btn-p" data-act="export">Exportieren</button><button data-act="import">Importieren</button></div>
+   <div class="muted">${n} Einträge gespeichert${store.lastExport?" · letzter Export "+esc(new Date(store.lastExport).toLocaleString("de-DE")):""}</div>
+  </div>
+  <div class="card" style="display:flex;flex-direction:column;gap:10px"><b>Inhalte</b><div class="muted">${F.map(f=>esc(f.name)+": "+(f.data?themen(f).length+" Themen, "+aufgaben(f).length+" Aufgaben (Stand "+esc(f.data.stand||"–")+")":"keine Datei")).join("<br>")}</div><button data-act="reload">Inhalte neu laden</button></div>
+  <div class="card"><button data-act="reset" style="width:100%;color:var(--red-d)">Lernstand auf diesem Gerät löschen</button></div>`;
+  $("#dev").addEventListener("change",e=>{store.device=e.target.value.trim();save()});
+}
+
+/* ============ Lernsitzung ============ */
+function startSession(what,fid,tid){
+  let q=[];
+  if(what==="due")q=faelligThemen();
+  else if(what==="fach")q=themen(fach(fid)).filter(t=>isDue(themaKey(fid,t.id))).map(t=>({kind:"t",fid,id:t.id}));
+  else if(what==="thema")q=[{kind:"t",fid,id:tid}];
+  else if(what==="rechnen"){q=faelligAufgaben(fid);if(!q.length)F.filter(f=>!fid||f.id===fid).forEach(f=>aufgaben(f).forEach(a=>q.push({kind:"a",fid:f.id,id:a.id})));q=shuffle(q)}
+  if(!q.length){toast("Nichts fällig");return}
+  S={q,i:0,total:q.length,done:0,rechnen:what==="rechnen"};
+  prepItem();render();window.scrollTo(0,0);
+}
+function cur(){return S.q[S.i]}
+function prepItem(){
+  const it=cur(); S.ui={};
+  if(it.kind==="t"){
+    const t=themen(fach(it.fid)).find(x=>x.id===it.id); it.t=t;
+    it.stage=P(themaKey(it.fid,it.id)).stage;
+    if(it.stage===2){S.ui.right=shuffle(t.zuordnen.map((p,i)=>i));S.ui.matched={};S.ui.sel=null;S.ui.err=0;S.ui.bad=null}
+    if(it.stage===3){S.ui.checked=false}
+    if(it.stage===4){S.ui.revealed=false}
+  }else{
+    it.a=aufgaben(fach(it.fid)).find(x=>x.id===it.id); S.ui.checked=false;
+  }
+}
+function next(requeue){
+  const it=cur();
+  if(requeue)S.q.push({kind:it.kind,fid:it.fid,id:it.id});
+  S.done++; S.i++;
+  if(S.i>=S.q.length){S=null;view={tab:"home"};toast(FS?"Sitzung fertig":"Sitzung fertig – jetzt in iCloud sichern");render();window.scrollTo(0,0);return}
+  prepItem();render();window.scrollTo(0,0);
+}
+function header(sub,titel){
+  const pr=Math.min(100,Math.round(100*S.i/S.q.length));
+  return `<div class="row"><button class="back" data-act="endsession" aria-label="Sitzung beenden">${IC.back}</button><div style="flex:1"><div class="muted" style="font-size:12px">${esc(sub)}</div><div style="font-size:17px;font-weight:700">Karte ${S.i+1} von ${S.q.length}</div></div></div><div class="bar"><div style="width:${pr}%"></div></div>`;
+}
+function stagesBar(s){return `<div class="stages">${STAGES.map((n,i)=>`<span class="${i+1<s?"done":i+1===s?"cur":""}">${i+1} ${n}</span>`).join("")}</div>`}
+function ansehenHTML(t){
+  return t.ansehen.map(b=>{
+    if(b.typ==="text")return `<p class="txt">${esc(b.inhalt)}</p>`;
+    if(b.typ==="formel")return `<div class="formel">${esc(b.inhalt)}</div>`;
+    if(b.typ==="tabelle")return `<table>${b.kopf?`<tr>${b.kopf.map(k=>`<th>${esc(k)}</th>`).join("")}</tr>`:""}${b.zeilen.map(r=>`<tr>${r.map(c=>`<td>${esc(c)}</td>`).join("")}</tr>`).join("")}</table>`;
+    return "";
+  }).join("");
+}
+function rateBar(sug,again="heute"){
+  const L=[["again","Nochmal",again],["hard","Schwer","morgen"],["good","Gut","bald"],["easy","Leicht","später"]];
+  return `<div class="muted" style="text-align:center;font-size:12px">Wie gut saß es?</div><div class="rate">${L.map(([k,n,s])=>`<button class="${k==="again"?"again":""} ${k===sug?"sug":""}" data-act="rate" data-r="${k}">${n}<small>${s}</small></button>`).join("")}</div>`;
+}
+function renderSession(){
+  const it=cur(); const f=fach(it.fid);
+  if(it.kind==="a")return renderAufgabe(it,f);
+  const t=it.t; let h=header(f.name.split(" · ")[0]+" · "+t.titel)+stagesBar(it.stage);
+  if(it.stage===1){
+    h+=`<div class="card" style="display:flex;flex-direction:column;gap:10px"><div class="row between"><b style="font-size:17px">${esc(t.titel)}</b></div><div class="muted">Folie ${esc(t.folien)}</div>${ansehenHTML(t)}</div>
+    <button class="btn-p" data-act="seen">Verstanden – weiter zu Zuordnen</button>`;
+  }else if(it.stage===2){
+    const u=S.ui, all=Object.keys(u.matched).length===t.zuordnen.length;
+    h+=`<div class="card" style="display:flex;flex-direction:column;gap:10px"><b style="font-size:16px">Ordne richtig zu</b><div class="muted">Tippe links einen Begriff, dann rechts die passende Erklärung.</div><div class="grid2"><div style="display:flex;flex-direction:column;gap:8px">`;
+    t.zuordnen.forEach((p,i)=>{h+=`<button class="match ${u.matched[i]?"ok":u.sel===i?"sel":""}" data-act="mleft" data-i="${i}" ${u.matched[i]?"disabled":""}>${esc(p[0])}</button>`});
+    h+=`</div><div style="display:flex;flex-direction:column;gap:8px">`;
+    u.right.forEach(i=>{h+=`<button class="match ${u.matched[i]?"ok":u.bad===i?"bad":""}" data-act="mright" data-i="${i}" ${u.matched[i]?"disabled":""}>${esc(t.zuordnen[i][1])}</button>`});
+    h+=`</div></div></div>`;
+    if(all)h+=`<div class="fb ${u.err?"bad":"ok"}">${u.err?u.err+" Fehlversuch"+(u.err>1?"e":"")+" – schau dir die Paare nochmal an.":"Alles richtig zugeordnet."}</div>`+rateBar(u.err?"hard":"good");
+    else h+=`<details class="card"><summary>Inhalt nochmal ansehen</summary>${ansehenHTML(t)}</details>`;
+  }else if(it.stage===3){
+    const u=S.ui; let gi=0;
+    h+=`<div class="card" style="display:flex;flex-direction:column;gap:10px"><b style="font-size:16px">Fülle die Lücken</b>`;
+    t.luecken.forEach(s=>{
+      const parts=s.split(/\{\{(.*?)\}\}/);
+      h+=`<div class="cloze">`+parts.map((p,j)=>{
+        if(j%2===0)return esc(p);
+        const id=gi++; const sol=p.split("|")[0]; const val=u.vals?.[id]??"";
+        const cls=u.checked?(u.res[id]?"ok":"bad"):"";
+        return `<input class="gap ${cls}" data-gap="${id}" value="${esc(val)}" size="${Math.max(6,sol.length+1)}" autocomplete="off" autocapitalize="off" spellcheck="false" ${u.checked?"readonly":""} aria-label="Lücke ${id+1}">`+(u.checked&&!u.res[id]?` <span style="color:var(--blue-d);font-weight:600;font-size:14px">→ ${esc(sol)}</span>`:"");
+      }).join("")+`</div>`;
+    });
+    h+=`</div>`;
+    if(!u.checked)h+=`<div class="grid2"><button data-act="reveal3">Lösung zeigen</button><button class="btn-p" data-act="check3">Prüfen</button></div>`;
+    else{const nOk=u.res.filter(Boolean).length,n=u.res.length;
+      h+=`<div class="fb ${nOk===n?"ok":"bad"}">${nOk} von ${n} Lücken richtig.${nOk<n?" Die richtigen Antworten stehen hinter den roten Feldern.":""}</div>`+rateBar(nOk===n?"good":nOk>=n/2?"hard":"again");}
+  }else{
+    const u=S.ui;
+    h+=`<div class="card" style="display:flex;flex-direction:column;gap:10px"><b style="font-size:16px;line-height:1.35">${esc(t.erklaeren.frage)}</b>
+    <label class="muted" style="display:flex;flex-direction:column;gap:6px">Deine Antwort (tippen oder mit dem Mikrofon der Tastatur diktieren)<textarea id="ans" ${u.revealed?"readonly":""}>${esc(u.ans||"")}</textarea></label></div>`;
+    if(!u.revealed)h+=`<button class="btn-p" data-act="reveal4">Kernpunkte aufdecken</button>`;
+    else{
+      const k=t.erklaeren.kernpunkte, c=u.kp||[]; const nOk=c.filter(Boolean).length;
+      h+=`<div class="card"><b style="font-size:14px">Selbstabgleich: Was hast du genannt?</b>${k.map((p,i)=>`<label class="kp"><input type="checkbox" data-kp="${i}" ${c[i]?"checked":""}><span>${esc(p)}</span></label>`).join("")}<div class="muted" style="border-top:1px solid var(--line);padding-top:8px;margin-top:4px">${nOk} von ${k.length} Kernpunkten</div></div>
+      <details class="card"><summary>Ganzen Inhalt ansehen</summary>${ansehenHTML(t)}</details>`;
+      const r=nOk/k.length; h+=rateBar(r>=1?"easy":r>=.75?"good":r>=.5?"hard":"again");
+    }
+  }
+  app.innerHTML=h;
+}
+function parseNum(s){
+  s=String(s).replace(/[\s€%]/g,"").replace(/TEUR/i,"");
+  if(!s)return [];
+  const out=[];
+  if(s.includes(","))out.push(parseFloat(s.replace(/\./g,"").replace(",",".")));
+  else{out.push(parseFloat(s));out.push(parseFloat(s.replace(/\./g,"")))}
+  return out.filter(x=>!isNaN(x));
+}
+function renderAufgabe(it,f){
+  const a=it.a,u=S.ui;
+  let h=header("Rechnen · "+f.name.split(" · ")[0]);
+  h+=`<div class="card" style="display:flex;flex-direction:column;gap:10px"><b style="font-size:16px">${esc(a.titel)}</b><p class="txt">${esc(a.text)}</p>
+  <label class="muted" style="display:flex;flex-direction:column;gap:6px">Dein Ergebnis${a.einheit?" in "+esc(a.einheit):""}<input class="numin" id="num" inputmode="decimal" value="${esc(u.val||"")}" ${u.checked?"readonly":""} autocomplete="off"></label></div>`;
+  if(!u.checked)h+=`<div class="grid2"><button data-act="checka" data-skip="1">Lösung zeigen</button><button class="btn-p" data-act="checka">Prüfen</button></div>`;
+  else{
+    const sol=a.antwort.toLocaleString("de-DE",{maximumFractionDigits:2});
+    h+=`<div class="fb ${u.ok?"ok":"bad"}">${u.ok?"Richtig: ":u.skip?"Lösung: ":"Nicht ganz. Richtig ist "}<b>${sol} ${esc(a.einheit||"")}</b></div>
+    <div class="card"><b style="font-size:14px">Lösungsweg</b><ol class="steps">${a.weg.map(s=>`<li>${esc(s)}</li>`).join("")}</ol></div>`+rateBar(u.ok?"good":"again");
+  }
+  app.innerHTML=h;
+}
+const norm=s=>String(s).toLowerCase().replace(/−/g,"-").replace(/[\s.€%]/g,"").replace(/[„“"]/g,"");
+
+/* ============ Ereignisse ============ */
+document.addEventListener("click",e=>{
+  const b=e.target.closest("[data-act]"); if(!b)return;
+  const a=b.dataset.act;
+  if(a==="tab"){view={tab:b.dataset.tab};S=null;render();window.scrollTo(0,0);return}
+  if(a==="openfach"){view={tab:"faecher",fach:b.dataset.fid};render();window.scrollTo(0,0);return}
+  if(a==="closefach"){view={tab:"faecher"};render();return}
+  if(a==="start"){startSession(b.dataset.what,b.dataset.fid,b.dataset.tid);return}
+  if(a==="endsession"){S=null;render();return}
+  if(a==="export")return exportFile();
+  if(a==="fsopen")return fsConnect(false);
+  if(a==="fsnew")return fsConnect(true);
+  if(a==="fssync")return fsSync();
+  if(a==="skipload"){SY.loaded=true;render();return}
+  if(a==="import")return $("#file").click();
+  if(a==="reload"){loadContent().then(()=>{render();toast("Inhalte neu geladen")});return}
+  if(a==="reset"){if(confirm("Lernstand auf diesem Gerät wirklich löschen? Das lässt sich nicht rückgängig machen.")){store.p={};save();render()}return}
+  if(!S)return;
+  const it=cur(), u=S.ui;
+  if(a==="seen"){const k=themaKey(it.fid,it.id);const p={...P(k)};p.stage=2;p.streak=0;p.due=today();p.last=new Date().toISOString();store.p[k]=p;markDirty();it.stage=2;prepItem();render();window.scrollTo(0,0);return}
+  if(a==="mleft"){u.sel=+b.dataset.i;u.bad=null;render();return}
+  if(a==="mright"){
+    if(u.sel===null){toast("Erst links einen Begriff wählen");return}
+    const i=+b.dataset.i; if(i===u.sel){u.matched[i]=true;u.sel=null;u.bad=null}else{u.err++;u.bad=i}
+    render();return}
+  if(a==="check3"||a==="reveal3"){
+    const t=it.t; const sols=[]; t.luecken.forEach(s=>s.split(/\{\{(.*?)\}\}/).forEach((p,j)=>{if(j%2)sols.push(p.split("|"))}));
+    u.vals={}; document.querySelectorAll("[data-gap]").forEach(inp=>u.vals[inp.dataset.gap]=inp.value);
+    u.res=sols.map((alts,i)=>a==="check3"&&alts.some(x=>norm(x)===norm(u.vals[i]||""))&&norm(u.vals[i]||"")!=="");
+    u.checked=true;render();return}
+  if(a==="reveal4"){u.ans=$("#ans").value;u.revealed=true;u.kp=[];render();return}
+  if(a==="checka"){
+    u.val=$("#num").value; u.skip=!!b.dataset.skip;
+    u.ok=!u.skip&&parseNum(u.val).some(x=>Math.abs(x-it.a.antwort)<=(it.a.toleranz??0.01));
+    u.checked=true;render();return}
+  if(a==="rate"){
+    const r=b.dataset.r;
+    if(it.kind==="a"){const req=rate(aufgKey(it.fid,it.id),it.fid,r,true);store.rechnenTag=today();save();next(req);return}
+    const req=rate(themaKey(it.fid,it.id),it.fid,r,false); next(req);return}
+});
+document.addEventListener("change",e=>{
+  if(e.target.dataset&&e.target.dataset.kp!==undefined&&S){S.ui.kp[+e.target.dataset.kp]=e.target.checked;render()}
+});
+document.addEventListener("keydown",e=>{
+  if(e.key==="Enter"&&S&&e.target.matches(".gap,#num")){e.preventDefault();const b=document.querySelector('[data-act="check3"],[data-act="checka"]:not([data-skip])');if(b)b.click()}
+});
+
+/* ============ Export / Import ============ */
+async function exportFile(){
+  const dev=(store.device||"Geraet").replace(/[^\wäöüÄÖÜß-]/g,"");
+  const data={app:"lernapp",format:1,device:store.device,exportiert:new Date().toISOString(),p:store.p};
+  const name="lernstand.json";
+  const file=new File([JSON.stringify(data)],name,{type:"application/json"});
+    try{if(navigator.canShare&&navigator.canShare({files:[file]})){await navigator.share({files:[file],title:name});store.dirty=0;store.lastExport=data.exportiert;save();render();return}}catch(err){if(err.name==="AbortError")return}
+  store.dirty=0;store.lastExport=data.exportiert;save();
+  const url=URL.createObjectURL(file);const el=document.createElement("a");el.href=url;el.download=name;document.body.appendChild(el);el.click();el.remove();setTimeout(()=>URL.revokeObjectURL(url),2000);
+  render();
+}
+function importFile(e){
+  const f=e.target.files[0]; if(!f)return;
+  const r=new FileReader();
+  r.onload=()=>{
+    try{
+      const d=JSON.parse(r.result); if(d.app!=="lernapp"||!d.p)throw 0;
+      const neu=merge(d.p); SY.loaded=true;
+      save();toast(neu+" Einträge übernommen");render();
+    }catch(err){toast("Das ist keine Lernstand-Datei")}
+  };
+  r.readAsText(f); e.target.value="";
+}
+
+/* ============ iCloud-Sync ============ */
+const FS="showOpenFilePicker" in window; // Chrome/Edge am Mac
+const SY={loaded:false,handle:null,perm:false,lastWrite:null,timer:null};
+function merge(remote){let n=0;Object.entries(remote||{}).forEach(([k,v])=>{const l=store.p[k];if(!l||(v.last&&(!l.last||v.last>l.last))){store.p[k]=v;n++}});return n}
+function markDirty(){store.dirty=(store.dirty||0)+1;save();if(SY.perm)scheduleWrite()}
+function idb(){return new Promise((res,rej)=>{const r=indexedDB.open("lernapp",1);r.onupgradeneeded=()=>r.result.createObjectStore("kv");r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error)})}
+async function kv(k,v){const db=await idb();return new Promise((res,rej)=>{const tx=db.transaction("kv",v===undefined?"readonly":"readwrite");const st=tx.objectStore("kv");const r=v===undefined?st.get(k):st.put(v,k);r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error)})}
+async function fsConnect(neu){
+  try{
+    let h;
+    if(neu)h=await showSaveFilePicker({suggestedName:"lernstand.json",types:[{description:"Lernstand",accept:{"application/json":[".json"]}}]});
+    else [h]=await showOpenFilePicker({types:[{description:"Lernstand",accept:{"application/json":[".json"]}}]});
+    SY.handle=h; await kv("handle",h); SY.perm=true; await fsSync();
+  }catch(e){if(e.name!=="AbortError")toast("Datei konnte nicht verbunden werden")}
+}
+async function fsSync(){
+  try{
+    if(!SY.perm){const q=await SY.handle.requestPermission({mode:"readwrite"});if(q!=="granted"){toast("Zugriff nicht erlaubt");return}SY.perm=true}
+    const txt=await (await SY.handle.getFile()).text();
+    let n=0; if(txt.trim()){try{const d=JSON.parse(txt);if(d.app==="lernapp")n=merge(d.p)}catch(e){}}
+    SY.loaded=true; await fsWrite(); toast(n?n+" Einträge vom anderen Gerät übernommen":"Synchronisiert"); render();
+  }catch(e){toast("Synchronisieren fehlgeschlagen");SY.perm=false;render()}
+}
+async function fsWrite(){
+  // vor dem Schreiben nochmal einlesen, damit Stände vom iPhone nicht überschrieben werden
+  try{const txt=await (await SY.handle.getFile()).text();if(txt.trim()){const d=JSON.parse(txt);if(d.app==="lernapp")merge(d.p)}}catch(e){}
+  const w=await SY.handle.createWritable();
+  await w.write(JSON.stringify({app:"lernapp",format:1,device:store.device||"Mac",exportiert:new Date().toISOString(),p:store.p}));
+  await w.close(); store.dirty=0; store.lastExport=new Date().toISOString(); SY.lastWrite=new Date(); save();
+}
+function scheduleWrite(){clearTimeout(SY.timer);SY.timer=setTimeout(()=>fsWrite().catch(()=>{SY.perm=false;toast("Automatisches Speichern unterbrochen – bitte neu synchronisieren")}),800)}
+function syncBanner(){
+  const box=(cls,body)=>`<div class="fb ${cls}" style="display:flex;flex-direction:column;gap:8px">${body}</div>`;
+  if(FS){
+    if(!SY.handle)return box("ok",`<b>iCloud-Speicherdatei verbinden</b><span>Einmalig: wähle deine <i>lernstand.json</i> im iCloud-Ordner oder lege sie neu an. Danach speichert die App automatisch.</span><div class="grid2"><button class="btn-p" data-act="fsopen">Vorhandene öffnen</button><button data-act="fsnew">Neu anlegen</button></div>`);
+    if(!SY.perm)return box("ok",`<b>Mit iCloud synchronisieren</b><span>Holt den Stand vom iPhone und speichert ab dann automatisch.</span><button class="btn-p" data-act="fssync">Synchronisieren</button>`);
+    return `<div class="muted" style="font-size:12px">✓ Automatisch gespeichert in ${esc(SY.handle.name)}${SY.lastWrite?" · "+SY.lastWrite.toLocaleTimeString("de-DE",{hour:"2-digit",minute:"2-digit"}):""}</div>`;
+  }
+  let h="";
+  if(!SY.loaded)h+=box("ok",`<b>Stand aus iCloud laden</b><span>Damit du da weitermachst, wo du am Mac aufgehört hast.</span><div class="grid2"><button class="btn-p" data-act="import">Laden</button><button data-act="skipload">Überspringen</button></div>`);
+  if(store.dirty>0)h+=box("bad",`<b>${store.dirty} Karte${store.dirty>1?"n":""} noch nicht in iCloud gesichert</b><span>Im Teilen-Menü „In Dateien sichern“ wählen, iCloud-Ordner, vorhandene <i>lernstand.json</i> ersetzen.</span><button class="btn-p" data-act="export">Jetzt sichern</button>`);
+  return h;
+}
+(async()=>{if(FS){try{const h=await kv("handle");if(h){SY.handle=h;SY.perm=(await h.queryPermission({mode:"readwrite"}))==="granted";if(SY.perm)await fsSync()}}catch(e){}}})();
+
+/* ============ Start ============ */
+$("#file").addEventListener("change",importFile);
+loadContent().then(render).catch(()=>{app.innerHTML=`<div class="card"><b>Inhalte konnten nicht geladen werden.</b><p class="txt muted">Die App muss über GitHub Pages (oder einen Webserver) geöffnet werden, nicht als Datei. Offline funktioniert sie, sobald sie einmal online geladen wurde.</p></div>`});
+if("serviceWorker" in navigator)navigator.serviceWorker.register("sw.js").catch(()=>{});
+</script>
+</body>
+</html>
