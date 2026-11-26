@@ -13,7 +13,7 @@
 <style>
 :root{--bg:#F3F5F8;--card:#fff;--ink:#1F2328;--sub:#5B6470;--line:#E6E9EE;--blue:#2F5FB3;--blue-d:#1C3F7A;--blue-l:#DCE8FB;--blue-xl:#EAF1FC;--red:#C8553D;--red-d:#9A2E22;--red-l:#FCEBEA;--red-b:#F0C4BE;--safe:env(safe-area-inset-top)}
 *{box-sizing:border-box}
-html,body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",Inter,system-ui,sans-serif;-webkit-text-size-adjust:100%}
+html,body{overflow-x:clip;margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",Inter,system-ui,sans-serif;-webkit-text-size-adjust:100%}
 #safe{position:fixed;top:0;left:0;right:0;height:var(--safe);background:var(--bg);z-index:20}
 #app{max-width:760px;margin:0 auto;padding:calc(var(--safe) + 14px) 14px 110px;display:flex;flex-direction:column;gap:12px}
 h1{margin:0;font-size:26px}
@@ -66,11 +66,14 @@ td:first-child{font-weight:600;width:34%}
 .ansb{text-align:left;font-weight:500;font-size:14.5px;line-height:1.35;padding:10px 12px;min-height:48px;hyphens:auto;-webkit-hyphens:auto;overflow-wrap:anywhere}
 .ansb.ok{border:2px solid var(--blue);background:var(--blue-xl);color:var(--blue-d)}
 .ansb.bad{border:2px solid var(--red);background:var(--red-l)}
-.zbar{position:fixed;left:0;right:0;bottom:0;z-index:15;background:var(--blue);color:#fff;padding:10px 14px calc(12px + env(safe-area-inset-bottom));border-radius:18px 18px 0 0;box-shadow:0 -4px 16px rgba(28,63,122,.18);touch-action:pan-y}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.navb{position:relative}.nbadge{position:absolute;top:0;right:10px;min-width:20px;height:20px;padding:0 6px;border-radius:10px;background:var(--red);color:#fff;font-size:11px;font-weight:700;line-height:20px;text-align:center}
+.zbar{position:fixed;left:0;right:0;bottom:0;z-index:15;background:var(--blue);color:#fff;padding:14px 14px calc(14px + env(safe-area-inset-bottom));border-radius:18px 18px 0 0;box-shadow:0 -4px 16px rgba(28,63,122,.18);touch-action:pan-y}
 .zin{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:8px}
-.zrow{display:flex;align-items:center;gap:8px}
-.zarr{min-height:44px;width:44px;padding:0;border:none;background:rgba(255,255,255,.16);color:#fff;font-size:22px;border-radius:12px;flex:none}
-.zterm{flex:1;background:#fff;color:var(--blue-d);border-radius:14px;padding:12px 14px;font-weight:700;font-size:16px;line-height:1.3;text-align:center;min-height:48px;display:flex;align-items:center;justify-content:center;hyphens:auto;-webkit-hyphens:auto;overflow-wrap:anywhere}
+.zrow{display:flex;align-items:center;justify-content:center;gap:12px}
+@media (pointer:coarse){.zarr{display:none}}
+.zarr{min-height:40px;width:44px;padding:0;border:none;background:rgba(255,255,255,.16);color:#fff;font-size:22px;border-radius:12px;flex:none}
+.zterm{width:100%;background:#fff;color:var(--blue-d);border-radius:14px;padding:14px 16px;font-weight:700;font-size:17px;line-height:1.3;text-align:center;min-height:60px;display:flex;align-items:center;justify-content:center;hyphens:auto;-webkit-hyphens:auto;overflow-wrap:anywhere}
 .zdots{display:flex;gap:6px;justify-content:center}.zdots i{width:8px;height:8px;border-radius:4px;background:rgba(255,255,255,.35);display:block}.zdots i.c{background:#fff}.zdots i.d{background:rgba(255,255,255,.75)}.zdots i.c{width:20px}
 .tag{display:inline-block;font-size:11px;font-weight:700;background:var(--blue);color:#fff;border-radius:6px;padding:2px 6px;margin-bottom:4px}
 .gap{display:inline-block;min-width:80px;max-width:100%;height:34px;border:none;border-bottom:2px solid var(--blue);background:var(--blue-xl);border-radius:6px 6px 0 0;padding:0 8px;font-weight:600;font-size:15px;font-family:inherit;color:var(--blue-d);margin:2px 0}
@@ -110,7 +113,7 @@ details summary{cursor:pointer;font-weight:600;color:var(--blue);font-size:14px;
 <nav id="nav">
 <button data-act="tab" data-tab="home"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="3"/><path d="M3 9h18M8 2v4M16 2v4"/></svg>Heute</button>
 <button data-act="tab" data-tab="faecher"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 5h6v14H4zM14 5h6v14h-6z"/></svg>Fächer</button>
-<button data-act="tab" data-tab="daten"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg>Lernstand</button>
+<button class="navb" data-act="tab" data-tab="daten"><span class="nbadge" id="badge" hidden></span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg>Lernstand</button>
 </nav>
 <script>
 "use strict";
@@ -219,6 +222,7 @@ function render(){
   document.querySelectorAll("nav button").forEach(b=>b.classList.toggle("on",b.dataset.tab===view.tab));
   const full=S||view.fall||view.puzzle;
   $("#nav").style.display=full?"none":"flex";
+  const bd=$("#badge"); if(bd){const n=(!FS&&store.dirty>0)?store.dirty:0; bd.hidden=!n; bd.textContent=n>99?"99+":n;}
   if(S)return renderSession();
   if(view.fall)return renderFall();
   if(view.puzzle)return renderPuzzle();
@@ -314,6 +318,7 @@ function renderThema(){
 function renderDaten(){
   const n=Object.keys(store.p).length;
   app.innerHTML=`<h1 style="padding-top:4px">Lernstand</h1>
+  ${!FS&&store.dirty>0?`<div class="fb bad" style="display:flex;flex-direction:column;gap:8px"><b>${store.dirty} Karte${store.dirty>1?"n":""} noch nicht in iCloud gesichert</b><span>Im Teilen-Menü „In Dateien sichern“ wählen, iCloud-Ordner, vorhandene lernstand.json ersetzen.</span><button class="btn-p" data-act="export">Jetzt sichern</button></div>`:""}
   <div class="card" style="display:flex;flex-direction:column;gap:10px">
    <b>Zwischen Mac und iPhone abgleichen</b>
    <p class="txt muted">Eine Datei lernstand.json im iCloud-Ordner ist der gemeinsame Stand. Am Mac (Chrome) liest und speichert die App sie automatisch. Am iPhone lädst du sie beim Start und sicherst nach dem Lernen über „Exportieren“. Pro Karte gewinnt der zuletzt gelernte Stand.</p>
@@ -424,11 +429,11 @@ function renderSession(){
     <div class="ans">${u.right.map(i=>`<button class="ansb ${u.matched[i]?"ok":u.bad===i?"bad":""}" data-act="mright" data-i="${i}" ${u.matched[i]||all?"disabled":""}>${u.matched[i]?`<span class="tag">${esc(k.zuordnen[i][0])}</span><br>`:""}${esc(k.zuordnen[i][1])}</button>`).join("")}</div></div>`;
     if(all)h+=`<div class="fb ${u.err?"bad":"ok"}">${u.err?u.err+" Fehlversuch"+(u.err>1?"e":"")+" – schau dir die Paare nochmal an.":"Alles richtig zugeordnet."}</div>`+rateBar(u.err?"hard":"good");
     else{
-      h+=`<details class="card"><summary>Inhalt nochmal ansehen</summary>${ansehenHTML(t,it.fid)}</details><div style="height:170px"></div>`;
+      h+=`<details class="card"><summary>Inhalt nochmal ansehen</summary>${ansehenHTML(t,it.fid)}</details><div style="height:200px"></div>`;
       const open=u.order.filter(i=>!u.matched[i]); const ci=u.order[u.pos];
-      h+=`<div class="zbar" id="zbar"><div class="zin"><div style="font-size:12px;font-weight:600;opacity:.85">Ordne zu: Welche Erklärung passt?</div>
-      <div class="zrow"><button class="zarr" data-act="zprev" aria-label="Vorheriger Begriff">‹</button><div class="zterm">${esc(k.zuordnen[ci][0])}</div><button class="zarr" data-act="znext" aria-label="Nächster Begriff">›</button></div>
-      <div class="zdots">${u.order.map(i=>`<i class="${i===ci?"c":u.matched[i]?"d":""}"></i>`).join("")}</div></div></div>`;
+      h+=`<div class="zbar" id="zbar"><div class="zin"><div style="font-size:13px;font-weight:600;opacity:.9;text-align:center">Ordne zu: Welche Erklärung passt?</div>
+      <div class="zterm">${esc(k.zuordnen[ci][0])}</div>
+      <div class="zrow"><button class="zarr" data-act="zprev" aria-label="Vorheriger Begriff">‹</button><div class="zdots">${u.order.map(i=>`<i class="${i===ci?"c":u.matched[i]?"d":""}"></i>`).join("")}</div><button class="zarr" data-act="znext" aria-label="Nächster Begriff">›</button></div></div></div>`;
     }
   }else if(it.stage===3){
     let gi=0;
@@ -509,7 +514,7 @@ document.addEventListener("click",e=>{
   if(a==="fsopen")return fsConnect(false);
   if(a==="fsnew")return fsConnect(true);
   if(a==="fssync")return fsSync();
-  if(a==="skipload"){SY.loaded=true;render();return}
+  if(a==="skipload"){SY.loaded=true;store.loadDay=today();save();render();return}
   if(a==="reload"){loadContent().then(()=>{render();toast("Inhalte neu geladen")});return}
   if(a==="reset"){if(confirm("Lernstand auf diesem Gerät wirklich löschen? Das lässt sich nicht rückgängig machen.")){store.p={};store.seen={};save();render()}return}
   if(!S)return;
@@ -569,7 +574,7 @@ function importFile(e){
   const r=new FileReader();
   r.onload=()=>{
     try{const d=JSON.parse(r.result); if(d.app!=="lernapp"||!d.p)throw 0;
-      const neu=merge(d.p,d.seen); SY.loaded=true; save();toast(neu+" Einträge übernommen");render();
+      const neu=merge(d.p,d.seen); SY.loaded=true; store.loadDay=today(); save();toast(neu+" Einträge übernommen");render();
     }catch(err){toast("Das ist keine Lernstand-Datei")}
   };
   r.readAsText(f); e.target.value="";
@@ -614,8 +619,7 @@ function syncBanner(){
     return `<div class="muted" style="font-size:12px">✓ Automatisch gespeichert in ${esc(SY.handle.name)}${SY.lastWrite?" · "+SY.lastWrite.toLocaleTimeString("de-DE",{hour:"2-digit",minute:"2-digit"}):""}</div>`;
   }
   let h="";
-  if(!SY.loaded)h+=box("ok",`<b>Stand aus iCloud laden</b><span>Damit du da weitermachst, wo du am Mac aufgehört hast.</span><div class="grid2"><button class="btn-p" data-act="import">Laden</button><button data-act="skipload">Überspringen</button></div>`);
-  if(store.dirty>0)h+=box("bad",`<b>${store.dirty} Karte${store.dirty>1?"n":""} noch nicht in iCloud gesichert</b><span>Im Teilen-Menü „In Dateien sichern“ wählen, iCloud-Ordner, vorhandene <i>lernstand.json</i> ersetzen.</span><button class="btn-p" data-act="export">Jetzt sichern</button>`);
+  if(!SY.loaded&&store.loadDay!==today())h+=box("ok",`<b>Stand aus iCloud laden</b><span>Damit du da weitermachst, wo du am Mac aufgehört hast.</span><div class="grid2"><button class="btn-p" data-act="import">Laden</button><button data-act="skipload">Überspringen</button></div>`);
   return h;
 }
 (async()=>{if(FS){try{const h=await kv("handle");if(h){SY.handle=h;SY.perm=(await h.queryPermission({mode:"readwrite"}))==="granted";if(SY.perm)await fsSync()}}catch(e){}}})();
