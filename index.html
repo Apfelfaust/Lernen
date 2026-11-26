@@ -38,7 +38,7 @@ button,.btn{font:inherit;cursor:pointer;border-radius:14px;min-height:48px;paddi
 nav{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid #E1E5EA;display:flex;justify-content:space-around;padding:8px 0 calc(8px + env(safe-area-inset-bottom));z-index:5}
 nav button{border:none;background:none;min-height:44px;display:flex;flex-direction:column;align-items:center;gap:3px;font-size:11px;color:var(--sub);font-weight:500;padding:4px 18px}
 nav button.on{color:var(--blue);font-weight:600}
-.head{position:sticky;top:var(--safe);z-index:10;background:var(--bg);margin:-14px -14px 0;padding:10px 14px 8px;display:flex;flex-direction:column;gap:8px}
+.head{position:sticky;top:var(--safe);z-index:10;background:var(--bg);margin:-14px -14px 0;padding:2px 14px 8px;display:flex;flex-direction:column;gap:8px}
 .back{width:44px;height:44px;min-height:44px;padding:0;display:flex;align-items:center;justify-content:center;border:none;flex:none}
 .stages{display:flex;gap:6px;align-items:center}
 .stages span{flex:1;height:30px;border-radius:8px;background:#fff;color:var(--sub);font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center}
@@ -404,9 +404,10 @@ function next(requeue){
   if(S.i>=S.q.length){S=null;toast(FS?"Sitzung fertig":"Sitzung fertig – denk ans Sichern in iCloud");render();window.scrollTo(0,0);return}
   prepItem();render();window.scrollTo(0,0);
 }
+const ttl=t=>`<div style="font-size:17px;font-weight:700;line-height:1.3;margin:2px 2px -2px">${esc(t)}</div>`;
 function sessHead(sub,sub2){
   const pr=Math.min(100,Math.round(100*S.i/S.q.length));
-  return `<div class="row"><button class="back" data-act="endsession" aria-label="Sitzung beenden">${IC.back}</button><div class="muted" style="flex:1;min-width:0;font-size:12px;line-height:1.35">Karte ${S.i+1} von ${S.q.length}${sub2?"<br>"+esc(sub2):""}</div></div><div class="bar"><div style="width:${pr}%"></div></div><div style="font-size:16px;font-weight:700;line-height:1.3;margin-top:2px">${esc(sub)}</div>`;
+  return `<div class="row"><button class="back" data-act="endsession" aria-label="Sitzung beenden">${IC.back}</button><div class="muted" style="flex:1;min-width:0;font-size:12px;line-height:1.35">Karte ${S.i+1} von ${S.q.length}${sub2?"<br>"+esc(sub2):""}</div></div><div class="bar"><div style="width:${pr}%"></div></div>`;
 }
 function stagesBar(k,s){const av=avail(k),pk=S&&S.ui.peek;return `<div class="row between"><span class="stagename">Stufe ${pk?1:s} · ${STAGES[(pk?1:s)-1]}</span></div><div class="stages">${[1,2,3,4].map(i=>{
     if(i===1&&s>1)return `<button class="stg ${pk?"cur":"done"}" data-act="peek" aria-label="Stufe 1 nachlesen">1</button>`;
@@ -421,18 +422,18 @@ function renderSession(){
   if(it.kind==="a")return renderAufgabe(it,f);
   const t=it.t,k=it.k,u=S.ui;
   if(k.typ==="fall"){
-    let h=`<div class="head">${sessHead(t.titel,"Fall")}<span class="stagename">Fall · ${esc(k.titel)}</span></div>`+fallHTML(k,u,true);
+    let h=`<div class="head">${sessHead(t.titel,"Fall")}<span class="stagename">Fall · ${esc(k.titel)}</span></div>`+ttl(t.titel)+fallHTML(k,u,true);
     if(u.revealed)h+=rateBar("good");
     app.innerHTML=h;return;
   }
-  let h=`<div class="head">${sessHead(t.titel,t.karten.length>1?k.titel:"")}${stagesBar(k,it.stage)}</div>`;
+  let h=`<div class="head">${sessHead(t.titel,t.karten.length>1?k.titel:"")}${stagesBar(k,it.stage)}</div>`+ttl(t.titel);
   if(u.peek){
     h+=u.peekOpen?`<div class="card" style="display:flex;flex-direction:column;gap:10px"><div class="muted">${esc(fol(t.folien))}</div>${ansehenHTML(t,it.fid)}</div>`
       :`<div class="card" style="display:flex;flex-direction:column;gap:10px;align-items:flex-start"><b>Inhalt von Stufe 1</b><span class="muted">Hier steht der komplette Inhalt des Themas. Erst aufdecken, wenn du wirklich nachschauen willst.</span><button data-act="peekopen" style="width:100%">Inhalte ansehen</button></div>`;
     app.innerHTML=h;return;
   }
   if(it.stage===1){
-    h+=`<div class="card" style="display:flex;flex-direction:column;gap:10px"><b style="font-size:17px">${esc(t.titel)}</b><div class="muted">${esc(fol(t.folien))}</div>${ansehenHTML(t,it.fid)}</div>
+    h+=`<div class="card" style="display:flex;flex-direction:column;gap:10px"><div class="muted">${esc(fol(t.folien))}</div>${ansehenHTML(t,it.fid)}</div>
     <button class="btn-p" data-act="seen">Verstanden – weiter</button>`;
   }else if(it.stage===2){
     const all=Object.keys(u.matched).length===k.zuordnen.length;
@@ -485,8 +486,8 @@ function parseNum(s){
 }
 function renderAufgabe(it,f){
   const a=it.a,u=S.ui;
-  let h=`<div class="head">${sessHead(a.titel,"Rechnen")}</div>`;
-  h+=`<div class="card" style="display:flex;flex-direction:column;gap:10px"><b style="font-size:16px">${esc(a.titel)}</b><p class="txt">${esc(a.text)}</p>
+  let h=`<div class="head">${sessHead(a.titel,"Rechnen")}</div>`+ttl(a.titel);
+  h+=`<div class="card" style="display:flex;flex-direction:column;gap:10px"><p class="txt">${esc(a.text)}</p>
   ${a.anlage?`<details><summary>Anlage (wie in der Klausur)</summary><p class="txt muted" style="font-size:13px">${esc(a.anlage)}</p></details>`:""}
   <label class="muted" style="display:flex;flex-direction:column;gap:6px">Dein Ergebnis${a.einheit?" in "+esc(a.einheit):""}<input class="numin" id="num" inputmode="decimal" value="${esc(u.val||"")}" ${u.checked?"readonly":""} autocomplete="off"></label></div>`;
   if(!u.checked)h+=`<div class="row" style="gap:8px"><button style="flex:1" data-act="checka" data-skip="1">Lösung zeigen</button><button class="btn-p" style="flex:1" data-act="checka">Prüfen</button></div>`;
