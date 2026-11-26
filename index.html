@@ -406,11 +406,12 @@ function next(requeue){
 }
 function sessHead(sub,sub2){
   const pr=Math.min(100,Math.round(100*S.i/S.q.length));
-  return `${headBar("Karte "+(S.i+1)+" von "+S.q.length+(sub2?" · "+sub2:""),sub,"endsession")}<div class="bar"><div style="width:${pr}%"></div></div>`;
+  return `<div class="row"><button class="back" data-act="endsession" aria-label="Sitzung beenden">${IC.back}</button><div class="muted" style="flex:1;min-width:0;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Karte ${S.i+1} von ${S.q.length}${sub2?" · "+esc(sub2):""}</div></div><div class="bar"><div style="width:${pr}%"></div></div><div style="font-size:19px;font-weight:700;line-height:1.25;margin-top:2px">${esc(sub)}</div>`;
 }
-function stagesBar(k,s){const av=avail(k),pk=S&&S.ui.peek;return `<div class="row between"><span class="stagename">Stufe ${pk?1:s} · ${STAGES[(pk?1:s)-1]}</span>${s>1&&!pk?`<span class="muted" style="font-size:11px">1 antippen = nachlesen</span>`:""}</div><div class="stages">${[1,2,3,4].map(i=>{
+function stagesBar(k,s){const av=avail(k),pk=S&&S.ui.peek;return `<div class="row between"><span class="stagename">Stufe ${pk?1:s} · ${STAGES[(pk?1:s)-1]}</span>${s>1?`<span class="muted" style="font-size:11px">${pk?s+" antippen = zurück":"1 antippen = nachlesen"}</span>`:""}</div><div class="stages">${[1,2,3,4].map(i=>{
     if(i===1&&s>1)return `<button class="stg ${pk?"cur":"done"}" data-act="peek" aria-label="Stufe 1 nachlesen">1</button>`;
-    return `<span class="${!av.includes(i)?"na":i<s?"na":i===s?(pk?"done":"cur"):""}">${i}</span>`}).join("")}</div>`}
+    if(i===s&&pk)return `<button class="stg done" data-act="peekback" aria-label="Zurück zu Stufe ${s}">${i}</button>`;
+    return `<span class="${!av.includes(i)?"na":i<s?"na":i===s?"cur":""}">${i}</span>`}).join("")}</div>`}
 function rateBar(sug){
   const L=[["again","Nochmal","heute"],["hard","Schwer","morgen"],["good","Gut","bald"],["easy","Leicht","später"]];
   return `<div class="muted" style="text-align:center;font-size:12px">Wie gut saß es?</div><div class="rate">${L.map(([k,n,s])=>`<button class="${k==="again"?"again":""} ${k===sug?"sug":""}" data-act="rate" data-r="${k}">${n}<small>${s}</small></button>`).join("")}</div>`;
@@ -428,7 +429,6 @@ function renderSession(){
   if(u.peek){
     h+=u.peekOpen?`<div class="card" style="display:flex;flex-direction:column;gap:10px"><div class="muted">${esc(fol(t.folien))}</div>${ansehenHTML(t,it.fid)}</div>`
       :`<div class="card" style="display:flex;flex-direction:column;gap:10px;align-items:flex-start"><b>Inhalt von Stufe 1</b><span class="muted">Hier steht der komplette Inhalt des Themas. Erst aufdecken, wenn du wirklich nachschauen willst.</span><button data-act="peekopen" style="width:100%">Inhalte ansehen</button></div>`;
-    h+=`<button class="btn-p" data-act="peekback">Zurück zu Stufe ${it.stage} · ${STAGES[it.stage-1]}</button>`;
     app.innerHTML=h;return;
   }
   if(it.stage===1){
