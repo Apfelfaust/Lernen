@@ -12,7 +12,7 @@
 <link rel="icon" type="image/png" href="icons/icon-192.png">
 <title>Lernen</title>
 <style>
-:root{--bg:#F3F5F8;--card:#fff;--ink:#1F2328;--sub:#5B6470;--line:#E6E9EE;--blue:#2F5FB3;--blue-d:#1C3F7A;--blue-l:#DCE8FB;--blue-xl:#EAF1FC;--red:#C8553D;--red-d:#9A2E22;--red-l:#FCEBEA;--red-b:#F0C4BE;--safe:env(safe-area-inset-top)}
+:root{--bg:#F3F5F8;--card:#fff;--ink:#1F2328;--sub:#5B6470;--line:#E6E9EE;--blue:#336DE6;--blue-d:#1D49AA;--blue-l:#DCE7FC;--blue-xl:#EDF3FD;--red:#C8553D;--red-d:#9A2E22;--red-l:#FCEBEA;--red-b:#F0C4BE;--safe:env(safe-area-inset-top)}
 *{box-sizing:border-box}
 html,body{overflow-x:clip;margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",Inter,system-ui,sans-serif;-webkit-text-size-adjust:100%}
 #safe{position:fixed;top:0;left:0;right:0;height:var(--safe);background:var(--bg);z-index:20}
@@ -30,7 +30,7 @@ button,.btn{font:inherit;cursor:pointer;border-radius:14px;min-height:48px;paddi
 .hero{background:var(--blue);color:#fff;border-radius:18px;padding:14px 16px;display:flex;flex-direction:column;gap:8px}
 .hero .big{font-size:34px;font-weight:700}
 .bar{height:6px;background:var(--line);border-radius:3px;overflow:hidden;display:flex}.bar>div{height:6px;background:var(--blue)}
-.bar .mid{background:#9DB7E4}
+.bar .mid{background:#A9C4F5}
 .list>.item{padding:11px 0;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:6px;cursor:pointer}
 .list>.item:last-child{border-bottom:none}
 .sugg{display:flex;gap:12px;align-items:center;background:#fff;border-radius:14px;padding:12px 14px;cursor:pointer;border:none;text-align:left;width:100%;min-height:60px;font-weight:400}
@@ -39,7 +39,14 @@ button,.btn{font:inherit;cursor:pointer;border-radius:14px;min-height:48px;paddi
 nav{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid #E1E5EA;display:flex;justify-content:space-around;padding:8px 0 calc(8px + env(safe-area-inset-bottom));z-index:5}
 nav button{border:none;background:none;min-height:44px;display:flex;flex-direction:column;align-items:center;gap:3px;font-size:11px;color:var(--sub);font-weight:500;padding:4px 18px}
 nav button.on{color:var(--blue);font-weight:600}
-.head{position:sticky;top:var(--safe);z-index:10;background:var(--bg);margin:-6px -14px 0;padding:4px 14px 8px;display:flex;flex-direction:column;gap:8px}
+.head{position:sticky;top:var(--safe);z-index:10;background:var(--bg);margin:-6px -14px 0;padding:2px 14px 0;display:flex;flex-direction:column;gap:6px}
+.head .back{width:34px;height:34px;min-height:34px;background:none;margin-left:-8px}
+.head .bar,.head .bar>div{height:3px}
+.htitle{background:#fff;border-radius:16px 16px 0 0;border-bottom:1px solid var(--line);padding:12px 14px 9px;margin-top:2px}
+.head:has(.htitle)+.card,.head:has(.htitle)+details.card{border-top-left-radius:0;border-top-right-radius:0;margin-top:-12px}
+.stages .wide{flex:2.2}
+.ring{position:relative;width:44px;height:44px;flex:none}.ring svg{position:absolute;inset:0}.ring b{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:11.5px;line-height:1;color:var(--ink)}.ring b small{font-size:8.5px;color:var(--sub);font-weight:500;margin-top:1px}
+.stages .stg,.stages span{height:28px;min-height:28px}
 .back{width:44px;height:44px;min-height:44px;padding:0;display:flex;align-items:center;justify-content:center;border:none;flex:none}
 .stages{display:flex;gap:6px;align-items:center}
 .stages span{flex:1;height:30px;border-radius:8px;background:#fff;color:var(--sub);font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center}
@@ -71,7 +78,7 @@ td:first-child{font-weight:600;width:34%}
 .ansb.bad{border:2px solid var(--red);background:var(--red-l)}
 .grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
 .navb{position:relative}.nbadge{position:absolute;top:0;right:10px;min-width:20px;height:20px;padding:0 6px;border-radius:10px;background:var(--red);color:#fff;font-size:11px;font-weight:700;line-height:20px;text-align:center}
-.zbar{position:fixed;left:0;right:0;bottom:0;z-index:15;background:var(--blue);color:#fff;padding:18px 16px calc(30px + env(safe-area-inset-bottom));min-height:210px;border-radius:18px 18px 0 0;box-shadow:0 -4px 16px rgba(28,63,122,.18);touch-action:pan-y}
+.zbar{position:fixed;left:0;right:0;bottom:0;z-index:15;background:var(--blue);color:#fff;padding:18px 16px calc(30px + env(safe-area-inset-bottom));min-height:210px;border-radius:18px 18px 0 0;box-shadow:0 -4px 16px rgba(29,73,170,.18);touch-action:pan-y}
 .zin{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
 .zrow{display:flex;align-items:center;justify-content:center;gap:12px}
 @media (pointer:coarse){.zarr{display:none}}
@@ -97,7 +104,7 @@ textarea{width:100%;min-height:110px;border:1px solid #D5DAE1;border-radius:12px
 .badge{font-size:11px;font-weight:600;padding:3px 7px;border-radius:999px;background:var(--blue-l);color:var(--blue-d);white-space:nowrap}
 .badge.grey{background:#E8EBEF;color:var(--sub)}
 .dots{display:flex;gap:4px;flex-wrap:wrap}.dots i{width:10px;height:10px;border-radius:5px;background:#D5DAE1;display:block}
-.dots i.w{background:#9DB7E4}.dots i.s{background:var(--blue)}
+.dots i.w{background:#A9C4F5}.dots i.s{background:var(--blue)}
 .lab{font-size:11px;font-weight:700;color:var(--blue);letter-spacing:.05em;text-transform:uppercase;margin-bottom:6px}
 .step{display:flex;gap:10px;font-size:15px;line-height:1.5;padding:4px 0}.n{flex:none;width:22px;height:22px;border-radius:11px;background:var(--blue-l);color:var(--blue-d);font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:2px}
 .steps{margin:0;padding-left:20px;font-size:14px;line-height:1.5}
@@ -136,10 +143,10 @@ const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(M
 function toast(t){const e=document.createElement("div");e.className="toast";e.textContent=t;document.body.appendChild(e);setTimeout(()=>e.remove(),2400)}
 const IC={
  back:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1F2328" stroke-width="2" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>',
- lines:'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2F5FB3" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h10M4 17h7"/></svg>',
+ lines:'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#336DE6" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h10M4 17h7"/></svg>',
  plus:'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C8553D" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>',
- calc:'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2F5FB3" stroke-width="2" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8M8 12h2M14 12h2M8 16h2M14 16h2"/></svg>',
- map:'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2F5FB3" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="3"/><circle cx="4" cy="5" r="2"/><circle cx="20" cy="5" r="2"/><circle cx="4" cy="19" r="2"/><circle cx="20" cy="19" r="2"/><path d="M6 6l4 4M18 6l-4 4M6 18l4-4M18 18l-4-4"/></svg>'
+ calc:'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#336DE6" stroke-width="2" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8M8 12h2M14 12h2M8 16h2M14 16h2"/></svg>',
+ map:'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#336DE6" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="3"/><circle cx="4" cy="5" r="2"/><circle cx="20" cy="5" r="2"/><circle cx="4" cy="19" r="2"/><circle cx="20" cy="19" r="2"/><path d="M6 6l4 4M18 6l-4 4M6 18l4-4M18 18l-4-4"/></svg>'
 };
 
 let store=load();
@@ -278,7 +285,7 @@ function renderFach(){
   }
   const c=counts(f), tot=c.n+c.w+c.s, dK=dueCards(fid).length, nA=aufgaben(f).length;
   h+=`<div class="card" style="display:flex;flex-direction:column;gap:8px"><div class="row between"><b>Lernstand</b><span class="muted">${tot} Karten · ${nA} Rechenaufgaben</span></div>${progressBar(c)}
-  <div class="row" style="gap:14px;font-size:12px;color:var(--sub);flex-wrap:wrap"><span><i style="display:inline-block;width:10px;height:10px;border-radius:5px;background:var(--blue)"></i> ${c.s} sitzen</span><span><i style="display:inline-block;width:10px;height:10px;border-radius:5px;background:#9DB7E4"></i> ${c.w} in Arbeit</span><span><i style="display:inline-block;width:10px;height:10px;border-radius:5px;background:#D5DAE1"></i> ${c.n} neu</span></div>
+  <div class="row" style="gap:14px;font-size:12px;color:var(--sub);flex-wrap:wrap"><span><i style="display:inline-block;width:10px;height:10px;border-radius:5px;background:var(--blue)"></i> ${c.s} sitzen</span><span><i style="display:inline-block;width:10px;height:10px;border-radius:5px;background:#A9C4F5"></i> ${c.w} in Arbeit</span><span><i style="display:inline-block;width:10px;height:10px;border-radius:5px;background:#D5DAE1"></i> ${c.n} neu</span></div>
   ${f.data.hinweis?`<div class="muted" style="font-size:12px">${esc(f.data.hinweis)}</div>`:""}</div>`;
   h+=`<button class="btn-p" data-act="start" data-what="fach" data-fid="${esc(fid)}" ${dK?"":"disabled style='opacity:.5'"}>${dK} fällige Karten lernen</button>
   <div class="row" style="gap:8px"><button style="flex:1" data-act="start" data-what="rechnen" data-fid="${esc(fid)}">Rechnen</button><button style="flex:1" data-act="puzzle" data-fid="${esc(fid)}">Mindmap-Puzzle</button></div>`;
@@ -407,15 +414,18 @@ function next(requeue){
   prepItem();render();window.scrollTo(0,0);
 }
 const bh=(t,sub)=>`<div><div style="font-size:17px;font-weight:700;line-height:1.3">${esc(t)}</div>${sub?`<div class="muted" style="margin-top:2px">${esc(sub)}</div>`:""}</div>`;
-function inject(h,H){const i=h.indexOf('<div class="card"',h.indexOf('class="head"'));if(i<0)return h;const j=h.indexOf(">",i);return h.slice(0,j+1)+H+h.slice(j+1)}
-function sessHead(sub,sub2){
+function inject(h,H){return h.replace("<!--T-->",`<div class="htitle">${H}</div>`)}
+function restMin(){let m=0;for(let j=S.i;j<S.q.length;j++)m+=S.q[j].kind==='a'?3:1.5;return Math.max(1,Math.round(m))}
+function ringHTML(p,t){const r=19,c=2*Math.PI*r;return `<div class="ring" aria-label="noch etwa ${t} Minuten"><svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="${r}" fill="none" stroke="var(--line)" stroke-width="4"/><circle cx="22" cy="22" r="${r}" fill="none" stroke="var(--blue)" stroke-width="4" stroke-linecap="round" stroke-dasharray="${(c*p).toFixed(1)} ${c.toFixed(1)}" transform="rotate(-90 22 22)"/></svg><b>${t<100?t:(t/60).toFixed(1).replace('.',',')}<small>${t<100?'min':'Std'}</small></b></div>`}
+function stName(k,s){const pk=S&&S.ui.peek;return `Stufe ${pk?1:s} · ${STAGES[(pk?1:s)-1]}`}
+function sessHead(sub,sub2,right){
   const pr=Math.min(100,Math.round(100*S.i/S.q.length));
-  return `<div class="row"><button class="back" data-act="endsession" aria-label="Sitzung beenden">${IC.back}</button><div class="muted" style="flex:1;min-width:0;font-size:12px;line-height:1.35"><b style="color:var(--ink)">${esc(sub)}</b><br>Karte ${S.i+1} von ${S.q.length}${sub2?" · "+esc(sub2):""}</div></div><div class="bar"><div style="width:${pr}%"></div></div>`;
+  return `<div class="row"><button class="back" data-act="endsession" aria-label="Sitzung beenden">${IC.back}</button><div class="muted" style="flex:1;min-width:0;font-size:12px;line-height:1.35"><b style="color:var(--ink)">${esc(sub)}</b><br>Karte ${S.i+1} von ${S.q.length}${sub2?" · "+esc(sub2):""}</div>${ringHTML(pr/100,restMin())}</div>`;
 }
-function stagesBar(k,s){const av=avail(k),pk=S&&S.ui.peek;return `<div class="row between"><span class="stagename">Stufe ${pk?1:s} · ${STAGES[(pk?1:s)-1]}</span></div><div class="stages">${[1,2,3,4].map(i=>{
-    if(i===1&&s>1)return `<button class="stg ${pk?"cur":"done"}" data-act="peek" aria-label="Stufe 1 nachlesen">1</button>`;
+function stagesBar(k,s){const av=avail(k),pk=S&&S.ui.peek;return `<div class="stages">${[1,2,3,4].map(i=>{
+    if(i===1&&s>1)return `<button class="stg ${pk?"cur wide":"done"}" data-act="peek" aria-label="Stufe 1 nachlesen">${pk?"1 · "+STAGES[0]:1}</button>`;
     if(i===s&&pk)return `<button class="stg done" data-act="peekback" aria-label="Zurück zu Stufe ${s}">${i}</button>`;
-    return `<span class="${!av.includes(i)?"na":i<s?"na":i===s?"cur":""}">${i}</span>`}).join("")}</div>`}
+    return `<span class="${!av.includes(i)?"na":i<s?"na":i===s&&!pk?"cur wide":""}">${i===s&&!pk?i+" · "+STAGES[i-1]:i}</span>`}).join("")}</div>`}
 function rateBar(sug){
   const L=[["again","Nochmal","heute"],["hard","Schwer","morgen"],["good","Gut","bald"],["easy","Leicht","später"]];
   return `<div class="muted" style="text-align:center;font-size:12px">Wie gut saß es?</div><div class="rate">${L.map(([k,n,s])=>`<button class="${k==="again"?"again":""} ${k===sug?"sug":""}" data-act="rate" data-r="${k}">${n}<small>${s}</small></button>`).join("")}</div>`;
@@ -425,11 +435,11 @@ function renderSession(){
   if(it.kind==="a")return renderAufgabe(it,f);
   const t=it.t,k=it.k,u=S.ui;
   if(k.typ==="fall"){
-    let h=`<div class="head">${sessHead(f.name,"Fall")}</div>`+fallHTML(k,u,true);
+    let h=`<div class="head">${sessHead(f.name,"Fall")}<!--T--></div>`+fallHTML(k,u,true);
     if(u.revealed)h+=rateBar("good");
     app.innerHTML=inject(h,bh(k.titel,t.titel));return;
   }
-  let h=`<div class="head">${sessHead(f.name,"")}${stagesBar(k,it.stage)}</div>`;
+  let h=`<div class="head">${sessHead(f.name,"",stName(k,it.stage))}${stagesBar(k,it.stage)}<!--T--></div>`;
   const H=bh(t.titel,t.karten.length>1&&k.titel!==t.titel?k.titel:"");
   if(u.peek){
     h+=u.peekOpen?`<div class="card" style="display:flex;flex-direction:column;gap:10px"><div class="muted">${esc(fol(t.folien))}</div>${ansehenHTML(t,it.fid)}</div>`
@@ -490,7 +500,7 @@ function parseNum(s){
 }
 function renderAufgabe(it,f){
   const a=it.a,u=S.ui;
-  let h=`<div class="head">${sessHead(f.name,"Rechnen")}</div>`;
+  let h=`<div class="head">${sessHead(f.name,"Rechnen")}<!--T--></div>`;
   h+=`<div class="card" style="display:flex;flex-direction:column;gap:10px"><p class="txt">${esc(a.text)}</p>
   ${a.anlage?`<details><summary>Anlage (wie in der Klausur)</summary><p class="txt muted" style="font-size:13px">${esc(a.anlage)}</p></details>`:""}
   <label class="muted" style="display:flex;flex-direction:column;gap:6px">Dein Ergebnis${a.einheit?" in "+esc(a.einheit):""}<input class="numin" id="num" inputmode="decimal" value="${esc(u.val||"")}" ${u.checked?"readonly":""} autocomplete="off"></label></div>`;
