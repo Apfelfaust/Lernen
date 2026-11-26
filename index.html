@@ -163,6 +163,7 @@ function normalize(f){
   });
 }
 const fach=id=>F.find(f=>f.id===id);
+const fol=s=>/^\d/.test(String(s||""))?"Folie "+s:String(s||"");
 const themen=f=>f?.data?.themen||[];
 const aufgaben=f=>f?.data?.aufgaben||[];
 const thema=(fid,tid)=>themen(fach(fid)).find(t=>t.id===tid);
@@ -285,7 +286,7 @@ function renderFach(){
     const dots=t.karten.map(k=>`<i class="${status(fid,t,k)==="s"?"s":status(fid,t,k)==="w"?"w":""}"></i>`).join("");
     const nf=t.karten.filter(k=>k.typ==="fall").length;
     h+=`<div class="item" data-act="openthema" data-tid="${esc(t.id)}"><div class="row between" style="align-items:flex-start"><span style="font-size:14.5px;font-weight:600">${esc(t.titel)}</span><span class="badge ${t.relevanz==="mittel"?"grey":""}">${t.relevanz==="mittel"?"Mittel":"Kern"}</span></div>
-    <div class="row between"><span class="muted" style="font-size:12px">Folie ${esc(t.folien)} · ${t.art==="rechnen"?"Rechnen":"Wissen"} · ${t.karten.length} Karten${nf?` · ${nf} Fälle`:""}</span><span class="dots">${dots}</span></div></div>`;
+    <div class="row between"><span class="muted" style="font-size:12px">${esc(fol(t.folien))} · ${t.art==="rechnen"?"Rechnen":"Wissen"} · ${t.karten.length} Karten${nf?` · ${nf} Fälle`:""}</span><span class="dots">${dots}</span></div></div>`;
   });
   app.innerHTML=h+`</div>`;
 }
@@ -304,7 +305,7 @@ function renderThema(){
   const fid=view.fach, t=thema(fid,view.thema), f=fach(fid);
   const auf=aufgaben(f).filter(a=>a.thema===t.id);
   let h=`<div class="head">${headBar(t.ast,t.titel)}</div>`;
-  h+=`<div class="row" style="gap:6px;flex-wrap:wrap"><span class="badge ${t.relevanz==="mittel"?"grey":""}">${t.relevanz==="mittel"?"Mittel":"Kern"}</span><span class="badge grey">${t.art==="rechnen"?"Rechnen":"Wissen"}</span><span class="muted">Folie ${esc(t.folien)}</span></div>`;
+  h+=`<div class="row" style="gap:6px;flex-wrap:wrap"><span class="badge ${t.relevanz==="mittel"?"grey":""}">${t.relevanz==="mittel"?"Mittel":"Kern"}</span><span class="badge grey">${t.art==="rechnen"?"Rechnen":"Wissen"}</span><span class="muted">${esc(fol(t.folien))}</span></div>`;
   h+=`<div class="card" style="display:flex;flex-direction:column;gap:10px">${ansehenHTML(t,fid)}</div>`;
   h+=`<button class="btn-p" data-act="start" data-what="thema" data-fid="${esc(fid)}" data-tid="${esc(t.id)}">Alle ${t.karten.length} Karten dieses Themas lernen</button>`;
   h+=`<div class="lab" style="margin:6px 0 -4px">Karten</div><div class="card list" style="padding:2px 14px">`;
@@ -346,7 +347,7 @@ function fallHTML(k,u,inSession){
 }
 function renderFall(){
   const v=view.fall, k=karte(v.fid,v.tid,v.cid), t=thema(v.fid,v.tid);
-  let h=`<div class="head">${headBar(t.titel,k.titel+(k.folien?" · Folie "+k.folien:""),"closefall")}</div>`+fallHTML(k,v,false);
+  let h=`<div class="head">${headBar(t.titel,k.titel+(k.folien?" · "+fol(k.folien):""),"closefall")}</div>`+fallHTML(k,v,false);
   if(v.revealed)h+=`<button class="btn-p" data-act="closefall">Zurück</button>`;
   app.innerHTML=h;
 }
@@ -425,13 +426,13 @@ function renderSession(){
   }
   let h=`<div class="head">${sessHead(t.titel,t.karten.length>1?k.titel:"")}${stagesBar(k,it.stage)}</div>`;
   if(u.peek){
-    h+=u.peekOpen?`<div class="card" style="display:flex;flex-direction:column;gap:10px"><div class="muted">Folie ${esc(t.folien)}</div>${ansehenHTML(t,it.fid)}</div>`
+    h+=u.peekOpen?`<div class="card" style="display:flex;flex-direction:column;gap:10px"><div class="muted">${esc(fol(t.folien))}</div>${ansehenHTML(t,it.fid)}</div>`
       :`<div class="card" style="display:flex;flex-direction:column;gap:10px;align-items:flex-start"><b>Inhalt von Stufe 1</b><span class="muted">Hier steht der komplette Inhalt des Themas. Erst aufdecken, wenn du wirklich nachschauen willst.</span><button data-act="peekopen" style="width:100%">Inhalte ansehen</button></div>`;
     h+=`<button class="btn-p" data-act="peekback">Zurück zu Stufe ${it.stage} · ${STAGES[it.stage-1]}</button>`;
     app.innerHTML=h;return;
   }
   if(it.stage===1){
-    h+=`<div class="card" style="display:flex;flex-direction:column;gap:10px"><b style="font-size:17px">${esc(t.titel)}</b><div class="muted">Folie ${esc(t.folien)}</div>${ansehenHTML(t,it.fid)}</div>
+    h+=`<div class="card" style="display:flex;flex-direction:column;gap:10px"><b style="font-size:17px">${esc(t.titel)}</b><div class="muted">${esc(fol(t.folien))}</div>${ansehenHTML(t,it.fid)}</div>
     <button class="btn-p" data-act="seen">Verstanden – weiter</button>`;
   }else if(it.stage===2){
     const all=Object.keys(u.matched).length===k.zuordnen.length;

@@ -1,0 +1,1495 @@
+{
+ "format": 2,
+ "fach": "vt-becker",
+ "name": "Versicherungstheorie · Becker",
+ "stand": "2026-11-26",
+ "hinweis": "Teilklausur Versicherungsökonomik (Probeklausuren: 40 Min., Rechnen + Zeichnen + Literatur). „Wie hoch ist der Nutzen?“ = rechnen; Zeichnung mit echten Werten, Lineal, farbigen Stiften. Kapitel 4 (Vertrieb) liegt nur als Bild vor.",
+ "themen": [
+  {
+   "id": "modell",
+   "ast": "Das Versicherungsmodell",
+   "titel": "Bausteine des Versicherungsmodells",
+   "folien": "9–18",
+   "art": "rechnen",
+   "relevanz": "kern",
+   "ansehen": [
+    {
+     "typ": "text",
+     "inhalt": "Becker betrachtet zwei Zeitpunkte: heute wird über die Versicherung entschieden, morgen ist der VN entweder gesund oder krank. Jede mögliche Lage ist ein Punkt in einem Diagramm mit dem Vermögen im gesunden Zustand (Wg) auf der waagrechten und im kranken Zustand (Wk) auf der senkrechten Achse. Ohne Versicherung liegt der VN im Anfangsausstattungspunkt A – einer unsicheren Lage."
+    },
+    {
+     "typ": "formel",
+     "inhalt": "ohne Versicherung:  Wg = W,  Wk = W − L\nmit Versicherung:  Wg = W − pS,  Wk = W − L − pS + S"
+    },
+    {
+     "typ": "tabelle",
+     "zeilen": [
+      [
+       "W",
+       "Anfangsvermögen (Wealth)"
+      ],
+      [
+       "L",
+       "Verlust im Schadenfall (Loss)"
+      ],
+      [
+       "k (κ)",
+       "Wahrscheinlichkeit für den Schaden, z. B. Erkrankung"
+      ],
+      [
+       "S",
+       "Schadenersatz, den die Versicherung im Schadenfall zahlt"
+      ],
+      [
+       "p",
+       "Prämiensatz pro 1 € Schadenersatz – der VN zahlt pS"
+      ],
+      [
+       "Sicherheitslinie (SL)",
+       "alle Punkte mit Wk = Wg, also kein Risiko: die 45°-Linie"
+      ],
+      [
+       "Erwartungswertgerade (EWG)",
+       "alle Punkte mit gleichem Erwartungswert wie A; Steigung −(1−k)/k"
+      ],
+      [
+       "Versicherungsgerade (VG)",
+       "alle Punkte, die man mit Versicherung erreichen kann; Steigung −(1−p)/p"
+      ],
+      [
+       "faire Prämie",
+       "p = k: VU macht keinen Gewinn (Nullgewinnbedingung bei vollständiger Konkurrenz), VG liegt auf der EWG"
+      ]
+     ],
+     "kopf": [
+      "Baustein",
+      "Bedeutung"
+     ]
+    }
+   ],
+   "puzzle": [
+    "Wg waagrecht, Wk senkrecht",
+    "fair: p = k, VG = EWG"
+   ],
+   "karten": [
+    {
+     "id": "modell-1",
+     "titel": "Begriffe des Modells",
+     "frage": "Erkläre Anfangsausstattungspunkt, Sicherheitslinie, Erwartungswertgerade und Versicherungsgerade.",
+     "kernpunkte": [
+      "A = (W | W − L): unsichere Lage ohne Versicherung",
+      "SL: Wk = Wg, 45°-Linie, kein Risiko",
+      "EWG: gleicher Erwartungswert wie A, Steigung −(1−k)/k",
+      "VG: mit Versicherung erreichbare Punkte, Steigung −(1−p)/p"
+     ],
+     "zuordnen": [
+      [
+       "Sicherheitslinie",
+       "Alle Punkte mit Wk = Wg – der VN trägt kein Risiko mehr, die 45°-Linie"
+      ],
+      [
+       "Erwartungswertgerade",
+       "Alle Vermögenslagen, die im Erwartungswert genauso viel wert sind wie die Ausgangslage"
+      ],
+      [
+       "Versicherungsgerade",
+       "Alle Vermögenslagen, die der VN durch Kauf von mehr oder weniger Schadenersatz erreichen kann"
+      ],
+      [
+       "Anfangsausstattungspunkt",
+       "Die unsichere Lage ohne Versicherung: gesund W, krank W − L"
+      ]
+     ],
+     "luecken": [
+      "Mit Versicherung gilt: Wg = W − {{pS|p·S|p*S}}",
+      "Im kranken Zustand gilt: Wk = W − L − pS + {{S}}",
+      "Die Sicherheitslinie ist die {{45°-Linie|45-Grad-Linie|45°|Winkelhalbierende}}."
+     ]
+    },
+    {
+     "id": "modell-2",
+     "titel": "Faire Prämie",
+     "frage": "Wann ist eine Versicherung fair, und warum liegt dann die Versicherungsgerade auf der Erwartungswertgeraden?",
+     "kernpunkte": [
+      "Fair heißt p = k: Prämie = erwarteter Schaden",
+      "Bei vollständiger Konkurrenz Nullgewinnbedingung: Π = pS − kS = 0",
+      "Dann haben VG und EWG die gleiche Steigung und gehen beide durch A → sie fallen zusammen",
+      "Liegt p > k (Verwaltungskosten, Oligopol), liegt die VG unter der EWG"
+     ],
+     "luecken": [
+      "Eine faire Prämie liegt vor, wenn {{p = k|p=k|k = p}} gilt.",
+      "Der Gewinn des VU ist Π = pS − {{kS|k·S|k*S}}.",
+      "Wegen Verwaltungskosten verlangt das VU meist p {{>|größer|größer als}} k."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "eu-sae",
+   "ast": "Das Versicherungsmodell",
+   "titel": "Erwartungsnutzen und Sicherheitsäquivalent",
+   "folien": "19–29",
+   "art": "rechnen",
+   "relevanz": "kern",
+   "ansehen": [
+    {
+     "typ": "text",
+     "inhalt": "Weil der VN nicht weiß, ob er morgen krank wird, bewertet er eine Lage mit dem Erwartungsnutzen: Nutzen je Zustand, gewichtet mit der Wahrscheinlichkeit (von-Neumann-Morgenstern-Nutzen, Bernoulli-Prinzip). Das Sicherheitsäquivalent (SÄ) ist das sichere Vermögen, das genauso viel Nutzen bringt wie die unsichere Lage. Daraus folgt, wie viel er höchstens für eine Vollversicherung zahlen würde."
+    },
+    {
+     "typ": "formel",
+     "inhalt": "EU = k · u(Wk) + (1 − k) · u(Wg)\nSÄ: u(SÄ) = EU  →  SÄ = u⁻¹(EU)   (bei √W: SÄ = EU²)\nmax. Zahlungsbereitschaft = W − SÄ\nRisikoprämie = Erwartungswert − SÄ"
+    },
+    {
+     "typ": "tabelle",
+     "zeilen": [
+      [
+       "Rechenweg",
+       "1. Zustände Wg und Wk aufschreiben → 2. Nutzen je Zustand → 3. mit k und 1 − k gewichten → 4. SÄ durch Umkehren → 5. mit Prämie vergleichen"
+      ],
+      [
+       "Achtung",
+       "nie die Wurzel aus dem Erwartungswert ziehen: EW(U) ≠ U(EW)"
+      ],
+      [
+       "Umkehrfunktionen",
+       "√W → hoch 2 · W^(1/3) → hoch 3 · W^(2/3) → hoch 1,5 · Faktor wie 0,7 vorher herausteilen"
+      ],
+      [
+       "Indifferenzkurve",
+       "alle Punkte mit gleichem EU; auf der SL hat sie dieselbe Steigung wie die EWG"
+      ]
+     ],
+     "kopf": [
+      "",
+      ""
+     ]
+    }
+   ],
+   "puzzle": [
+    "EU = k·u(Wk) + (1−k)·u(Wg)",
+    "SÄ = sicheres Vermögen mit gleichem Nutzen"
+   ],
+   "karten": [
+    {
+     "id": "eusae-1",
+     "titel": "Erwartungsnutzen",
+     "frage": "Wie berechnet man den Erwartungsnutzen, und welcher typische Fehler passiert dabei?",
+     "kernpunkte": [
+      "Erst Nutzen je Zustand berechnen",
+      "dann mit k und (1 − k) gewichten",
+      "nicht die Wurzel aus dem Erwartungswert ziehen",
+      "EW(U) < U(EW) zeigt Risikoaversion"
+     ],
+     "zuordnen": [
+      [
+       "Erwartungsnutzen",
+       "Mit den Wahrscheinlichkeiten gewichteter Nutzen der beiden Zustände"
+      ],
+      [
+       "Sicherheitsäquivalent",
+       "Das sichere Vermögen, das genauso viel Nutzen bringt wie die unsichere Lage"
+      ],
+      [
+       "Zahlungsbereitschaft",
+       "So viel würde der VN höchstens für eine Vollversicherung zahlen: W − SÄ"
+      ],
+      [
+       "Risikoprämie",
+       "Der Betrag über dem erwarteten Schaden, den er für Sicherheit zu zahlen bereit ist: EW − SÄ"
+      ]
+     ],
+     "luecken": [
+      "EU = k · u(Wk) + ({{1 − k|1-k|1 - k}}) · u(Wg)",
+      "Bei u(W) = √W gilt: SÄ = EU hoch {{2|zwei}}.",
+      "Maximale Zahlungsbereitschaft = W − {{SÄ|Sicherheitsäquivalent}}"
+     ]
+    },
+    {
+     "id": "eusae-2",
+     "titel": "Sicherheitsäquivalent",
+     "frage": "Was ist das Sicherheitsäquivalent, und wie entscheidest du damit, ob sich eine Versicherung lohnt?",
+     "kernpunkte": [
+      "Sichere Vermögenslage (auf der SL) mit gleichem Nutzen wie die unsichere",
+      "SÄ durch Umkehrung der Nutzenfunktion aus EU",
+      "Zahlungsbereitschaft W − SÄ mit der verlangten Prämie vergleichen",
+      "Gegenprobe: Nutzen mit Versicherung > EU ohne → abschließen"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "risikoeinstellung",
+   "ast": "Das Versicherungsmodell",
+   "titel": "Risikoaversion, -neutralität, -freude",
+   "folien": "28–31",
+   "art": "wissen",
+   "relevanz": "kern",
+   "ansehen": [
+    {
+     "typ": "text",
+     "inhalt": "Wie stark jemand Sicherheit schätzt, zeigt sich im Diagramm an der Lage des Sicherheitsäquivalents und an der Krümmung der Indifferenzkurven. Risikoaverse verzichten auf Erwartungswert, um sicher zu sein – deshalb liegt ihr SÄ unter der Erwartungswertgeraden."
+    },
+    {
+     "typ": "tabelle",
+     "zeilen": [
+      [
+       "risikoavers",
+       "SÄ liegt unter der EWG, IK nach außen gekrümmt; je stärker die Aversion, desto tiefer das SÄ und desto stärker die Krümmung – übliche Annahme für Individuen"
+      ],
+      [
+       "risikoneutral",
+       "SÄ = Erwartungswert, Indifferenzkurven sind Geraden (parallel zur EWG) – übliche Annahme für Firmen, z. B. Versicherer"
+      ],
+      [
+       "risikofreudig",
+       "sichere Lage ist weniger wert als die unsichere, SÄ über der EWG – erklärt z. B. Casino, Lotto, Bungeesprung"
+      ],
+      [
+       "Nutzenfunktion",
+       "√W: abnehmender Grenznutzen → risikoavers"
+      ]
+     ]
+    }
+   ],
+   "puzzle": [
+    "SÄ unter EWG: risikoavers",
+    "Casino nur mit Risikofreude erklärbar"
+   ],
+   "karten": [
+    {
+     "id": "risiko-1",
+     "titel": "Drei Risikoeinstellungen",
+     "frage": "Erkläre Risikoaversion, Risikoneutralität und Risikofreude im Versicherungsmodell.",
+     "kernpunkte": [
+      "avers: SÄ unter EWG, verzichtet auf Erwartungswert für Sicherheit",
+      "neutral: SÄ = EW, IK sind Geraden (Annahme für VU)",
+      "freudig: SÄ über EWG, unsichere Lage mehr wert",
+      "je risikoaverser, desto stärker gekrümmt die IK"
+     ],
+     "zuordnen": [
+      [
+       "risikoavers",
+       "Verzichtet auf Erwartungswert, um eine sichere Lage zu erreichen – das SÄ liegt unter der EWG"
+      ],
+      [
+       "risikoneutral",
+       "Bewertet nur den Erwartungswert – die Indifferenzkurven sind Geraden"
+      ],
+      [
+       "risikofreudig",
+       "Zieht die unsichere Lage einer sicheren mit gleichem Erwartungswert vor"
+      ],
+      [
+       "Versicherungsunternehmen",
+       "Wird im Modell üblicherweise als risikoneutral angenommen"
+      ]
+     ],
+     "luecken": [
+      "Bei Risikoaversion liegt das SÄ {{unter|unterhalb}} der EWG.",
+      "Je größer die Risikoaversion, desto stärker ist die {{Krümmung}} der Indifferenzkurve.",
+      "Roulettespielen ist nur mit {{Risikofreude|Risikoliebe}} vereinbar."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "nachfrage",
+   "ast": "Das Versicherungsmodell",
+   "titel": "Welche Versicherung wählt der VN?",
+   "folien": "32–37",
+   "art": "wissen",
+   "relevanz": "kern",
+   "ansehen": [
+    {
+     "typ": "text",
+     "inhalt": "Der VN bewegt sich auf der Versicherungsgeraden und wählt den Punkt, an dem er die höchste Indifferenzkurve erreicht. Wo dieser Punkt liegt, hängt nur davon ab, ob die Prämie fair, zu hoch oder zu niedrig ist. Diese drei Fälle reichen, um Argumentationsaufgaben ohne Rechnung zu lösen."
+    },
+    {
+     "typ": "tabelle",
+     "zeilen": [
+      [
+       "p = k (fair)",
+       "Vollversicherung S = L: Optimum auf der SL, weil die IK dort die Steigung der EWG hat"
+      ],
+      [
+       "p > k (unfair)",
+       "Teilversicherung S < L: höchste IK berührt die VG rechts der SL (Wk < Wg), ein Restrisiko bleibt"
+      ],
+      [
+       "p < k (subventioniert)",
+       "Überversicherung S > L: unrealistisch, VU würde Verluste machen; Bereicherungsverbot"
+      ],
+      [
+       "Pareto-Verbesserung",
+       "Vertrag ist für den VN besser (höhere IK) und für das VU nicht schlechter (Π ≥ 0)"
+      ]
+     ]
+    }
+   ],
+   "puzzle": [
+    "fair → Vollversicherung",
+    "unfair → Teilversicherung"
+   ],
+   "karten": [
+    {
+     "id": "nachfrage-1",
+     "titel": "Drei Fälle",
+     "frage": "Welchen Versicherungsumfang wählt ein risikoaverser VN bei fairer, unfairer und zu niedriger Prämie? Begründe mit dem Modell.",
+     "kernpunkte": [
+      "p = k: Vollversicherung S = L auf der SL",
+      "p > k: Teilversicherung S < L, Tangente IK/VG rechts der SL",
+      "p < k: Überversicherung S > L",
+      "Grund: IK hat auf der SL die Steigung der EWG"
+     ],
+     "zuordnen": [
+      [
+       "p = k",
+       "Der VN wählt eine Vollversicherung, sein Optimum liegt auf der Sicherheitslinie"
+      ],
+      [
+       "p > k",
+       "Der VN wählt eine Teilversicherung, ein Restrisiko bleibt bei ihm"
+      ],
+      [
+       "p < k",
+       "Der VN würde sich überversichern, mehr als den Schaden absichern"
+      ],
+      [
+       "Pareto-Verbesserung",
+       "Mindestens einer stellt sich besser, keiner schlechter – z. B. VN höhere IK, VU Gewinn null"
+      ]
+     ],
+     "luecken": [
+      "Bei fairer Prämie fragt der VN eine {{Vollversicherung}} nach, also S = L.",
+      "Bei unfairer Prämie gilt S {{<|kleiner|kleiner als}} L."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "musterfaelle",
+   "ast": "Das Versicherungsmodell",
+   "titel": "Rechen- und Zeichenfälle aus den Probeklausuren",
+   "folien": "PK 1, PK 2, Übungen",
+   "art": "rechnen",
+   "relevanz": "kern",
+   "ansehen": [
+    {
+     "typ": "text",
+     "inhalt": "Hier sind die Fälle gesammelt, die Becker in Übungen und Probeklausuren rechnen und zeichnen lässt. Laut Becker gilt: „Wie hoch ist der Nutzen?“ heißt rechnen. Eine Skizze irgendeines Sachverhalts ist keine Zeichnung des konkreten Sachverhalts – also mit den echten Werten, mit Lineal und farbigen Stiften zeichnen."
+    },
+    {
+     "typ": "tabelle",
+     "zeilen": [
+      [
+       "Zeichnung",
+       "Achsen gleich skalieren, A eintragen, SL als 45°-Linie, EWG und VG je durch A und ihren Schnittpunkt mit der SL, SÄ auf der SL, Indifferenzkurven durch die Punkte"
+      ],
+      [
+       "Schnittpunkt EWG/SL",
+       "bei W − kL (fairer sicherer Wert)"
+      ],
+      [
+       "Schnittpunkt VG/SL",
+       "bei W − pL (sicherer Wert nach Prämie)"
+      ],
+      [
+       "Herr Spahn",
+       "Übungsaufgabe: unfaire Prämie, nicht abschließen",
+       "fall:fall-spahn"
+      ],
+      [
+       "Herr Schuhmacher",
+       "Probeklausur 1: Ferrari, trotz unfairer Prämie abschließen",
+       "fall:fall-schuhmacher"
+      ],
+      [
+       "Herr Maier",
+       "Übung: Haus mit Grundstück, Wirkung von zusätzlichem Vermögen",
+       "fall:fall-maier"
+      ],
+      [
+       "Herr Sparbier",
+       "Probeklausur 2: Roulette und Risikofreude",
+       "fall:fall-sparbier"
+      ]
+     ]
+    }
+   ],
+   "puzzle": [
+    "Zeichnen = echte Werte, Lineal, Farben",
+    "VG schneidet SL bei W − pL"
+   ],
+   "karten": [
+    {
+     "id": "zeichnen-1",
+     "titel": "Zeichnung im Modell",
+     "frage": "Beschreibe Schritt für Schritt, wie du eine vollständige Zeichnung im Versicherungsmodell mit konkreten Werten anfertigst.",
+     "kernpunkte": [
+      "Achsen Wg (waagrecht) und Wk (senkrecht), gleich skaliert",
+      "A = (W | W − L) eintragen, SL als 45°-Linie",
+      "EWG durch A und (W − kL | W − kL), VG durch A und (W − pL | W − pL)",
+      "SÄ auf der SL, Indifferenzkurven durch A/SÄ und durch den Vertragspunkt",
+      "konkrete Werte, Lineal, farbige Stifte"
+     ],
+     "luecken": [
+      "Die EWG schneidet die SL im Punkt W − {{kL|k·L|k*L}}.",
+      "Die VG schneidet die SL im Punkt W − {{pL|p·L|p*L}}."
+     ]
+    },
+    {
+     "id": "fall-spahn",
+     "typ": "fall",
+     "titel": "Herr Spahn (Übungsaufgabe)",
+     "folien": "Übung",
+     "sachverhalt": "Anfangsvermögen 100 €. Wird Herr Spahn krank, verliert er 60 €; Wahrscheinlichkeit 50 %. Die Versicherung bietet Schutz zu einem Prämiensatz von 60 %. Nutzenfunktion u(W) = √W.",
+     "frage": "a) Sollte er die Vollversicherung abschließen (Nutzen ohne und mit)? b) Wie viel würde er höchstens zahlen (SÄ)? c) Nutzen bei fairem Vertrag? d) Was gehört in die Zeichnung?",
+     "loesung": [
+      [
+       "Zustände",
+       "Wg = 100, Wk = 40 → A = (100 | 40)"
+      ],
+      [
+       "a) ohne",
+       "EU₀ = 0,5 · √40 + 0,5 · √100 = 0,5 · 6,32 + 0,5 · 10 = 8,16"
+      ],
+      [
+       "a) mit",
+       "Prämie 0,6 · 60 = 36 → sicher 64 € → EU = √64 = 8,00 < 8,16 → nicht abschließen (p > k, Aufschlag zu hoch)"
+      ],
+      [
+       "b) SÄ",
+       "SÄ = 8,16² = 66,62 → max. Prämie 100 − 66,62 = 33,38 € (30 € erwarteter Schaden + 3,38 € Risikoprämie)"
+      ],
+      [
+       "c) fair",
+       "p = k = 0,5 → Prämie 30 → sicher 70 → EU = √70 = 8,37 > 8,16"
+      ],
+      [
+       "d) Zeichnung",
+       "A (100|40), SL, EWG von A nach (70|70), VG von A nach (64|64), SÄ (66,62|66,62), IK durch A und SÄ, IK durch F (70|70)"
+      ]
+     ],
+     "ergebnis": "Nicht abschließen; Zahlungsbereitschaft 33,38 € < 36 €. Reihenfolge: fair 8,37 > ohne 8,16 > Angebot 8,00.",
+     "merke": "Nie die Wurzel aus dem Erwartungswert ziehen (√70 wäre der Nutzen bei fairer Vollversicherung, nicht ohne Versicherung)."
+    },
+    {
+     "id": "fall-schuhmacher",
+     "typ": "fall",
+     "titel": "Herr Schuhmacher und sein Ferrari (Probeklausur 1)",
+     "folien": "PK 1",
+     "sachverhalt": "Ferrari im Wert von 1 Mio. €, sonst kein Vermögen. Diebstahl 7 %, Totalschaden durch Brand 5 % (jeweils Totalverlust). Nutzenfunktion u(W) = W^(2/3). Versicherung gegen beide Risiken für 150.000 €.",
+     "frage": "a) Fair? b) Abschließen? c) Nutzen auf der EWG? e) Optimaler Umfang bei frei wählbarer Deckung? f) Versicherung über dem Fahrzeugwert?",
+     "loesung": [
+      [
+       "Zustände",
+       "k = 0,07 + 0,05 = 0,12 (Ereignisse schließen sich aus) → Wg = 1.000.000, Wk = 0"
+      ],
+      [
+       "a) fair?",
+       "Erwarteter Schaden 0,12 · 1 Mio. = 120.000 € < 150.000 € → p = 15 % > k = 12 % → unfair"
+      ],
+      [
+       "b) ohne",
+       "EU₀ = 0,88 · 1.000.000^(2/3) + 0,12 · 0 = 0,88 · 10.000 = 8.800"
+      ],
+      [
+       "b) mit",
+       "EU = 850.000^(2/3) = 8.973 > 8.800 → abschließen; SÄ = 8.800^1,5 = 825.513 → ZB 174.487 € > 150.000 €"
+      ],
+      [
+       "c) EWG",
+       "fair: 1.000.000 − 120.000 = 880.000 → EU = 880.000^(2/3) = 9.183"
+      ],
+      [
+       "e) Umfang",
+       "p > k → Teilversicherung S < L, Tangente der höchsten IK an die VG rechts der SL"
+      ],
+      [
+       "f) Über Wert",
+       "nur bei p < k denkbar; unwahrscheinlich: VU macht Verlust, Bereicherungsverbot"
+      ]
+     ],
+     "ergebnis": "Trotz unfairer Prämie abschließen, weil die Risikoaversion beim drohenden Totalverlust sehr hoch ist.",
+     "merke": "Wahrscheinlichkeiten sich ausschließender Totalverluste addieren: k = 12 %, 1 − k = 0,88."
+    },
+    {
+     "id": "fall-maier",
+     "typ": "fall",
+     "titel": "Herr Maier und sein Haus (Übungsaufgabe)",
+     "folien": "Übung",
+     "sachverhalt": "Einfamilienhaus 800.000 €, davon Grundstück 200.000 €. Feuerrisiko 1 %, sonst kein Vermögen. Nutzenfunktion u(W) = 0,7 · W^(1/3). Feuerversicherung für 7.000 €. b) zusätzlich 2 Mio. € Wertpapiere.",
+     "frage": "Sollte Herr Maier die Versicherung abschließen – a) ohne, b) mit den Wertpapieren? Begründe über Erwartungsnutzen, SÄ und Zahlungsbereitschaft.",
+     "loesung": [
+      [
+       "Zustände a)",
+       "Wg = 800.000, Wk = 200.000 (Grundstück brennt nicht) → L = 600.000"
+      ],
+      [
+       "EU a)",
+       "0,99 · 0,7 · 800.000^(1/3) + 0,01 · 0,7 · 200.000^(1/3) = 64,74"
+      ],
+      [
+       "SÄ a)",
+       "(64,74 ÷ 0,7)³ = 791.152 → ZB = 8.848 € > 7.000 € → abschließen"
+      ],
+      [
+       "Zustände b)",
+       "Wg = 2.800.000, Wk = 2.200.000, EU = 98,59 → SÄ = 2.793.517"
+      ],
+      [
+       "ZB b)",
+       "2.800.000 − 2.793.517 = 6.483 € < 7.000 € → nicht abschließen"
+      ],
+      [
+       "Warum?",
+       "Abnehmende absolute Risikoaversion: Mit mehr Vermögen tut derselbe Verlust weniger weh, die Risikoprämie sinkt von 2.848 € auf 483 €."
+      ]
+     ],
+     "ergebnis": "a) abschließen, b) nicht abschließen.",
+     "merke": "Erst durch 0,7 teilen, dann hoch 3 – und auf den echten Verlust achten (ohne Grundstück)."
+    },
+    {
+     "id": "fall-sparbier",
+     "typ": "fall",
+     "titel": "Herr Sparbier am Roulette (Probeklausur 2)",
+     "folien": "PK 2",
+     "sachverhalt": "Herr Sparbier steht mit 1 € vor dem Roulettetisch und will alles auf Rot setzen. 37 Fächer: 18 rot, 18 schwarz, 1 ohne Farbe. Trifft er Rot, bekommt er 2 € ausgezahlt, sonst nichts.",
+     "frage": "a) Ausgangssituation und Lage bei Spiel im Modell? b) Liegt die Spiellage auf, über oder unter der EWG? c) Ist Spielen mit Risikoaversion vereinbar? Welche Indifferenzkurven passen?",
+     "loesung": [
+      [
+       "Achsen",
+       "Zwei Zustände: verlieren (statt krank) und gewinnen (statt gesund)"
+      ],
+      [
+       "aa) Ausgang",
+       "Nicht spielen: sicher 1 € in beiden Zuständen → Punkt (1 | 1) auf der Sicherheitslinie"
+      ],
+      [
+       "ab) Spiel",
+       "Gewinnen 2 €, verlieren 0 € → Punkt (2 | 0)"
+      ],
+      [
+       "b) EWG",
+       "Erwartungswert des Spiels = 18/37 · 2 = 0,973 € < 1 € → die Spiellage liegt unter der EWG durch (1|1)"
+      ],
+      [
+       "ca) Risikoaversion",
+       "Nein. Er gibt sichere 1 € für eine unsichere Lage mit geringerem Erwartungswert auf – nicht einmal ein Risikoneutraler würde das tun."
+      ],
+      [
+       "cb) IK",
+       "Nur risikofreudig: IK zur anderen Seite gekrümmt; die IK durch (2|0) liegt höher als die IK durch (1|1)"
+      ]
+     ],
+     "ergebnis": "Spielen ist nur mit Risikofreude erklärbar.",
+     "merke": "Erwartungswert vergleichen: 0,973 < 1 → unter der EWG."
+    }
+   ]
+  },
+  {
+   "id": "asym-info",
+   "ast": "Marktversagen bei asymmetrischer Information",
+   "titel": "Asymmetrische Information und Agentur-Probleme",
+   "folien": "39–49",
+   "art": "wissen",
+   "relevanz": "kern",
+   "ansehen": [
+    {
+     "typ": "text",
+     "inhalt": "Märkte erreichen ihr Wohlfahrtsoptimum nicht, wenn Marktversagen vorliegt – z. B. durch Monopole, externe Effekte oder öffentliche Güter. Auf Versicherungsmärkten ist vor allem asymmetrische Information wichtig: Zwei Parteien schließen einen Vertrag, wissen aber unterschiedlich viel über relevante Dinge (Endres/Martiensen). Das tritt nur bei Arbeitsteilung auf: Ein Prinzipal beauftragt einen Agenten, kann dessen Handeln aber nicht genau beobachten. Der Agent hat dann einen Anreiz, opportunistisch im eigenen Interesse zu handeln."
+    },
+    {
+     "typ": "tabelle",
+     "zeilen": [
+      [
+       "Prinzipal",
+       "schlechter informierte Partei, z. B. VU, Aktionär, Autobesitzer"
+      ],
+      [
+       "Agent",
+       "besser informierte Partei, z. B. VN, Manager, Mechaniker"
+      ],
+      [
+       "Hidden Characteristics",
+       "vor Vertragsschluss: Eigenschaften des Partners unbekannt → Adverse Selektion (z. B. Versicherung, Personalauswahl)"
+      ],
+      [
+       "Hidden Action",
+       "nach Vertragsschluss: Handlungen nicht beobachtbar → Moral Hazard (z. B. Leistung von Mitarbeitern)"
+      ],
+      [
+       "Hidden Information",
+       "nach Vertragsschluss: Handlungen beobachtbar, aber nicht beurteilbar → Moral Hazard (z. B. Investitionsentscheidung von Managern)"
+      ],
+      [
+       "Beispiel VU/VN",
+       "Prinzipal VU, Agent VN; Aufgabe: Sorgfalt, ehrliche Angabe der Risikomerkmale"
+      ]
+     ],
+     "kopf": [
+      "Begriff",
+      "Bedeutung"
+     ]
+    }
+   ],
+   "puzzle": [
+    "Prinzipal schlechter informiert",
+    "Hidden Characteristics → Adverse Selektion"
+   ],
+   "karten": [
+    {
+     "id": "asym-1",
+     "titel": "Prinzipal und Agent",
+     "frage": "Was versteht man unter asymmetrischer Information und einem Agentur-Problem? Nenne zwei Beispiele für Agentur-Beziehungen.",
+     "kernpunkte": [
+      "Zwei Parteien mit unterschiedlichem Informationsstand über vertragsrelevante Dinge",
+      "nur bei Arbeitsteilung",
+      "Prinzipal beauftragt Agenten, kann ihn nicht vollständig beobachten, unvollständiger Vertrag",
+      "Agent hat Anreiz zu opportunistischem Verhalten",
+      "Beispiele: Aktionär–Manager, VU–VN, Autobesitzer–Mechaniker"
+     ],
+     "zuordnen": [
+      [
+       "Prinzipal",
+       "Die schlechter informierte Partei, die einen anderen mit einer Aufgabe beauftragt"
+      ],
+      [
+       "Agent",
+       "Die besser informierte Partei, die die Aufgabe ausführt und eigene Interessen verfolgen kann"
+      ],
+      [
+       "Aktionär – Manager",
+       "Agentur-Beziehung mit der Aufgabe, den Shareholder Value zu maximieren"
+      ],
+      [
+       "VU – VN",
+       "Agentur-Beziehung, in der der VN sorgfältig sein und seine Risikomerkmale ehrlich angeben soll"
+      ]
+     ]
+    },
+    {
+     "id": "asym-2",
+     "titel": "Drei Arten von Agentur-Problemen",
+     "frage": "Grenze Hidden Characteristics, Hidden Action und Hidden Information ab und ordne Adverse Selektion und Moral Hazard zu.",
+     "kernpunkte": [
+      "Hidden Characteristics: vor Vertragsschluss, Eigenschaften unbekannt → Adverse Selektion",
+      "Hidden Action: nach Vertragsschluss, Handeln nicht beobachtbar → Moral Hazard",
+      "Hidden Information: Handeln beobachtbar, aber nicht beurteilbar → Moral Hazard"
+     ],
+     "zuordnen": [
+      [
+       "Hidden Characteristics",
+       "Vor Vertragsschluss sind Eigenschaften des Partners unbekannt – Gefahr der falschen Auswahl"
+      ],
+      [
+       "Hidden Action",
+       "Nach Vertragsschluss kann der Prinzipal das Handeln des Agenten nicht beobachten"
+      ],
+      [
+       "Hidden Information",
+       "Das Handeln ist sichtbar, aber der Prinzipal kann nicht beurteilen, ob es gut war"
+      ],
+      [
+       "Adverse Selektion",
+       "Ineffiziente Auswahl der Vertragspartner wegen versteckter Eigenschaften"
+      ],
+      [
+       "Moral Hazard",
+       "Opportunistisches Verhalten nach Vertragsschluss gegen Geist und Inhalt des Vertrags"
+      ]
+     ],
+     "luecken": [
+      "Hidden Characteristics führen zu {{Adverser Selektion|Adverse Selection|adverser Selektion}}.",
+      "Hidden Action und Hidden Information führen zu {{Moral Hazard}}."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "loesungen-agentur",
+   "ast": "Marktversagen bei asymmetrischer Information",
+   "titel": "Lösungen für Agentur-Probleme",
+   "folien": "54–64",
+   "art": "wissen",
+   "relevanz": "kern",
+   "ansehen": [
+    {
+     "typ": "text",
+     "inhalt": "Meist löst der Markt Informationsprobleme selbst, indem private Institutionen entstehen: Information wird beschafft oder bereitgestellt, Reputation aufgebaut und Verträge werden so gestaltet, dass sich ehrliches Verhalten lohnt. Zusätzlich kann der Staat eingreifen."
+    },
+    {
+     "typ": "tabelle",
+     "zeilen": [
+      [
+       "Screening",
+       "der schlechter Informierte beschafft Informationen, z. B. Gesundheitsfragen der Versicherung; nach Vertragsschluss: Monitoring; Grenze: lohnt nur, solange Grenznutzen > Grenzkosten"
+      ],
+      [
+       "Signaling",
+       "der besser Informierte gibt glaubwürdig Informationen weiter, z. B. Garantie, Selbstbehalt; glaubwürdig nur, wenn falsche Signale teurer sind als ihr Vorteil; nach Vertragsschluss: Reporting"
+      ],
+      [
+       "Reputation",
+       "guter Ruf als starkes Signal, schwer zu fälschen; wirkt umso besser, je häufiger die Transaktion und je leichter die Qualität danach erkennbar ist"
+      ],
+      [
+       "Anreizkompatible Verträge",
+       "Selbstauswahl zwischen Verträgen, Belohnung (Erfolgsbeteiligung) oder Bestrafung (Konventionalstrafe)"
+      ],
+      [
+       "Commitment",
+       "Selbstbindung durch transaktionsspezifische Investitionen, z. B. Spezialmaschine beim Zulieferer"
+      ],
+      [
+       "Bonding",
+       "freiwilliges Pfand, das bei Fehlverhalten verfällt, z. B. Mietkaution, Geld-zurück-Garantie"
+      ],
+      [
+       "Staat",
+       "Informationspflichten, Mindestgewährleistung, Mindeststandards, Pflichtversicherungen (KV, Kfz-Haftpflicht)"
+      ]
+     ],
+     "kopf": [
+      "Lösung",
+      "Wie sie wirkt"
+     ]
+    }
+   ],
+   "puzzle": [
+    "Screening: schlechter Informierter fragt",
+    "Signaling: besser Informierter zeigt"
+   ],
+   "karten": [
+    {
+     "id": "loes-1",
+     "titel": "Screening, Signaling, Reputation",
+     "frage": "Erkläre Screening, Signaling und Reputation und nenne je ein Beispiel aus der Versicherung.",
+     "kernpunkte": [
+      "Screening: schlechter Informierter beschafft Information (Gesundheitsfragen)",
+      "Grenze: Grenznutzen > Grenzkosten, rationale Ignoranz",
+      "Signaling: besser Informierter sendet glaubwürdiges Signal (Selbstbehalt, Angaben zur Gesundheit)",
+      "Reputation: guter Ruf als schwer fälschbares Signal"
+     ],
+     "zuordnen": [
+      [
+       "Screening",
+       "Der schlechter Informierte beschafft sich selbst Informationen, z. B. Gesundheitsfragen des Versicherers"
+      ],
+      [
+       "Signaling",
+       "Der besser Informierte gibt glaubwürdig Informationen weiter, z. B. indem er freiwillig einen Selbstbehalt wählt"
+      ],
+      [
+       "Monitoring",
+       "Screening nach Vertragsschluss: Der Prinzipal überwacht den Agenten"
+      ],
+      [
+       "Reputation",
+       "Ein guter Ruf, der über wiederholt hohe Qualität aufgebaut wird und schwer zu fälschen ist"
+      ]
+     ],
+     "luecken": [
+      "Ein Signal ist nur glaubwürdig, wenn falsche Signale {{teurer|kostspieliger}} sind als ihr Vorteil.",
+      "Informationsbeschaffung lohnt nur, solange der Grenznutzen größer ist als die {{Grenzkosten}}."
+     ]
+    },
+    {
+     "id": "loes-2",
+     "titel": "Anreizkompatible Verträge, Commitment, Bonding",
+     "frage": "Was sind anreizkompatible Verträge? Erkläre Commitment und Bonding mit Beispiel.",
+     "kernpunkte": [
+      "Vertrag, bei dem sich nicht-opportunistisches Verhalten selbst lohnt (sich selbst durchsetzend)",
+      "Selbstauswahl, Belohnung, Bestrafung",
+      "Commitment: Selbstbindung über transaktionsspezifische Investition (Spezialmaschine)",
+      "Bonding: freiwilliges Pfand (Mietkaution, Geld-zurück-Garantie)"
+     ],
+     "zuordnen": [
+      [
+       "Commitment",
+       "Der Agent bindet sich über eine Investition, die nur in dieser Beziehung Wert hat, z. B. eine Spezialmaschine"
+      ],
+      [
+       "Bonding",
+       "Der Agent hinterlegt freiwillig ein Pfand, das bei Fehlverhalten verfällt, z. B. eine Mietkaution"
+      ],
+      [
+       "Selbstauswahl",
+       "Der besser Informierte wählt zwischen risikospezifischen Verträgen und verrät so seinen Typ"
+      ],
+      [
+       "Pflichtversicherung",
+       "Staatliche Maßnahme gegen Marktversagen, z. B. Kfz-Haftpflicht"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "anreizvertrag",
+   "ast": "Marktversagen bei asymmetrischer Information",
+   "titel": "Rechenbeispiel: fester Lohn oder Erfolgsbeteiligung?",
+   "folien": "58–61",
+   "art": "rechnen",
+   "relevanz": "mittel",
+   "ansehen": [
+    {
+     "typ": "text",
+     "inhalt": "Eigentümer E will den Gewinn maximieren, Mitarbeiter M kann mit geringem oder hohem Einsatz arbeiten – E sieht das nicht (Hidden Action). Der Erlös hängt vom Einsatz und vom Zufall ab (je 50 %). Hoher Einsatz kostet M 400 €."
+    },
+    {
+     "typ": "tabelle",
+     "zeilen": [
+      [
+       "Erlöse",
+       "gering: 5.000 / 10.000 → Erwartung 7.500; hoch: 10.000 / 20.000 → Erwartung 15.000"
+      ],
+      [
+       "Fester Lohn 500",
+       "M: gering 500, hoch 500 − 400 = 100 → M wählt gering; E: 7.500 − 500 = 7.000"
+      ],
+      [
+       "L = Erlös − 7.200",
+       "M: gering 300, hoch 15.000 − 7.200 − 400 = 7.400 → M wählt hoch; E bekommt in beiden Fällen 7.200"
+      ],
+      [
+       "L = 0,1 · Erlös",
+       "M: gering 750, hoch 1.500 − 400 = 1.100 → M wählt hoch; E: 15.000 − 1.500 = 13.500"
+      ],
+      [
+       "Fazit",
+       "Fester Lohn bietet keinen Anreiz; Erfolgsbeteiligung bringt die Ziele von Prinzipal und Agent in Einklang"
+      ]
+     ]
+    }
+   ],
+   "puzzle": [
+    "fester Lohn: kein Anreiz",
+    "Erfolgsbeteiligung: Ziele im Einklang"
+   ],
+   "karten": [
+    {
+     "id": "anreiz-1",
+     "titel": "Fester Lohn vs. Profit Sharing",
+     "frage": "Warum ist ein fester Lohn bei Hidden Action nicht anreizoptimal, und wie hilft eine Erfolgsbeteiligung?",
+     "kernpunkte": [
+      "Bei festem Lohn bringt hoher Einsatz dem Agenten nur Kosten",
+      "M wählt geringen Einsatz, E bekommt weniger",
+      "Erfolgsbeteiligung belohnt das Ergebnis hohen Einsatzes",
+      "Beispiel 10 % Beteiligung: M 1.100 statt 750, E 13.500 statt 7.000"
+     ],
+     "luecken": [
+      "Bei festem Lohn von 500 € wählt M {{geringen|niedrigen}} Einsatz.",
+      "Bei L = 0,1 · Erlös verdient M bei hohem Einsatz {{1.100|1100}} €."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "akerlof",
+   "ast": "Marktversagen bei asymmetrischer Information",
+   "titel": "Literatur: Akerlof – The Market for „Lemons“",
+   "folien": "39, 50",
+   "art": "wissen",
+   "relevanz": "kern",
+   "ansehen": [
+    {
+     "typ": "text",
+     "inhalt": "Becker fragt den Artikel direkt ab (Probeklausur 2: 20 Punkte). Akerlof zeigt am Gebrauchtwagenmarkt, wie asymmetrische Information einen Markt zerstören kann: Der Verkäufer kennt die Qualität, der Käufer nicht."
+    },
+    {
+     "typ": "tabelle",
+     "zeilen": [
+      [
+       "Warum kein niedriger Preis für Lemons?",
+       "Käufer erkennen die Qualität nicht und zahlen nur den Durchschnittspreis; für gute Autos ist der zu niedrig, ihre Besitzer ziehen sich zurück; Durchschnittsqualität und Preis sinken weiter – schlechte Qualität verdrängt gute"
+      ],
+      [
+       "Art des Marktversagens",
+       "asymmetrische Information, genauer Adverse Selektion durch Qualitätsunsicherheit; vorteilhafte Geschäfte kommen nicht zustande"
+      ],
+      [
+       "Versicherungsmärkte",
+       "Krankenversicherung für über 65-Jährige: Versicherte kennen ihr Risiko besser, Prämie für Durchschnittsrisiko, Gesunde steigen aus, Prämie steigt – Teufelskreis"
+      ],
+      [
+       "Arbeitsmarkt für Minderheiten",
+       "Arbeitgeber greifen mangels Information auf Gruppenmerkmale zurück (statistische Diskriminierung); auch Leistungsfähige werden schlechter bezahlt, Bildung lohnt sich weniger, das Vorurteil verfestigt sich"
+      ],
+      [
+       "Gegenmaßnahmen",
+       "Garantien, Marken und Reputation, Lizenzen und Zertifikate, Händlerketten/unabhängige Prüfer, Gruppenversicherungen"
+      ]
+     ],
+     "kopf": [
+      "Frage",
+      "Antwort"
+     ]
+    }
+   ],
+   "puzzle": [
+    "Lemons: schlechte Qualität verdrängt gute",
+    "Garantien, Marken, Lizenzen"
+   ],
+   "karten": [
+    {
+     "id": "akerlof-1",
+     "titel": "Warum Lemons den Markt verdrängen",
+     "frage": "Warum werden „Lemons“ nicht einfach zu einem niedrigen, ihrem Wert entsprechenden Preis gehandelt? Welche Art von Marktversagen ist das?",
+     "kernpunkte": [
+      "Käufer erkennen Qualität nicht (asymmetrische Information)",
+      "zahlen nur Durchschnittspreis",
+      "gute Anbieter ziehen sich zurück → Qualität und Preis sinken weiter",
+      "im Extremfall Marktzusammenbruch",
+      "Marktversagen durch Adverse Selektion"
+     ],
+     "zuordnen": [
+      [
+       "Lemon",
+       "Ein Gebrauchtwagen mit verstecktem Mangel, dessen Qualität nur der Verkäufer kennt"
+      ],
+      [
+       "Durchschnittspreis",
+       "Mehr zahlt der Käufer nicht, weil er gute und schlechte Autos nicht unterscheiden kann"
+      ],
+      [
+       "Adverse Selektion",
+       "Gute Anbieter verlassen den Markt, zurück bleiben die schlechten"
+      ],
+      [
+       "Statistische Diskriminierung",
+       "Arbeitgeber beurteilen Bewerber nach Gruppenmerkmalen statt nach ihrer Leistung"
+      ]
+     ],
+     "luecken": [
+      "Bei Akerlof verdrängt schlechte Qualität die {{gute|gute Qualität}}.",
+      "Als Gegenmaßnahme nennt Akerlof z. B. {{Garantien|Garantie|Marken|Lizenzen}}."
+     ]
+    },
+    {
+     "id": "akerlof-2",
+     "titel": "Versicherung, Minderheiten, Gegenmaßnahmen",
+     "frage": "Beschreibe Akerlofs Beobachtungen auf Versicherungsmärkten und auf dem Arbeitsmarkt für Minderheiten und nenne seine Gegenmaßnahmen.",
+     "kernpunkte": [
+      "Versicherung: über 65-Jährige, Prämie für Durchschnittsrisiko, Gesunde steigen aus, Teufelskreis",
+      "Minderheiten: statistische Diskriminierung über Gruppenmerkmale",
+      "auch Leistungsfähige schlechter bezahlt, Bildung lohnt weniger",
+      "Gegenmaßnahmen: Garantien, Marken, Lizenzen/Zertifikate, Händler/Prüfer"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "adverse-selection",
+   "ast": "Versicherungsmärkte: Adverse Selection und Moral Hazard",
+   "titel": "Adverse Selection auf Versicherungsmärkten",
+   "folien": "75–110",
+   "art": "wissen",
+   "relevanz": "kern",
+   "ansehen": [
+    {
+     "typ": "text",
+     "inhalt": "Es gibt VN mit niedrigem (κg) und hohem (κh) Krankheitsrisiko, der Anteil der hohen ist λ. Becker prüft schrittweise, ob es ein effizientes Gleichgewicht gibt. Effizient heißt: Jeder ist voll versichert zu seiner fairen Prämie."
+    },
+    {
+     "typ": "tabelle",
+     "zeilen": [
+      [
+       "Schritt 1: symmetrisch, bekannt",
+       "VU und VN kennen die Risiken → zwei faire Vollversicherungen pg = κg, ph = κh → Separationsgleichgewicht, effizient"
+      ],
+      [
+       "Schritt 2: symmetrisch, unbekannt",
+       "niemand kennt das individuelle Risiko → Durchschnittsprämie p = λκh + (1 − λ)κg für alle → Pool-Gleichgewicht, effizient"
+      ],
+      [
+       "Schritt 3a: asymmetrisch, faires Separations-GG",
+       "alle geben sich als „g“ aus, VU bieten den g-Vertrag nicht an (Verlust) → kein Gleichgewicht"
+      ],
+      [
+       "Schritt 3b: Pool mit frei wählbarer Deckung",
+       "g versichern sich unter (S < L), h über (S > L) → VU machen Verlust → kein Pool-GG"
+      ],
+      [
+       "Schritt 3c: Pool mit fester Deckung",
+       "Konkurrent lockt die g mit besserem Vertrag weg, λ steigt → Nullgewinn verletzt → instabil"
+      ],
+      [
+       "Schritt 3d: ineffizientes Separations-GG",
+       "Vollversicherung zu ph für h, Teilversicherung zu pg für g → jeder wählt seinen Vertrag; Pareto-Verbesserung, aber Restrisiko bei g; bei hohem Anteil g evtl. gar kein stabiles GG"
+      ],
+      [
+       "Warum gibt es trotzdem Versicherungsmärkte?",
+       "Gegenmaßnahmen (Gesundheitsfragen, Vorversichereranfragen) verkleinern die Asymmetrie; Oligopol-Gewinne können einige h im g-Vertrag mitfinanzieren"
+      ],
+      [
+       "Übung Unisex",
+       "Pool-Gleichgewicht durch Gesetz, instabil durch Adverse Selektion",
+       "fall:fall-unisex"
+      ]
+     ],
+     "kopf": [
+      "Schritt",
+      "Ergebnis"
+     ]
+    }
+   ],
+   "puzzle": [
+    "Separations-GG: jeder fair voll versichert",
+    "Pool-GG instabil: g wandern ab"
+   ],
+   "karten": [
+    {
+     "id": "as-1",
+     "titel": "Separations- und Pool-Gleichgewicht",
+     "frage": "Erkläre Separations- und Pool-Gleichgewicht. Warum sind beide bei symmetrischer Information effizient?",
+     "kernpunkte": [
+      "Separations-GG: jede Gruppe fair voll versichert (pg = κg, ph = κh)",
+      "Pool-GG: eine Durchschnittsprämie p = λκh + (1 − λ)κg für alle",
+      "bei symmetrischer Information wählen alle Vollversicherung zu fairer Prämie",
+      "effizient: kein Risiko bleibt beim risikoaversen VN"
+     ],
+     "zuordnen": [
+      [
+       "Separationsgleichgewicht",
+       "Jede Risikogruppe bekommt einen eigenen Vertrag zu ihrer fairen Prämie"
+      ],
+      [
+       "Pool-Gleichgewicht",
+       "Alle zahlen dieselbe Durchschnittsprämie, gute Risiken subventionieren schlechte"
+      ],
+      [
+       "λ (Lambda)",
+       "Anteil der VN mit hohem Risiko am gesamten Bestand"
+      ],
+      [
+       "Nullgewinnbedingung",
+       "Bei vollständiger Konkurrenz macht das VU im Erwartungswert keinen Gewinn"
+      ]
+     ],
+     "luecken": [
+      "Die Pool-Prämie lautet p = λκh + (1 − {{λ|Lambda}})κg.",
+      "Bei symmetrischer Information ist das Separationsgleichgewicht {{effizient}}."
+     ]
+    },
+    {
+     "id": "as-2",
+     "titel": "Warum Adverse Selection zu Marktversagen führt",
+     "frage": "Warum kommt bei asymmetrischer Information weder das effiziente Separations- noch ein stabiles Pool-Gleichgewicht zustande? Welches Gleichgewicht ist bestenfalls möglich?",
+     "kernpunkte": [
+      "faires Separations-GG: alle geben sich als g aus, VU bieten g-Vertrag nicht an",
+      "Pool mit freier Deckung: g unter-, h überversichert → Verlust für VU",
+      "Pool mit fester Deckung: Konkurrent lockt g weg, λ steigt → instabil",
+      "bestenfalls ineffizientes Separations-GG: Teilversicherung für g",
+      "bei hohem Anteil g evtl. gar kein stabiles GG"
+     ],
+     "luecken": [
+      "Im ineffizienten Separations-GG bekommen die g-Typen nur eine {{Teilversicherung}}.",
+      "Bei freier Deckung im Pool wählen die h-Typen eine {{Überversicherung}}."
+     ]
+    },
+    {
+     "id": "fall-unisex",
+     "typ": "fall",
+     "titel": "Übung: Unisex-Tarife in der Risikolebensversicherung",
+     "folien": "110",
+     "sachverhalt": "Bis 31.12.2012 durften VU in der Risikolebensversicherung die Prämie nach Geschlecht differenzieren, seit 1.1.2013 nur noch Unisex-Tarife.",
+     "frage": "1. Warum haben VU bis 2012 nach Geschlecht differenziert? 2./3. Wie sieht das im Modell vor und nach 2013 aus? 4. Inwiefern kann es ab 2013 zu Adverser Selektion kommen?",
+     "loesung": [
+      [
+       "1. Vor 2013",
+       "Männer haben eine höhere Sterbewahrscheinlichkeit (hohes Risiko h) als Frauen (g). Das Geschlecht ist ein leicht beobachtbares Risikomerkmal → faire, risikogerechte Prämien je Gruppe."
+      ],
+      [
+       "2. Modell vor 2013",
+       "Separationsgleichgewicht: zwei Versicherungsgeraden VGg = EWGg und VGh = EWGh, jede Gruppe voll versichert zu ihrer fairen Prämie – effizient."
+      ],
+      [
+       "3. Modell nach 2013",
+       "Einheitliche Pool-Prämie p = λκh + (1 − λ)κg; eine Pool-VG zwischen den beiden EWG. Frauen subventionieren Männer."
+      ],
+      [
+       "4. Adverse Selektion",
+       "Für Frauen ist der Pool-Tarif zu teuer → sie versichern sich weniger (Unterversicherung) oder gar nicht, Männer eher mehr (Überversicherung). Der Anteil λ der hohen Risiken steigt, die Nullgewinnbedingung bricht, die Prämie muss steigen – das Pool-Gleichgewicht ist nicht stabil."
+      ]
+     ],
+     "ergebnis": "Unisex erzwingt ein Pool-Gleichgewicht, das wegen Adverser Selektion instabil ist.",
+     "merke": "Pool-Prämie = gewichteter Durchschnitt der Wahrscheinlichkeiten."
+    }
+   ]
+  },
+  {
+   "id": "moral-hazard",
+   "ast": "Versicherungsmärkte: Adverse Selection und Moral Hazard",
+   "titel": "Moral Hazard auf Versicherungsmärkten",
+   "folien": "111–126",
+   "art": "wissen",
+   "relevanz": "kern",
+   "ansehen": [
+    {
+     "typ": "text",
+     "inhalt": "Hier haben alle VN zunächst das hohe Risiko κh. Durch Vorsorge (Sport, Vorsorgeuntersuchungen, Nichtrauchen) können sie es auf κg senken, das kostet sie V. Die Vorsorge lohnt sich gesamtwirtschaftlich: W − V − κg·L > W − κh·L. Das Problem: Nach Vertragsschluss sieht das VU nicht, ob vorgesorgt wird (Hidden Action)."
+    },
+    {
+     "typ": "tabelle",
+     "zeilen": [
+      [
+       "Schritt 1: symmetrisch",
+       "VU bieten Vertrag zu ph und günstigeren Vertrag mit Vorsorgepflicht zu pg; alle wählen Vorsorge → stabil und effizient"
+      ],
+      [
+       "Schritt 2: asymmetrisch",
+       "VN schließen den g-Vertrag ab, sparen sich aber V → VU machen Verlust (Π = (κg − κh)L < 0) und stellen das Angebot ein → Marktversagen"
+      ],
+      [
+       "Schritt 3: nur h-Verträge",
+       "Nullgewinn möglich, aber entweder kein Vorsorgeanreiz oder VN verzichten auf zu teure Versicherung → ineffizient"
+      ],
+      [
+       "Schritt 4: Teilversicherung",
+       "anreizkompatibel: mit Restrisiko lohnt sich Vorsorge wieder, VN „defektieren“ nicht; aber Nutzen sinkt, Restrisiko beim risikoaversen VN"
+      ],
+      [
+       "Beurteilung",
+       "bei Moral Hazard kommt es zwangsläufig zu Marktversagen oder Ineffizienz"
+      ]
+     ],
+     "kopf": [
+      "Schritt",
+      "Ergebnis"
+     ]
+    }
+   ],
+   "puzzle": [
+    "Vorsorge V senkt κh auf κg",
+    "Teilversicherung schafft Vorsorgeanreiz"
+   ],
+   "karten": [
+    {
+     "id": "mh-1",
+     "titel": "Modell und Marktversagen",
+     "frage": "Erkläre das Moral-Hazard-Modell und warum es bei asymmetrischer Information zum Marktversagen kommt.",
+     "kernpunkte": [
+      "Alle haben κh, Vorsorge mit Kosten V senkt auf κg",
+      "Vorsorge ist effizient: W − V − κg·L > W − κh·L",
+      "symmetrisch: Vertrag mit Vorsorgepflicht, effizient",
+      "asymmetrisch: VN nehmen g-Vertrag, sparen V → VU Verlust → Angebot eingestellt"
+     ],
+     "zuordnen": [
+      [
+       "V",
+       "Kosten der Vorsorge, z. B. Sport, Vorsorgeuntersuchung oder Verzicht auf Tabak"
+      ],
+      [
+       "Vertrag mit Vorsorgepflicht",
+       "Günstigerer Vertrag zu pg für VN, die sich zur Vorsorge verpflichten"
+      ],
+      [
+       "Defektieren",
+       "Der VN schließt den günstigen Vertrag ab, verzichtet aber heimlich auf die Vorsorge"
+      ],
+      [
+       "Teilversicherung",
+       "Lässt ein Restrisiko beim VN, damit sich Vorsorge für ihn wieder lohnt"
+      ]
+     ],
+     "luecken": [
+      "Wenn alle defektieren, macht das VU einen {{Verlust|negativen Gewinn}} von (κg − κh)L.",
+      "Ein anreizkompatibler Vertrag gegen Moral Hazard ist eine {{Teilversicherung}}."
+     ]
+    },
+    {
+     "id": "mh-2",
+     "titel": "Lösungen und ihre Grenzen",
+     "frage": "Welche Vertragsangebote haben die VU gegen Moral Hazard, und warum bleibt der Markt trotzdem ineffizient?",
+     "kernpunkte": [
+      "Nur h-Verträge: Nullgewinn, aber kein Vorsorgeanreiz oder Verzicht auf Versicherung",
+      "Teilversicherung: Vorsorge lohnt sich wieder",
+      "aber Nutzen sinkt, Restrisiko beim risikoaversen VN",
+      "→ Marktversagen oder Ineffizienz ist unvermeidbar"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "provisionsabgabeverbot",
+   "ast": "Versicherungsvertrieb",
+   "titel": "Provisionsabgabeverbot",
+   "folien": "127–133 (Folien als Bild, Inhalt ergänzt)",
+   "art": "wissen",
+   "relevanz": "kern",
+   "ansehen": [
+    {
+     "typ": "text",
+     "inhalt": "Das Provisionsabgabeverbot untersagt Vermittlern, Teile ihrer Provision als Rabatt an den Kunden weiterzugeben. In Probeklausur 1 sollst du als GDV-Präsident ein kurzes Statement für die Beibehaltung halten – mit mindestens fünf Argumenten aus der Literatur (GDV, AVL, Schiller). Hinweis: Beckers Folien zu Kapitel 4 sind nur als Bild im Skript; die Argumente hier stammen aus der in der Literaturliste genannten Debatte und sollten mit seinen Folien abgeglichen werden."
+    },
+    {
+     "typ": "tabelle",
+     "zeilen": [
+      [
+       "Beratungsqualität",
+       "Wettbewerb soll über Beratung und Produktqualität laufen, nicht über Rabatte; sonst Anreiz, Verträge mit dem größten Rabattspielraum zu verkaufen statt bedarfsgerecht"
+      ],
+      [
+       "Fehlanreize vermeiden",
+       "Rabatte locken zu Abschlüssen und Umdeckungen um des Rabatts willen; Gefahr von Provisionsschinderei und hohen Stornoquoten"
+      ],
+      [
+       "Gleichbehandlung",
+       "gleiche Prämie für gleiches Risiko; verhandlungsstarke Kunden sollen nicht besser gestellt werden als andere"
+      ],
+      [
+       "Finanzierung der Betreuung",
+       "die Provision bezahlt auch Betreuung und Schadenservice über die Laufzeit; wird sie abgegeben, fehlt das Geld dafür"
+      ],
+      [
+       "Vermittlerlandschaft",
+       "Rabattschlachten gefährden vor allem kleine Vermittler und damit flächendeckende Beratung"
+      ],
+      [
+       "Stabilität/Verbraucherschutz",
+       "Vermeidung ruinösen Preiswettbewerbs, Schutz der Kunden vor schlecht beratenen Billigabschlüssen"
+      ],
+      [
+       "Gegenargumente (VZBV)",
+       "schränkt Wettbewerb ein, Kunden können über Kosten nicht verhandeln, Honorarberatung wird erschwert"
+      ],
+      [
+       "Rechtslage",
+       "seit der Umsetzung der Versicherungsvertriebsrichtlinie (IDD) 2017/2018 gesetzlich in § 48b VAG verankert"
+      ]
+     ],
+     "kopf": [
+      "Argument",
+      "Inhalt"
+     ]
+    }
+   ],
+   "puzzle": [
+    "Wettbewerb über Beratung, nicht Rabatt",
+    "Provision finanziert Betreuung"
+   ],
+   "karten": [
+    {
+     "id": "pav-1",
+     "titel": "Argumente für das Verbot",
+     "frage": "Halte als GDV-Präsident ein kurzes Statement für die Beibehaltung des Provisionsabgabeverbots mit mindestens fünf Argumenten.",
+     "kernpunkte": [
+      "Beratungsqualität statt Rabattwettbewerb",
+      "Vermeidung von Fehlanreizen, Umdeckungen und Stornos",
+      "Gleichbehandlung der Versicherungsnehmer",
+      "Provision finanziert Betreuung über die Laufzeit",
+      "Schutz der Vermittlerlandschaft/flächendeckende Beratung",
+      "Verbraucherschutz vor ruinösem Preiswettbewerb"
+     ],
+     "zuordnen": [
+      [
+       "Beratungsqualität",
+       "Vermittler sollen nach Bedarf beraten und nicht danach, bei welchem Vertrag der größte Rabatt möglich ist"
+      ],
+      [
+       "Gleichbehandlung",
+       "Gleiches Risiko soll gleich viel kosten, egal wie gut ein Kunde verhandeln kann"
+      ],
+      [
+       "Betreuungsfinanzierung",
+       "Die Provision bezahlt auch Service und Schadenbetreuung während der ganzen Vertragslaufzeit"
+      ],
+      [
+       "Fehlanreize",
+       "Rabatte verleiten zu Abschlüssen und Umdeckungen nur wegen des Preisnachlasses"
+      ]
+     ]
+    },
+    {
+     "id": "pav-2",
+     "titel": "Gegenargumente und Rechtslage",
+     "frage": "Welche Argumente bringen Verbraucherschützer gegen das Provisionsabgabeverbot vor, und wo ist es heute geregelt?",
+     "kernpunkte": [
+      "Einschränkung des Preiswettbewerbs",
+      "Kunden können über die Provision nicht verhandeln",
+      "erschwert Honorarberatung",
+      "seit IDD-Umsetzung gesetzlich in § 48b VAG"
+     ]
+    }
+   ]
+  }
+ ],
+ "aufgaben": [
+  {
+   "id": "spahn-eu0",
+   "thema": "eu-sae",
+   "titel": "Spahn: Nutzen ohne Versicherung",
+   "text": "W = 100 €, L = 60 €, k = 50 %, u(W) = √W. Wie hoch ist der Erwartungsnutzen ohne Versicherung (2 Nachkommastellen)?",
+   "antwort": 8.16,
+   "toleranz": 0.01,
+   "einheit": "",
+   "weg": [
+    "Wg = 100, Wk = 40",
+    "EU = 0,5 · √40 + 0,5 · √100 = 0,5 · 6,325 + 5 = 8,16"
+   ]
+  },
+  {
+   "id": "spahn-sae",
+   "thema": "eu-sae",
+   "titel": "Spahn: Zahlungsbereitschaft",
+   "text": "W = 100 €, L = 60 €, k = 50 %, u(W) = √W, EU ohne Versicherung = 8,16. Wie viel würde Herr Spahn höchstens für eine Vollversicherung zahlen?",
+   "antwort": 33.38,
+   "toleranz": 0.1,
+   "einheit": "€",
+   "weg": [
+    "SÄ = EU² = 8,1623² = 66,62 €",
+    "ZB = 100 − 66,62 = 33,38 €"
+   ]
+  },
+  {
+   "id": "spahn-fair",
+   "thema": "eu-sae",
+   "titel": "Spahn: Nutzen bei fairer Vollversicherung",
+   "text": "W = 100 €, L = 60 €, k = 50 %, u(W) = √W. Welchen Nutzen hat Herr Spahn bei einer fairen Vollversicherung (2 Nachkommastellen)?",
+   "antwort": 8.37,
+   "toleranz": 0.01,
+   "einheit": "",
+   "weg": [
+    "fair: p = k = 0,5 → Prämie 0,5 · 60 = 30 €",
+    "sicher 70 € → u = √70 = 8,37"
+   ]
+  },
+  {
+   "id": "schuh-eu0",
+   "thema": "eu-sae",
+   "titel": "Schuhmacher: Nutzen ohne Versicherung",
+   "text": "Ferrari 1 Mio. €, sonst kein Vermögen; Diebstahl 7 %, Brand 5 % (je Totalverlust); u(W) = W^(2/3). Erwartungsnutzen ohne Versicherung?",
+   "antwort": 8800,
+   "toleranz": 1,
+   "einheit": "",
+   "weg": [
+    "k = 0,12, Wg = 1.000.000, Wk = 0",
+    "EU = 0,88 · 1.000.000^(2/3) = 0,88 · 10.000 = 8.800"
+   ]
+  },
+  {
+   "id": "schuh-zb",
+   "thema": "eu-sae",
+   "titel": "Schuhmacher: Zahlungsbereitschaft",
+   "text": "Wie oben (EU ohne Versicherung = 8.800, u(W) = W^(2/3), W = 1 Mio. €). Wie hoch ist die maximale Zahlungsbereitschaft in Euro?",
+   "antwort": 174487,
+   "toleranz": 5,
+   "einheit": "€",
+   "weg": [
+    "SÄ = 8.800^(3/2) = 825.513 €",
+    "ZB = 1.000.000 − 825.513 = 174.487 € > 150.000 € → abschließen"
+   ]
+  },
+  {
+   "id": "maier-zb",
+   "thema": "eu-sae",
+   "titel": "Maier: Zahlungsbereitschaft",
+   "text": "Haus 800.000 € inkl. 200.000 € Grundstück, Feuerrisiko 1 %, u(W) = 0,7 · W^(1/3). Wie hoch ist die maximale Zahlungsbereitschaft für die Feuerversicherung?",
+   "antwort": 8848,
+   "toleranz": 5,
+   "einheit": "€",
+   "weg": [
+    "Wg = 800.000, Wk = 200.000",
+    "EU = 0,99 · 64,98 + 0,01 · 40,94 = 64,74",
+    "SÄ = (64,74 ÷ 0,7)³ = 791.152 → ZB = 8.848 €"
+   ]
+  },
+  {
+   "id": "ueb-a-sae",
+   "thema": "eu-sae",
+   "titel": "Übung A: Sicherheitsäquivalent",
+   "text": "W = 400 €, L = 300 €, k = 20 %, u(W) = √W. Wie hoch ist das Sicherheitsäquivalent?",
+   "antwort": 324,
+   "toleranz": 0.5,
+   "einheit": "€",
+   "weg": [
+    "Wg = 400 → √ = 20; Wk = 100 → √ = 10",
+    "EU = 0,2 · 10 + 0,8 · 20 = 18",
+    "SÄ = 18² = 324 €"
+   ]
+  },
+  {
+   "id": "ueb-a-zb",
+   "thema": "eu-sae",
+   "titel": "Übung A: Abschließen?",
+   "text": "W = 400 €, L = 300 €, k = 20 %, u(W) = √W. Ein VU bietet Vollversicherung zu p = 25 %. Wie hoch ist die maximale Zahlungsbereitschaft? (Danach: abschließen?)",
+   "antwort": 76,
+   "toleranz": 0.5,
+   "einheit": "€",
+   "weg": [
+    "EU = 18 → SÄ = 324 → ZB = 400 − 324 = 76 €",
+    "Prämie = 0,25 · 300 = 75 € < 76 € → knapp abschließen",
+    "Gegenprobe: √325 = 18,03 > 18"
+   ]
+  },
+  {
+   "id": "ueb-b-zb",
+   "thema": "eu-sae",
+   "titel": "Übung B: Abschließen?",
+   "text": "W = 900 €, L = 500 €, k = 10 %, u(W) = √W. Vollversicherung zu p = 12 %. Wie hoch ist die maximale Zahlungsbereitschaft? (Danach: abschließen?)",
+   "antwort": 59,
+   "toleranz": 0.5,
+   "einheit": "€",
+   "weg": [
+    "√900 = 30, √400 = 20 → EU = 0,1 · 20 + 0,9 · 30 = 29",
+    "SÄ = 29² = 841 → ZB = 59 €",
+    "Prämie = 0,12 · 500 = 60 € > 59 € → nicht abschließen (√840 = 28,98 < 29)"
+   ]
+  },
+  {
+   "id": "ueb-c-zb",
+   "thema": "eu-sae",
+   "titel": "Übung C: Kubikwurzel",
+   "text": "W = 1.000 €, L = 875 €, k = 20 %, u(W) = W^(1/3). Wie hoch ist die maximale Zahlungsbereitschaft für eine Vollversicherung?",
+   "antwort": 271,
+   "toleranz": 0.5,
+   "einheit": "€",
+   "weg": [
+    "1.000^(1/3) = 10, 125^(1/3) = 5",
+    "EU = 0,2 · 5 + 0,8 · 10 = 9",
+    "SÄ = 9³ = 729 → ZB = 1.000 − 729 = 271 €"
+   ]
+  },
+  {
+   "id": "ueb-c-rp",
+   "thema": "eu-sae",
+   "titel": "Übung C: Risikoprämie",
+   "text": "W = 1.000 €, L = 875 €, k = 20 %, u(W) = W^(1/3), SÄ = 729 €. Wie hoch ist die Risikoprämie?",
+   "antwort": 96,
+   "toleranz": 0.5,
+   "einheit": "€",
+   "weg": [
+    "Erwartungswert = 1.000 − 0,2 · 875 = 825 €",
+    "Risikoprämie = EW − SÄ = 825 − 729 = 96 €"
+   ]
+  },
+  {
+   "id": "anreiz-10",
+   "thema": "anreizvertrag",
+   "titel": "Profit Sharing 10 %",
+   "text": "Erlös bei hohem Einsatz: je 50 % 10.000 € oder 20.000 €. Lohn L = 0,1 · Erlös, hoher Einsatz kostet den Mitarbeiter 400 €. Wie viel bleibt dem Mitarbeiter bei hohem Einsatz im Erwartungswert?",
+   "antwort": 1100,
+   "toleranz": 0.5,
+   "einheit": "€",
+   "weg": [
+    "Erwarteter Erlös = 0,5 · 10.000 + 0,5 · 20.000 = 15.000 €",
+    "Lohn = 1.500 € − 400 € Kosten = 1.100 €"
+   ]
+  },
+  {
+   "id": "sparbier-ew",
+   "thema": "musterfaelle",
+   "titel": "Sparbier: Erwartungswert des Spiels",
+   "text": "1 € auf Rot, 18 von 37 Fächern rot, Auszahlung 2 € bei Rot. Erwartungswert des Spiels (3 Nachkommastellen)?",
+   "antwort": 0.973,
+   "toleranz": 0.002,
+   "einheit": "€",
+   "weg": [
+    "EW = 18/37 · 2 + 19/37 · 0 = 0,973 €",
+    "< 1 € → Spiellage unter der EWG"
+   ]
+  }
+ ]
+}

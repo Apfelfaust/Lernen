@@ -1,0 +1,1215 @@
+{
+ "format": 2,
+ "fach": "finanzprodukte",
+ "name": "Finanzprodukte · Möbius",
+ "stand": "2026-11-26",
+ "hinweis": "Bisher Aktien, Anleihen und Discount-Zertifikat aus den erarbeiteten Kochrezepten. Es fehlen noch Derivate, Bonus-Zertifikate, Indexpolicen und Fonds (Skript schicken).",
+ "themen": [
+  {
+   "id": "aktie",
+   "ast": "1.1 Aktien",
+   "titel": "Was ist eine Aktie?",
+   "folien": "Kap. 1.1",
+   "art": "wissen",
+   "relevanz": "kern",
+   "ansehen": [
+    {
+     "typ": "text",
+     "inhalt": "Wer eine Aktie kauft, besitzt ein kleines Stück der Firma und ist Miteigentümer. Der Kurs ist das, was Käufer gerade zahlen, und schwankt. Der innere Wert ist das, was die Firma wirklich wert ist – genau den sucht die Aktienbewertung."
+    },
+    {
+     "typ": "tabelle",
+     "zeilen": [
+      [
+       "Rechte",
+       "Stimmrecht in der Hauptversammlung, Gewinnanteil (Dividende), Bezugsrecht auf neue Aktien"
+      ],
+      [
+       "Risiken",
+       "Kurs fällt, Dividende fällt aus, Firma geht pleite"
+      ],
+      [
+       "Anleihe zum Vergleich",
+       "Gläubiger mit festem Anspruch auf Zins und Rückzahlung – Aktionär hat keinen festen Anspruch"
+      ]
+     ]
+    }
+   ],
+   "puzzle": [
+    "Aktionär = Miteigentümer",
+    "Stimmrecht, Dividende, Bezugsrecht"
+   ],
+   "karten": [
+    {
+     "id": "aktie-1",
+     "titel": "Rechte und Risiken",
+     "frage": "Welche Rechte hat ein Aktionär, welche Risiken trägt er, und wie unterscheidet er sich von einem Anleihegläubiger?",
+     "kernpunkte": [
+      "Miteigentümer der Firma",
+      "Stimmrecht, Dividende, Bezugsrecht",
+      "Risiken: Kursverlust, Dividendenausfall, Insolvenz",
+      "Gläubiger hat festen Anspruch auf Zins und Rückzahlung, Aktionär nicht"
+     ],
+     "zuordnen": [
+      [
+       "Stimmrecht",
+       "Der Aktionär darf in der Hauptversammlung mitentscheiden"
+      ],
+      [
+       "Dividende",
+       "Der Anteil am Gewinn, den die AG an ihre Aktionäre ausschüttet"
+      ],
+      [
+       "Bezugsrecht",
+       "Bei einer Kapitalerhöhung darf der Aktionär neue Aktien zuerst kaufen"
+      ],
+      [
+       "innerer Wert",
+       "Was die Firma wirklich wert ist – unabhängig vom aktuellen Kurs"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "index",
+   "ast": "1.1 Aktien",
+   "titel": "Aktienindizes",
+   "folien": "Kap. 1.1",
+   "art": "rechnen",
+   "relevanz": "kern",
+   "ansehen": [
+    {
+     "typ": "text",
+     "inhalt": "Ein Index fasst viele Aktien zu einer Zahl zusammen und zeigt, wie es der Börse insgesamt geht. Entscheidend ist die Gewichtung: Beim preisgewichteten Index zählt nur der Kurs, beim kapitalisierungsgewichteten der Börsenwert der Firma."
+    },
+    {
+     "typ": "formel",
+     "inhalt": "preisgewichtet:  Index = Summe der Kurse ÷ Anzahl Aktien\nkapitalisierungsgewichtet:  Summe aus Kurs × Anzahl Aktien\nRendite = Wert in t = 1 ÷ Wert in t = 0 − 1"
+    },
+    {
+     "typ": "tabelle",
+     "zeilen": [
+      [
+       "preisgewichtet",
+       "jede Aktie zählt einmal, teure Aktien bewegen den Index stärker – Dow Jones, Nikkei"
+      ],
+      [
+       "kapitalisierungsgewichtet",
+       "große Firmen bewegen den Index am stärksten – DAX, MSCI World"
+      ],
+      [
+       "Performanceindex",
+       "Dividenden werden wieder angelegt, steigt stärker – DAX"
+      ],
+      [
+       "Kursindex",
+       "nur die Kurse – Dow Jones, Euro Stoxx 50"
+      ],
+      [
+       "Beispiel Skript",
+       "Kurse 30/10/20/60 → 36/12/25/58: preisgewichtet 9,2 %, kapitalisierungsgewichtet 14,5 %"
+      ]
+     ]
+    }
+   ],
+   "puzzle": [
+    "Dow Jones: preisgewichtet",
+    "DAX: kapitalisierungsgewichtet, Performance"
+   ],
+   "karten": [
+    {
+     "id": "index-1",
+     "titel": "Gewichtung",
+     "frage": "Erkläre den Unterschied zwischen preis- und kapitalisierungsgewichtetem Index und zwischen Performance- und Kursindex mit je einem Beispiel.",
+     "kernpunkte": [
+      "preisgewichtet: nur Kurs zählt (Dow Jones)",
+      "kapitalisierungsgewichtet: Kurs × Anzahl Aktien (DAX)",
+      "Performanceindex: Dividenden reinvestiert (DAX)",
+      "Kursindex: nur Kurse (Euro Stoxx 50)"
+     ],
+     "zuordnen": [
+      [
+       "Dow Jones",
+       "Preisgewichteter Kursindex – eine teure Aktie bewegt ihn stärker als eine billige"
+      ],
+      [
+       "DAX",
+       "Kapitalisierungsgewichteter Performanceindex der 40 größten deutschen AGs"
+      ],
+      [
+       "MSCI World",
+       "Kapitalisierungsgewichteter Index mit rund 1.650 Aktien weltweit"
+      ],
+      [
+       "Performanceindex",
+       "Dividenden werden wieder angelegt, deshalb steigt er stärker als ein Kursindex"
+      ]
+     ],
+     "luecken": [
+      "Beim preisgewichteten Index gilt: Summe der Kurse ÷ {{Anzahl der Aktien|Anzahl Aktien|Anzahl}}",
+      "Beim kapitalisierungsgewichteten Index zählt Kurs × {{Anzahl der Aktien|Anzahl Aktien|Aktienanzahl}}"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "kgv",
+   "ast": "1.1 Aktien",
+   "titel": "KGV und PEG",
+   "folien": "Kap. 1.1",
+   "art": "rechnen",
+   "relevanz": "kern",
+   "ansehen": [
+    {
+     "typ": "text",
+     "inhalt": "Das Kurs-Gewinn-Verhältnis (KGV) zeigt, nach wie vielen Jahren der Kaufpreis aus dem Gewinn zurückverdient ist. Ob ein hohes KGV gerechtfertigt ist, prüft das PEG, das das KGV ins Verhältnis zum Gewinnwachstum setzt."
+    },
+    {
+     "typ": "formel",
+     "inhalt": "Marktkapitalisierung = Anzahl Aktien × Kurs\nKGV = Marktkapitalisierung ÷ Gewinn = Kurs ÷ Gewinn je Aktie\nPEG = KGV ÷ Wachstum in %"
+    },
+    {
+     "typ": "tabelle",
+     "zeilen": [
+      [
+       "PEG < 1",
+       "unterbewertet, günstig im Verhältnis zum Wachstum"
+      ],
+      [
+       "PEG = 1",
+       "fair bewertet"
+      ],
+      [
+       "PEG > 1",
+       "überbewertet, das Wachstum deckt das hohe KGV nicht"
+      ],
+      [
+       "Beispiel",
+       "50 Mio. Aktien · 30 € · Gewinn 100 Mio. € · Wachstum 10 % → Marktkap. 1.500 Mio. €, KGV 15, PEG 1,5"
+      ],
+      [
+       "weitere Kennzahlen",
+       "Dividendenrendite (Dividende ÷ Kurs), KBV (Kurs/Buchwert), KCV (Kurs/Cashflow), Shiller-KGV (über 10 Jahre geglättet)"
+      ]
+     ]
+    }
+   ],
+   "puzzle": [
+    "KGV = Jahre bis Kaufpreis verdient",
+    "PEG > 1: teuer"
+   ],
+   "karten": [
+    {
+     "id": "kgv-1",
+     "titel": "KGV und PEG deuten",
+     "frage": "Was sagt das KGV aus, und wie beurteilt man mit dem PEG, ob es gerechtfertigt ist?",
+     "kernpunkte": [
+      "KGV = Kurs ÷ Gewinn je Aktie",
+      "nach KGV Jahren ist der Preis aus dem Gewinn verdient",
+      "PEG = KGV ÷ Wachstum in %",
+      "PEG < 1 günstig, = 1 fair, > 1 teuer"
+     ],
+     "zuordnen": [
+      [
+       "KGV",
+       "Nach so vielen Jahren ist der Kaufpreis aus dem Gewinn zurückverdient"
+      ],
+      [
+       "PEG",
+       "Das KGV geteilt durch das erwartete Gewinnwachstum in Prozent"
+      ],
+      [
+       "PEG über 1",
+       "Die Aktie ist teuer, weil das Wachstum das hohe KGV nicht rechtfertigt"
+      ],
+      [
+       "Marktkapitalisierung",
+       "Börsenwert der ganzen Firma: Anzahl Aktien mal Kurs"
+      ]
+     ],
+     "luecken": [
+      "KGV = Kurs ÷ {{Gewinn je Aktie|EPS|Gewinn pro Aktie}}",
+      "PEG = KGV ÷ {{Wachstum|Gewinnwachstum}} in %"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "capm",
+   "ast": "1.1 Aktien",
+   "titel": "CAPM und Wertpapierlinie",
+   "folien": "Kap. 1.1",
+   "art": "rechnen",
+   "relevanz": "kern",
+   "ansehen": [
+    {
+     "typ": "text",
+     "inhalt": "Die Wertpapierlinie (SML) zeigt, welche Rendite eine Aktie für ihr Risiko β bringen muss: Je höher β, desto mehr Rendite verlangen die Anleger. β misst, wie stark die Aktie im Vergleich zum Markt schwankt. Liegt eine Aktie über der Linie, ist sie günstig, darunter teuer."
+    },
+    {
+     "typ": "formel",
+     "inhalt": "E(rᵢ) = r_f + βᵢ · MP     mit  MP = E(r_M) − r_f\nMarktportfolio: β = 1  →  E(r_M) = r_f + MP"
+    },
+    {
+     "typ": "tabelle",
+     "zeilen": [
+      [
+       "Rechenweg",
+       "für zwei Aktien je eine Gleichung → voneinander abziehen → MP → in eine Gleichung einsetzen → r_f"
+      ],
+      [
+       "Beispiel",
+       "A: 8 % bei β 0,5 · B: 14 % bei β 1,5 → MP 6 %, r_f 5 %, Markt 11 %"
+      ],
+      [
+       "Achtung",
+       "MP ist nicht die Marktrendite, sondern nur der Aufschlag über r_f"
+      ],
+      [
+       "über der SML",
+       "unterbewertet, bringt mehr als ihr Risiko verlangt"
+      ],
+      [
+       "unter der SML",
+       "überbewertet, bringt weniger als ihr Risiko verlangt"
+      ]
+     ]
+    }
+   ],
+   "puzzle": [
+    "E(r) = r_f + β · MP",
+    "unter der SML = überbewertet"
+   ],
+   "karten": [
+    {
+     "id": "capm-1",
+     "titel": "Wertpapierlinie deuten",
+     "frage": "Erkläre CAPM und Wertpapierlinie. Wann ist eine Aktie über- oder unterbewertet?",
+     "kernpunkte": [
+      "E(r) = r_f + β · MP",
+      "β = Schwankung relativ zum Markt, Markt hat β = 1",
+      "MP = E(r_M) − r_f, nicht die Marktrendite",
+      "über SML unterbewertet, unter SML überbewertet"
+     ],
+     "zuordnen": [
+      [
+       "β",
+       "Misst, wie stark eine Aktie im Vergleich zum Markt schwankt"
+      ],
+      [
+       "Marktrisikoprämie",
+       "Der Aufschlag der Marktrendite über den risikolosen Zins"
+      ],
+      [
+       "r_f",
+       "Risikoloser Zins, z. B. für sichere Staatsanleihen"
+      ],
+      [
+       "unter der Wertpapierlinie",
+       "Die Aktie bringt weniger, als ihr Risiko verlangt – sie ist überbewertet"
+      ]
+     ],
+     "luecken": [
+      "E(r) = r_f + β · {{MP|Marktrisikoprämie}}",
+      "Das Marktportfolio hat ein β von {{1|eins}}."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dcf",
+   "ast": "1.1 Aktien",
+   "titel": "Unternehmenswert mit DCF",
+   "folien": "Kap. 1.1",
+   "art": "rechnen",
+   "relevanz": "kern",
+   "ansehen": [
+    {
+     "typ": "text",
+     "inhalt": "Ein Unternehmen ist so viel wert wie alles Geld, das es künftig erwirtschaftet, umgerechnet auf heute. Der Wert besteht aus den abgezinsten Cashflows der nächsten Jahre und dem Fortführungswert für alles danach – meist der größte Teil. Steigt der Zins, sinkt der Unternehmenswert."
+    },
+    {
+     "typ": "formel",
+     "inhalt": "PV = Σ CFₜ ÷ (1 + i)ᵗ  +  FW ÷ (1 + i)ⁿ\nFW = CFₙ ÷ (i − w)   (ewige Rente mit Wachstum)"
+    },
+    {
+     "typ": "tabelle",
+     "zeilen": [
+      [
+       "Beispiel",
+       "CF 100/110/120, i = 10 %, w = 2 % → 271,98 + 1.500 ÷ 1,1³ = 1.398,95"
+      ],
+      [
+       "Sensitivität",
+       "alles mit i + 1 % und i − 1 % wiederholen"
+      ],
+      [
+       "Achtung",
+       "Möbius nimmt CFₙ ÷ (i − w); manche Lehrbücher CFₙ · (1 + w) ÷ (i − w) – Aufgabenstellung beachten; Einheiten (Mrd./Mio.) prüfen"
+      ]
+     ]
+    }
+   ],
+   "puzzle": [
+    "Wert = abgezinste Cashflows + FW",
+    "Zins steigt → Wert sinkt"
+   ],
+   "karten": [
+    {
+     "id": "dcf-1",
+     "titel": "DCF-Verfahren",
+     "frage": "Erkläre das DCF-Verfahren und die Rolle des Fortführungswerts.",
+     "kernpunkte": [
+      "Unternehmenswert = Barwert aller künftigen Cashflows",
+      "Detailphase: jeden CF einzeln abzinsen",
+      "Fortführungswert als ewige Rente mit Wachstum: CFₙ ÷ (i − w)",
+      "FW ebenfalls auf heute abzinsen; höherer Zins → niedrigerer Wert"
+     ],
+     "luecken": [
+      "Der Fortführungswert ist FW = CFₙ ÷ (i − {{w|Wachstum}})",
+      "Steigt der Zins, {{sinkt|fällt}} der Unternehmenswert."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "analyse",
+   "ast": "1.1 Aktien",
+   "titel": "Drei Arten der Aktienanalyse",
+   "folien": "Kap. 1.1",
+   "art": "wissen",
+   "relevanz": "mittel",
+   "ansehen": [
+    {
+     "typ": "tabelle",
+     "zeilen": [
+      [
+       "Fundamentalanalyse",
+       "„Wie gut ist die Firma?“ Von groß nach klein: Wirtschaft (Zinsen, BIP) → Branche (z. B. ifo-Index) → Firma (Gewinn, Management, Konkurrenz) → fairer Wert"
+      ],
+      [
+       "Technische Analyse",
+       "„Was sagt der Chart?“ Nur der Kursverlauf, Suche nach Mustern wie Trends; Firmenzahlen spielen keine Rolle"
+      ],
+      [
+       "Quantitative Analyse",
+       "„Was sagt die Statistik?“ Rechenmodelle werten viele alte Kursdaten aus und leiten Prognosen ab"
+      ]
+     ]
+    }
+   ],
+   "puzzle": [
+    "Fundamental: Firma",
+    "Technisch: Chart"
+   ],
+   "karten": [
+    {
+     "id": "analyse-1",
+     "titel": "Analysearten",
+     "frage": "Grenze Fundamentalanalyse, technische und quantitative Analyse voneinander ab.",
+     "kernpunkte": [
+      "Fundamental: Wirtschaft → Branche → Firma, fairer Wert",
+      "Technisch: nur Kursverlauf und Muster",
+      "Quantitativ: statistische Modelle auf historischen Daten"
+     ],
+     "zuordnen": [
+      [
+       "Fundamentalanalyse",
+       "Bewertet die Firma selbst, von der Gesamtwirtschaft über die Branche bis zum Unternehmen"
+      ],
+      [
+       "Technische Analyse",
+       "Sucht im Kursverlauf nach Mustern, Firmenzahlen sind egal"
+      ],
+      [
+       "Quantitative Analyse",
+       "Leitet mit statistischen Modellen aus vielen alten Kursdaten Prognosen ab"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "anleihe",
+   "ast": "1.2 Anleihen",
+   "titel": "Was ist eine Anleihe?",
+   "folien": "Kap. 1.2",
+   "art": "wissen",
+   "relevanz": "kern",
+   "ansehen": [
+    {
+     "typ": "text",
+     "inhalt": "Mit einer Anleihe leihst du einem Staat oder einer Firma Geld und bekommst dafür ein Wertpapier. Du erhältst jedes Jahr Zinsen und am Ende den Nennwert zurück. Der Kurs hängt vom Marktzins ab."
+    },
+    {
+     "typ": "tabelle",
+     "zeilen": [
+      [
+       "pari",
+       "100 % des Nennwerts; unter pari kaufen → Rendite über dem Kupon, über pari → Rendite unter dem Kupon"
+      ],
+      [
+       "Festzins",
+       "jedes Jahr derselbe Kupon"
+      ],
+      [
+       "Floater",
+       "variabler Zins nach Referenzzins wie dem Euribor, regelmäßig angepasst"
+      ],
+      [
+       "Stufenzins",
+       "Kupon steigt oder fällt nach festem Plan"
+      ],
+      [
+       "Zerobond",
+       "keine Zinsen, Ausgabe unter Nennwert, Ertrag ist die Differenz – kein variabler Zins"
+      ],
+      [
+       "Staatsanleihe",
+       "Risiko je nach Land; Bundesanleihen sehr sicher, dafür wenig Zins"
+      ],
+      [
+       "Unternehmensanleihe",
+       "mehr Zins, aber Ausfallrisiko bei Insolvenz – Rating prüfen"
+      ],
+      [
+       "Pfandbrief",
+       "von Banken, zusätzlich durch Kredite und Sicherheiten (Grundschulden) gedeckt – sehr sicher"
+      ],
+      [
+       "Inhaberpapier",
+       "gehört dem Besitzer, leicht handelbar – Normalfall"
+      ],
+      [
+       "Namenspapier",
+       "an eine Person gebunden, Weitergabe nur durch Abtretung – kaum handelbar"
+      ]
+     ]
+    }
+   ],
+   "puzzle": [
+    "Gläubiger: Zins + Rückzahlung",
+    "Zerobond: keine Zinsen, Ausgabe unter pari"
+   ],
+   "karten": [
+    {
+     "id": "anleihe-1",
+     "titel": "Arten von Anleihen",
+     "frage": "Unterscheide Anleihen nach Verzinsung und nach Emittent.",
+     "kernpunkte": [
+      "Festzins, Floater (Euribor), Stufenzins, Zerobond",
+      "Staat, Unternehmen, Pfandbrief",
+      "Risiko und Zins hängen vom Emittenten ab",
+      "Zerobond: Ertrag aus Differenz zum Nennwert"
+     ],
+     "zuordnen": [
+      [
+       "Floater",
+       "Der Zins richtet sich nach einem Referenzzins wie dem Euribor und wird regelmäßig angepasst"
+      ],
+      [
+       "Zerobond",
+       "Zahlt keine laufenden Zinsen, wird unter dem Nennwert ausgegeben und zum Nennwert zurückgezahlt"
+      ],
+      [
+       "Pfandbrief",
+       "Zusätzlich durch Bankkredite und deren Sicherheiten wie Grundschulden gedeckt"
+      ],
+      [
+       "Namenspapier",
+       "An eine Person gebunden, Weitergabe nur durch Abtretung der Forderung"
+      ]
+     ],
+     "luecken": [
+      "Kaufst du unter pari, liegt die Rendite {{über|höher als}} dem Kupon.",
+      "Ein Namenspapier wird durch {{Abtretung}} übertragen."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "kurs",
+   "ast": "1.2 Anleihen",
+   "titel": "Anleihekurs = Barwert",
+   "folien": "Kap. 1.2",
+   "art": "rechnen",
+   "relevanz": "kern",
+   "ansehen": [
+    {
+     "typ": "text",
+     "inhalt": "Der Kurs einer Anleihe ist der Barwert aller künftigen Zahlungen: die jährlichen Zinsen plus die Rückzahlung, abgezinst mit dem Marktzins. Geld in der Zukunft ist heute weniger wert, weil es heute angelegt schon Zinsen brächte."
+    },
+    {
+     "typ": "formel",
+     "inhalt": "P = K · ((1 + i)ⁿ − 1) ÷ (i · (1 + i)ⁿ)  +  N ÷ (1 + i)ⁿ"
+    },
+    {
+     "typ": "tabelle",
+     "zeilen": [
+      [
+       "Beispiel",
+       "4 %-Anleihe, 5 Jahre, Marktzins 3 % → 18,32 + 86,26 = 104,58"
+      ],
+      [
+       "Marktzins steigt",
+       "Kurs bestehender Anleihen fällt – neue Anleihen zahlen mehr, die alte wird stärker abgezinst"
+      ],
+      [
+       "Kupon > Marktzins",
+       "Kurs über 100"
+      ],
+      [
+       "Kupon < Marktzins",
+       "Kurs unter 100"
+      ],
+      [
+       "Achtung",
+       "Nennwert nur einmal am Ende abzinsen, Zinsen jedes Jahr"
+      ]
+     ]
+    }
+   ],
+   "puzzle": [
+    "Marktzins rauf → Kurs runter",
+    "Kupon > Marktzins → Kurs > 100"
+   ],
+   "karten": [
+    {
+     "id": "kurs-1",
+     "titel": "Kurs und Marktzins",
+     "frage": "Warum fällt der Kurs einer Anleihe, wenn der Marktzins steigt?",
+     "kernpunkte": [
+      "Kurs = Barwert aller Zahlungen",
+      "neue Anleihen zahlen höheren Zins",
+      "alte Anleihe mit festem Kupon nur noch günstiger verkäuflich",
+      "rechnerisch: stärkere Abzinsung mit höherem Marktzins"
+     ],
+     "zuordnen": [
+      [
+       "Kupon über Marktzins",
+       "Die Anleihe notiert über 100, weil sie mehr zahlt als der Markt"
+      ],
+      [
+       "Kupon unter Marktzins",
+       "Die Anleihe notiert unter 100, weil sie weniger zahlt als der Markt"
+      ],
+      [
+       "Rentenbarwertfaktor",
+       "Damit werden alle jährlichen Zinszahlungen auf einmal abgezinst"
+      ],
+      [
+       "Marktzins",
+       "Der Zins, den man heute für eine vergleichbare Anlage bekommt"
+      ]
+     ],
+     "luecken": [
+      "Steigt der Marktzins, {{fällt|sinkt}} der Kurs bestehender Anleihen.",
+      "Die Rückzahlung N wird mit (1 + i) hoch {{n}} abgezinst."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "stueckzinsen",
+   "ast": "1.2 Anleihen",
+   "titel": "Stückzinsen, Dirty und Clean Price",
+   "folien": "Kap. 1.2",
+   "art": "rechnen",
+   "relevanz": "kern",
+   "ansehen": [
+    {
+     "typ": "text",
+     "inhalt": "Wer zwischen zwei Zinsterminen kauft, bekommt beim nächsten Termin den vollen Jahreskupon. Deshalb zahlt er dem Verkäufer dessen Anteil vorab: die Stückzinsen. Möbius rechnet mit 30 Tagen pro Monat und 360 Tagen pro Jahr."
+    },
+    {
+     "typ": "formel",
+     "inhalt": "a = Monate bis Kupon · 30 ÷ 360,   b = 1 − a\nSZ = K · b\nDP = (1 + i)ᵇ · Barwert am letzten Kupontermin\nCP = DP − SZ"
+    },
+    {
+     "typ": "tabelle",
+     "zeilen": [
+      [
+       "Dirty Price",
+       "Kurs inklusive Stückzinsen – was der Käufer insgesamt zahlt"
+      ],
+      [
+       "Clean Price",
+       "Kurs ohne Stückzinsen – der Börsenkurs"
+      ],
+      [
+       "n",
+       "alle noch ausstehenden Kupons inklusive des nächsten – meist eins mehr als die ganzen Restjahre"
+      ],
+      [
+       "Beispiel",
+       "5 %, Kauf 1.7.00, Kupon 1.10., fällig 1.10.03, i = 4 %: n = 4, SZ 3,75, DP 106,72, CP 102,97"
+      ]
+     ]
+    }
+   ],
+   "puzzle": [
+    "SZ = K · b",
+    "CP = DP − SZ"
+   ],
+   "karten": [
+    {
+     "id": "sz-1",
+     "titel": "Stückzinsen",
+     "frage": "Was sind Stückzinsen, und wie hängen Dirty und Clean Price zusammen?",
+     "kernpunkte": [
+      "Käufer bekommt beim nächsten Termin den vollen Kupon",
+      "zahlt Verkäufer dessen Anteil K · b vorab",
+      "Dirty Price = Clean Price + Stückzinsen",
+      "30/360-Methode bei Möbius"
+     ],
+     "zuordnen": [
+      [
+       "Stückzinsen",
+       "Der Zinsanteil, der dem Verkäufer für die Zeit seit dem letzten Kupon zusteht"
+      ],
+      [
+       "Dirty Price",
+       "Kurs inklusive Stückzinsen – das zahlt der Käufer insgesamt"
+      ],
+      [
+       "Clean Price",
+       "Kurs ohne Stückzinsen – so steht die Anleihe an der Börse"
+      ],
+      [
+       "30/360",
+       "Möbius rechnet jeden Monat mit 30 Tagen und das Jahr mit 360 Tagen"
+      ]
+     ],
+     "luecken": [
+      "Stückzinsen = K · {{b}}",
+      "Clean Price = Dirty Price − {{Stückzinsen|SZ}}"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rendite",
+   "ast": "1.2 Anleihen",
+   "titel": "Rendite mit dem Newton-Verfahren",
+   "folien": "Kap. 1.2",
+   "art": "rechnen",
+   "relevanz": "kern",
+   "ansehen": [
+    {
+     "typ": "text",
+     "inhalt": "Die Rendite ist der Zins, bei dem der Barwert aller Zahlungen genau dem heutigen Kurs entspricht (interner Zinsfuß). Ab drei Jahren lässt sie sich nicht direkt ausrechnen – deshalb das Newton-Verfahren."
+    },
+    {
+     "typ": "formel",
+     "inhalt": "PV(i) = −P₀ + K ÷ (1 + i) + … + (K + N) ÷ (1 + i)ⁿ\nPV′(i) = −1·K ÷ (1 + i)² − … − n·(K + N) ÷ (1 + i)ⁿ⁺¹\niₖ₊₁ = iₖ − PV(iₖ) ÷ PV′(iₖ)"
+    },
+    {
+     "typ": "tabelle",
+     "zeilen": [
+      [
+       "Start",
+       "i₀ = Kupon in %; meist reichen 2 Schritte"
+      ],
+      [
+       "Beispiel",
+       "4 %, 3 Jahre, Kurs 97 → 5,08 % → 5,10 %"
+      ],
+      [
+       "Kurs < 100",
+       "Rendite höher als der Kupon"
+      ],
+      [
+       "Kurs > 100",
+       "Rendite niedriger als der Kupon"
+      ],
+      [
+       "Achtung",
+       "letzte Zahlung K + N; PV′ ist immer negativ"
+      ]
+     ]
+    }
+   ],
+   "puzzle": [
+    "Rendite = interner Zinsfuß",
+    "Kurs < 100 → Rendite > Kupon"
+   ],
+   "karten": [
+    {
+     "id": "rendite-1",
+     "titel": "Rendite und Kupon",
+     "frage": "Erkläre den Unterschied zwischen Kupon und Rendite und das Vorgehen beim Newton-Verfahren.",
+     "kernpunkte": [
+      "Kupon = fester Zins auf den Nennwert",
+      "Rendite = tatsächlicher Ertrag auf den Kaufpreis (interner Zinsfuß)",
+      "Newton: PV(i) und PV′(i) aufstellen, Startwert Kupon",
+      "iₖ₊₁ = iₖ − PV/PV′, wiederholen bis PV ≈ 0"
+     ],
+     "luecken": [
+      "Der Newton-Schritt lautet iₖ₊₁ = iₖ − PV(iₖ) ÷ {{PV′(iₖ)|PV'(iₖ)|PV'}}",
+      "Liegt der Kurs unter 100, ist die Rendite {{höher|größer}} als der Kupon."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "risiken",
+   "ast": "1.2 Anleihen",
+   "titel": "Risiken und Zinsstruktur",
+   "folien": "Kap. 1.2",
+   "art": "wissen",
+   "relevanz": "mittel",
+   "ansehen": [
+    {
+     "typ": "tabelle",
+     "zeilen": [
+      [
+       "Kursrisiko",
+       "Marktzins steigt → Kurs fällt"
+      ],
+      [
+       "Wiederanlagerisiko",
+       "Marktzins fällt → Zinsen nur noch schlechter anlegbar; beide wirken gegeneinander, gemessen mit der Duration"
+      ],
+      [
+       "Bonitätsrisiko",
+       "Emittent kann nicht zahlen; Ratings von S&P, Moody's, Fitch"
+      ],
+      [
+       "AAA bis A",
+       "beste bis hohe Qualität, geringes Ausfallrisiko"
+      ],
+      [
+       "BBB",
+       "noch Investment Grade"
+      ],
+      [
+       "BB und schlechter",
+       "spekulativ, Junk Bonds, hoher Zins"
+      ],
+      [
+       "normale Zinsstruktur",
+       "lange Laufzeit = mehr Zins"
+      ],
+      [
+       "flache Zinsstruktur",
+       "gleicher Zins für alle Laufzeiten – so rechnet das Skript"
+      ],
+      [
+       "inverse Zinsstruktur",
+       "kurze Laufzeit = mehr Zins, oft Krisenzeichen"
+      ]
+     ]
+    }
+   ],
+   "puzzle": [
+    "Kurs- vs. Wiederanlagerisiko",
+    "BB und schlechter = Junk"
+   ],
+   "karten": [
+    {
+     "id": "risiken-1",
+     "titel": "Risiken einer Anleihe",
+     "frage": "Nenne die Risiken einer Anleihe und erkläre die Zinsstrukturkurve.",
+     "kernpunkte": [
+      "Kursrisiko und Wiederanlagerisiko wirken gegeneinander (Duration)",
+      "Bonitätsrisiko, Rating",
+      "Investment Grade bis BBB, darunter spekulativ",
+      "Zinsstruktur normal, flach, invers"
+     ],
+     "zuordnen": [
+      [
+       "Wiederanlagerisiko",
+       "Fällt der Marktzins, lassen sich die erhaltenen Zinsen nur noch schlechter anlegen"
+      ],
+      [
+       "Bonitätsrisiko",
+       "Die Gefahr, dass der Emittent Zinsen oder Rückzahlung nicht mehr leisten kann"
+      ],
+      [
+       "Junk Bond",
+       "Anleihe mit Rating BB oder schlechter – spekulativ, dafür hoher Zins"
+      ],
+      [
+       "inverse Zinsstruktur",
+       "Kurze Laufzeiten bringen mehr Zins als lange – oft ein Krisenzeichen"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "discount",
+   "ast": "3 Zertifikate",
+   "titel": "Discount-Zertifikat",
+   "folien": "Moodle-Aufgabe",
+   "art": "rechnen",
+   "relevanz": "kern",
+   "ansehen": [
+    {
+     "typ": "text",
+     "inhalt": "Mit einem Discount-Zertifikat kaufst du eine Aktie mit Rabatt. Im Gegenzug ist der Gewinn nach oben begrenzt: Mehr als den Cap bekommst du nie. Unterhalb des Caps bekommst du den Aktienkurs, oberhalb nur den Cap."
+    },
+    {
+     "typ": "formel",
+     "inhalt": "Discount = S₀ − Z₀   (in % von S₀)\nmax. Ertrag = Cap − Z₀   (in % von Z₀)\nr_Zert = (min(S_T; Cap) − Z₀) ÷ Z₀,   r_Aktie = (S_T − S₀) ÷ S₀\nIndifferenzkurs x = S₀ · (1 + r_max)"
+    },
+    {
+     "typ": "tabelle",
+     "zeilen": [
+      [
+       "Beispiel",
+       "Aktie 40, Zertifikat 34,90/35 (Geld/Brief), Cap 42 → Discount 5 € = 12,5 %, max. Ertrag 7 € = 20 %, Indifferenz 48 €"
+      ],
+      [
+       "min(S_T; Cap)",
+       "der kleinere der beiden Werte – über dem Cap bekommst du nur den Cap"
+      ],
+      [
+       "Achtung",
+       "immer mit dem Briefkurs rechnen (du kaufst); Discount in % auf den Aktienkurs, max. Ertrag in % auf den Zertifikatspreis"
+      ]
+     ]
+    }
+   ],
+   "puzzle": [
+    "Rabatt gegen begrenzten Gewinn",
+    "Indifferenz = S₀ · (1 + r_max)"
+   ],
+   "karten": [
+    {
+     "id": "discount-1",
+     "titel": "Funktionsweise",
+     "frage": "Erkläre ein Discount-Zertifikat: Wann ist es besser als die Aktie, wann schlechter?",
+     "kernpunkte": [
+      "Aktie mit Rabatt (Discount) kaufen",
+      "Gewinn nach oben durch den Cap begrenzt",
+      "unter dem Indifferenzkurs besser als die Aktie, auch bei fallenden Kursen",
+      "über dem Indifferenzkurs ist die Aktie besser"
+     ],
+     "zuordnen": [
+      [
+       "Discount",
+       "Der Rabatt des Zertifikats gegenüber dem heutigen Aktienkurs"
+      ],
+      [
+       "Cap",
+       "Höchstbetrag, den das Zertifikat bei Fälligkeit auszahlt"
+      ],
+      [
+       "Briefkurs",
+       "Der Preis, zu dem du das Zertifikat kaufst – damit wird gerechnet"
+      ],
+      [
+       "Indifferenzkurs",
+       "Ab diesem Aktienkurs bringt die Aktie mehr als das Zertifikat"
+      ]
+     ],
+     "luecken": [
+      "Der maximale Ertrag in % bezieht sich auf den {{Zertifikatspreis|Briefkurs|Kaufpreis des Zertifikats}}.",
+      "Bei Fälligkeit erhältst du min(S_T; {{Cap}})."
+     ]
+    }
+   ]
+  }
+ ],
+ "aufgaben": [
+  {
+   "id": "kgv-a",
+   "thema": "kgv",
+   "titel": "KGV berechnen",
+   "text": "80 Mio. Aktien, Kurs 25 €, Jahresgewinn 160 Mio. €. Wie hoch ist das KGV?",
+   "antwort": 12.5,
+   "toleranz": 0.01,
+   "einheit": "",
+   "weg": [
+    "Marktkapitalisierung = 80 Mio. × 25 € = 2.000 Mio. €",
+    "KGV = 2.000 ÷ 160 = 12,5"
+   ]
+  },
+  {
+   "id": "peg-a",
+   "thema": "kgv",
+   "titel": "PEG berechnen",
+   "text": "KGV 12,5, erwartetes Gewinnwachstum 8 % p. a. Wie hoch ist das PEG (2 Nachkommastellen)?",
+   "antwort": 1.56,
+   "toleranz": 0.01,
+   "einheit": "",
+   "weg": [
+    "PEG = 12,5 ÷ 8 = 1,56 → über 1, eher teuer"
+   ]
+  },
+  {
+   "id": "index-preis",
+   "thema": "index",
+   "titel": "Preisgewichteter Index",
+   "text": "Vier Aktien, Kurse in t=0: 30/10/20/60 €, in t=1: 36/12/25/58 €. Rendite des preisgewichteten Index in %?",
+   "antwort": 9.17,
+   "toleranz": 0.05,
+   "einheit": "%",
+   "weg": [
+    "t=0: 120 ÷ 4 = 30",
+    "t=1: 131 ÷ 4 = 32,75",
+    "32,75 ÷ 30 − 1 = 9,17 %"
+   ]
+  },
+  {
+   "id": "index-kap",
+   "thema": "index",
+   "titel": "Kapitalisierungsgewichteter Index",
+   "text": "Wie oben, Anzahl Aktien 1.000/2.000/1.500/500. Rendite des kapitalisierungsgewichteten Index in %?",
+   "antwort": 15.0,
+   "toleranz": 0.05,
+   "einheit": "%",
+   "weg": [
+    "t=0: 30·1.000 + 10·2.000 + 20·1.500 + 60·500 = 110.000",
+    "t=1: 36·1.000 + 12·2.000 + 25·1.500 + 58·500 = 126.500",
+    "126.500 ÷ 110.000 − 1 = 15,00 %"
+   ]
+  },
+  {
+   "id": "capm-mp",
+   "thema": "capm",
+   "titel": "CAPM: Marktrisikoprämie",
+   "text": "Aktie A: erwartete Rendite 7 % bei β = 0,8. Aktie B: 13 % bei β = 1,8. Wie hoch ist die Marktrisikoprämie in %?",
+   "antwort": 6,
+   "toleranz": 0.01,
+   "einheit": "%",
+   "weg": [
+    "B − A: 13 % − 7 % = (1,8 − 0,8) · MP",
+    "MP = 6 %"
+   ]
+  },
+  {
+   "id": "capm-rf",
+   "thema": "capm",
+   "titel": "CAPM: risikoloser Zins",
+   "text": "Wie oben (MP = 6 %, A: 7 % bei β = 0,8). Wie hoch ist r_f in %?",
+   "antwort": 2.2,
+   "toleranz": 0.01,
+   "einheit": "%",
+   "weg": [
+    "7 % = r_f + 0,8 · 6 %",
+    "r_f = 7 % − 4,8 % = 2,2 %"
+   ]
+  },
+  {
+   "id": "capm-markt",
+   "thema": "capm",
+   "titel": "CAPM: Marktrendite",
+   "text": "Wie oben (r_f = 2,2 %, MP = 6 %). Welche Rendite erwartet man für das Marktportfolio in %?",
+   "antwort": 8.2,
+   "toleranz": 0.01,
+   "einheit": "%",
+   "weg": [
+    "Markt: β = 1",
+    "E(r_M) = 2,2 % + 6 % = 8,2 % – MP allein wäre falsch"
+   ]
+  },
+  {
+   "id": "dcf-a",
+   "thema": "dcf",
+   "titel": "DCF-Unternehmenswert",
+   "text": "Cashflows 200 / 220 / 240 Mio. € in Jahr 1–3, danach ewiges Wachstum 2 %, Zins 8 %. Unternehmenswert in Mio. € (FW = CF₃ ÷ (i − w))?",
+   "antwort": 3739.65,
+   "toleranz": 0.5,
+   "einheit": "Mio. €",
+   "weg": [
+    "Detailphase: 200/1,08 + 220/1,08² + 240/1,08³ = 564,32",
+    "FW = 240 ÷ (0,08 − 0,02) = 4.000,00",
+    "FW abgezinst: 4.000,00 ÷ 1,08³ = 3.175,33",
+    "Summe = 3.739,65 Mio. €"
+   ]
+  },
+  {
+   "id": "dcf-skript",
+   "thema": "dcf",
+   "titel": "DCF aus dem Kochrezept",
+   "text": "CF 100 / 110 / 120, i = 10 %, w = 2 %. Unternehmenswert (FW = CF₃ ÷ (i − w))?",
+   "antwort": 1398.95,
+   "toleranz": 0.5,
+   "einheit": "",
+   "weg": [
+    "100/1,1 + 110/1,1² + 120/1,1³ = 271,98",
+    "FW = 120 ÷ 0,08 = 1.500 → ÷ 1,1³ = 1.126,97",
+    "PV = 1.398,95"
+   ]
+  },
+  {
+   "id": "kurs-a",
+   "thema": "kurs",
+   "titel": "Anleihekurs (Kochrezept)",
+   "text": "4 %-Anleihe, Restlaufzeit 5 Jahre, Marktzins 3 %, Nennwert 100. Kurs?",
+   "antwort": 104.58,
+   "toleranz": 0.02,
+   "einheit": "€",
+   "weg": [
+    "Zinsen: 4 · (1,03⁵ − 1) ÷ (0,03 · 1,03⁵) = 18,32",
+    "Rückzahlung: 100 ÷ 1,03⁵ = 86,26",
+    "Kurs = 104,58 € (Kupon > Marktzins → über 100)"
+   ]
+  },
+  {
+   "id": "kurs-b",
+   "thema": "kurs",
+   "titel": "Anleihekurs unter pari",
+   "text": "3 %-Anleihe, Restlaufzeit 4 Jahre, Marktzins 5 %, Nennwert 100. Kurs?",
+   "antwort": 92.91,
+   "toleranz": 0.02,
+   "einheit": "€",
+   "weg": [
+    "Zinsen: 3 · RBF(5 %, 4) = 3 · 3,5460 = 10,64",
+    "Rückzahlung: 100 ÷ 1,05⁴ = 82,27",
+    "Kurs = 92,91 € (Kupon < Marktzins → unter 100)"
+   ]
+  },
+  {
+   "id": "sz-dp",
+   "thema": "stueckzinsen",
+   "titel": "Dirty Price",
+   "text": "5 %-Anleihe, Kupon am 1.10., Kauf am 1.7.00, fällig 1.10.03, Marktzins 4 %. Dirty Price?",
+   "antwort": 106.72,
+   "toleranz": 0.03,
+   "einheit": "€",
+   "weg": [
+    "a = 3·30/360 = 0,25, b = 0,75, n = 4",
+    "Barwert am letzten Kupontermin = 103,63",
+    "DP = 1,04^0,75 · 103,63 = 106,72 €"
+   ]
+  },
+  {
+   "id": "sz-cp",
+   "thema": "stueckzinsen",
+   "titel": "Clean Price",
+   "text": "Wie oben (Dirty Price 106,72 €, Kupon 5 €, b = 0,75). Clean Price?",
+   "antwort": 102.97,
+   "toleranz": 0.03,
+   "einheit": "€",
+   "weg": [
+    "SZ = 5 · 0,75 = 3,75 €",
+    "CP = 106,72 − 3,75 = 102,97 €"
+   ]
+  },
+  {
+   "id": "sz-b",
+   "thema": "stueckzinsen",
+   "titel": "Stückzinsen – neue Zahlen",
+   "text": "6 %-Anleihe, Kupon am 1.12., Kauf am 1.8.01, letzter Kupon 1.12.03, Marktzins 5 %. Wie hoch sind die Stückzinsen?",
+   "antwort": 4.0,
+   "toleranz": 0.01,
+   "einheit": "€",
+   "weg": [
+    "Bis zum Kupon 4 Monate → a = 4·30/360 = 0,333, b = 0,667",
+    "SZ = 6 · 0,667 = 4,00 €"
+   ]
+  },
+  {
+   "id": "sz-b-dp",
+   "thema": "stueckzinsen",
+   "titel": "Dirty Price – neue Zahlen",
+   "text": "Wie oben (6 %, Kauf 1.8.01, Kupons 1.12.01, 02, 03 → n = 3, Marktzins 5 %, b = 0,667). Dirty Price?",
+   "antwort": 106.12,
+   "toleranz": 0.05,
+   "einheit": "€",
+   "weg": [
+    "Barwert am letzten Kupontermin: 6 · RBF(5 %, 3) + 100/1,05³ = 102,72",
+    "DP = 1,05^0,667 · 102,72 = 106,12 €",
+    "CP = 106,12 − 4,00 = 102,12 €"
+   ]
+  },
+  {
+   "id": "newton-a",
+   "thema": "rendite",
+   "titel": "Rendite (Kochrezept)",
+   "text": "4 %-Anleihe, Restlaufzeit 3 Jahre, Kurs 97 €. Rendite in % (2 Nachkommastellen)?",
+   "antwort": 5.1,
+   "toleranz": 0.02,
+   "einheit": "%",
+   "weg": [
+    "Start i₀ = 4 %: PV = 3,00, PV′ = −277,51",
+    "i₁ = 5,08 %",
+    "i₂ = 5,10 % → PV ≈ 0"
+   ]
+  },
+  {
+   "id": "newton-b",
+   "thema": "rendite",
+   "titel": "Rendite über pari",
+   "text": "5 %-Anleihe, Restlaufzeit 3 Jahre, Kurs 103 €. Rendite in % (2 Nachkommastellen)?",
+   "antwort": 3.92,
+   "toleranz": 0.02,
+   "einheit": "%",
+   "weg": [
+    "Start i₀ = 5 %",
+    "i₁ = 3,90 %",
+    "i₂ = 3,92 % (Kurs > 100 → Rendite < Kupon)"
+   ]
+  },
+  {
+   "id": "disc-d",
+   "thema": "discount",
+   "titel": "Discount in %",
+   "text": "Aktie 40 €, Discount-Zertifikat Geld 34,90 € / Brief 35 €, Cap 42 €. Discount in %?",
+   "antwort": 12.5,
+   "toleranz": 0.01,
+   "einheit": "%",
+   "weg": [
+    "Kauf zum Briefkurs 35 €",
+    "Discount = 40 − 35 = 5 € → 5 ÷ 40 = 12,5 %"
+   ]
+  },
+  {
+   "id": "disc-max",
+   "thema": "discount",
+   "titel": "Maximale Rendite",
+   "text": "Wie oben (Brief 35 €, Cap 42 €). Maximale Rendite in %?",
+   "antwort": 20,
+   "toleranz": 0.01,
+   "einheit": "%",
+   "weg": [
+    "max. Ertrag = 42 − 35 = 7 €",
+    "7 ÷ 35 = 20 % (Bezug: Zertifikatspreis)"
+   ]
+  },
+  {
+   "id": "disc-ind",
+   "thema": "discount",
+   "titel": "Indifferenzkurs",
+   "text": "Wie oben (Aktie 40 €, r_max = 20 %). Ab welchem Aktienkurs ist die Aktie besser?",
+   "antwort": 48,
+   "toleranz": 0.01,
+   "einheit": "€",
+   "weg": [
+    "x = 40 · (1 + 0,20) = 48 €"
+   ]
+  },
+  {
+   "id": "disc-b",
+   "thema": "discount",
+   "titel": "Discount – neue Zahlen",
+   "text": "Aktie 60 €, Zertifikat Brief 52,50 €, Cap 63 €. Aktie steht bei Fälligkeit bei 70 €. Rendite des Zertifikats in %?",
+   "antwort": 20,
+   "toleranz": 0.01,
+   "einheit": "%",
+   "weg": [
+    "min(70; 63) = 63",
+    "(63 − 52,50) ÷ 52,50 = 20 %",
+    "Aktie: (70 − 60) ÷ 60 = 16,67 % → Zertifikat besser (Indifferenz bei 60 · 1,2 = 72 €)"
+   ]
+  },
+  {
+   "id": "disc-b2",
+   "thema": "discount",
+   "titel": "Discount bei fallendem Kurs",
+   "text": "Wie oben (Aktie 60 €, Brief 52,50 €, Cap 63 €), aber die Aktie fällt auf 50 €. Rendite des Zertifikats in % (2 Nachkommastellen)?",
+   "antwort": -4.76,
+   "toleranz": 0.02,
+   "einheit": "%",
+   "weg": [
+    "min(50; 63) = 50",
+    "(50 − 52,50) ÷ 52,50 = -4,76 %",
+    "Aktie: (50 − 60) ÷ 60 = −16,67 % → Zertifikat verliert weniger"
+   ]
+  }
+ ]
+}

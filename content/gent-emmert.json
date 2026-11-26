@@ -1,0 +1,835 @@
+{
+ "format": 2,
+ "fach": "vt-gent-emmert",
+ "name": "Versicherungstheorie · Gent-Emmert",
+ "stand": "2026-11-26",
+ "hinweis": "Klausur: 35 Punkte, 6–7 reine Wiedergabe-Aufgaben. Relevant: Kap. 3, 6, 7, 8 (nur Combined Ratio), 9 (RPA + Folie 150). Nicht: Kap. 1, 2, 4, 5, Praxisbeispiele, Artikel, KI.",
+ "themen": [
+  {
+   "id": "rechtsformen",
+   "ast": "Aufbau eines VU",
+   "titel": "Rechtsformen von Versicherern",
+   "folien": "37–39",
+   "art": "wissen",
+   "relevanz": "kern",
+   "ansehen": [
+    {
+     "typ": "text",
+     "inhalt": "Nicht jede Rechtsform darf eine Versicherung betreiben. § 8 VAG erlaubt nur Formen, die auf Dauer angelegt sind, ausreichend Kapital haben und streng beaufsichtigt werden – denn Versicherte müssen sich oft jahrzehntelang darauf verlassen können, dass ihr Versicherer zahlt."
+    },
+    {
+     "typ": "tabelle",
+     "zeilen": [
+      [
+       "erlaubt",
+       "Aktiengesellschaft (auch SE), Versicherungsverein auf Gegenseitigkeit (VVaG), öffentlich-rechtliche Versicherer (Körperschaft, Anstalt)"
+      ],
+      [
+       "nicht erlaubt",
+       "Einzelkaufleute, Personengesellschaften (GbR, OHG, KG), GmbH, Genossenschaften"
+      ],
+      [
+       "Grund",
+       "Dauerhaftigkeit, Kapitalausstattung, Aufsicht – Schutz der Versicherten"
+      ]
+     ]
+    }
+   ],
+   "puzzle": [
+    "AG, VVaG, öffentlich-rechtlich",
+    "keine GmbH, keine Personengesellschaft"
+   ],
+   "karten": [
+    {
+     "id": "rf-1",
+     "titel": "Erlaubte Rechtsformen",
+     "frage": "Welche Rechtsformen dürfen nach § 8 VAG eine Versicherung betreiben, welche nicht – und warum?",
+     "kernpunkte": [
+      "erlaubt: AG/SE, VVaG, öffentlich-rechtliche Versicherer",
+      "nicht: Einzelkaufleute, Personengesellschaften, GmbH, Genossenschaften",
+      "Grund: dauerhaft, ausreichend Kapital, streng beaufsichtigt",
+      "Versicherte müssen sich jahrzehntelang verlassen können"
+     ],
+     "zuordnen": [
+      [
+       "Aktiengesellschaft",
+       "Erlaubte Rechtsform – auch als Europäische Gesellschaft (SE)"
+      ],
+      [
+       "VVaG",
+       "Versicherungsverein auf Gegenseitigkeit – die Versicherten sind zugleich Mitglieder"
+      ],
+      [
+       "öffentlich-rechtlicher Versicherer",
+       "Erlaubt als Körperschaft oder Anstalt des öffentlichen Rechts"
+      ],
+      [
+       "GmbH",
+       "Darf keine Versicherung betreiben"
+      ]
+     ],
+     "luecken": [
+      "Die zulässigen Rechtsformen regelt § {{8}} VAG.",
+      "Ein Versicherungsverein auf Gegenseitigkeit heißt abgekürzt {{VVaG}}."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "spartentrennung",
+   "ast": "Aufbau eines VU",
+   "titel": "Spartentrennungsprinzip",
+   "folien": "41–44",
+   "art": "wissen",
+   "relevanz": "kern",
+   "ansehen": [
+    {
+     "typ": "text",
+     "inhalt": "Lebensversicherung und substitutive Krankenversicherung dürfen nicht zusammen mit anderen Sparten in einem Unternehmen betrieben werden. Deshalb haben Konzerne eigene Gesellschaften für Leben, Kranken und Schaden/Unfall."
+    },
+    {
+     "typ": "tabelle",
+     "zeilen": [
+      [
+       "Ziel",
+       "die langfristig angesparten Gelder der Lebens- und Krankenversicherten schützen – keine Quersubventionierung anderer Sparten"
+      ],
+      [
+       "Rechtsschutz",
+       "betreibt ein Kompositversicherer Rechtsschutz, muss er die Schadenregulierung an ein unabhängiges Unternehmen auslagern – sonst Interessenkonflikt, wenn er im Streit selbst Gegner ist (z. B. über die Haftpflichtsparte)"
+      ]
+     ]
+    }
+   ],
+   "puzzle": [
+    "Leben/Kranken getrennt",
+    "Rechtsschutz: Schadenregulierung auslagern"
+   ],
+   "karten": [
+    {
+     "id": "sp-1",
+     "titel": "Spartentrennung",
+     "frage": "Was besagt das Spartentrennungsprinzip, warum gibt es es, und was gilt beim Rechtsschutz?",
+     "kernpunkte": [
+      "Leben und substitutive Kranken nicht mit anderen Sparten zusammen",
+      "Schutz der angesparten Gelder, keine Quersubventionierung",
+      "Konzerne mit eigenen Gesellschaften je Sparte",
+      "Rechtsschutz: Schadenregulierung an unabhängiges Unternehmen auslagern (Interessenkonflikt)"
+     ],
+     "luecken": [
+      "Lebensversicherung und {{substitutive Krankenversicherung|Krankenversicherung}} müssen getrennt betrieben werden.",
+      "Ziel ist, eine {{Quersubventionierung}} anderer Sparten zu verhindern."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "risikomerkmale",
+   "ast": "Risiko und Versicherbarkeit",
+   "titel": "Risikomerkmale",
+   "folien": "82–83",
+   "art": "wissen",
+   "relevanz": "kern",
+   "ansehen": [
+    {
+     "typ": "text",
+     "inhalt": "Risikomerkmale sind Eigenschaften eines Risikos, die mit Schadenhäufigkeit und Schadenhöhe zusammenhängen. Mit ihnen bildet der Versicherer Risikoklassen aus möglichst gleichartigen Risiken – die Grundlage für die Prämie."
+    },
+    {
+     "typ": "tabelle",
+     "zeilen": [
+      [
+       "objektive Merkmale",
+       "unabhängig vom Verhalten: Eigenschaften von Sachen (Bauart eines Gebäudes, Wetterlage) oder Personen (Alter)"
+      ],
+      [
+       "subjektive Merkmale",
+       "abhängig vom Verhalten: Fahrverhalten, jährliche Fahrleistung, Abstellplatz"
+      ],
+      [
+       "Moral Hazard",
+       "der Kunde verhält sich wegen der Versicherung anders, z. B. meldet mehr oder höhere Schäden"
+      ]
+     ]
+    }
+   ],
+   "puzzle": [
+    "objektiv: unabhängig vom Verhalten",
+    "subjektiv: Fahrleistung, Abstellplatz"
+   ],
+   "karten": [
+    {
+     "id": "rm-1",
+     "titel": "Objektive und subjektive Merkmale",
+     "frage": "Was sind Risikomerkmale, wozu dienen sie, und wie unterscheidet man objektive und subjektive?",
+     "kernpunkte": [
+      "Eigenschaften, die mit Schadenhäufigkeit und -höhe zusammenhängen",
+      "Bildung von Risikoklassen aus gleichartigen Risiken → Prämie",
+      "objektiv: unabhängig vom Verhalten (Bauart, Alter)",
+      "subjektiv: vom Verhalten abhängig (Fahrleistung, Abstellplatz)"
+     ],
+     "zuordnen": [
+      [
+       "objektives Risikomerkmal",
+       "Hängt nicht vom Verhalten ab, z. B. das Alter oder die Bauart eines Gebäudes"
+      ],
+      [
+       "subjektives Risikomerkmal",
+       "Hängt vom Verhalten ab, z. B. jährliche Fahrleistung oder Abstellplatz"
+      ],
+      [
+       "Risikoklasse",
+       "Gruppe möglichst gleichartiger Risiken, für die dieselbe Prämie gilt"
+      ],
+      [
+       "Moral Hazard",
+       "Der Kunde verhält sich wegen der Versicherung weniger vorsichtig"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "risiken-vu",
+   "ast": "Risiko und Versicherbarkeit",
+   "titel": "Risiken im Versicherungsunternehmen",
+   "folien": "85–87",
+   "art": "wissen",
+   "relevanz": "kern",
+   "ansehen": [
+    {
+     "typ": "text",
+     "inhalt": "Das Gesamtrisiko eines Versicherers ist die Gefahr, seine Unternehmensziele zu verfehlen. Es setzt sich aus vier Risikoarten zusammen. Das versicherungstechnische Risiko ist das, was trotz Ausgleich im Kollektiv und über die Zeit an Schwankung übrig bleibt."
+    },
+    {
+     "typ": "tabelle",
+     "zeilen": [
+      [
+       "allgemeines Unternehmensrisiko",
+       "Risiken jedes Unternehmens, z. B. falsche Strategie, starker Wettbewerb"
+      ],
+      [
+       "versicherungstechnisches Risiko",
+       "die Schäden fallen anders aus als kalkuliert"
+      ],
+      [
+       "Kapitalanlagerisiko",
+       "angelegte Gelder verlieren an Wert, z. B. durch Kurs- oder Zinsänderungen"
+      ],
+      [
+       "sonstige/operationelle Risiken",
+       "z. B. IT-Ausfälle, rechtliche Risiken"
+      ]
+     ],
+     "kopf": [
+      "Risikoart",
+      "Bedeutung"
+     ]
+    },
+    {
+     "typ": "tabelle",
+     "zeilen": [
+      [
+       "Zufallsrisiko",
+       "Schäden schwanken zufällig in Anzahl und Höhe"
+      ],
+      [
+       "Änderungsrisiko",
+       "Bedingungen ändern sich nach der Kalkulation, z. B. Klimawandel, Inflation"
+      ],
+      [
+       "Irrtumsrisiko",
+       "Kalkulation von Anfang an falsch, z. B. falsche Daten"
+      ],
+      [
+       "asymmetrische Information",
+       "Kunde weiß mehr – Adverse Selektion und Moral Hazard"
+      ]
+     ],
+     "kopf": [
+      "Versicherungstechnisches Risiko",
+      "Form"
+     ]
+    }
+   ],
+   "puzzle": [
+    "vier Risikoarten im VU",
+    "Zufall, Änderung, Irrtum, asym. Info"
+   ],
+   "karten": [
+    {
+     "id": "rvu-1",
+     "titel": "Vier Risikoarten",
+     "frage": "Aus welchen Risikoarten setzt sich das Gesamtrisiko eines Versicherers zusammen?",
+     "kernpunkte": [
+      "allgemeines Unternehmensrisiko",
+      "versicherungstechnisches Risiko",
+      "Kapitalanlagerisiko",
+      "sonstige/operationelle Risiken"
+     ],
+     "zuordnen": [
+      [
+       "allgemeines Unternehmensrisiko",
+       "Risiken, die jedes Unternehmen hat, z. B. eine falsche Strategie"
+      ],
+      [
+       "versicherungstechnisches Risiko",
+       "Die Schäden fallen anders aus als kalkuliert"
+      ],
+      [
+       "Kapitalanlagerisiko",
+       "Die angelegten Gelder verlieren durch Kurs- oder Zinsänderungen an Wert"
+      ],
+      [
+       "operationelles Risiko",
+       "Übrige Risiken wie IT-Ausfälle oder rechtliche Probleme"
+      ]
+     ]
+    },
+    {
+     "id": "rvu-2",
+     "titel": "Versicherungstechnisches Risiko",
+     "frage": "Erkläre die vier Formen des versicherungstechnischen Risikos mit Beispiel.",
+     "kernpunkte": [
+      "Zufallsrisiko: Anzahl und Höhe schwanken zufällig",
+      "Änderungsrisiko: Bedingungen ändern sich (Klimawandel, Inflation)",
+      "Irrtumsrisiko: Kalkulation von Anfang an falsch",
+      "asymmetrische Information: Adverse Selektion, Moral Hazard"
+     ],
+     "zuordnen": [
+      [
+       "Zufallsrisiko",
+       "Schadenanzahl und Schadenhöhe schwanken rein zufällig"
+      ],
+      [
+       "Änderungsrisiko",
+       "Nach der Kalkulation ändern sich die Bedingungen, z. B. durch Klimawandel"
+      ],
+      [
+       "Irrtumsrisiko",
+       "Die Kalkulation war von Anfang an falsch, z. B. wegen falscher Daten"
+      ],
+      [
+       "asymmetrische Information",
+       "Der Kunde weiß mehr über sein Risiko als der Versicherer"
+      ]
+     ],
+     "luecken": [
+      "Steigende Schäden durch Klimawandel sind ein {{Änderungsrisiko}}.",
+      "Eine Kalkulation mit falschen Daten ist ein {{Irrtumsrisiko}}."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "farny",
+   "ast": "Risiko und Versicherbarkeit",
+   "titel": "Versicherbarkeit nach Farny",
+   "folien": "95",
+   "art": "wissen",
+   "relevanz": "kern",
+   "ansehen": [
+    {
+     "typ": "text",
+     "inhalt": "Nach Farny ist ein Risiko versicherbar, wenn die Schadenverteilung fünf Merkmale erfüllt. Eine harte Grenze gibt es nicht – am Ende entscheidet der Versicherer."
+    },
+    {
+     "typ": "tabelle",
+     "zeilen": [
+      [
+       "Zufälligkeit",
+       "ob, wann und wie hoch ein Schaden entsteht, ist ungewiss und hängt nicht vom Verhalten des Kunden ab"
+      ],
+      [
+       "Schätzbarkeit",
+       "Wahrscheinlichkeit und Höhe lassen sich schätzen (Erwartungswert, Streuung)"
+      ],
+      [
+       "Eindeutigkeit",
+       "klar definiert, was versichert ist: Gefahren, Personen, Sachen"
+      ],
+      [
+       "Unabhängigkeit",
+       "Schäden treten nicht alle gleichzeitig auf – kein Kumul (z. B. Pandemie)"
+      ],
+      [
+       "Größe",
+       "der mögliche Schaden bleibt unter einer Obergrenze, die der Versicherer tragen kann"
+      ]
+     ]
+    }
+   ],
+   "puzzle": [
+    "Zufälligkeit, Schätzbarkeit, Eindeutigkeit",
+    "Unabhängigkeit, Größe"
+   ],
+   "karten": [
+    {
+     "id": "farny-1",
+     "titel": "Fünf Kriterien",
+     "frage": "Nenne und erkläre die fünf Kriterien der Versicherbarkeit nach Farny.",
+     "kernpunkte": [
+      "Zufälligkeit",
+      "Schätzbarkeit",
+      "Eindeutigkeit",
+      "Unabhängigkeit (kein Kumul)",
+      "Größe (tragbare Obergrenze)"
+     ],
+     "zuordnen": [
+      [
+       "Zufälligkeit",
+       "Ob und wann ein Schaden entsteht, ist ungewiss und nicht vom Kunden steuerbar"
+      ],
+      [
+       "Schätzbarkeit",
+       "Wahrscheinlichkeit und Höhe der Schäden lassen sich berechnen"
+      ],
+      [
+       "Eindeutigkeit",
+       "Es ist klar festgelegt, welche Gefahren, Personen und Sachen versichert sind"
+      ],
+      [
+       "Unabhängigkeit",
+       "Die Schäden treten nicht alle gleichzeitig auf, wie es bei einer Pandemie wäre"
+      ],
+      [
+       "Größe",
+       "Der mögliche Schaden bleibt unter dem, was der Versicherer tragen kann"
+      ]
+     ],
+     "luecken": [
+      "Eine Pandemie verletzt das Kriterium der {{Unabhängigkeit}}.",
+      "Farny nennt {{5|fünf}} Kriterien der Versicherbarkeit."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "asym",
+   "ast": "Risiko und Versicherbarkeit",
+   "titel": "Adverse Selektion und Moral Hazard",
+   "folien": "88–89",
+   "art": "wissen",
+   "relevanz": "kern",
+   "ansehen": [
+    {
+     "typ": "tabelle",
+     "zeilen": [
+      [
+       "Adverse Selektion",
+       "vor Vertragsabschluss: Kunde kennt sein Risiko besser, Versicherer verlangt Durchschnittspreis, gute Risiken verzichten, schlechte bleiben übrig"
+      ],
+      [
+       "Gegenmaßnahmen AS",
+       "Screening (Gesundheitsfragen), Tarifdifferenzierung nach Risikomerkmalen (z. B. Alter)"
+      ],
+      [
+       "Moral Hazard",
+       "nach Vertragsabschluss: Kunde wird weniger vorsichtig, z. B. das nicht abgeschlossene Fahrrad in der WG"
+      ],
+      [
+       "Gegenmaßnahmen MH",
+       "Selbstbeteiligung, Obliegenheiten (Fahrrad abschließen, sonst Leistungskürzung), Bonus-Malus (Schadenfreiheitsrabatt in Kfz)"
+      ]
+     ]
+    }
+   ],
+   "puzzle": [
+    "AS: vor Vertragsschluss",
+    "MH: Selbstbehalt, Obliegenheiten, Bonus-Malus"
+   ],
+   "karten": [
+    {
+     "id": "asym-1",
+     "titel": "Adverse Selektion",
+     "frage": "Erkläre Adverse Selektion und zwei Gegenmaßnahmen des Versicherers.",
+     "kernpunkte": [
+      "vor Vertragsabschluss, Kunde kennt Risiko besser",
+      "Durchschnittsprämie zu teuer für gute Risiken",
+      "gute steigen aus, schlechte bleiben",
+      "Screening (Gesundheitsfragen), Tarifdifferenzierung"
+     ],
+     "zuordnen": [
+      [
+       "Screening",
+       "Der Versicherer fragt Informationen ab, z. B. Gesundheitsfragen vor Vertragsschluss"
+      ],
+      [
+       "Tarifdifferenzierung",
+       "Unterschiedliche Preise je nach Risikomerkmal, z. B. nach Alter"
+      ],
+      [
+       "Selbstbeteiligung",
+       "Der Kunde trägt einen Teil des Schadens selbst und wird dadurch vorsichtiger"
+      ],
+      [
+       "Bonus-Malus-System",
+       "Schadenfreie Kunden zahlen weniger, z. B. über Schadenfreiheitsklassen in Kfz"
+      ]
+     ]
+    },
+    {
+     "id": "asym-2",
+     "titel": "Moral Hazard",
+     "frage": "Erkläre Moral Hazard mit Beispiel und nenne drei Gegenmaßnahmen.",
+     "kernpunkte": [
+      "nach Vertragsabschluss weniger vorsichtig",
+      "Beispiel: Fahrrad nicht abgeschlossen",
+      "Selbstbeteiligung",
+      "Obliegenheiten mit Leistungskürzung",
+      "Bonus-Malus/Schadenfreiheitsrabatt"
+     ],
+     "luecken": [
+      "Moral Hazard entsteht {{nach}} Vertragsabschluss.",
+      "Die Pflicht, das Fahrrad abzuschließen, ist eine {{Obliegenheit}}."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "aequivalenz",
+   "ast": "Kalkulation und Steuerung",
+   "titel": "Äquivalenzprinzip",
+   "folien": "114–116",
+   "art": "rechnen",
+   "relevanz": "kern",
+   "ansehen": [
+    {
+     "typ": "text",
+     "inhalt": "Das Äquivalenzprinzip ist die Grundlage der Prämienkalkulation: Die reine Risikoprämie soll dem Erwartungswert der Schäden entsprechen. Leistung und Gegenleistung sind gleichwertig – eine „faire Wette“."
+    },
+    {
+     "typ": "tabelle",
+     "zeilen": [
+      [
+       "individuell",
+       "jedes einzelne Risiko zahlt genau seinen eigenen Schadenerwartungswert (gleich, nicht weniger)"
+      ],
+      [
+       "kollektiv",
+       "der ganze Bestand bringt mindestens so viel Prämie auf, wie insgesamt Schäden erwartet werden"
+      ],
+      [
+       "Beispiel Glücksrad",
+       "100 Felder, bei der 4 gibt es 500 € → fairer Einsatz = 1/100 · 500 € = 5 €"
+      ]
+     ]
+    }
+   ],
+   "puzzle": [
+    "Risikoprämie = Schadenerwartungswert",
+    "individuell vs. kollektiv"
+   ],
+   "karten": [
+    {
+     "id": "aeq-1",
+     "titel": "Individuell und kollektiv",
+     "frage": "Erkläre das Äquivalenzprinzip und den Unterschied zwischen individueller und kollektiver Äquivalenz.",
+     "kernpunkte": [
+      "reine Risikoprämie = Erwartungswert der Schäden",
+      "Leistung und Gegenleistung gleichwertig",
+      "individuell: jedes Risiko zahlt genau seinen Erwartungswert",
+      "kollektiv: Bestand insgesamt mindestens Erwartungsschaden"
+     ],
+     "zuordnen": [
+      [
+       "individuelles Äquivalenzprinzip",
+       "Jedes einzelne Risiko zahlt genau seinen eigenen Schadenerwartungswert"
+      ],
+      [
+       "kollektives Äquivalenzprinzip",
+       "Der ganze Bestand zahlt mindestens so viel, wie insgesamt an Schäden erwartet wird"
+      ],
+      [
+       "reine Risikoprämie",
+       "Prämienteil, der nur den erwarteten Schaden deckt – ohne Kosten und Gewinn"
+      ],
+      [
+       "faire Wette",
+       "Einsatz entspricht genau dem erwarteten Gewinn"
+      ]
+     ],
+     "luecken": [
+      "Die reine Risikoprämie entspricht dem {{Erwartungswert|Schadenerwartungswert}} der Schäden.",
+      "Beim individuellen Äquivalenzprinzip zahlt jedes Risiko {{genau|exakt|gleich}} seinen Erwartungswert."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cr",
+   "ast": "Kalkulation und Steuerung",
+   "titel": "Combined Ratio",
+   "folien": "Kap. 8",
+   "art": "rechnen",
+   "relevanz": "kern",
+   "ansehen": [
+    {
+     "typ": "text",
+     "inhalt": "Die Combined Ratio (Schaden-Kosten-Quote) zeigt, ob das reine Versicherungsgeschäft profitabel ist. Sie setzt Schäden und Kosten ins Verhältnis zu den Prämien – Kapitalerträge bleiben bewusst außen vor."
+    },
+    {
+     "typ": "formel",
+     "inhalt": "CR = (Schäden + Verwaltungskosten + Abschlusskosten) ÷ Nettoprämien"
+    },
+    {
+     "typ": "tabelle",
+     "zeilen": [
+      [
+       "CR < 100 %",
+       "das Versicherungsgeschäft macht Gewinn, je niedriger desto profitabler"
+      ],
+      [
+       "CR > 100 %",
+       "Verlust im Kerngeschäft, Gewinn nur über Kapitalerträge (Cashflow Underwriting) – in Kfz häufig"
+      ],
+      [
+       "Beispiel",
+       "(700 + 100 + 180) ÷ 1.000 = 98 %"
+      ]
+     ]
+    }
+   ],
+   "puzzle": [
+    "CR < 100 %: Gewinn im Kerngeschäft",
+    "Kapitalerträge bleiben außen vor"
+   ],
+   "karten": [
+    {
+     "id": "cr-1",
+     "titel": "Combined Ratio deuten",
+     "frage": "Was misst die Combined Ratio, wie wird sie berechnet und wie deutest du Werte über und unter 100 %?",
+     "kernpunkte": [
+      "(Schäden + Verwaltungs- + Abschlusskosten) ÷ Nettoprämien",
+      "misst Profitabilität des reinen Versicherungsgeschäfts",
+      "Kapitalerträge nicht enthalten",
+      "unter 100 % Gewinn, über 100 % Verlust (Cashflow Underwriting)"
+     ],
+     "luecken": [
+      "Eine CR über 100 % bedeutet {{Verlust|einen Verlust}} im Kerngeschäft.",
+      "In der Combined Ratio bleiben die {{Kapitalerträge}} außen vor."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rpa",
+   "ast": "Prozesse und RPA",
+   "titel": "Robotic Process Automation (RPA)",
+   "folien": "142–148",
+   "art": "wissen",
+   "relevanz": "kern",
+   "ansehen": [
+    {
+     "typ": "text",
+     "inhalt": "RPA ist eine Software, kein echter Roboter. Sie bedient Programme über die Benutzeroberfläche wie ein Mensch und übernimmt wiederkehrende, regelbasierte Aufgaben – ohne tiefe Eingriffe in die bestehende IT. Nutzen: mehr Effizienz und Qualität, geringere Kosten, zufriedenere Kunden und Zeit für wichtige Aufgaben."
+    },
+    {
+     "typ": "tabelle",
+     "zeilen": [
+      [
+       "Volumen",
+       "häufig, manuell, wiederholend oder fehleranfällig"
+      ],
+      [
+       "Regelbasiert",
+       "klare Anweisungen, keine individuellen Entscheidungen"
+      ],
+      [
+       "Standardisierter Input",
+       "einheitlich und digital lesbar"
+      ],
+      [
+       "Stabilität",
+       "wenige Ausnahmen, keine geplanten Änderungen"
+      ],
+      [
+       "Wirtschaftlichkeit",
+       "Automatisierung spart deutlich (positiver Business Case)"
+      ]
+     ],
+     "kopf": [
+      "Ein Prozess ist automatisierbar, wenn …",
+      ""
+     ]
+    }
+   ],
+   "puzzle": [
+    "RPA = Software-Roboter über die Oberfläche",
+    "regelbasiert, standardisiert, stabil"
+   ],
+   "karten": [
+    {
+     "id": "rpa-1",
+     "titel": "RPA und Kriterien",
+     "frage": "Was ist RPA, welchen Nutzen bringt es und wann eignet sich ein Prozess dafür?",
+     "kernpunkte": [
+      "Software, die Programme über die Oberfläche bedient wie ein Mensch",
+      "für wiederkehrende, regelbasierte Aufgaben, ohne tiefe IT-Eingriffe",
+      "Nutzen: Effizienz, Qualität, Kosten, Kundenzufriedenheit",
+      "Kriterien: Volumen, regelbasiert, standardisierter Input, Stabilität, Wirtschaftlichkeit"
+     ],
+     "zuordnen": [
+      [
+       "Regelbasiert",
+       "Der Prozess folgt klaren Anweisungen ohne individuelle Entscheidungen"
+      ],
+      [
+       "Standardisierter Input",
+       "Die Eingangsdaten sind einheitlich und digital lesbar"
+      ],
+      [
+       "Stabilität",
+       "Der Prozess hat wenige Ausnahmen und es sind keine Änderungen geplant"
+      ],
+      [
+       "Wirtschaftlichkeit",
+       "Die Automatisierung spart so viel, dass sich der Aufwand lohnt"
+      ]
+     ],
+     "luecken": [
+      "RPA bedient Programme über die {{Benutzeroberfläche|Oberfläche}} wie ein Mensch.",
+      "RPA ist eine {{Software}}, kein echter Roboter."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bpmn",
+   "ast": "Prozesse und RPA",
+   "titel": "Prozessnotation GENO-BPMN",
+   "folien": "150",
+   "art": "wissen",
+   "relevanz": "kern",
+   "ansehen": [
+    {
+     "typ": "text",
+     "inhalt": "Folie 150 zeigt die Bausteine, mit denen man einen Prozess als Diagramm zeichnet – zum Beispiel, bevor man ihn mit RPA automatisiert."
+    },
+    {
+     "typ": "tabelle",
+     "zeilen": [
+      [
+       "Aktivität",
+       "eine einzelne Tätigkeit (Rechteck)"
+      ],
+      [
+       "Ereignis",
+       "Start, Zwischenereignis oder Ende (Kreis)"
+      ],
+      [
+       "Teilprozess",
+       "ausgelagerter Prozessteil (Rechteck mit +)"
+      ],
+      [
+       "Gateway",
+       "UND- oder ODER-Weiche (Raute)"
+      ],
+      [
+       "Datenobjekt",
+       "Dokument wie E-Mail, Brief oder Formular"
+      ],
+      [
+       "Pool/Lane",
+       "Beteiligte bzw. Abteilungen im Prozess"
+      ]
+     ],
+     "kopf": [
+      "Symbol",
+      "Bedeutung"
+     ]
+    }
+   ],
+   "puzzle": [
+    "Raute = Gateway",
+    "Kreis = Ereignis"
+   ],
+   "karten": [
+    {
+     "id": "bpmn-1",
+     "titel": "Symbole",
+     "frage": "Nenne die Symbole der GENO-BPMN-Notation und ihre Bedeutung.",
+     "kernpunkte": [
+      "Aktivität: Rechteck",
+      "Ereignis: Kreis (Start, Zwischen, Ende)",
+      "Teilprozess: Rechteck mit +",
+      "Gateway: Raute (UND/ODER)",
+      "Datenobjekt und Pool/Lane"
+     ],
+     "zuordnen": [
+      [
+       "Aktivität",
+       "Eine einzelne Tätigkeit, gezeichnet als Rechteck"
+      ],
+      [
+       "Ereignis",
+       "Start, Zwischenereignis oder Ende, gezeichnet als Kreis"
+      ],
+      [
+       "Gateway",
+       "UND- oder ODER-Weiche, gezeichnet als Raute"
+      ],
+      [
+       "Teilprozess",
+       "Ausgelagerter Prozessteil, Rechteck mit Plus-Zeichen"
+      ],
+      [
+       "Lane",
+       "Bahn für einen Beteiligten oder eine Abteilung im Prozess"
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "aufgaben": [
+  {
+   "id": "cr-a",
+   "thema": "cr",
+   "titel": "Combined Ratio berechnen",
+   "text": "Schäden 700 Mio. €, Verwaltungskosten 100 Mio. €, Abschlusskosten 180 Mio. €, Nettoprämien 1.000 Mio. €. Combined Ratio in %?",
+   "antwort": 98,
+   "toleranz": 0.1,
+   "einheit": "%",
+   "weg": [
+    "(700 + 100 + 180) ÷ 1.000 = 0,98 = 98 % → knapp Gewinn im Kerngeschäft"
+   ]
+  },
+  {
+   "id": "cr-b",
+   "thema": "cr",
+   "titel": "Combined Ratio Kfz",
+   "text": "Kfz-Sparte: Schäden 820 Mio. €, Verwaltungskosten 90 Mio. €, Abschlusskosten 130 Mio. €, Nettoprämien 1.000 Mio. €. Combined Ratio in %?",
+   "antwort": 104,
+   "toleranz": 0.1,
+   "einheit": "%",
+   "weg": [
+    "(820 + 90 + 130) ÷ 1.000 = 104 % → Verlust im Kerngeschäft, nur über Kapitalerträge ausgleichbar"
+   ]
+  },
+  {
+   "id": "aeq-a",
+   "thema": "aequivalenz",
+   "titel": "Faire Prämie (Glücksrad)",
+   "text": "Glücksrad mit 100 Feldern, bei einem Feld gibt es 500 €. Wie hoch ist der faire Einsatz?",
+   "antwort": 5,
+   "toleranz": 0.01,
+   "einheit": "€",
+   "weg": [
+    "Erwartungswert = 1/100 · 500 € = 5 €"
+   ]
+  },
+  {
+   "id": "aeq-b",
+   "thema": "aequivalenz",
+   "titel": "Reine Risikoprämie",
+   "text": "Ein Haus brennt mit Wahrscheinlichkeit 0,2 % ab, Schaden dann 300.000 €. Wie hoch ist die reine Risikoprämie nach dem individuellen Äquivalenzprinzip?",
+   "antwort": 600,
+   "toleranz": 0.5,
+   "einheit": "€",
+   "weg": [
+    "0,002 · 300.000 € = 600 €"
+   ]
+  }
+ ]
+}
