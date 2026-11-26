@@ -1,86 +1,111 @@
 {
- "format": 1,
+ "format": 2,
  "fach": "steuerlehre",
  "name": "Steuerlehre · Ertel",
- "stand": "2026-11-25",
- "hinweis": "Eingrenzung nach den Notizen aus der Vorlesung. Rechenwege: Kochrezepte.",
+ "stand": "2026-11-26",
+ "hinweis": "Relevant ist alles außer: „Nur zur Information“, Folie 227, 237, Personengesellschaften im Detail, 359, ab 363 (außer Kurzschema 372–375 und 385), Umsatzsteuer.",
  "themen": [
   {
-   "id": "kapitalwert",
-   "ast": "Warum sind Steuern wichtig?",
-   "titel": "Kapitalwert mit Steuern",
-   "folien": "53–71",
-   "art": "rechnen",
+   "id": "steuerbegriff",
+   "ast": "Grundlagen: Warum und welche Steuern?",
+   "titel": "Was sind Steuern? (§ 3 AO)",
+   "folien": "80–87",
+   "art": "wissen",
+   "relevanz": "mittel",
    "ansehen": [
     {
      "typ": "text",
-     "inhalt": "Steuern sind Auszahlungen und verändern deshalb, ob sich eine Investition lohnt. Im Standardmodell werden sie an zwei Stellen berücksichtigt: Die Rückflüsse werden um die Steuer gekürzt, und der Kalkulationszins sinkt, weil auch die Zinsen der Alternativanlage am Kapitalmarkt versteuert würden. Das ist keine doppelte Besteuerung."
-    },
-    {
-     "typ": "formel",
-     "inhalt": "iₛ = i · (1 − s)\nSteuer je Jahr = s · (Rückfluss − AfA)"
+     "inhalt": "Steuern sind nach § 3 Abs. 1 AO Geldleistungen ohne konkrete Gegenleistung, die ein öffentlich-rechtliches Gemeinwesen allen auferlegt, bei denen der gesetzliche Tatbestand zutrifft. Einnahmen zu erzielen darf dabei auch nur Nebenzweck sein – deshalb sind auch Lenkungssteuern Steuern. Gerechtfertigt wird das deutsche Steuerrecht über die Opfertheorie: Jeder trägt nach seiner Leistungsfähigkeit zur Finanzierung des Staates bei."
     },
     {
      "typ": "tabelle",
      "zeilen": [
       [
-       "Abkürzungen",
-       "i = Kapitalmarktzins vor Steuern, s = Steuersatz, iₛ = Zins nach Steuern, AfA = Abschreibung"
+       "Steuer",
+       "Geldleistung ohne Gegenleistung, allen auferlegt, bei denen der Tatbestand greift (§ 3 Abs. 1 AO)"
       ],
       [
-       "Entscheidung",
-       "Kapitalwert (KW) > 0 → Investition lohnt sich; bei mehreren Alternativen die mit dem höchsten KW wählen"
+       "Gebühr",
+       "Entgelt für eine konkrete Leistung der Verwaltung, z. B. Ausweis, Müllabfuhr"
       ],
       [
-       "Beispiel F. 66",
-       "i = 10 %, s = 30 % → iₛ = 0,1 · 0,7 = 7 %; ohne Steuern KW = 169,79 > 0 → vorteilhaft"
+       "Beitrag",
+       "Entgelt für die Möglichkeit, eine Leistung zu nutzen, z. B. Straßenanliegerbeitrag"
       ],
       [
-       "typischer Fehler",
-       "mit i statt iₛ abzinsen – genau das war der Fehler der ChatGPT-Lösung auf Folie 70"
+       "Äquivalenztheorie",
+       "Steuer als Preis für konkrete Staatsleistungen – folgt das deutsche Recht nicht"
+      ],
+      [
+       "Opfertheorie",
+       "Steuer als Beitrag zur Finanzierung des Staates ohne konkrete Gegenleistung, gemessen an der Leistungsfähigkeit – Grundlage des deutschen Rechts"
       ]
      ]
     }
    ],
-   "zuordnen": [
-    [
-     "i",
-     "Kapitalmarktzins vor Steuern"
-    ],
-    [
-     "s",
-     "Steuersatz"
-    ],
-    [
-     "iₛ",
-     "Zins nach Steuern"
-    ],
-    [
-     "AfA",
-     "Abschreibung"
-    ]
+   "puzzle": [
+    "Geldleistung ohne konkrete Gegenleistung",
+    "Opfertheorie: Beitrag nach Leistungsfähigkeit"
    ],
-   "luecken": [
-    "iₛ = i · ({{1 − s|1-s|1 - s}})",
-    "Steuer je Jahr = s · (Rückfluss − {{AfA|Abschreibung}})",
-    "Eine Investition lohnt sich, wenn ihr Kapitalwert {{größer 0|> 0|>0|positiv|größer als 0|größer null}} ist."
-   ],
-   "erklaeren": {
-    "frage": "Warum wird beim Kapitalwert nach Steuern nicht nur der Rückfluss, sondern auch der Zins gekürzt?",
-    "kernpunkte": [
-     "Steuern sind Auszahlungen und mindern die Rückflüsse der Investition",
-     "Auch die Zinsen der Alternativanlage am Kapitalmarkt würden versteuert",
-     "Deshalb wird mit iₛ = i · (1 − s) abgezinst",
-     "Das ist keine doppelte Berücksichtigung der Steuer"
-    ]
-   }
+   "karten": [
+    {
+     "id": "steuerbegriff-1",
+     "titel": "Steuerbegriff",
+     "frage": "Definiere den Begriff „Steuern“ nach § 3 Abs. 1 AO und grenze ihn von Gebühren ab.",
+     "kernpunkte": [
+      "Geldleistung, keine Gegenleistung für eine besondere Leistung",
+      "von einem öffentlich-rechtlichen Gemeinwesen auferlegt",
+      "allen, bei denen der gesetzliche Tatbestand zutrifft",
+      "Einnahmeerzielung kann Nebenzweck sein",
+      "Gebühr = Entgelt für eine konkrete Leistung, also mit Gegenleistung"
+     ],
+     "zuordnen": [
+      [
+       "Steuer",
+       "ohne konkrete Gegenleistung"
+      ],
+      [
+       "Gebühr",
+       "Entgelt für eine konkrete Leistung"
+      ],
+      [
+       "Beitrag",
+       "Entgelt für die Nutzungsmöglichkeit"
+      ],
+      [
+       "§ 3 Abs. 1 AO",
+       "Definition der Steuer"
+      ]
+     ],
+     "luecken": [
+      "Steuern sind Geldleistungen, die keine {{Gegenleistung}} für eine besondere Leistung darstellen.",
+      "Die Erzielung von Einnahmen kann auch {{Nebenzweck}} sein."
+     ]
+    },
+    {
+     "id": "steuerbegriff-2",
+     "titel": "Äquivalenz- vs. Opfertheorie",
+     "frage": "Erkläre den Unterschied zwischen Äquivalenz- und Opfertheorie. Welcher folgt das deutsche Steuerrecht?",
+     "kernpunkte": [
+      "Äquivalenztheorie: Steuer als Preis für konkrete Staatsleistungen",
+      "Opfertheorie: Finanzierung des Staates ohne konkrete Gegenleistung",
+      "Maßstab der Opfertheorie ist die Leistungsfähigkeit",
+      "Deutschland folgt der Opfertheorie (sichtbar in § 3 AO)"
+     ],
+     "luecken": [
+      "Das deutsche Steuerrecht folgt der {{Opfertheorie}}.",
+      "Maßstab der Besteuerung ist die {{Leistungsfähigkeit}}."
+     ]
+    }
+   ]
   },
   {
    "id": "funktionen",
-   "ast": "Warum sind Steuern wichtig?",
+   "ast": "Grundlagen: Warum und welche Steuern?",
    "titel": "Funktionen & Grundsätze der Besteuerung",
    "folien": "88",
    "art": "wissen",
+   "relevanz": "kern",
    "ansehen": [
     {
      "typ": "text",
@@ -116,50 +141,157 @@
      ]
     }
    ],
-   "zuordnen": [
-    [
-     "Fiskalfunktion",
-     "Einnahmen für die Staatsausgaben"
-    ],
-    [
-     "Lenkungsfunktion",
-     "Anreize und Rahmenbedingungen setzen"
-    ],
-    [
-     "vertikale Gerechtigkeit",
-     "Wer mehr leisten kann, zahlt mehr"
-    ],
-    [
-     "horizontale Gerechtigkeit",
-     "Gleiche Leistungsfähigkeit, gleiche Steuer"
-    ],
-    [
-     "Neutralität",
-     "Steuern sollen Entscheidungen nicht verzerren"
-    ]
+   "puzzle": [
+    "Fiskal- und Lenkungsfunktion",
+    "Neutralität, Gerechtigkeit, Einfachheit"
    ],
-   "luecken": [
-    "Die zwei Funktionen der Besteuerung sind die {{Fiskalfunktion}} und die {{Lenkungsfunktion|Ordnungsfunktion|Lenkungs- und Ordnungsfunktion}}.",
-    "Die drei Grundsätze sind Neutralität, {{Gerechtigkeit}} und {{Einfachheit}}.",
-    "Legale Steuerplanung ist erlaubt, {{Steuerhinterziehung}} nicht."
+   "karten": [
+    {
+     "id": "funktionen-1",
+     "titel": "Zwei Funktionen",
+     "frage": "Nenne die zwei Grundfunktionen von Steuergesetzen und erkläre sie.",
+     "kernpunkte": [
+      "Fiskalfunktion: Einnahmen zur Finanzierung der Staatsausgaben",
+      "Lenkungsfunktion: Verhalten beeinflussen, Anreize setzen",
+      "auch Ordnungsfunktion: Rahmenbedingungen setzen"
+     ],
+     "zuordnen": [
+      [
+       "Fiskalfunktion",
+       "Einnahmen für die Staatsausgaben"
+      ],
+      [
+       "Lenkungsfunktion",
+       "Anreize und Rahmenbedingungen setzen"
+      ]
+     ],
+     "luecken": [
+      "Die zwei Funktionen sind die {{Fiskalfunktion}} und die {{Lenkungsfunktion|Ordnungsfunktion|Lenkungs- und Ordnungsfunktion}}."
+     ]
+    },
+    {
+     "id": "funktionen-2",
+     "titel": "Drei Grundsätze",
+     "frage": "Nenne die drei Grundsätze der Besteuerung und erkläre jeweils kurz.",
+     "kernpunkte": [
+      "Neutralität: Branche, Investition, Rechtsform, Finanzierung nicht verzerren",
+      "Gerechtigkeit vertikal: wer mehr leisten kann, zahlt mehr",
+      "Gerechtigkeit horizontal: gleiche Leistungsfähigkeit, gleiche Steuer (Art. 3 GG)",
+      "Einfachheit: einfach planen, erklären und erheben"
+     ],
+     "zuordnen": [
+      [
+       "Neutralität",
+       "Entscheidungen nicht verzerren"
+      ],
+      [
+       "vertikale Gerechtigkeit",
+       "Wer mehr leisten kann, zahlt mehr"
+      ],
+      [
+       "horizontale Gerechtigkeit",
+       "Gleiche Leistungsfähigkeit, gleiche Steuer"
+      ],
+      [
+       "Einfachheit",
+       "leicht planbar und erhebbar"
+      ]
+     ],
+     "luecken": [
+      "Die drei Grundsätze sind Neutralität, {{Gerechtigkeit}} und {{Einfachheit}}.",
+      "Legale Steuerplanung ist erlaubt, {{Steuerhinterziehung}} nicht."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "steuerarten",
+   "ast": "Grundlagen: Warum und welche Steuern?",
+   "titel": "Einteilung der Steuerarten",
+   "folien": "94–101",
+   "art": "wissen",
+   "relevanz": "mittel",
+   "ansehen": [
+    {
+     "typ": "text",
+     "inhalt": "Steuern lassen sich nach mehreren Merkmalen einteilen. Für die Klausur wichtig sind drei Einteilungen: wer die Steuer wirtschaftlich trägt (direkt/indirekt), ob die persönliche Leistungsfähigkeit zählt (Personen-/Objektsteuer) und woran die Steuer anknüpft."
+    },
+    {
+     "typ": "tabelle",
+     "zeilen": [
+      [
+       "direkte Steuer",
+       "Steuerschuldner = Steuerträger, z. B. Einkommensteuer, Kirchensteuer"
+      ],
+      [
+       "indirekte Steuer",
+       "Schuldner ≠ Träger, die Steuer wird überwälzt, z. B. Umsatzsteuer"
+      ],
+      [
+       "Personensteuer",
+       "persönliche Leistungsfähigkeit im Fokus, z. B. ESt, KSt"
+      ],
+      [
+       "Objektsteuer",
+       "knüpft an ein Objekt an, Leistungsfähigkeit egal, z. B. Gewerbesteuer, Grundsteuer (Realsteuern)"
+      ],
+      [
+       "Ertragsteuern",
+       "knüpfen an den Gewinn an: ESt, KSt, GewSt"
+      ],
+      [
+       "Verkehr-/Verbrauchsteuern",
+       "knüpfen an Vorgänge bzw. Verbrauch an: Grunderwerbsteuer, Umsatzsteuer, Energiesteuer"
+      ]
+     ]
+    }
    ],
-   "erklaeren": {
-    "frage": "Nenne die zwei Funktionen von Steuergesetzen und die drei Grundsätze der Besteuerung und erkläre jeweils kurz.",
-    "kernpunkte": [
-     "Fiskalfunktion: Einnahmen zur Finanzierung der Staatsausgaben",
-     "Lenkungs-/Ordnungsfunktion: Rahmenbedingungen und Anreize setzen",
-     "Neutralität: Branche, Investition, Rechtsform, Finanzierung nicht verzerren",
-     "Gerechtigkeit: vertikal (Leistungsfähigkeit) und horizontal (Gleichmäßigkeit, Art. 3 GG)",
-     "Einfachheit: Planung, Erklärung und Erhebung einfach halten"
-    ]
-   }
+   "puzzle": [
+    "direkt: Schuldner = Träger",
+    "Objektsteuer: z. B. Gewerbesteuer"
+   ],
+   "karten": [
+    {
+     "id": "steuerarten-1",
+     "titel": "Direkt, indirekt, Personen- und Objektsteuer",
+     "frage": "Ordne Einkommensteuer, Umsatzsteuer und Gewerbesteuer den Einteilungen direkt/indirekt und Personen-/Objektsteuer zu und begründe.",
+     "kernpunkte": [
+      "ESt: direkt (Schuldner = Träger) und Personensteuer",
+      "USt: indirekt, wird auf den Endkunden überwälzt",
+      "GewSt: Objektsteuer (Realsteuer), knüpft an den Gewerbebetrieb an"
+     ],
+     "zuordnen": [
+      [
+       "Einkommensteuer",
+       "direkte Personensteuer"
+      ],
+      [
+       "Umsatzsteuer",
+       "indirekte Steuer"
+      ],
+      [
+       "Gewerbesteuer",
+       "Objektsteuer (Realsteuer)"
+      ],
+      [
+       "Grunderwerbsteuer",
+       "Verkehrsteuer"
+      ]
+     ],
+     "luecken": [
+      "Bei einer indirekten Steuer fallen Steuerschuldner und {{Steuerträger|Steuerdestinatar}} auseinander.",
+      "Gewerbe- und Grundsteuer heißen auch {{Realsteuern|Objektsteuern|Sachsteuern}}."
+     ]
+    }
+   ]
   },
   {
    "id": "rechtsformen",
-   "ast": "Warum sind Steuern wichtig?",
+   "ast": "Grundlagen: Warum und welche Steuern?",
    "titel": "Rechtsformen: Transparenz- vs. Trennungssystem",
    "folien": "132–136 ★",
    "art": "wissen",
+   "relevanz": "kern",
    "ansehen": [
     {
      "typ": "text",
@@ -187,46 +319,327 @@
      ]
     }
    ],
-   "zuordnen": [
-    [
-     "Transparenzsystem",
-     "Einzelunternehmen und Personengesellschaften"
-    ],
-    [
-     "Trennungssystem",
-     "Kapitalgesellschaften"
-    ],
-    [
-     "Vorbelastung",
-     "KSt, SolZ und GewSt im Unternehmen"
-    ],
-    [
-     "Nachbelastung",
-     "Abgeltungsteuer bzw. ESt beim Anteilseigner"
-    ]
+   "puzzle": [
+    "Transparenz: Gewinn beim Inhaber besteuert",
+    "Trennung: Vorbelastung + Nachbelastung"
    ],
-   "luecken": [
-    "Bei Personenunternehmen wird der Gewinn direkt beim {{Inhaber|Gesellschafter|Unternehmer}} besteuert.",
-    "Eine GmbH braucht mindestens {{25.000 €|25.000|25000|25000 €}} Stammkapital.",
-    "Einzelunternehmer bekommen die GewSt nach § {{35}} EStG auf die ESt angerechnet."
+   "karten": [
+    {
+     "id": "rechtsformen-1",
+     "titel": "Transparenz- vs. Trennungssystem",
+     "frage": "Wie werden Unternehmen in Deutschland besteuert? Erkläre Transparenz- und Trennungssystem.",
+     "kernpunkte": [
+      "Besteuerung hängt von der Rechtsform ab",
+      "Transparenz: Einzelunternehmen/Personengesellschaft – GewSt im Unternehmen, ESt beim Inhaber",
+      "GewSt-Anrechnung nach § 35 EStG",
+      "Trennung: Kapitalgesellschaft ist selbst Steuersubjekt – Vorbelastung KSt, SolZ, GewSt",
+      "Nachbelastung bei Ausschüttung beim Anteilseigner"
+     ],
+     "zuordnen": [
+      [
+       "Transparenzsystem",
+       "Einzelunternehmen und Personengesellschaften"
+      ],
+      [
+       "Trennungssystem",
+       "Kapitalgesellschaften"
+      ],
+      [
+       "Vorbelastung",
+       "KSt, SolZ und GewSt im Unternehmen"
+      ],
+      [
+       "Nachbelastung",
+       "Abgeltungsteuer bzw. ESt beim Anteilseigner"
+      ]
+     ],
+     "luecken": [
+      "Bei Personenunternehmen wird der Gewinn direkt beim {{Inhaber|Gesellschafter|Unternehmer}} besteuert.",
+      "Einzelunternehmer bekommen die GewSt nach § {{35}} EStG auf die ESt angerechnet."
+     ]
+    },
+    {
+     "id": "rechtsformen-2",
+     "titel": "Haftung und Kapital",
+     "frage": "Vergleiche Einzelunternehmen, Personengesellschaft und GmbH nach Haftung und Mindestkapital.",
+     "kernpunkte": [
+      "Einzelunternehmen: unbeschränkte Haftung, kein Mindestkapital",
+      "Personengesellschaft: grundsätzlich unbeschränkt, Kommanditist beschränkt",
+      "GmbH: Haftung nur mit dem Gesellschaftsvermögen, 25.000 € Stammkapital"
+     ],
+     "luecken": [
+      "Eine GmbH braucht mindestens {{25.000 €|25.000|25000|25000 €}} Stammkapital.",
+      "Der {{Kommanditist}} einer KG haftet nur beschränkt."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "planung-wirkung",
+   "ast": "Steuern und Investitionen",
+   "titel": "Steuerplanung und Steuerwirkung",
+   "folien": "36–39",
+   "art": "wissen",
+   "relevanz": "mittel",
+   "ansehen": [
+    {
+     "typ": "text",
+     "inhalt": "Die Betriebswirtschaftliche Steuerlehre stellt zwei Fragen. Die Steuerplanungslehre ist normativ: Wie sollte man sich unter Berücksichtigung von Steuern entscheiden? Ihr Werkzeug ist das Kapitalwertkriterium. Die Steuerwirkungslehre ist beschreibend: Wie verhalten sich Menschen tatsächlich wegen Steuern? Ertels Beispiel ist die englische Fenstersteuer – Häuser wurden mit zugemauerten Fenstern gebaut."
+    },
+    {
+     "typ": "tabelle",
+     "zeilen": [
+      [
+       "Steuerplanungslehre",
+       "normativ: Handlungsempfehlung, wie man sich entscheiden soll (Kapitalwert mit Steuern)"
+      ],
+      [
+       "ex ante / ex post",
+       "Steuern im Voraus in die Entscheidung einbeziehen bzw. erst im Nachhinein berücksichtigen"
+      ],
+      [
+       "Steuerwirkungslehre",
+       "positiv: wie Steuern das Verhalten tatsächlich verändern – entscheidungslogisch oder empirisch"
+      ],
+      [
+       "Beispiel",
+       "Fenstersteuer in England (ab ~1695): weniger Fenster, zugemauerte Fenster"
+      ]
+     ]
+    }
    ],
-   "erklaeren": {
-    "frage": "Wie werden Unternehmen in Deutschland besteuert? Erkläre Transparenz- und Trennungssystem.",
-    "kernpunkte": [
-     "Besteuerung hängt von der Rechtsform ab",
-     "Transparenzsystem: Einzelunternehmen/Personengesellschaft – GewSt im Unternehmen, ESt beim Inhaber/Gesellschafter",
-     "GewSt-Anrechnung nach § 35 EStG beim Transparenzsystem",
-     "Trennungssystem: Kapitalgesellschaft ist selbst Steuersubjekt – Vorbelastung mit KSt, SolZ, GewSt",
-     "Nachbelastung bei Ausschüttung beim Anteilseigner (Abgeltungsteuer bzw. ESt)"
-    ]
-   }
+   "puzzle": [
+    "Planung: wie man entscheiden soll",
+    "Wirkung: wie Menschen tatsächlich reagieren"
+   ],
+   "karten": [
+    {
+     "id": "planung-wirkung-1",
+     "titel": "Planungs- vs. Wirkungslehre",
+     "frage": "Grenze Steuerplanungslehre und Steuerwirkungslehre voneinander ab und nenne je ein Beispiel.",
+     "kernpunkte": [
+      "Planungslehre normativ: Handlungsempfehlung",
+      "Werkzeug: Kapitalwertkriterium mit Steuern",
+      "Wirkungslehre: tatsächliches Verhalten wegen Steuern",
+      "Beispiel Fenstersteuer"
+     ],
+     "zuordnen": [
+      [
+       "Steuerplanungslehre",
+       "Wie soll man entscheiden?"
+      ],
+      [
+       "Steuerwirkungslehre",
+       "Wie reagieren Menschen tatsächlich?"
+      ],
+      [
+       "Kapitalwertkriterium",
+       "Werkzeug der Steuerplanung"
+      ],
+      [
+       "Fenstersteuer",
+       "Beispiel einer Steuerwirkung"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "kapitalwert",
+   "ast": "Steuern und Investitionen",
+   "titel": "Kapitalwert mit Steuern",
+   "folien": "49–74",
+   "art": "rechnen",
+   "relevanz": "kern",
+   "ansehen": [
+    {
+     "typ": "text",
+     "inhalt": "Steuern sind Auszahlungen und verändern deshalb, ob sich eine Investition lohnt. Im Standardmodell werden sie an zwei Stellen berücksichtigt: Die Rückflüsse werden um die Steuer gekürzt, und der Kalkulationszins sinkt, weil auch die Zinsen der Alternativanlage am Kapitalmarkt versteuert würden. Das ist keine doppelte Besteuerung."
+    },
+    {
+     "typ": "formel",
+     "inhalt": "iₛ = i · (1 − s)\nSteuer je Jahr = s · (Rückfluss − AfA)"
+    },
+    {
+     "typ": "tabelle",
+     "zeilen": [
+      [
+       "Abkürzungen",
+       "i = Kapitalmarktzins vor Steuern, s = Steuersatz, iₛ = Zins nach Steuern, AfA = Abschreibung"
+      ],
+      [
+       "Entscheidung",
+       "Kapitalwert (KW) > 0 → Investition lohnt sich; bei mehreren Alternativen die mit dem höchsten KW wählen"
+      ],
+      [
+       "Beispiel F. 66",
+       "i = 10 %, s = 30 % → iₛ = 0,1 · 0,7 = 7 %; ohne Steuern KW = 169,79 > 0 → vorteilhaft"
+      ],
+      [
+       "typischer Fehler",
+       "mit i statt iₛ abzinsen – genau das war der Fehler der ChatGPT-Lösung auf Folie 70"
+      ]
+     ]
+    }
+   ],
+   "puzzle": [
+    "iₛ = i · (1 − s)",
+    "Steuer = s · (Rückfluss − AfA)"
+   ],
+   "karten": [
+    {
+     "id": "kapitalwert-1",
+     "titel": "Standardmodell",
+     "frage": "Warum wird beim Kapitalwert nach Steuern nicht nur der Rückfluss, sondern auch der Zins gekürzt?",
+     "kernpunkte": [
+      "Steuern sind Auszahlungen und mindern die Rückflüsse",
+      "Auch die Zinsen der Alternativanlage würden versteuert",
+      "Deshalb Abzinsen mit iₛ = i · (1 − s)",
+      "keine doppelte Berücksichtigung der Steuer"
+     ],
+     "zuordnen": [
+      [
+       "i",
+       "Kapitalmarktzins vor Steuern"
+      ],
+      [
+       "s",
+       "Steuersatz"
+      ],
+      [
+       "iₛ",
+       "Zins nach Steuern"
+      ],
+      [
+       "AfA",
+       "Abschreibung"
+      ]
+     ],
+     "luecken": [
+      "iₛ = i · ({{1 − s|1-s|1 - s}})",
+      "Steuer je Jahr = s · (Rückfluss − {{AfA|Abschreibung}})"
+     ]
+    },
+    {
+     "id": "kapitalwert-2",
+     "titel": "Entscheidungsregel",
+     "frage": "Wann lohnt sich eine Investition nach dem Kapitalwertkriterium, und wie entscheidet man zwischen zwei Alternativen?",
+     "kernpunkte": [
+      "KW > 0: Investition lohnt sich",
+      "bei mehreren Alternativen: höchster KW",
+      "Kapitalwert- und Endwertkriterium führen zur gleichen Entscheidung, nur anderer Zeitpunkt"
+     ],
+     "luecken": [
+      "Eine Investition lohnt sich, wenn ihr Kapitalwert {{größer 0|> 0|>0|positiv|größer als 0|größer null}} ist.",
+      "Das {{Endwertkriterium|Endwert}} betrachtet den Zeitpunkt am Ende statt in t₀."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "neutralitaet",
+   "ast": "Steuern und Investitionen",
+   "titel": "Entscheidungsneutralität",
+   "folien": "59–65",
+   "art": "rechnen",
+   "relevanz": "kern",
+   "ansehen": [
+    {
+     "typ": "text",
+     "inhalt": "Steuern sollen Entscheidungen eigentlich nicht verzerren – sie tun es aber oft. Ertels Beispiel: Ohne Steuern sind zwei Anlagen mit gleichem Ertrag gleich gut. Wird nur eine davon besteuert, kippt die Entscheidung. Eine Steuer, die nicht direkt gezahlt wird, kann trotzdem wirken: Steuerfreie Anleihen sind begehrt, ihr Kurs steigt und ihre Rendite sinkt – das nennt man implizite Steuer."
+    },
+    {
+     "typ": "formel",
+     "inhalt": "Endvermögen nach Steuern = Anlage + Ertrag · (1 − s)"
+    },
+    {
+     "typ": "tabelle",
+     "zeilen": [
+      [
+       "Neutralitätsformen",
+       "Rechtsform, Finanzierung, Gewinnverwendung, Standort, Branche, Betriebsgröße"
+      ],
+      [
+       "Beispiel 2 (F. 63)",
+       "Anleihe 1.000 mit 10 % Zins (25 % Steuer) vs. Wertpapier 1.000 mit 100 steuerfreier Dividende"
+      ],
+      [
+       "ohne Steuern",
+       "beide 1.100 → indifferent"
+      ],
+      [
+       "mit Steuern",
+       "Anleihe 1.000 + 100 · 0,75 = 1.075, Wertpapier 1.100 → Wertpapier vorziehen"
+      ],
+      [
+       "explizite Steuer",
+       "wird direkt gezahlt, z. B. 25 % auf die Zinsen"
+      ],
+      [
+       "implizite Steuer",
+       "steuerfreie Anlage wird teurer, ihre Rendite sinkt auf das Niveau nach Steuern"
+      ]
+     ]
+    }
+   ],
+   "puzzle": [
+    "Steuer verändert die Rangfolge",
+    "implizite Steuer: Kurs steigt, Rendite sinkt"
+   ],
+   "karten": [
+    {
+     "id": "neutralitaet-1",
+     "titel": "Neutralität",
+     "frage": "Was bedeutet Entscheidungsneutralität, und warum ist die Besteuerung meist nicht neutral? Erkläre an Ertels Beispiel mit Anleihe und Wertpapier.",
+     "kernpunkte": [
+      "Neutral = Steuer ändert die Rangfolge der Alternativen nicht",
+      "Ohne Steuern beide 1.100 → indifferent",
+      "Zinsen besteuert, Dividende steuerfrei → 1.075 vs. 1.100",
+      "Wertpapier wird vorgezogen → Steuer verzerrt die Entscheidung"
+     ],
+     "zuordnen": [
+      [
+       "Rechtsformneutralität",
+       "Rechtsform beeinflusst die Steuer nicht"
+      ],
+      [
+       "Finanzierungsneutralität",
+       "Eigen- und Fremdkapital gleich behandelt"
+      ],
+      [
+       "Gewinnverwendungsneutralität",
+       "Ausschüttung und Thesaurierung gleich behandelt"
+      ],
+      [
+       "Standortneutralität",
+       "Ort der Investition egal"
+      ]
+     ]
+    },
+    {
+     "id": "neutralitaet-2",
+     "titel": "Implizite Steuer",
+     "frage": "Welche Folge hat die Besteuerung der Normalanleihe für den Kurs einer steuerfreien Anleihe?",
+     "kernpunkte": [
+      "Steuerfreie Anleihe ist nach Steuern attraktiver",
+      "Nachfrage steigt → Kurs steigt",
+      "Rendite sinkt, bis sie der Rendite der Normalanleihe nach Steuern entspricht",
+      "Dieser Renditeverlust heißt implizite Steuer"
+     ],
+     "luecken": [
+      "Der Kurs der steuerfreien Anleihe {{steigt}}, ihre Rendite {{sinkt}}.",
+      "Diesen Renditeverlust nennt man {{implizite}} Steuer."
+     ]
+    }
+   ]
   },
   {
    "id": "est-merkmale",
-   "ast": "Einkommensteuer: Wer, wann, wie viel?",
+   "ast": "Einkommensteuer: Wer und was?",
    "titel": "Merkmale der Einkommensteuer",
-   "folien": "141, 143",
+   "folien": "141–143",
    "art": "wissen",
+   "relevanz": "mittel",
    "ansehen": [
     {
      "typ": "text",
@@ -258,45 +671,53 @@
      ]
     }
    ],
-   "zuordnen": [
-    [
-     "Personensteuer",
-     "persönliche Verhältnisse zählen"
-    ],
-    [
-     "direkte Steuer",
-     "Steuerschuldner = Steuerträger"
-    ],
-    [
-     "Jahressteuer",
-     "§ 2 Abs. 7 EStG"
-    ],
-    [
-     "Abzugsteuer",
-     "z. B. Lohnsteuer, Abgeltungsteuer"
-    ]
+   "puzzle": [
+    "Personensteuer, direkt, Jahressteuer",
+    "Erhebung: Veranlagung oder Abzugsteuer"
    ],
-   "luecken": [
-    "Die ESt ist eine {{direkte}} Steuer, weil Steuerschuldner und Steuerträger identisch sind.",
-    "Ein Beispiel für eine indirekte Steuer ist die {{Umsatzsteuer|USt}}.",
-    "Nachzahlungen sind {{einen Monat|1 Monat|ein Monat}} nach Bekanntgabe des Steuerbescheids fällig."
-   ],
-   "erklaeren": {
-    "frage": "Nenne die Merkmale der Einkommensteuer.",
-    "kernpunkte": [
-     "Personensteuer der natürlichen Personen, persönliche Verhältnisse werden berücksichtigt",
-     "direkte Steuer (Schuldner = Träger), Gegenbeispiel Umsatzsteuer",
-     "Jahressteuer (§ 2 Abs. 7 EStG)",
-     "Erhebung per Veranlagung oder als Abzugsteuer (Lohnsteuer, Abgeltungsteuer)"
-    ]
-   }
+   "karten": [
+    {
+     "id": "est-merkmale-1",
+     "titel": "Merkmale der ESt",
+     "frage": "Nenne die Merkmale der Einkommensteuer.",
+     "kernpunkte": [
+      "Personensteuer der natürlichen Personen",
+      "direkte Steuer, Gegenbeispiel Umsatzsteuer",
+      "Jahressteuer (§ 2 Abs. 7 EStG)",
+      "Erhebung per Veranlagung oder als Abzugsteuer"
+     ],
+     "zuordnen": [
+      [
+       "Personensteuer",
+       "persönliche Verhältnisse zählen"
+      ],
+      [
+       "direkte Steuer",
+       "Steuerschuldner = Steuerträger"
+      ],
+      [
+       "Jahressteuer",
+       "§ 2 Abs. 7 EStG"
+      ],
+      [
+       "Abzugsteuer",
+       "z. B. Lohnsteuer, Abgeltungsteuer"
+      ]
+     ],
+     "luecken": [
+      "Die ESt ist eine {{direkte}} Steuer.",
+      "Nachzahlungen sind {{einen Monat|1 Monat|ein Monat}} nach Bekanntgabe des Bescheids fällig."
+     ]
+    }
+   ]
   },
   {
    "id": "steuerpflicht",
-   "ast": "Einkommensteuer: Wer, wann, wie viel?",
+   "ast": "Einkommensteuer: Wer und was?",
    "titel": "Wer ist steuerpflichtig?",
-   "folien": "148–155, 165 ff. – 6 Übungen!",
+   "folien": "145–180",
    "art": "wissen",
+   "relevanz": "kern",
    "ansehen": [
     {
      "typ": "text",
@@ -319,59 +740,489 @@
       ],
       [
        "Fall Lavazo",
-       "Haus in Karlsruhe jederzeit nutzbar → Wohnsitz → unbeschränkt steuerpflichtig"
+       "Haus in Karlsruhe jederzeit nutzbar → Wohnsitz → unbeschränkt steuerpflichtig",
+       "fall:fall-lavazo"
       ],
       [
        "Fall Felt",
-       "a) Familie bleibt, b) Haus leer → Wohnsitz bleibt, unbeschränkt; c) Haus fremdvermietet → kein Wohnsitz mehr"
+       "a) Familie bleibt, b) Haus leer → Wohnsitz bleibt, unbeschränkt; c) Haus fremdvermietet → kein Wohnsitz mehr",
+       "fall:fall-felt"
+      ]
+     ]
+    },
+    {
+     "typ": "tabelle",
+     "zeilen": [
+      [
+       "Prüfreihenfolge",
+       "1. Wohnsitz (§ 8 AO) → 2. gewöhnlicher Aufenthalt (§ 9 AO) → 3. erweitert (§ 1 Abs. 2) → 4. fiktiv auf Antrag (§ 1 Abs. 3) → 5. beschränkt mit Katalogeinkünften (§ 1 Abs. 4, § 49)"
+      ],
+      [
+       "Beginn / Ende",
+       "frühestens mit der Geburt, spätestens mit dem Tod; sonst durch Zuzug oder Wegzug"
       ]
      ]
     }
    ],
-   "zuordnen": [
-    [
-     "Wohnsitz",
-     "§ 8 AO"
-    ],
-    [
-     "gewöhnlicher Aufenthalt",
-     "§ 9 AO"
-    ],
-    [
-     "unbeschränkte Steuerpflicht",
-     "§ 1 Abs. 1 EStG"
-    ],
-    [
-     "beschränkte Steuerpflicht",
-     "§ 1 Abs. 4 EStG"
-    ],
-    [
-     "Grenzpendler (auf Antrag)",
-     "§ 1 Abs. 3 EStG"
-    ]
+   "puzzle": [
+    "Wohnsitz: Schlüsselgewalt",
+    "beschränkt: nur inländische Einkünfte"
    ],
-   "luecken": [
-    "Unbeschränkt steuerpflichtig ist, wer im Inland einen {{Wohnsitz}} oder seinen {{gewöhnlichen Aufenthalt|gewöhnlichen Aufenthaltsort}} hat.",
-    "Ein zusammenhängender Aufenthalt von mehr als {{6|sechs}} Monaten gilt immer als gewöhnlicher Aufenthalt.",
-    "Unbeschränkt Steuerpflichtige werden mit ihrem {{Welteinkommen}} besteuert."
+   "karten": [
+    {
+     "id": "steuerpflicht-1",
+     "titel": "Arten der Steuerpflicht",
+     "frage": "Nenne die Arten der persönlichen Einkommensteuerpflicht mit Normen und in der richtigen Prüfreihenfolge.",
+     "kernpunkte": [
+      "unbeschränkt § 1 Abs. 1: Wohnsitz oder gewöhnlicher Aufenthalt → Welteinkommen",
+      "erweitert unbeschränkt § 1 Abs. 2: Staatsbedienstete im Ausland",
+      "fiktiv unbeschränkt § 1 Abs. 3: Grenzpendler auf Antrag",
+      "beschränkt § 1 Abs. 4: nur inländische Einkünfte nach § 49"
+     ],
+     "zuordnen": [
+      [
+       "§ 1 Abs. 1 EStG",
+       "unbeschränkt: Wohnsitz oder gewöhnlicher Aufenthalt"
+      ],
+      [
+       "§ 1 Abs. 2 EStG",
+       "erweitert: Staatsbedienstete im Ausland"
+      ],
+      [
+       "§ 1 Abs. 3 EStG",
+       "fiktiv: Grenzpendler auf Antrag"
+      ],
+      [
+       "§ 1 Abs. 4 EStG",
+       "beschränkt: nur inländische Einkünfte"
+      ]
+     ]
+    },
+    {
+     "id": "steuerpflicht-2",
+     "titel": "Wohnsitz und Aufenthalt",
+     "frage": "Wann hat jemand einen Wohnsitz und wann einen gewöhnlichen Aufenthalt in Deutschland?",
+     "kernpunkte": [
+      "Wohnsitz § 8 AO: Wohnung innehaben, beibehalten, jederzeit nutzen",
+      "Absicht zählt: von vornherein nur vorübergehend → kein Wohnsitz",
+      "gewöhnlicher Aufenthalt § 9 AO: nicht nur vorübergehend, mehr als 6 Monate am Stück zählen immer",
+      "kurze Unterbrechungen schaden nicht"
+     ],
+     "zuordnen": [
+      [
+       "Wohnsitz",
+       "§ 8 AO"
+      ],
+      [
+       "gewöhnlicher Aufenthalt",
+       "§ 9 AO"
+      ],
+      [
+       "Welteinkommen",
+       "Folge der unbeschränkten Steuerpflicht"
+      ],
+      [
+       "Katalogeinkünfte",
+       "§ 49 EStG"
+      ]
+     ],
+     "luecken": [
+      "Unbeschränkt steuerpflichtig ist, wer im Inland einen {{Wohnsitz}} oder seinen {{gewöhnlichen Aufenthalt}} hat.",
+      "Ein zusammenhängender Aufenthalt von mehr als {{6|sechs}} Monaten gilt immer als gewöhnlicher Aufenthalt.",
+      "Die Staatsangehörigkeit ist für § 1 Abs. 1 EStG {{egal|irrelevant|unerheblich|nicht entscheidend}}."
+     ]
+    },
+    {
+     "id": "fall-lavazo",
+     "typ": "fall",
+     "titel": "Fall Lavazo",
+     "folien": "149–152",
+     "sachverhalt": "Herr Lavazo lebt mit seiner Familie in Italien. Zusätzlich besitzt er ein Haus in Karlsruhe, das er jederzeit nutzen kann und in dem er regelmäßig wohnt, wenn er geschäftlich in Deutschland ist.",
+     "frage": "Ist Herr Lavazo in Deutschland unbeschränkt steuerpflichtig?",
+     "loesung": [
+      [
+       "Norm",
+       "Unbeschränkt steuerpflichtig ist, wer im Inland einen Wohnsitz oder gewöhnlichen Aufenthalt hat (§ 1 Abs. 1 EStG)."
+      ],
+      [
+       "Voraussetzung",
+       "Wohnsitz nach § 8 AO: Wohnung innehaben, beibehalten und jederzeit nutzen können."
+      ],
+      [
+       "Anwendung",
+       "Das Haus in Karlsruhe ist jederzeit nutzbar und wird regelmäßig genutzt. Dass er auch in Italien wohnt, schadet nicht – man kann mehrere Wohnsitze haben."
+      ]
+     ],
+     "ergebnis": "Wohnsitz in Deutschland → unbeschränkt steuerpflichtig mit dem Welteinkommen. Die Doppelbesteuerung mit Italien regelt das DBA.",
+     "merke": "Mehrere Wohnsitze sind möglich."
+    },
+    {
+     "id": "fall-felt",
+     "typ": "fall",
+     "titel": "Fall Felt",
+     "folien": "153–154",
+     "sachverhalt": "Frau Felt besitzt in Karlsruhe ein Einfamilienhaus, in dem sie mit ihrer Familie wohnt. Ihr Arbeitgeber schickt sie für 2 Jahre nach Kanada. Das Haus wird so genutzt:\na) Sie geht allein, die Familie bleibt in Karlsruhe.\nb) Die ganze Familie geht mit, das Haus steht leer.\nc) Die ganze Familie geht mit, das Haus wird fremdvermietet.",
+     "frage": "Wie ist die persönliche Steuerpflicht von Frau Felt in Deutschland in a), b) und c) zu beurteilen?",
+     "loesung": [
+      [
+       "Norm",
+       "Unbeschränkt steuerpflichtig ist, wer im Inland einen Wohnsitz oder gewöhnlichen Aufenthalt hat (§ 1 Abs. 1 EStG)."
+      ],
+      [
+       "Voraussetzung",
+       "Wohnsitz nach § 8 AO: Wohnung innehaben, beibehalten und jederzeit nutzen können („Schlüsselgewalt“)."
+      ],
+      [
+       "a) und b)",
+       "Frau Felt behält die Schlüsselgewalt, in a) über ihre Familie, und kann das Haus jederzeit nutzen → Wohnsitz → unbeschränkt steuerpflichtig."
+      ],
+      [
+       "c)",
+       "Durch die Fremdvermietung kann sie das Haus nicht mehr jederzeit nutzen → kein Wohnsitz → nicht unbeschränkt steuerpflichtig."
+      ]
+     ],
+     "ergebnis": "c): nur beschränkt steuerpflichtig mit den inländischen Einkünften, hier den Mieteinnahmen (§ 1 Abs. 4, § 49 EStG). Der gewöhnliche Aufenthalt spielt keine Rolle.",
+     "merke": "Bei Wohnsitzfällen immer fragen: Wer hat den Schlüssel?"
+    },
+    {
+     "id": "fall-wg-zimmer",
+     "typ": "fall",
+     "titel": "Übung 1: WG-Zimmer für vier Monate",
+     "folien": "165–166",
+     "sachverhalt": "Person X reist am 1.4. nach Deutschland ein und bezieht ein WG-Zimmer. Am 5.4. übt X eine selbständige Tätigkeit aus und erhält dafür eine Vergütung. Am 7.8. verlässt X Deutschland und gibt das WG-Zimmer auf.",
+     "frage": "Wie ist die Steuerpflicht von X in Deutschland zu würdigen?",
+     "loesung": [
+      [
+       "Wohnsitz",
+       "Das WG-Zimmer ist eine Wohnung, aber das „Beibehalten und Benutzen“ scheitert am Zeitraum: Die 6-Monats-Frist liefe vom 1.4. bis 1.10., X reist schon am 7.8. ab."
+      ],
+      [
+       "Gewöhnlicher Aufenthalt",
+       "Ebenfalls nicht, weil der Aufenthalt keine 6 Monate dauert (§ 9 AO)."
+      ],
+      [
+       "Fiktiv unbeschränkt",
+       "Keine Anzeichen für § 1 Abs. 3 EStG."
+      ],
+      [
+       "Beschränkt",
+       "Weder Wohnsitz noch Aufenthalt, aber inländische Einkünfte aus selbständiger Arbeit (§ 49 Abs. 1 Nr. 3 EStG)."
+      ]
+     ],
+     "ergebnis": "Beschränkt steuerpflichtig nach § 1 Abs. 4 EStG mit den Einkünften aus der selbständigen Tätigkeit."
+    },
+    {
+     "id": "fall-landau",
+     "typ": "fall",
+     "titel": "Übung 2: Spanierin in Landau",
+     "folien": "167–168",
+     "sachverhalt": "X ist in Spanien geboren und hat die spanische Staatsbürgerschaft. Sie lebt seit mehr als acht Jahren in einem eigenen Haus in Landau in der Pfalz und arbeitet als freiberufliche Redakteurin.",
+     "frage": "Wie ist die Steuerpflicht von X in Deutschland zu würdigen?",
+     "loesung": [
+      [
+       "Wohnsitz",
+       "Eigenes Haus in Landau → Wohnsitz nach § 8 AO."
+      ],
+      [
+       "Staatsangehörigkeit",
+       "Spielt für die unbeschränkte Steuerpflicht keine Rolle."
+      ],
+      [
+       "Einkünfte",
+       "Freiberufliche Redakteurin → Einkünfte aus selbständiger Arbeit (§ 18 Abs. 1 Nr. 1 EStG)."
+      ]
+     ],
+     "ergebnis": "Unbeschränkt steuerpflichtig nach § 1 Abs. 1 S. 1 EStG.",
+     "merke": "Steuerpflicht hängt am Wohnsitz, nicht am Pass."
+    },
+    {
+     "id": "fall-mailand",
+     "typ": "fall",
+     "titel": "Übung 3: Studentin in Mailand",
+     "folien": "169–170",
+     "sachverhalt": "Studentin Y hat in Mailand eine Einzimmerwohnung und studiert dort seit drei Semestern Architektur. Bei ihren Eltern in Bamberg hat sie unverändert ihr Zimmer, das sie jederzeit nutzen kann. Sie sieht die elterliche Wohnung weiterhin als eigene an.",
+     "frage": "Wie ist die Steuerpflicht von Y in Deutschland zu würdigen? (AEAO beachten)",
+     "loesung": [
+      [
+       "Wohnung",
+       "Das Zimmer in Bamberg ist objektiv jederzeit verfügbar → Innehaben einer Wohnung."
+      ],
+      [
+       "AEAO zu § 8 Nr. 6.2.2",
+       "Bei Kindern im Ausland reicht das allein nicht. Das Kind muss die elterliche Wohnung weiterhin als eigene betrachten."
+      ],
+      [
+       "Anwendung",
+       "Y sieht die Wohnung als eigene an → Wohnsitz in Deutschland."
+      ],
+      [
+       "Doppelt",
+       "Y ist auch in Italien unbeschränkt steuerpflichtig (Wohnung in Mailand). Welcher Staat besteuern darf, regelt das DBA."
+      ]
+     ],
+     "ergebnis": "Dem Grunde nach unbeschränkt steuerpflichtig in Deutschland (§ 1 Abs. 1 EStG)."
+    },
+    {
+     "id": "fall-clara",
+     "typ": "fall",
+     "titel": "Übung 4: Clara, Praktikum in München",
+     "folien": "171–172",
+     "sachverhalt": "Studentin Clara wohnt in Spanien. Für ein dreimonatiges Praktikum mietet sie ein WG-Zimmer in München und erhält eine monatliche Vergütung. Danach reist sie zurück nach Spanien.",
+     "frage": "Ist Clara in Deutschland unbeschränkt oder beschränkt steuerpflichtig?",
+     "loesung": [
+      [
+       "Wohnsitz",
+       "Kein Wohnsitz: Das Zimmer war von vornherein nur vorübergehend (unter 6 Monate) gedacht (AEAO zu § 8 Nr. 4.2.2)."
+      ],
+      [
+       "Gewöhnlicher Aufenthalt",
+       "Nein, Aufenthalt unter 6 Monaten (§ 9 AO)."
+      ],
+      [
+       "Beschränkt",
+       "Einkünfte aus nichtselbständiger Arbeit im Inland (§ 49 Abs. 1 Nr. 4 a EStG)."
+      ]
+     ],
+     "ergebnis": "Beschränkt steuerpflichtig nach § 1 Abs. 4 EStG mit der Praktikumsvergütung (DBA Spanien ggf. beachten).",
+     "merke": "Entscheidend ist auch die Absicht: von vornherein nur vorübergehend → kein Wohnsitz."
+    },
+    {
+     "id": "fall-grenzgaenger",
+     "typ": "fall",
+     "titel": "Übung 5: Grenzgänger Jean C.",
+     "folien": "173–174",
+     "sachverhalt": "Arbeitnehmer Jean C. wohnt in Lauterbourg (Frankreich) und arbeitet seit Jahren an der DHBW in Karlsruhe.",
+     "frage": "Wie ist die Steuerpflicht von Jean C. in Deutschland zu würdigen?",
+     "loesung": [
+      [
+       "Wohnsitz",
+       "Er wohnt in Frankreich, keine Wohnung in Deutschland bekannt → kein Wohnsitz."
+      ],
+      [
+       "Gewöhnlicher Aufenthalt",
+       "Grenzgänger haben ihren gewöhnlichen Aufenthalt grundsätzlich im Wohnsitzstaat (AEAO zu § 9 Nr. 2)."
+      ],
+      [
+       "Beschränkt",
+       "Inländische Einkünfte aus nichtselbständiger Arbeit (§ 49 Abs. 1 Nr. 4 a EStG) → § 1 Abs. 4 EStG."
+      ],
+      [
+       "Optionen",
+       "Auf Antrag ggf. Grenzpendlerregelung § 1 Abs. 3 EStG – im Sachverhalt fehlen dafür Angaben. § 1 Abs. 2 (Diplomaten) scheidet aus."
+      ]
+     ],
+     "ergebnis": "Beschränkt steuerpflichtig nach § 1 Abs. 4 EStG."
+    },
+    {
+     "id": "fall-lehrer-usa",
+     "typ": "fall",
+     "titel": "Übung 6: Lehrer an deutscher Auslandsschule",
+     "folien": "175–176",
+     "sachverhalt": "Lehrer X, geboren in München, deutsche Staatsangehörigkeit, arbeitet an einer deutschen Auslandsschule in den USA und lebt seit über 2 Jahren in einem eigenen Haus dort. In Deutschland hat er kein Haus mehr. Seinen Lohn erhält er aus einer inländischen öffentlichen Kasse (Dienstverhältnis zu einer inländischen juristischen Person des öffentlichen Rechts).",
+     "frage": "Wie ist die Steuerpflicht von X in Deutschland zu würdigen?",
+     "loesung": [
+      [
+       "§ 1 Abs. 1",
+       "Scheidet aus: weder Wohnsitz noch gewöhnlicher Aufenthalt in Deutschland."
+      ],
+      [
+       "§ 1 Abs. 2",
+       "Erweiterte unbeschränkte Steuerpflicht: deutscher Staatsangehöriger, Dienstverhältnis zu einer inländischen juristischen Person des öffentlichen Rechts, Lohn aus inländischer öffentlicher Kasse."
+      ]
+     ],
+     "ergebnis": "Unbeschränkt steuerpflichtig nach § 1 Abs. 2 S. 1 EStG (erweiterte unbeschränkte Steuerpflicht).",
+     "merke": "§ 1 Abs. 2 = „Diplomatenregelung“ für Staatsbedienstete im Ausland."
+    }
+   ]
+  },
+  {
+   "id": "einkunftsarten",
+   "ast": "Einkommensteuer: Wer und was?",
+   "titel": "Die sieben Einkunftsarten",
+   "folien": "220–226",
+   "art": "wissen",
+   "relevanz": "kern",
+   "ansehen": [
+    {
+     "typ": "text",
+     "inhalt": "Nachdem geklärt ist, wer steuerpflichtig ist, geht es darum, was besteuert wird (sachliche Steuerpflicht, § 2 EStG). Besteuert werden nur Einkünfte aus den sieben Einkunftsarten. Sie teilen sich in zwei Gruppen mit unterschiedlicher Ermittlung – das ist der Dualismus der Einkunftsarten."
+    },
+    {
+     "typ": "tabelle",
+     "zeilen": [
+      [
+       "Gewinneinkünfte",
+       "1. Land- und Forstwirtschaft (§ 13), 2. Gewerbebetrieb (§ 15), 3. selbständige Arbeit (§ 18) → Gewinn = Betriebseinnahmen − Betriebsausgaben"
+      ],
+      [
+       "Überschusseinkünfte",
+       "4. nichtselbständige Arbeit (§ 19), 5. Kapitalvermögen (§ 20), 6. Vermietung und Verpachtung (§ 21), 7. sonstige Einkünfte (§ 22) → Überschuss = Einnahmen − Werbungskosten"
+      ],
+      [
+       "Folge",
+       "Überschusseinkünfte: Zufluss-/Abflussprinzip § 11; Gewinneinkünfte meist Bilanzierung mit periodengerechter Abgrenzung"
+      ],
+      [
+       "Gewerbebetrieb",
+       "positiv: selbständig, nachhaltig, Gewinnerzielungsabsicht, Teilnahme am allgemeinen wirtschaftlichen Verkehr; negativ: keine LuF, keine selbständige Arbeit, keine reine Vermögensverwaltung – alle kumulativ"
+      ]
+     ],
+     "kopf": [
+      "Gruppe",
+      "Inhalt"
+     ]
+    }
    ],
-   "erklaeren": {
-    "frage": "Frau Felt geht mit ihrer Familie für 2 Jahre nach Kanada und vermietet ihr Haus in Karlsruhe fremd. Ist sie in Deutschland unbeschränkt steuerpflichtig? Begründe mit Normen.",
-    "kernpunkte": [
-     "Prüfung nach § 1 Abs. 1 EStG: Wohnsitz oder gewöhnlicher Aufenthalt im Inland",
-     "Wohnsitz § 8 AO: Wohnung innehaben, beibehalten und jederzeit nutzen können („Schlüsselgewalt“)",
-     "Durch die Fremdvermietung kann sie das Haus nicht jederzeit nutzen → kein Wohnsitz",
-     "Kein gewöhnlicher Aufenthalt in Deutschland → nicht unbeschränkt steuerpflichtig",
-     "Höchstens beschränkt steuerpflichtig mit inländischen Einkünften (§ 1 Abs. 4, § 49 EStG), z. B. der Miete"
-    ]
-   }
+   "puzzle": [
+    "Gewinneinkünfte: LuF, Gewerbe, selbständig",
+    "Überschusseinkünfte: Lohn, Kapital, Miete, Sonstige"
+   ],
+   "karten": [
+    {
+     "id": "einkunftsarten-1",
+     "titel": "Sieben Einkunftsarten",
+     "frage": "Nenne die sieben Einkunftsarten und ordne sie Gewinn- bzw. Überschusseinkünften zu.",
+     "kernpunkte": [
+      "Gewinneinkünfte: Land- und Forstwirtschaft, Gewerbebetrieb, selbständige Arbeit",
+      "Überschusseinkünfte: nichtselbständige Arbeit, Kapitalvermögen, Vermietung und Verpachtung, sonstige Einkünfte",
+      "Gewinn = Betriebseinnahmen − Betriebsausgaben",
+      "Überschuss = Einnahmen − Werbungskosten"
+     ],
+     "zuordnen": [
+      [
+       "§ 15 EStG",
+       "Gewerbebetrieb"
+      ],
+      [
+       "§ 18 EStG",
+       "selbständige Arbeit"
+      ],
+      [
+       "§ 19 EStG",
+       "nichtselbständige Arbeit"
+      ],
+      [
+       "§ 20 EStG",
+       "Kapitalvermögen"
+      ],
+      [
+       "§ 21 EStG",
+       "Vermietung und Verpachtung"
+      ]
+     ],
+     "luecken": [
+      "Es gibt {{7|sieben}} Einkunftsarten (§ 2 Abs. 1 EStG).",
+      "Bei Überschusseinkünften gilt: Einnahmen − {{Werbungskosten}}.",
+      "Bei Gewinneinkünften gilt: Betriebseinnahmen − {{Betriebsausgaben}}."
+     ]
+    },
+    {
+     "id": "einkunftsarten-2",
+     "titel": "Gewerblichkeit",
+     "frage": "Nenne die Kriterien eines Gewerbebetriebs. Wie grenzt man ihn von privater Vermögensverwaltung ab?",
+     "kernpunkte": [
+      "selbständig, nachhaltig, Gewinnerzielungsabsicht, Teilnahme am allgemeinen wirtschaftlichen Verkehr",
+      "keine Land- und Forstwirtschaft, keine selbständige Arbeit",
+      "Rahmen der privaten Vermögensverwaltung überschritten",
+      "alle Kriterien kumulativ; Folge: GewSt-Pflicht, Veräußerungsgewinne steuerpflichtig"
+     ],
+     "luecken": [
+      "Ein Gewerbebetrieb liegt nur vor, wenn alle Kriterien {{kumulativ}} erfüllt sind.",
+      "Influencer sind in der Regel {{Gewerbetreibende|gewerblich}} und zahlen auch Gewerbesteuer."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "zve-schema",
+   "ast": "Einkommensteuer: Wer und was?",
+   "titel": "Vom Einkommen zum zvE (§ 2 EStG)",
+   "folien": "181–184",
+   "art": "rechnen",
+   "relevanz": "kern",
+   "ansehen": [
+    {
+     "typ": "text",
+     "inhalt": "Die Einkommensteuer wird nicht auf den Bruttolohn erhoben, sondern auf das zu versteuernde Einkommen (zvE). Dorthin führt ein festes Schema in § 2 EStG. Du musst die Stufen in der richtigen Reihenfolge kennen – die Details der einzelnen Abzüge nicht."
+    },
+    {
+     "typ": "formel",
+     "inhalt": "Summe der Einkünfte (7 Einkunftsarten)\n− Altersentlastungsbetrag, Entlastungsbetrag Alleinerziehende\n= Gesamtbetrag der Einkünfte (GdE)\n− Verlustabzug, Sonderausgaben, außergewöhnliche Belastungen\n= Einkommen\n− Freibeträge für Kinder, Härteausgleich\n= zu versteuerndes Einkommen (zvE)"
+    },
+    {
+     "typ": "tabelle",
+     "zeilen": [
+      [
+       "Summe der Einkünfte",
+       "§ 2 Abs. 1 EStG: alle sieben Einkunftsarten zusammen"
+      ],
+      [
+       "GdE",
+       "§ 2 Abs. 3 EStG"
+      ],
+      [
+       "Einkommen",
+       "§ 2 Abs. 4 EStG"
+      ],
+      [
+       "zvE",
+       "§ 2 Abs. 5 EStG – darauf wird der Tarif angewendet"
+      ],
+      [
+       "Verfahren",
+       "Steueranspruch entsteht mit dem Tatbestand (§ 38 AO) → Erklärung → Steuerbescheid → Zahlung; Rechtsbehelfe: Einspruch, Klage"
+      ]
+     ]
+    }
+   ],
+   "puzzle": [
+    "SdE → GdE → Einkommen → zvE",
+    "Tarif wird auf das zvE angewendet"
+   ],
+   "karten": [
+    {
+     "id": "zve-1",
+     "titel": "Schema § 2 EStG",
+     "frage": "Wie kommt man von der Summe der Einkünfte zum zu versteuernden Einkommen? Nenne die Stufen in der richtigen Reihenfolge.",
+     "kernpunkte": [
+      "Summe der Einkünfte aus den sieben Einkunftsarten",
+      "− Altersentlastungsbetrag u. a. = Gesamtbetrag der Einkünfte",
+      "− Verlustabzug, Sonderausgaben, außergewöhnliche Belastungen = Einkommen",
+      "− Kinderfreibeträge, Härteausgleich = zvE"
+     ],
+     "zuordnen": [
+      [
+       "Summe der Einkünfte",
+       "§ 2 Abs. 1 EStG"
+      ],
+      [
+       "Gesamtbetrag der Einkünfte",
+       "§ 2 Abs. 3 EStG"
+      ],
+      [
+       "Einkommen",
+       "§ 2 Abs. 4 EStG"
+      ],
+      [
+       "zu versteuerndes Einkommen",
+       "§ 2 Abs. 5 EStG"
+      ]
+     ],
+     "luecken": [
+      "Summe der Einkünfte − Altersentlastungsbetrag = {{Gesamtbetrag der Einkünfte|GdE}}",
+      "GdE − Sonderausgaben − außergewöhnliche Belastungen = {{Einkommen}}",
+      "Einkommen − Freibeträge für {{Kinder}} = zvE"
+     ]
+    }
+   ]
   },
   {
    "id": "veranlagung",
-   "ast": "Einkommensteuer: Wer, wann, wie viel?",
+   "ast": "Einkommensteuer: Wer und was?",
    "titel": "Veranlagung: Einzel oder zusammen?",
-   "folien": "187, 190",
+   "folien": "187–191",
    "art": "wissen",
+   "relevanz": "kern",
    "ansehen": [
     {
      "typ": "text",
@@ -386,57 +1237,100 @@
       ],
       [
        "Fall 1",
-       "Ehemann zieht am 14.2.01 ins Ausland → VZ 01 zusammen, VZ 02 einzeln"
+       "Ehemann zieht am 14.2.01 ins Ausland → VZ 01 zusammen, VZ 02 einzeln",
+       "fall:fall-veranlagung"
       ],
       [
        "Fall 2 / 3",
-       "Trennung 14.2.01 → nur 01 zusammen; dauernd getrennt erst ab 5.2.02 → 01 und 02 zusammen, ab 03 einzeln"
+       "Trennung 14.2.01 → nur 01 zusammen; dauernd getrennt erst ab 5.2.02 → 01 und 02 zusammen, ab 03 einzeln",
+       "fall:fall-veranlagung"
       ],
       [
        "Fall 4",
-       "Ehefrau stirbt 31.12.01 → 01 zusammen; 02 Gnadensplitting (Verwitweten-Splitting, § 32a Abs. 6 EStG)"
+       "Ehefrau stirbt 31.12.01 → 01 zusammen; 02 Gnadensplitting (Verwitweten-Splitting, § 32a Abs. 6 EStG)",
+       "fall:fall-veranlagung"
       ]
      ]
     }
    ],
-   "zuordnen": [
-    [
-     "Veranlagungszeitraum",
-     "Kalenderjahr (§ 25 EStG)"
-    ],
-    [
-     "Zusammenveranlagung",
-     "§ 26 EStG"
-    ],
-    [
-     "Splittingtarif",
-     "§ 32a Abs. 5 EStG"
-    ],
-    [
-     "Gnadensplitting",
-     "§ 32a Abs. 6 EStG"
-    ]
+   "puzzle": [
+    "§ 26: verheiratet, unbeschränkt, nicht getrennt",
+    "ein Tag im VZ reicht"
    ],
-   "luecken": [
-    "Voraussetzungen der Zusammenveranlagung: verheiratet, beide {{unbeschränkt steuerpflichtig|unbeschränkt}} und nicht {{dauernd getrennt lebend|dauernd getrennt}}.",
-    "Es reicht, wenn alle Voraussetzungen an {{einem Tag|1 Tag|mindestens einem Tag}} im Veranlagungszeitraum gleichzeitig vorliegen."
-   ],
-   "erklaeren": {
-    "frage": "Ein Ehepaar lebt ab dem 14.2.01 dauernd getrennt, die Scheidung ist in VZ 04. Welche Veranlagung ist in VZ 01 bis 04 möglich? Begründe.",
-    "kernpunkte": [
-     "§ 26 EStG: Ehe, beide unbeschränkt steuerpflichtig, nicht dauernd getrennt",
-     "Voraussetzungen müssen nur an einem Tag im VZ gleichzeitig vorliegen",
-     "VZ 01: bis 13.2. erfüllt → Zusammenveranlagung möglich",
-     "VZ 02 bis 04: dauernd getrennt → Einzelveranlagung"
-    ]
-   }
+   "karten": [
+    {
+     "id": "veranlagung-1",
+     "titel": "Voraussetzungen § 26",
+     "frage": "Nenne die Voraussetzungen der Zusammenveranlagung und erkläre, wann sie im VZ vorliegen müssen.",
+     "kernpunkte": [
+      "verheiratet oder eingetragene Lebenspartner",
+      "beide unbeschränkt steuerpflichtig",
+      "nicht dauernd getrennt lebend",
+      "an mindestens einem Tag im VZ gleichzeitig"
+     ],
+     "zuordnen": [
+      [
+       "Veranlagungszeitraum",
+       "Kalenderjahr (§ 25 EStG)"
+      ],
+      [
+       "Zusammenveranlagung",
+       "§ 26 EStG"
+      ],
+      [
+       "Splittingtarif",
+       "§ 32a Abs. 5 EStG"
+      ],
+      [
+       "Gnadensplitting",
+       "§ 32a Abs. 6 EStG"
+      ]
+     ],
+     "luecken": [
+      "Voraussetzungen: verheiratet, beide {{unbeschränkt steuerpflichtig|unbeschränkt}} und nicht {{dauernd getrennt lebend|dauernd getrennt}}.",
+      "Es reicht, wenn alle Voraussetzungen an {{einem Tag|1 Tag|mindestens einem Tag}} im VZ vorliegen."
+     ]
+    },
+    {
+     "id": "fall-veranlagung",
+     "typ": "fall",
+     "titel": "Vier Veranlagungsfälle",
+     "folien": "190–191",
+     "sachverhalt": "Prüfe für jedes Ehepaar, welche Veranlagung in den Veranlagungszeiträumen möglich ist:\n1) Ehemann zieht am 14.2.01 dauerhaft ins Ausland.\n2) Das Paar trennt sich am 14.2.01 dauerhaft; Scheidung in VZ 04.\n3) Das Paar lebt erst ab 5.2.02 dauernd getrennt.\n4) Die Ehefrau stirbt am 31.12.01.",
+     "frage": "Zusammen- oder Einzelveranlagung – in welchem VZ?",
+     "loesung": [
+      [
+       "Norm",
+       "§ 26 EStG: verheiratet, beide unbeschränkt steuerpflichtig, nicht dauernd getrennt – an mindestens einem Tag im VZ gleichzeitig."
+      ],
+      [
+       "Fall 1",
+       "Bis 13.2.01 alle Voraussetzungen erfüllt → VZ 01 zusammen; VZ 02 einzeln (Ehemann nicht mehr unbeschränkt steuerpflichtig)."
+      ],
+      [
+       "Fall 2",
+       "VZ 01 zusammen (bis 13.2. nicht getrennt); VZ 02 bis 04 einzeln."
+      ],
+      [
+       "Fall 3",
+       "VZ 01 und VZ 02 zusammen (bis 4.2.02 nicht getrennt); ab VZ 03 einzeln."
+      ],
+      [
+       "Fall 4",
+       "VZ 01 zusammen; VZ 02 Einzelveranlagung mit Gnadensplitting (§ 32a Abs. 6 Nr. 1 EStG)."
+      ]
+     ],
+     "ergebnis": "Ein einziger Tag im VZ mit allen drei Voraussetzungen reicht für die Zusammenveranlagung."
+    }
+   ]
   },
   {
    "id": "tarif",
-   "ast": "Einkommensteuer: Wer, wann, wie viel?",
+   "ast": "Einkommensteuer: Wie viel?",
    "titel": "Einkommensteuertarif",
-   "folien": "193–206 – „Klausurrelevant!!“",
+   "folien": "193–211, 27–29",
    "art": "rechnen",
+   "relevanz": "kern",
    "ansehen": [
     {
      "typ": "text",
@@ -462,48 +1356,103 @@
        "Grenzsatz = Steuer auf den nächsten Euro; Durchschnittssatz = Steuer ÷ zvE, liegt immer darunter"
       ]
      ]
+    },
+    {
+     "typ": "text",
+     "inhalt": "Tarif VZ 2026 nach § 32a EStG – kommt in der Klausur als Anlage:"
+    },
+    {
+     "typ": "tabelle",
+     "zeilen": [
+      [
+       "bis 12.348 €",
+       "0 (Grundfreibetrag)"
+      ],
+      [
+       "12.349–17.799 €",
+       "(914,51 · y + 1.400) · y,  y = (zvE − 12.348) ÷ 10.000"
+      ],
+      [
+       "17.800–69.878 €",
+       "(173,10 · z + 2.397) · z + 1.034,87,  z = (zvE − 17.799) ÷ 10.000"
+      ],
+      [
+       "69.879–277.825 €",
+       "0,42 · x − 11.135,63,  x = zvE"
+      ],
+      [
+       "ab 277.826 €",
+       "0,45 · x − 19.470,38"
+      ],
+      [
+       "Rundung",
+       "zvE und Steuer auf volle Euro abrunden; immer erst die Klammer, dann ÷ 10.000"
+      ]
+     ],
+     "kopf": [
+      "Zone",
+      "Formel"
+     ]
     }
    ],
-   "zuordnen": [
-    [
-     "proportionaler Tarif",
-     "KSt 15 % (§ 23 KStG)"
-    ],
-    [
-     "indirekt progressiv",
-     "Abgeltungsteuer mit Sparer-Pauschbetrag"
-    ],
-    [
-     "direkt progressiv",
-     "ESt-Tarif (§ 32a EStG)"
-    ],
-    [
-     "Spitzensteuersatz",
-     "42 %, für sehr hohe Einkommen 45 %"
-    ]
+   "puzzle": [
+    "Grundfreibetrag → 14 % … 42 % → 45 %",
+    "Grenzsatz > Durchschnittssatz"
    ],
-   "luecken": [
-    "Bis zum {{Grundfreibetrag}} fällt keine Einkommensteuer an.",
-    "Der {{Grenzsteuersatz}} ist die Steuer auf den nächsten Euro.",
-    "Durchschnittssteuersatz = Steuer ÷ {{zvE|zu versteuerndes Einkommen}}.",
-    "Im Tarif gilt: erst die {{Klammer}} ausrechnen, dann durch 10.000 teilen."
-   ],
-   "erklaeren": {
-    "frage": "Erkläre den Unterschied zwischen Grenz- und Durchschnittssteuersatz und warum der ESt-Tarif direkt progressiv ist.",
-    "kernpunkte": [
-     "Grenzsteuersatz: Steuer auf den nächsten zusätzlichen Euro",
-     "Durchschnittssteuersatz: gesamte Steuer ÷ zvE, liegt unter dem Grenzsatz",
-     "Direkt progressiv: der Satz selbst steigt mit dem Einkommen",
-     "Grundfreibetrag steuerfrei, dann steigend bis 42 % bzw. 45 %"
-    ]
-   }
+   "karten": [
+    {
+     "id": "tarif-1",
+     "titel": "Tarifarten",
+     "frage": "Erkläre proportionalen, indirekt progressiven und direkt progressiven Tarif mit je einem Beispiel.",
+     "kernpunkte": [
+      "proportional: fester Satz, z. B. KSt 15 %",
+      "indirekt progressiv: fester Satz mit Freibetrag, z. B. Abgeltungsteuer mit Sparer-Pauschbetrag",
+      "direkt progressiv: Satz steigt mit dem Einkommen, ESt-Tarif"
+     ],
+     "zuordnen": [
+      [
+       "proportionaler Tarif",
+       "KSt 15 % (§ 23 KStG)"
+      ],
+      [
+       "indirekt progressiv",
+       "Abgeltungsteuer mit Sparer-Pauschbetrag"
+      ],
+      [
+       "direkt progressiv",
+       "ESt-Tarif (§ 32a EStG)"
+      ],
+      [
+       "Spitzensteuersatz",
+       "42 %, für sehr hohe Einkommen 45 %"
+      ]
+     ]
+    },
+    {
+     "id": "tarif-2",
+     "titel": "Grenz- vs. Durchschnittssatz",
+     "frage": "Erkläre Grenz- und Durchschnittssteuersatz und was die kalte Progression ist.",
+     "kernpunkte": [
+      "Grenzsatz: Steuer auf den nächsten Euro",
+      "Durchschnittssatz: Steuer ÷ zvE, liegt darunter",
+      "kalte Progression: Gehalt steigt nur um die Inflation, Durchschnittsbelastung steigt trotzdem → schleichende Steuererhöhung"
+     ],
+     "luecken": [
+      "Der {{Grenzsteuersatz}} ist die Steuer auf den nächsten Euro.",
+      "Durchschnittssteuersatz = Steuer ÷ {{zvE|zu versteuerndes Einkommen}}.",
+      "Bis zum {{Grundfreibetrag}} fällt keine Einkommensteuer an.",
+      "Im Tarif gilt: erst die {{Klammer}} ausrechnen, dann durch 10.000 teilen."
+     ]
+    }
+   ]
   },
   {
    "id": "splitting",
-   "ast": "Einkommensteuer: Wer, wann, wie viel?",
+   "ast": "Einkommensteuer: Wie viel?",
    "titel": "Ehegattensplitting",
-   "folien": "213–215",
+   "folien": "212–218",
    "art": "rechnen",
+   "relevanz": "kern",
    "ansehen": [
     {
      "typ": "text",
@@ -527,45 +1476,53 @@
      ]
     }
    ],
-   "zuordnen": [
-    [
-     "Schritt 1",
-     "zvE beider Ehegatten addieren"
-    ],
-    [
-     "Schritt 2",
-     "Summe halbieren"
-    ],
-    [
-     "Schritt 3",
-     "Grundtarif anwenden"
-    ],
-    [
-     "Schritt 4",
-     "Steuer verdoppeln"
-    ]
+   "puzzle": [
+    "(zvE₁ + zvE₂) ÷ 2 → Tarif → × 2",
+    "Vorteil bei ungleichen Einkommen"
    ],
-   "luecken": [
-    "Steuer = {{2}} · Tarif((zvE₁ + zvE₂) ÷ 2)",
-    "Den größten Vorteil bringt Splitting bei {{sehr unterschiedlichen|unterschiedlichen|unterschiedlich hohen}} Einkommen.",
-    "Bei einem proportionalen Tarif bringt Splitting {{keinen Vorteil|nichts|keinen}}."
-   ],
-   "erklaeren": {
-    "frage": "Warum spart ein Ehepaar durch Splitting Steuern – und wann nicht?",
-    "kernpunkte": [
-     "Ehegatten werden wie ein Steuerpflichtiger behandelt (§ 26b EStG)",
-     "zvE addieren, halbieren, Tarif anwenden, verdoppeln",
-     "Wegen der Progression rutscht der Besserverdienende in eine niedrigere Stufe",
-     "Kein Vorteil bei gleich hohen Einkommen oder proportionalem Tarif (Flat Tax)"
-    ]
-   }
+   "karten": [
+    {
+     "id": "splitting-1",
+     "titel": "Splittingverfahren",
+     "frage": "Erkläre das Splittingverfahren und wann es einen Vorteil bringt.",
+     "kernpunkte": [
+      "zvE addieren, halbieren, Grundtarif anwenden, verdoppeln",
+      "Voraussetzung: Zusammenveranlagung (§§ 26, 26b) oder Gnadensplitting",
+      "Vorteil durch Progression bei ungleichen Einkommen",
+      "kein Vorteil bei gleichen Einkommen oder Flat Tax"
+     ],
+     "zuordnen": [
+      [
+       "Schritt 1",
+       "zvE beider Ehegatten addieren"
+      ],
+      [
+       "Schritt 2",
+       "Summe halbieren"
+      ],
+      [
+       "Schritt 3",
+       "Grundtarif anwenden"
+      ],
+      [
+       "Schritt 4",
+       "Steuer verdoppeln"
+      ]
+     ],
+     "luecken": [
+      "Steuer = {{2}} · Tarif((zvE₁ + zvE₂) ÷ 2)",
+      "Bei 250.000 € + 250.000 € bringt Splitting {{keinen Vorteil|nichts|keinen}}."
+     ]
+    }
+   ]
   },
   {
    "id": "werbungskosten-zufluss",
    "ast": "Einkünfte ermitteln",
    "titel": "Werbungskosten & Zuflussprinzip",
-   "folien": "238–247",
+   "folien": "232–248",
    "art": "wissen",
+   "relevanz": "kern",
    "ansehen": [
     {
      "typ": "text",
@@ -589,44 +1546,92 @@
      ]
     }
    ],
-   "zuordnen": [
-    [
-     "§ 9 EStG",
-     "Werbungskosten"
-    ],
-    [
-     "§ 4 Abs. 4 EStG",
-     "Betriebsausgaben"
-    ],
-    [
-     "§ 11 EStG",
-     "Zufluss- und Abflussprinzip"
-    ],
-    [
-     "§ 12 EStG",
-     "Private Lebensführung nicht abziehbar"
-    ]
+   "puzzle": [
+    "Werbungskosten § 9",
+    "Zufluss § 11, Ausnahme 22.12.–10.01."
    ],
-   "luecken": [
-    "Einnahmen zählen im Jahr des {{Zuflusses|Zufluss}}, Ausgaben im Jahr des {{Abflusses|Abfluss}}.",
-    "Ausnahme für regelmäßig wiederkehrende Zahlungen: Zahlung UND {{Fälligkeit}} liegen beide zwischen 22.12. und {{10.01.|10.1.|10.01|10. Januar|10.1}}."
-   ],
-   "erklaeren": {
-    "frage": "Der Mieter zahlt die Januarmiete 02 (fällig am 01.01.02) schon am 28.12.01. In welchem Jahr ist sie beim Vermieter Einnahme? Begründe.",
-    "kernpunkte": [
-     "Grundregel § 11 Abs. 1 S. 1: Zufluss am 28.12.01 → eigentlich 01",
-     "Miete ist eine regelmäßig wiederkehrende Einnahme",
-     "Zahlung (28.12.) und Fälligkeit (1.1.) liegen beide in der Zone 22.12.–10.01.",
-     "Ausnahme § 11 Abs. 1 S. 2 → Einnahme im Jahr der wirtschaftlichen Zugehörigkeit: 02"
-    ]
-   }
+   "karten": [
+    {
+     "id": "wk-1",
+     "titel": "Werbungskosten",
+     "frage": "Was sind Werbungskosten, und wie grenzt man sie von Betriebsausgaben und Kosten der Lebensführung ab?",
+     "kernpunkte": [
+      "Aufwendungen zur Erwerbung, Sicherung und Erhaltung der Einnahmen (§ 9 EStG)",
+      "bei Überschusseinkünften",
+      "Gegenstück bei Gewinneinkünften: Betriebsausgaben (§ 4 Abs. 4 EStG)",
+      "private Lebensführung nicht abziehbar (§ 12 EStG)"
+     ],
+     "zuordnen": [
+      [
+       "§ 9 EStG",
+       "Werbungskosten"
+      ],
+      [
+       "§ 4 Abs. 4 EStG",
+       "Betriebsausgaben"
+      ],
+      [
+       "§ 11 EStG",
+       "Zufluss- und Abflussprinzip"
+      ],
+      [
+       "§ 12 EStG",
+       "private Lebensführung nicht abziehbar"
+      ]
+     ]
+    },
+    {
+     "id": "wk-2",
+     "titel": "Zuflussprinzip",
+     "frage": "Erkläre das Zufluss-/Abflussprinzip und seine Ausnahme.",
+     "kernpunkte": [
+      "Einnahmen im Jahr des Zuflusses, Ausgaben im Jahr des Abflusses",
+      "Ausnahme für regelmäßig wiederkehrende Zahlungen",
+      "Zahlung UND Fälligkeit innerhalb 22.12.–10.01.",
+      "dann Jahr der wirtschaftlichen Zugehörigkeit"
+     ],
+     "luecken": [
+      "Einnahmen zählen im Jahr des {{Zuflusses|Zufluss}}, Ausgaben im Jahr des {{Abflusses|Abfluss}}.",
+      "Ausnahme: Zahlung UND {{Fälligkeit}} liegen zwischen 22.12. und {{10.01.|10.1.|10.01|10. Januar|10.1}}."
+     ]
+    },
+    {
+     "id": "fall-januarmiete",
+     "typ": "fall",
+     "titel": "Januarmiete im Dezember gezahlt",
+     "folien": "242–248",
+     "sachverhalt": "Mieter M zahlt die Januarmiete 02 (fällig am 01.01.02) schon am 28.12.01 an Vermieter V.",
+     "frage": "In welchem Jahr ist die Miete bei V als Einnahme zu erfassen?",
+     "loesung": [
+      [
+       "Grundregel",
+       "§ 11 Abs. 1 S. 1 EStG: Einnahmen im Jahr des Zuflusses → 28.12.01, also eigentlich VZ 01."
+      ],
+      [
+       "Ausnahme prüfen",
+       "Miete ist eine regelmäßig wiederkehrende Einnahme."
+      ],
+      [
+       "10-Tage-Zone",
+       "Zahlung (28.12.) und Fälligkeit (1.1.) liegen beide zwischen 22.12. und 10.01."
+      ],
+      [
+       "Folge",
+       "§ 11 Abs. 1 S. 2 EStG: Zurechnung zum Jahr der wirtschaftlichen Zugehörigkeit."
+      ]
+     ],
+     "ergebnis": "Einnahme im VZ 02.",
+     "merke": "Zahlung UND Fälligkeit müssen beide in der Zone liegen."
+    }
+   ]
   },
   {
    "id": "nichtselbstaendig",
    "ast": "Einkünfte ermitteln",
    "titel": "Nichtselbständige Arbeit",
-   "folien": "252–260 – „Tabellenschema kennen“",
+   "folien": "249–261",
    "art": "rechnen",
+   "relevanz": "kern",
    "ansehen": [
     {
      "typ": "text",
@@ -654,46 +1659,54 @@
      ]
     }
    ],
-   "zuordnen": [
-    [
-     "Arbeitnehmer-Pauschbetrag",
-     "1.230 € (§ 9a EStG)"
-    ],
-    [
-     "Homeoffice-Pauschale",
-     "6 € pro Tag"
-    ],
-    [
-     "Homeoffice-Höchstbetrag",
-     "210 Tage = 1.260 €"
-    ],
-    [
-     "Entfernungspauschale ab 2026",
-     "0,38 € je km ab dem 1. km"
-    ]
+   "puzzle": [
+    "Bruttolohn − Werbungskosten",
+    "mindestens 1.230 € Pauschbetrag"
    ],
-   "luecken": [
-    "Bruttolohn − {{Werbungskosten}} = Einkünfte aus nichtselbständiger Arbeit (§ {{19}} EStG).",
-    "Sind die echten Werbungskosten kleiner als {{1.230 €|1.230|1230|1230 €}}, wird der Pauschbetrag abgezogen.",
-    "Bei der Entfernungspauschale zählt nur die {{einfache}} Entfernung."
-   ],
-   "erklaeren": {
-    "frage": "Erkläre das Tabellenschema für die Einkünfte aus nichtselbständiger Arbeit mit Homeoffice- und Bürotagen.",
-    "kernpunkte": [
-     "Bruttolohn als Einnahme (§ 19 i. V. m. § 8 EStG)",
-     "Homeoffice: 6 € je Tag, max. 210 Tage",
-     "Fahrten: einfache Entfernung × 0,38 € × Bürotage (VZ 2026)",
-     "Summe der Werbungskosten mit 1.230 € Pauschbetrag vergleichen – der höhere Wert zählt",
-     "Bruttolohn − Werbungskosten = Einkünfte"
-    ]
-   }
+   "karten": [
+    {
+     "id": "ns-1",
+     "titel": "Schema Arbeitnehmer",
+     "frage": "Erkläre das Tabellenschema für die Einkünfte aus nichtselbständiger Arbeit mit Homeoffice- und Bürotagen.",
+     "kernpunkte": [
+      "Bruttolohn als Einnahme (§ 19 EStG)",
+      "Homeoffice: 6 € je Tag, max. 210 Tage",
+      "Fahrten: einfache Entfernung × 0,38 € × Bürotage (VZ 2026)",
+      "mit 1.230 € Pauschbetrag vergleichen, höherer Wert zählt",
+      "Bruttolohn − Werbungskosten = Einkünfte"
+     ],
+     "zuordnen": [
+      [
+       "Arbeitnehmer-Pauschbetrag",
+       "1.230 € (§ 9a EStG)"
+      ],
+      [
+       "Homeoffice-Pauschale",
+       "6 € pro Tag"
+      ],
+      [
+       "Homeoffice-Höchstbetrag",
+       "210 Tage = 1.260 €"
+      ],
+      [
+       "Entfernungspauschale 2026",
+       "0,38 € je km ab dem 1. km"
+      ]
+     ],
+     "luecken": [
+      "Bruttolohn − {{Werbungskosten}} = Einkünfte aus nichtselbständiger Arbeit (§ {{19}} EStG).",
+      "Bei der Entfernungspauschale zählt nur die {{einfache}} Entfernung."
+     ]
+    }
+   ]
   },
   {
    "id": "kapitaleinkuenfte",
    "ast": "Einkünfte ermitteln",
    "titel": "Kapitaleinkünfte",
-   "folien": "269–273",
+   "folien": "262–273",
    "art": "rechnen",
+   "relevanz": "kern",
    "ansehen": [
     {
      "typ": "text",
@@ -717,45 +1730,53 @@
      ]
     }
    ],
-   "zuordnen": [
-    [
-     "Abgeltungsteuer",
-     "25 % + 5,5 % SolZ"
-    ],
-    [
-     "Sparer-Pauschbetrag",
-     "1.000 € (Ehepaar 2.000 €)"
-    ],
-    [
-     "Teileinkünfteverfahren",
-     "60 % steuerpflichtig"
-    ],
-    [
-     "Günstigerprüfung",
-     "auf Antrag persönlicher Steuersatz"
-    ]
+   "puzzle": [
+    "Abgeltungsteuer 25 % + SolZ",
+    "Sparer-Pauschbetrag 1.000 €"
    ],
-   "luecken": [
-    "Kapitaleinkünfte im Privatvermögen werden mit {{25}} % Abgeltungsteuer besteuert.",
-    "Beim Teileinkünfteverfahren sind {{60}} % steuerpflichtig und {{40}} % steuerfrei.",
-    "Das Teileinkünfteverfahren gilt bei einer Beteiligung von mindestens {{1}} % (§ 17 EStG)."
-   ],
-   "erklaeren": {
-    "frage": "Erkläre, wie eine Dividende vom Gewinn der Kapitalgesellschaft bis zum Nettobetrag beim Aktionär besteuert wird.",
-    "kernpunkte": [
-     "Unternehmensebene: GewSt (14 bei h = 400 %) und KSt 15 % → 71 bleiben",
-     "Ausschüttung beim Aktionär: Abgeltungsteuer 25 % + SolZ",
-     "Alternativ Teileinkünfteverfahren: 60 % zum persönlichen Satz",
-     "Gesamtbelastung knapp 48 %"
-    ]
-   }
+   "karten": [
+    {
+     "id": "kap-1",
+     "titel": "Abgeltungsteuer",
+     "frage": "Wie werden Kapitaleinkünfte im Privatvermögen besteuert? Nenne Satz, Pauschbetrag und Ausnahmen.",
+     "kernpunkte": [
+      "Abgeltungsteuer 25 % + 5,5 % SolZ (§ 32d EStG)",
+      "Sparer-Pauschbetrag 1.000 € (Ehepaar 2.000 €), keine echten Werbungskosten",
+      "Günstigerprüfung auf Antrag",
+      "Teileinkünfteverfahren: 60 % steuerpflichtig (Betriebsvermögen bzw. Beteiligung ≥ 1 % nach § 17)"
+     ],
+     "zuordnen": [
+      [
+       "Abgeltungsteuer",
+       "25 % + 5,5 % SolZ"
+      ],
+      [
+       "Sparer-Pauschbetrag",
+       "1.000 € (Ehepaar 2.000 €)"
+      ],
+      [
+       "Teileinkünfteverfahren",
+       "60 % steuerpflichtig"
+      ],
+      [
+       "Günstigerprüfung",
+       "auf Antrag persönlicher Steuersatz"
+      ]
+     ],
+     "luecken": [
+      "Kapitaleinkünfte im Privatvermögen werden mit {{25}} % Abgeltungsteuer besteuert.",
+      "Beim Teileinkünfteverfahren sind {{60}} % steuerpflichtig."
+     ]
+    }
+   ]
   },
   {
    "id": "vermietung",
    "ast": "Einkünfte ermitteln",
    "titel": "Vermietung & Verpachtung",
-   "folien": "275–282",
+   "folien": "274–286",
    "art": "rechnen",
+   "relevanz": "kern",
    "ansehen": [
     {
      "typ": "text",
@@ -779,45 +1800,53 @@
      ]
     }
    ],
-   "zuordnen": [
-    [
-     "Einnahmen",
-     "Kaltmiete + Nebenkosten"
-    ],
-    [
-     "Werbungskosten",
-     "Zinsen, gezahlte Nebenkosten, AfA"
-    ],
-    [
-     "§ 21 EStG",
-     "Einkünfte aus Vermietung und Verpachtung"
-    ],
-    [
-     "durchlaufender Posten",
-     "Nebenkosten heben sich auf"
-    ]
+   "puzzle": [
+    "Einnahmen − Werbungskosten (§ 21)",
+    "Nebenkosten = durchlaufender Posten"
    ],
-   "luecken": [
-    "Die vom Mieter gezahlten Nebenkosten sind beim Vermieter {{Einnahmen|Einnahme}}.",
-    "Schuldzinsen für die Wohnung sind {{Werbungskosten}} (§ 9 Abs. 1 S. 3 Nr. 1 EStG).",
-    "Abgeschrieben wird nur das {{Gebäude}}, nicht der Grund und Boden."
-   ],
-   "erklaeren": {
-    "frage": "Erkläre, wie du die Einkünfte aus der Vermietung einer Wohnung ermittelst.",
-    "kernpunkte": [
-     "Einkünfte nach § 21 EStG = Einnahmen − Werbungskosten",
-     "Einnahmen: Kaltmiete + Nebenkosten (§ 8), nach Zuflussprinzip § 11",
-     "Werbungskosten: Zinsen, gezahlte Nebenkosten, AfA auf das Gebäude (§ 9)",
-     "Nebenkosten sind ein durchlaufender Posten"
-    ]
-   }
+   "karten": [
+    {
+     "id": "vv-1",
+     "titel": "Einkünfte aus V+V",
+     "frage": "Erkläre, wie du die Einkünfte aus der Vermietung einer Wohnung ermittelst.",
+     "kernpunkte": [
+      "Einkünfte § 21 EStG = Einnahmen − Werbungskosten",
+      "Einnahmen: Kaltmiete + Nebenkosten (§ 8), Zuflussprinzip § 11",
+      "Werbungskosten: Zinsen, gezahlte Nebenkosten, AfA auf das Gebäude",
+      "AfA-Dauer wird in der Klausur gegeben"
+     ],
+     "zuordnen": [
+      [
+       "Einnahmen",
+       "Kaltmiete + Nebenkosten"
+      ],
+      [
+       "Werbungskosten",
+       "Zinsen, gezahlte Nebenkosten, AfA"
+      ],
+      [
+       "§ 21 EStG",
+       "Vermietung und Verpachtung"
+      ],
+      [
+       "durchlaufender Posten",
+       "Nebenkosten heben sich auf"
+      ]
+     ],
+     "luecken": [
+      "Die vom Mieter gezahlten Nebenkosten sind beim Vermieter {{Einnahmen|Einnahme}}.",
+      "Abgeschrieben wird nur das {{Gebäude}}, nicht der Grund und Boden."
+     ]
+    }
+   ]
   },
   {
    "id": "gewst-grundlagen",
-   "ast": "Unternehmen: GewSt & KSt",
+   "ast": "Unternehmen: GewSt, KSt, Rechtsform",
    "titel": "Gewerbesteuer: Was, wer, ab wann?",
-   "folien": "292–300",
+   "folien": "287–300",
    "art": "wissen",
+   "relevanz": "kern",
    "ansehen": [
     {
      "typ": "text",
@@ -836,7 +1865,8 @@
       ],
       [
        "Beginn",
-       "Einzel-/Personenunternehmen: mit der werbenden Tätigkeit nach außen (Folie 297: Ladeneröffnung 1.7., nicht schon Anmietung oder Renovierung); Kapitalgesellschaft: i. d. R. mit Handelsregistereintrag"
+       "Einzel-/Personenunternehmen: mit der werbenden Tätigkeit nach außen (Folie 297: Ladeneröffnung 1.7., nicht schon Anmietung oder Renovierung); Kapitalgesellschaft: i. d. R. mit Handelsregistereintrag",
+       "fall:fall-ladeneroeffnung"
       ],
       [
        "Ende",
@@ -845,44 +1875,77 @@
      ]
     }
    ],
-   "zuordnen": [
-    [
-     "Kapitalgesellschaft",
-     "immer Gewerbebetrieb kraft Rechtsform"
-    ],
-    [
-     "Freiberufler (§ 18 EStG)",
-     "keine Gewerbesteuer"
-    ],
-    [
-     "Steuerschuldner Personengesellschaft",
-     "die Gesellschaft selbst"
-    ],
-    [
-     "Beginn Einzelunternehmen",
-     "werbende Tätigkeit nach außen"
-    ]
+   "puzzle": [
+    "Gemeindesteuer auf den Gewerbeertrag",
+    "Beginn: werbende Tätigkeit nach außen"
    ],
-   "luecken": [
-    "Merkmale eines Gewerbebetriebs: selbständig, {{nachhaltig}}, mit Gewinnerzielungsabsicht und Teilnahme am allgemeinen wirtschaftlichen {{Verkehr}}.",
-    "Bei einer Kapitalgesellschaft endet die GewSt-Pflicht erst, wenn das Vermögen an die Gesellschafter {{verteilt}} ist."
-   ],
-   "erklaeren": {
-    "frage": "A mietet ab 1.4. einen Laden, renoviert im April und eröffnet am 1.7. Ab wann ist er gewerbesteuerpflichtig? Begründe.",
-    "kernpunkte": [
-     "Einzelunternehmen: Beginn mit der werbenden Tätigkeit nach außen",
-     "Anmieten und Renovieren sind nur Vorbereitung",
-     "GewSt-Pflicht beginnt am 1.7. mit der Ladeneröffnung",
-     "Die Kosten vorher mindern als vorweggenommene Betriebsausgaben die ESt, nicht die GewSt"
-    ]
-   }
+   "karten": [
+    {
+     "id": "gew-1",
+     "titel": "Steuerpflicht und Schuldner",
+     "frage": "Wer zahlt Gewerbesteuer, wer nicht, und wer ist Steuerschuldner?",
+     "kernpunkte": [
+      "Inländischer stehender Gewerbebetrieb (§ 2 GewStG)",
+      "Kapitalgesellschaften immer kraft Rechtsform",
+      "keine GewSt: Freiberufler, Land- und Forstwirte, Vermögensverwalter",
+      "Schuldner: Einzelunternehmer bzw. die Gesellschaft selbst (§ 5)"
+     ],
+     "zuordnen": [
+      [
+       "Kapitalgesellschaft",
+       "immer Gewerbebetrieb kraft Rechtsform"
+      ],
+      [
+       "Freiberufler (§ 18 EStG)",
+       "keine Gewerbesteuer"
+      ],
+      [
+       "Steuerschuldner Personengesellschaft",
+       "die Gesellschaft selbst"
+      ],
+      [
+       "Beginn Einzelunternehmen",
+       "werbende Tätigkeit nach außen"
+      ]
+     ],
+     "luecken": [
+      "Die Gewerbesteuer ist eine {{Gemeindesteuer|Gemeinde-Steuer|Objektsteuer}}.",
+      "Bei einer Kapitalgesellschaft endet die GewSt-Pflicht erst, wenn das Vermögen {{verteilt}} ist."
+     ]
+    },
+    {
+     "id": "fall-ladeneroeffnung",
+     "typ": "fall",
+     "titel": "Ladeneröffnung",
+     "folien": "296–298",
+     "sachverhalt": "A mietet ab 1.4. einen Laden an, renoviert ihn im April bis Juni und eröffnet ihn am 1.7. für Kunden.",
+     "frage": "Ab wann ist A gewerbesteuerpflichtig, und was gilt für die Kosten vor der Eröffnung?",
+     "loesung": [
+      [
+       "Norm",
+       "Gewerbesteuerpflicht für den stehenden Gewerbebetrieb (§ 2 GewStG); bei Einzelunternehmen beginnt sie mit der werbenden Tätigkeit nach außen."
+      ],
+      [
+       "Anwendung",
+       "Anmieten und Renovieren sind nur Vorbereitungshandlungen. Nach außen tritt A erst mit der Eröffnung am 1.7. auf."
+      ],
+      [
+       "Kosten vorher",
+       "Mindern als vorweggenommene Betriebsausgaben die Einkommensteuer, aber nicht die Gewerbesteuer."
+      ]
+     ],
+     "ergebnis": "Gewerbesteuerpflicht ab 1.7.",
+     "merke": "Vorbereitung ≠ Beginn. Bei Kapitalgesellschaften dagegen i. d. R. ab Handelsregistereintrag."
+    }
+   ]
   },
   {
    "id": "gewst-berechnen",
-   "ast": "Unternehmen: GewSt & KSt",
+   "ast": "Unternehmen: GewSt, KSt, Rechtsform",
    "titel": "Gewerbesteuer berechnen + Anrechnung § 35",
-   "folien": "305–309",
+   "folien": "301–309",
    "art": "rechnen",
+   "relevanz": "kern",
    "ansehen": [
     {
      "typ": "text",
@@ -897,7 +1960,7 @@
      "zeilen": [
       [
        "Hebesatz",
-       "legt jede Gemeinde selbst fest; laut Ertel mindestens 280 % (im Skript steht noch der alte Wert 200 %)"
+       "legt jede Gemeinde selbst fest; mindestens 280 % (§ 16 GewStG, so in Ertels Lösungen; auf Folie 305 steht noch 200 %)"
       ],
       [
        "Freibetrag",
@@ -914,45 +1977,68 @@
      ]
     }
    ],
-   "zuordnen": [
-    [
-     "Messzahl",
-     "3,5 %"
-    ],
-    [
-     "Hebesatz",
-     "mindestens 280 %"
-    ],
-    [
-     "Anrechnung § 35",
-     "Faktor 4,0"
-    ],
-    [
-     "Freibetrag",
-     "24.500 €"
-    ]
+   "puzzle": [
+    "Ertrag × 3,5 % × Hebesatz",
+    "§ 35: 4,0 × Messbetrag"
    ],
-   "luecken": [
-    "GewSt = Gewerbeertrag × {{3,5 %|3,5|3,5%}} × {{Hebesatz}}",
-    "Die ESt sinkt um {{4,0|4|4.0}} × Messbetrag, höchstens um die {{gezahlte GewSt|gezahlte Gewerbesteuer|tatsächlich gezahlte GewSt}}.",
-    "Der Freibetrag von 24.500 € gilt nur für Einzelunternehmen und {{Personengesellschaften|PersG}}."
-   ],
-   "erklaeren": {
-    "frage": "Warum gibt es die Gewerbesteueranrechnung nach § 35 EStG und warum bleibt bei einem Hebesatz über 400 % trotzdem eine Belastung?",
-    "kernpunkte": [
-     "Gewinn wird doppelt belastet: GewSt im Betrieb und ESt beim Inhaber",
-     "Gilt nur für Einzelunternehmen und Personengesellschaften",
-     "ESt sinkt um 4,0 × Gewerbesteuermessbetrag",
-     "Höchstens um die gezahlte GewSt – über 400 % Hebesatz bleibt ein Rest als Mehrbelastung"
-    ]
-   }
+   "karten": [
+    {
+     "id": "gewb-1",
+     "titel": "Berechnung",
+     "frage": "Wie berechnet man die Gewerbesteuer eines Einzelunternehmers? Nenne alle Schritte.",
+     "kernpunkte": [
+      "Gewinn ± Hinzurechnungen/Kürzungen = Gewerbeertrag",
+      "Freibetrag 24.500 € (nur Einzelunternehmen/Personengesellschaften), auf volle 100 € abrunden",
+      "× 3,5 % Messzahl = Messbetrag",
+      "× Hebesatz (mind. 280 %) = Gewerbesteuer"
+     ],
+     "zuordnen": [
+      [
+       "Messzahl",
+       "3,5 %"
+      ],
+      [
+       "Hebesatz",
+       "mindestens 280 %"
+      ],
+      [
+       "Anrechnung § 35",
+       "Faktor 4,0"
+      ],
+      [
+       "Freibetrag",
+       "24.500 €"
+      ]
+     ],
+     "luecken": [
+      "GewSt = Gewerbeertrag × {{3,5 %|3,5|3,5%}} × {{Hebesatz}}",
+      "Der Freibetrag von 24.500 € gilt nur für Einzelunternehmen und {{Personengesellschaften|PersG}}."
+     ]
+    },
+    {
+     "id": "gewb-2",
+     "titel": "Anrechnung § 35",
+     "frage": "Warum gibt es die Anrechnung nach § 35 EStG, und warum bleibt bei einem Hebesatz über 400 % eine Belastung?",
+     "kernpunkte": [
+      "Doppelbelastung: GewSt im Betrieb und ESt beim Inhaber",
+      "nur Einzelunternehmen und Personengesellschaften",
+      "ESt sinkt um 4,0 × Messbetrag",
+      "höchstens um die gezahlte GewSt – über 400 % bleibt ein Rest"
+     ],
+     "luecken": [
+      "Die ESt sinkt um {{4,0|4|4.0}} × Messbetrag, höchstens um die {{gezahlte GewSt|gezahlte Gewerbesteuer|tatsächlich gezahlte GewSt}}.",
+      "Bei einer Kapitalgesellschaft ist die GewSt {{nicht}} als Betriebsausgabe abziehbar."
+     ]
+    }
+   ]
   },
   {
    "id": "kst",
-   "ast": "Unternehmen: GewSt & KSt",
+   "ast": "Unternehmen: GewSt, KSt, Rechtsform",
    "titel": "Körperschaftsteuer",
-   "folien": "349, 357, 375",
+   "folien": "342–358",
    "art": "wissen",
+   "relevanz": "kern",
    "ansehen": [
     {
      "typ": "text",
@@ -980,45 +2066,174 @@
      ]
     }
    ],
-   "zuordnen": [
-    [
-     "§ 1 KStG",
-     "unbeschränkt: Sitz oder Geschäftsleitung im Inland"
-    ],
-    [
-     "§ 2 KStG",
-     "beschränkt: nur inländische Einkünfte"
-    ],
-    [
-     "§ 23 KStG",
-     "Steuersatz 15 %"
-    ],
-    [
-     "§ 8 Abs. 1 KStG",
-     "Einkommen nach den Regeln des EStG"
-    ]
+   "puzzle": [
+    "Sitz oder Geschäftsleitung im Inland",
+    "15 % + SolZ"
    ],
-   "luecken": [
-    "Unbeschränkt körperschaftsteuerpflichtig ist eine Körperschaft mit {{Sitz}} oder {{Geschäftsleitung}} im Inland.",
-    "Die Körperschaftsteuer beträgt {{15}} % des zvE zuzüglich {{5,5}} % SolZ.",
-    "Bei beschränkter Steuerpflicht gilt das {{Territorialprinzip}}."
+   "karten": [
+    {
+     "id": "kst-1",
+     "titel": "KSt-Pflicht",
+     "frage": "Erkläre unbeschränkte und beschränkte Körperschaftsteuerpflicht und das Territorialprinzip.",
+     "kernpunkte": [
+      "unbeschränkt § 1 KStG: Sitz (§ 11 AO) oder Geschäftsleitung (§ 10 AO) im Inland",
+      "unbeschränkt → Welteinkommen",
+      "beschränkt § 2 KStG: weder Sitz noch Leitung, aber inländische Einkünfte",
+      "Territorialprinzip: nur inländische Einkünfte"
+     ],
+     "zuordnen": [
+      [
+       "§ 1 KStG",
+       "unbeschränkt: Sitz oder Geschäftsleitung im Inland"
+      ],
+      [
+       "§ 2 KStG",
+       "beschränkt: nur inländische Einkünfte"
+      ],
+      [
+       "§ 10 AO",
+       "Geschäftsleitung"
+      ],
+      [
+       "§ 11 AO",
+       "Sitz"
+      ]
+     ],
+     "luecken": [
+      "Unbeschränkt steuerpflichtig ist eine Körperschaft mit {{Sitz}} oder {{Geschäftsleitung}} im Inland.",
+      "Bei beschränkter Steuerpflicht gilt das {{Territorialprinzip}}."
+     ]
+    },
+    {
+     "id": "kst-2",
+     "titel": "Steuersatz und Schema",
+     "frage": "Nenne den KSt-Satz und das Kurzschema vom Gewinn zum Gewinn nach Steuern einer GmbH.",
+     "kernpunkte": [
+      "KSt 15 % (§ 23 KStG) + 5,5 % SolZ auf die KSt",
+      "GewSt 14 % bei Hebesatz 400 %, nicht abziehbar",
+      "100 − 14 − 15 − 0,825 = 70,175",
+      "alle Einkünfte einer Kapitalgesellschaft gelten als gewerblich"
+     ],
+     "luecken": [
+      "Die Körperschaftsteuer beträgt {{15}} % zuzüglich {{5,5}} % SolZ.",
+      "Bei Gewinn 100 und Hebesatz 400 % bleiben {{70,175|70,18}} nach Steuern."
+     ]
+    },
+    {
+     "id": "fall-a-gmbh",
+     "typ": "fall",
+     "titel": "A-GmbH mit Büro in Ettlingen",
+     "folien": "350–351",
+     "sachverhalt": "Die A-GmbH verkauft Waren an Kunden in Deutschland und Belgien. Geschäftsführer A leitet die Geschäfte operativ aus dem Büro der A-GmbH in Ettlingen.",
+     "frage": "Wie ist die persönliche und sachliche Steuerpflicht der A-GmbH in Deutschland zu beurteilen? Zitiere die Normen exakt.",
+     "loesung": [
+      [
+       "Körperschaft",
+       "GmbH = Kapitalgesellschaft nach § 1 Abs. 1 Nr. 1 KStG."
+      ],
+      [
+       "Geschäftsleitung",
+       "Mittelpunkt der geschäftlichen Oberleitung (§ 10 AO) ist Ettlingen, also im Inland (§ 1 Abs. 3 KStG)."
+      ],
+      [
+       "Sitz",
+       "Vermutlich ebenfalls Ettlingen (§ 11 AO) – muss aber nicht mehr geprüft werden, weil die Geschäftsleitung schon reicht."
+      ],
+      [
+       "Umfang",
+       "Unbeschränkte Steuerpflicht → sämtliche Einkünfte, auch die Verkäufe nach Belgien (§ 1 Abs. 2 KStG)."
+      ]
+     ],
+     "ergebnis": "Unbeschränkt körperschaftsteuerpflichtig mit allen Einkünften (Welteinkommen).",
+     "merke": "Geschäftsleitung ODER Sitz im Inland genügt."
+    }
+   ]
+  },
+  {
+   "id": "kapg-ausschuettung",
+   "ast": "Unternehmen: GewSt, KSt, Rechtsform",
+   "titel": "GmbH schüttet an die Gesellschafterin aus",
+   "folien": "376–383",
+   "art": "rechnen",
+   "relevanz": "kern",
+   "ansehen": [
+    {
+     "typ": "text",
+     "inhalt": "Hier wird das Trennungssystem durchgerechnet: Erst zahlt die GmbH ihre Steuern, dann schüttet sie den Rest aus und die Gesellschafterin versteuert die Ausschüttung. Wie hoch die zweite Stufe ist, hängt davon ab, wo die Anteile liegen."
+    },
+    {
+     "typ": "formel",
+     "inhalt": "Ebene GmbH: 100 − KSt 15 − SolZ 0,825 − GewSt 14 = 70,175\nEbene Gesellschafterin (Privatvermögen): 70,175 × 26,375 % = 18,509"
+    },
+    {
+     "typ": "tabelle",
+     "zeilen": [
+      [
+       "Grundfall: Privatvermögen",
+       "Abgeltungsteuer 25 % + SolZ → 17,544 + 0,965 = 18,509 → Gesamtbelastung 48,33 %"
+      ],
+      [
+       "Abwandlung: Betriebsvermögen",
+       "Teileinkünfteverfahren: 60 % von 70,175 = 42,105 × 45 % ESt + SolZ = 19,989 → Gesamtbelastung 49,81 %"
+      ],
+      [
+       "Option § 32d Abs. 2 Nr. 3",
+       "auf Antrag Teileinkünfteverfahren bei Beteiligung ≥ 25 % oder ≥ 1 % und beruflich tätig"
+      ],
+      [
+       "Merke",
+       "Zusammen mit dem Einzelunternehmer (44,31 %) ist das der Belastungsvergleich auf Folie 385"
+      ]
+     ]
+    }
    ],
-   "erklaeren": {
-    "frage": "Erkläre das Territorialprinzip und grenze unbeschränkte und beschränkte Körperschaftsteuerpflicht ab.",
-    "kernpunkte": [
-     "Unbeschränkt (§ 1 KStG): Sitz (§ 11 AO) oder Geschäftsleitung (§ 10 AO) im Inland",
-     "Unbeschränkt → Welteinkommen",
-     "Beschränkt (§ 2 KStG): weder Sitz noch Leitung im Inland, aber inländische Einkünfte",
-     "Territorialprinzip: nur die inländischen Einkünfte werden besteuert"
-    ]
-   }
+   "puzzle": [
+    "Vorbelastung 29,825",
+    "Nachbelastung 18,509 → 48,33 %"
+   ],
+   "karten": [
+    {
+     "id": "kapg-1",
+     "titel": "Zwei Ebenen",
+     "frage": "Erkläre die Besteuerung einer Gewinnausschüttung von der GmbH bis zur Gesellschafterin (Anteile im Privatvermögen).",
+     "kernpunkte": [
+      "GmbH: KSt 15 % + SolZ + GewSt 14 % → 70,175 bleiben",
+      "Ausschüttung = Einkünfte aus Kapitalvermögen (§ 20 Abs. 1 Nr. 1)",
+      "Abgeltungsteuer 25 % + SolZ = 18,509",
+      "Gesamtbelastung 48,33 %"
+     ],
+     "zuordnen": [
+      [
+       "Privatvermögen",
+       "Abgeltungsteuer 25 %"
+      ],
+      [
+       "Betriebsvermögen",
+       "Teileinkünfteverfahren 60 %"
+      ],
+      [
+       "Vorbelastung",
+       "29,825 bei Gewinn 100"
+      ],
+      [
+       "Gesamtbelastung Privatvermögen",
+       "48,33 %"
+      ]
+     ],
+     "luecken": [
+      "Bei Anteilen im Betriebsvermögen sind {{40}} % der Ausschüttung steuerfrei.",
+      "Die GewSt einer GmbH wird {{nicht}} auf die Steuer der Gesellschafterin angerechnet."
+     ]
+    }
+   ]
   },
   {
    "id": "belastungsvergleich",
-   "ast": "Unternehmen: GewSt & KSt",
+   "ast": "Unternehmen: GewSt, KSt, Rechtsform",
    "titel": "Belastungsvergleich der Rechtsformen",
-   "folien": "385 – „auch wichtig!“",
+   "folien": "385",
    "art": "rechnen",
+   "relevanz": "kern",
    "ansehen": [
     {
      "typ": "text",
@@ -1042,33 +2257,97 @@
      ]
     }
    ],
-   "zuordnen": [
-    [
-     "Einzelunternehmen",
-     "44,31 %"
-    ],
-    [
-     "Freiberufler",
-     "44,31 %"
-    ],
-    [
-     "Kapitalgesellschaft",
-     "48,33 %"
-    ]
+   "puzzle": [
+    "Einzelunternehmen 44,31 %",
+    "Kapitalgesellschaft 48,33 %"
    ],
-   "luecken": [
-    "Beim Einzelunternehmen wird die GewSt von 14 über § 35 {{vollständig|voll|komplett}} angerechnet.",
-    "Bei der Kapitalgesellschaft bleiben nach GewSt, KSt und SolZ {{70,18}} zur Ausschüttung."
+   "karten": [
+    {
+     "id": "bv-1",
+     "titel": "Vergleich",
+     "frage": "Warum sind Einzelunternehmer und Freiberufler bei Hebesatz 400 % gleich belastet, die Kapitalgesellschaft aber höher?",
+     "kernpunkte": [
+      "Freiberufler zahlen keine GewSt, nur ESt + SolZ",
+      "Einzelunternehmer: GewSt 14 über § 35 voll ausgeglichen (4,0 × 3,5 % × 100)",
+      "Kapitalgesellschaft: GewSt + KSt + SolZ ohne Anrechnung",
+      "danach Abgeltungsteuer auf die Ausschüttung → 48,33 %"
+     ],
+     "zuordnen": [
+      [
+       "Einzelunternehmen",
+       "44,31 %"
+      ],
+      [
+       "Freiberufler",
+       "44,31 %"
+      ],
+      [
+       "Kapitalgesellschaft",
+       "48,33 %"
+      ]
+     ],
+     "luecken": [
+      "Beim Einzelunternehmen wird die GewSt von 14 über § 35 {{vollständig|voll|komplett}} angerechnet.",
+      "Bei der Kapitalgesellschaft bleiben nach GewSt, KSt und SolZ {{70,18|70,175}} zur Ausschüttung."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "personengesellschaft",
+   "ast": "Unternehmen: GewSt, KSt, Rechtsform",
+   "titel": "Personengesellschaft: Grundprinzip",
+   "folien": "310–312, 331",
+   "art": "wissen",
+   "relevanz": "mittel",
+   "ansehen": [
+    {
+     "typ": "text",
+     "inhalt": "Ertel: Personengesellschaften kommen nicht im Detail dran, das Grundprinzip solltest du aber kennen. Eine Personengesellschaft (z. B. OHG, KG) ist für die Einkommensteuer kein eigenes Steuersubjekt. Ihr Gewinn wird den Gesellschaftern anteilig zugerechnet und dort versteuert (Transparenzprinzip). Nur für die Gewerbesteuer ist die Gesellschaft selbst Schuldnerin."
+    },
+    {
+     "typ": "tabelle",
+     "zeilen": [
+      [
+       "ESt",
+       "nicht die Gesellschaft, sondern die Gesellschafter (Mitunternehmer) versteuern ihren Gewinnanteil"
+      ],
+      [
+       "GewSt",
+       "Steuerschuldner ist die Personengesellschaft selbst (§ 5 GewStG), Freibetrag 24.500 €"
+      ],
+      [
+       "§ 35 EStG",
+       "die GewSt wird den Gesellschaftern anteilig auf die ESt angerechnet"
+      ],
+      [
+       "Gegensatz",
+       "Kapitalgesellschaft = eigenes Steuersubjekt (KSt), Trennungsprinzip"
+      ]
+     ]
+    }
    ],
-   "erklaeren": {
-    "frage": "Warum sind Einzelunternehmer und Freiberufler bei Hebesatz 400 % gleich belastet, die Kapitalgesellschaft aber höher?",
-    "kernpunkte": [
-     "Freiberufler zahlen keine GewSt, nur ESt + SolZ",
-     "Beim Einzelunternehmer wird die GewSt bei 400 % über § 35 genau ausgeglichen (4,0 × 3,5 % × 100 = 14)",
-     "Kapitalgesellschaft: Vorbelastung GewSt + KSt + SolZ, keine Anrechnung",
-     "Danach noch Abgeltungsteuer auf die Ausschüttung → insgesamt 48,33 %"
-    ]
-   }
+   "puzzle": [
+    "PersG: Gewinn wird den Gesellschaftern zugerechnet",
+    "GewSt schuldet die Gesellschaft selbst"
+   ],
+   "karten": [
+    {
+     "id": "pg-1",
+     "titel": "Transparenzprinzip",
+     "frage": "Erkläre das Grundprinzip der Besteuerung einer gewerblichen Personengesellschaft.",
+     "kernpunkte": [
+      "keine eigene Steuerpflicht für ESt",
+      "Gewinn wird den Gesellschaftern anteilig zugerechnet und dort versteuert",
+      "GewSt schuldet die Gesellschaft selbst",
+      "Anrechnung über § 35 bei den Gesellschaftern"
+     ],
+     "luecken": [
+      "Für die Einkommensteuer gilt bei der Personengesellschaft das {{Transparenzprinzip|Transparenzsystem}}.",
+      "Steuerschuldner der Gewerbesteuer ist die {{Gesellschaft|Personengesellschaft}} selbst."
+     ]
+    }
+   ]
   }
  ],
  "aufgaben": [
@@ -1141,7 +2420,7 @@
    "toleranz": 1,
    "einheit": "€",
    "weg": [
-    "Freibetrag Einzelunternehmen: 60.000 − 24.500 = 35.500 €",
+    "Freibetrag Einzelunternehmen: 60.000 − 24.500 = 35.500 € (auf volle 100 € abgerundet)",
     "Messbetrag = 35.500 × 3,5 % = 1.242,50 €",
     "GewSt = 1.242,50 × 400 % = 4.970 €",
     "Anrechnung § 35: 4,0 × 1.242,50 = 4.970 € → hier vollständig"
@@ -1175,6 +2454,140 @@
     "KSt = 15 % × 100 = 15",
     "SolZ = 5,5 % × 15 = 0,825",
     "100 − 14 − 15 − 0,825 = 70,175 ≈ 70,18 TEUR"
+   ]
+  },
+  {
+   "id": "neutral-f63",
+   "thema": "neutralitaet",
+   "titel": "Anleihe vs. Wertpapier (Folie 63)",
+   "text": "S kann 1.000 entweder in eine Anleihe mit 10 % Zins (Zinsen mit 25 % besteuert) oder in ein Wertpapier mit 100 garantierter, steuerfreier Dividende anlegen. Wie hoch ist das Endvermögen der Anleihe nach Steuern nach einem Jahr?",
+   "antwort": 1075,
+   "toleranz": 0.5,
+   "einheit": "",
+   "weg": [
+    "Zinsen = 1.000 × 10 % = 100",
+    "Steuer = 25 % × 100 = 25",
+    "Endvermögen Anleihe = 1.000 + 100 − 25 = 1.075",
+    "Wertpapier: 1.000 + 100 = 1.100 (steuerfrei) → Wertpapier vorziehen"
+   ]
+  },
+  {
+   "id": "tarif-15000",
+   "thema": "tarif",
+   "titel": "ESt-Tarif 2026: zvE 15.000",
+   "text": "Wie hoch ist die Einkommensteuer (VZ 2026, Einzelveranlagung, ohne SolZ) bei einem zvE von 15.000 €?",
+   "anlage": "Anlage Tarif VZ 2026: bis 12.348 € → 0 · bis 17.799 € → (914,51·y + 1.400)·y mit y = (zvE − 12.348) ÷ 10.000 · bis 69.878 € → (173,10·z + 2.397)·z + 1.034,87 mit z = (zvE − 17.799) ÷ 10.000 · bis 277.825 € → 0,42·x − 11.135,63 · darüber 0,45·x − 19.470,38. Ergebnis auf volle Euro abrunden.",
+   "antwort": 435,
+   "toleranz": 1,
+   "einheit": "€",
+   "weg": [
+    "Zone 2: y = (15.000 − 12.348) ÷ 10.000 = 0,2652",
+    "(914,51 × 0,2652 + 1.400) × 0,2652 = 435,59",
+    "abrunden → 435 €"
+   ]
+  },
+  {
+   "id": "tarif-65000",
+   "thema": "tarif",
+   "titel": "ESt-Tarif 2026: zvE 65.000",
+   "text": "Wie hoch ist die Einkommensteuer (VZ 2026, Einzelveranlagung, ohne SolZ) bei einem zvE von 65.000 €?",
+   "anlage": "Anlage Tarif VZ 2026: bis 12.348 € → 0 · bis 17.799 € → (914,51·y + 1.400)·y mit y = (zvE − 12.348) ÷ 10.000 · bis 69.878 € → (173,10·z + 2.397)·z + 1.034,87 mit z = (zvE − 17.799) ÷ 10.000 · bis 277.825 € → 0,42·x − 11.135,63 · darüber 0,45·x − 19.470,38. Ergebnis auf volle Euro abrunden.",
+   "antwort": 16205,
+   "toleranz": 1,
+   "einheit": "€",
+   "weg": [
+    "Zone 3: z = (65.000 − 17.799) ÷ 10.000 = 4,7201",
+    "(173,10 × 4,7201 + 2.397) × 4,7201 + 1.034,87 = 16.205,…",
+    "abrunden → 16.205 €"
+   ]
+  },
+  {
+   "id": "tarif-100000",
+   "thema": "tarif",
+   "titel": "ESt-Tarif 2026: zvE 100.000",
+   "text": "Wie hoch ist die Einkommensteuer (VZ 2026, Einzelveranlagung, ohne SolZ) bei einem zvE von 100.000 €?",
+   "anlage": "Anlage Tarif VZ 2026: bis 12.348 € → 0 · bis 17.799 € → (914,51·y + 1.400)·y mit y = (zvE − 12.348) ÷ 10.000 · bis 69.878 € → (173,10·z + 2.397)·z + 1.034,87 mit z = (zvE − 17.799) ÷ 10.000 · bis 277.825 € → 0,42·x − 11.135,63 · darüber 0,45·x − 19.470,38. Ergebnis auf volle Euro abrunden.",
+   "antwort": 30864,
+   "toleranz": 1,
+   "einheit": "€",
+   "weg": [
+    "Zone 4: 0,42 × 100.000 − 11.135,63 = 30.864,37",
+    "abrunden → 30.864 €"
+   ]
+  },
+  {
+   "id": "tarif-400000",
+   "thema": "tarif",
+   "titel": "ESt-Tarif 2026: zvE 400.000",
+   "text": "Wie hoch ist die Einkommensteuer (VZ 2026, Einzelveranlagung, ohne SolZ) bei einem zvE von 400.000 €?",
+   "anlage": "Anlage Tarif VZ 2026: bis 12.348 € → 0 · bis 17.799 € → (914,51·y + 1.400)·y mit y = (zvE − 12.348) ÷ 10.000 · bis 69.878 € → (173,10·z + 2.397)·z + 1.034,87 mit z = (zvE − 17.799) ÷ 10.000 · bis 277.825 € → 0,42·x − 11.135,63 · darüber 0,45·x − 19.470,38. Ergebnis auf volle Euro abrunden.",
+   "antwort": 160529,
+   "toleranz": 1,
+   "einheit": "€",
+   "weg": [
+    "Zone 5: 0,45 × 400.000 − 19.470,38 = 160.529,62",
+    "abrunden → 160.529 €"
+   ]
+  },
+  {
+   "id": "splitting-f216",
+   "thema": "splitting",
+   "titel": "Splitting 55.000 € + 15.000 € (Folie 216, VZ 2026)",
+   "text": "Ehefrau zvE 55.000 €, Ehemann zvE 15.000 €. Wie hoch ist die Einkommensteuer bei Zusammenveranlagung (VZ 2026, ohne SolZ)?",
+   "anlage": "Anlage Tarif VZ 2026: bis 12.348 € → 0 · bis 17.799 € → (914,51·y + 1.400)·y mit y = (zvE − 12.348) ÷ 10.000 · bis 69.878 € → (173,10·z + 2.397)·z + 1.034,87 mit z = (zvE − 17.799) ÷ 10.000 · bis 277.825 € → 0,42·x − 11.135,63 · darüber 0,45·x − 19.470,38. Ergebnis auf volle Euro abrunden.",
+   "antwort": 11340,
+   "toleranz": 2,
+   "einheit": "€",
+   "weg": [
+    "Summe 70.000 ÷ 2 = 35.000",
+    "Zone 3: z = (35.000 − 17.799) ÷ 10.000 = 1,7201",
+    "(173,10 × 1,7201 + 2.397) × 1,7201 + 1.034,87 = 5.670",
+    "× 2 = 11.340 €",
+    "Einzeln: 12.347 + 435 = 12.782 € → Splittingvorteil 1.442 €"
+   ]
+  },
+  {
+   "id": "splitting-vorteil",
+   "thema": "splitting",
+   "titel": "Splittingvorteil (Folie 216, VZ 2026)",
+   "text": "Ehefrau zvE 55.000 €, Ehemann zvE 15.000 €. Um wie viel Euro ist die Zusammenveranlagung günstiger als die Einzelveranlagung (VZ 2026, ohne SolZ)?",
+   "anlage": "Anlage Tarif VZ 2026: bis 12.348 € → 0 · bis 17.799 € → (914,51·y + 1.400)·y mit y = (zvE − 12.348) ÷ 10.000 · bis 69.878 € → (173,10·z + 2.397)·z + 1.034,87 mit z = (zvE − 17.799) ÷ 10.000 · bis 277.825 € → 0,42·x − 11.135,63 · darüber 0,45·x − 19.470,38. Ergebnis auf volle Euro abrunden.",
+   "antwort": 1442,
+   "toleranz": 2,
+   "einheit": "€",
+   "weg": [
+    "Einzel Ehefrau 55.000: z = 3,7201 → 12.347 €",
+    "Einzel Ehemann 15.000: y = 0,2652 → 435 €",
+    "Summe einzeln 12.782 €",
+    "Zusammen 11.340 € → Vorteil 1.442 €"
+   ]
+  },
+  {
+   "id": "kapg-pv",
+   "thema": "kapg-ausschuettung",
+   "titel": "Gesamtbelastung bei Ausschüttung (Folie 378)",
+   "text": "GmbH, Gewinn 100 TEUR, Hebesatz 400 %, KSt 15 % + SolZ. Der Gewinn nach Steuern wird voll an die Gesellschafterin ausgeschüttet, die die Anteile im Privatvermögen hält (Abgeltungsteuer + SolZ). Wie hoch ist die Gesamtsteuerbelastung in Prozent?",
+   "antwort": 48.33,
+   "toleranz": 0.02,
+   "einheit": "%",
+   "weg": [
+    "GmbH: 15 + 0,825 + 14 = 29,825 → 70,175 bleiben",
+    "Abgeltungsteuer 25 % × 70,175 = 17,544; SolZ 5,5 % = 0,965 → 18,509",
+    "Gesamt 29,825 + 18,509 = 48,334 → 48,33 %"
+   ]
+  },
+  {
+   "id": "kapg-bv",
+   "thema": "kapg-ausschuettung",
+   "titel": "Ausschüttung ins Betriebsvermögen (Folie 379)",
+   "text": "Wie vorher, aber die Anteile liegen im Betriebsvermögen (Teileinkünfteverfahren), persönlicher ESt-Satz 45 % + SolZ. Wie hoch ist die Gesamtsteuerbelastung in Prozent?",
+   "antwort": 49.81,
+   "toleranz": 0.02,
+   "einheit": "%",
+   "weg": [
+    "Ausschüttung 70,175; 40 % steuerfrei → BMG 60 % = 42,105",
+    "ESt 45 % = 18,947; SolZ 5,5 % = 1,042 → 19,989",
+    "Gesamt 29,825 + 19,989 = 49,814 → 49,81 %"
    ]
   }
  ]
