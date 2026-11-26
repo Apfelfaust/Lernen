@@ -9,13 +9,14 @@
 <meta name="apple-mobile-web-app-title" content="Lernen">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="icons/icon-192.png">
 <title>Lernen</title>
 <style>
 :root{--bg:#F3F5F8;--card:#fff;--ink:#1F2328;--sub:#5B6470;--line:#E6E9EE;--blue:#2F5FB3;--blue-d:#1C3F7A;--blue-l:#DCE8FB;--blue-xl:#EAF1FC;--red:#C8553D;--red-d:#9A2E22;--red-l:#FCEBEA;--red-b:#F0C4BE;--safe:env(safe-area-inset-top)}
 *{box-sizing:border-box}
 html,body{overflow-x:clip;margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",Inter,system-ui,sans-serif;-webkit-text-size-adjust:100%}
 #safe{position:fixed;top:0;left:0;right:0;height:var(--safe);background:var(--bg);z-index:20}
-#app{max-width:760px;margin:0 auto;padding:calc(var(--safe) + 14px) 14px 110px;display:flex;flex-direction:column;gap:12px}
+#app{max-width:760px;margin:0 auto;padding:calc(var(--safe) + 6px) 14px 110px;display:flex;flex-direction:column;gap:12px}
 h1{margin:0;font-size:26px}
 h2{margin:6px 0 0;font-size:16px}
 .muted{color:var(--sub);font-size:13px}
@@ -38,7 +39,7 @@ button,.btn{font:inherit;cursor:pointer;border-radius:14px;min-height:48px;paddi
 nav{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid #E1E5EA;display:flex;justify-content:space-around;padding:8px 0 calc(8px + env(safe-area-inset-bottom));z-index:5}
 nav button{border:none;background:none;min-height:44px;display:flex;flex-direction:column;align-items:center;gap:3px;font-size:11px;color:var(--sub);font-weight:500;padding:4px 18px}
 nav button.on{color:var(--blue);font-weight:600}
-.head{position:sticky;top:var(--safe);z-index:10;background:var(--bg);margin:-14px -14px 0;padding:2px 14px 8px;display:flex;flex-direction:column;gap:8px}
+.head{position:sticky;top:var(--safe);z-index:10;background:var(--bg);margin:-6px -14px 0;padding:4px 14px 8px;display:flex;flex-direction:column;gap:8px}
 .back{width:44px;height:44px;min-height:44px;padding:0;display:flex;align-items:center;justify-content:center;border:none;flex:none}
 .stages{display:flex;gap:6px;align-items:center}
 .stages span{flex:1;height:30px;border-radius:8px;background:#fff;color:var(--sub);font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center}
@@ -110,6 +111,7 @@ details summary{cursor:pointer;font-weight:600;color:var(--blue);font-size:14px;
 </head>
 <body>
 <div id="safe"></div>
+<script>/* iOS: liegt die App schon unter der Statusleiste, keinen zweiten Abstand einbauen */(function(){function f(){var d=screen.height-innerHeight;document.documentElement.style.setProperty("--safe",(d>20||innerWidth>innerHeight)?"0px":"env(safe-area-inset-top)")}f();addEventListener("resize",f)})()</script>
 <input type="file" id="file" accept="application/json,.json" style="display:none">
 <div id="app"><p class="muted">Lade Inhalte …</p></div>
 <nav id="nav">
@@ -226,8 +228,8 @@ function render(){
   const full=S||view.fall||view.puzzle;
   $("#nav").style.display=full?"none":"flex";
   const bd=$("#badge"); if(bd){const n=(!FS&&store.dirty>0)?store.dirty:0; bd.hidden=!n; bd.textContent=n>99?"99+":n;}
-  if(S)return renderSession();
   if(view.fall)return renderFall();
+  if(S)return renderSession();
   if(view.puzzle)return renderPuzzle();
   if(view.tab==="home")return renderHome();
   if(view.tab==="faecher"){if(view.thema)return renderThema();if(view.fach)return renderFach();return renderFaecher()}
@@ -239,7 +241,7 @@ function renderHome(){
   const next=F.map(f=>f.klausur).filter(k=>k&&k>=t).sort()[0];
   const due=dueCards(), dueA=dueAufgaben();
   const perF={}; due.forEach(d=>perF[d.fid]=(perF[d.fid]||0)+1);
-  let h=`<div class="row between" style="align-items:flex-end;padding-top:4px"><div><div class="muted">${esc(wd)}</div><h1>Heute</h1></div>${next?`<span class="pill">${daysBetween(t,next)} Tage bis ${fmtDate(next)}</span>`:""}</div>`;
+  let h=`<div class="row between" style="align-items:flex-end"><div><div class="muted">${esc(wd)}</div><h1>Heute</h1></div>${next?`<span class="pill">${daysBetween(t,next)} Tage bis ${fmtDate(next)}</span>`:""}</div>`;
   h+=syncBanner();
   h+=`<div class="hero"><div style="font-size:13px;opacity:.85">Fällig zum Wiederholen</div>
   <div class="row" style="align-items:baseline;gap:8px"><span class="big">${due.length}</span><span>Karten · ca. ${Math.max(1,Math.round(due.length*1.5))} Min.</span></div>
@@ -263,7 +265,7 @@ function renderHome(){
   app.innerHTML=h+`</div>`;
 }
 function renderFaecher(){
-  let h=`<h1 style="padding-top:4px">Fächer</h1><div class="card list" style="padding:2px 14px">`;
+  let h=`<h1>Fächer</h1><div class="card list" style="padding:2px 14px">`;
   F.forEach(f=>{const c=counts(f);h+=`<div class="item" data-act="openfach" data-fid="${esc(f.id)}"><div class="row between"><b style="font-size:15px">${esc(f.name)}</b><span class="muted">${f.datei?themen(f).length+" Themen":"keine Inhalte"}</span></div>${progressBar(c)}</div>`});
   app.innerHTML=h+`</div>`;
 }
@@ -320,7 +322,7 @@ function renderThema(){
 }
 function renderDaten(){
   const n=Object.keys(store.p).length;
-  app.innerHTML=`<h1 style="padding-top:4px">Lernstand</h1>
+  app.innerHTML=`<h1>Lernstand</h1>
   ${!FS&&store.dirty>0?`<div class="fb bad" style="display:flex;flex-direction:column;gap:8px"><b>${store.dirty} Karte${store.dirty>1?"n":""} noch nicht in iCloud gesichert</b><span>Im Teilen-Menü „In Dateien sichern“ wählen, iCloud-Ordner, vorhandene lernstand.json ersetzen.</span><button class="btn-p" data-act="export">Jetzt sichern</button></div>`:""}
   <div class="card" style="display:flex;flex-direction:column;gap:10px">
    <b>Zwischen Mac und iPhone abgleichen</b>
@@ -404,10 +406,11 @@ function next(requeue){
   if(S.i>=S.q.length){S=null;toast(FS?"Sitzung fertig":"Sitzung fertig – denk ans Sichern in iCloud");render();window.scrollTo(0,0);return}
   prepItem();render();window.scrollTo(0,0);
 }
-const ttl=t=>`<div style="font-size:17px;font-weight:700;line-height:1.3;margin:2px 2px -2px">${esc(t)}</div>`;
+const bh=(t,sub)=>`<div><div style="font-size:17px;font-weight:700;line-height:1.3">${esc(t)}</div>${sub?`<div class="muted" style="margin-top:2px">${esc(sub)}</div>`:""}</div>`;
+function inject(h,H){const i=h.indexOf('<div class="card"',h.indexOf('class="head"'));if(i<0)return h;const j=h.indexOf(">",i);return h.slice(0,j+1)+H+h.slice(j+1)}
 function sessHead(sub,sub2){
   const pr=Math.min(100,Math.round(100*S.i/S.q.length));
-  return `<div class="row"><button class="back" data-act="endsession" aria-label="Sitzung beenden">${IC.back}</button><div class="muted" style="flex:1;min-width:0;font-size:12px;line-height:1.35">Karte ${S.i+1} von ${S.q.length}${sub2?"<br>"+esc(sub2):""}</div></div><div class="bar"><div style="width:${pr}%"></div></div>`;
+  return `<div class="row"><button class="back" data-act="endsession" aria-label="Sitzung beenden">${IC.back}</button><div class="muted" style="flex:1;min-width:0;font-size:12px;line-height:1.35"><b style="color:var(--ink)">${esc(sub)}</b><br>Karte ${S.i+1} von ${S.q.length}${sub2?" · "+esc(sub2):""}</div></div><div class="bar"><div style="width:${pr}%"></div></div>`;
 }
 function stagesBar(k,s){const av=avail(k),pk=S&&S.ui.peek;return `<div class="row between"><span class="stagename">Stufe ${pk?1:s} · ${STAGES[(pk?1:s)-1]}</span></div><div class="stages">${[1,2,3,4].map(i=>{
     if(i===1&&s>1)return `<button class="stg ${pk?"cur":"done"}" data-act="peek" aria-label="Stufe 1 nachlesen">1</button>`;
@@ -422,15 +425,16 @@ function renderSession(){
   if(it.kind==="a")return renderAufgabe(it,f);
   const t=it.t,k=it.k,u=S.ui;
   if(k.typ==="fall"){
-    let h=`<div class="head">${sessHead(t.titel,"Fall")}<span class="stagename">Fall · ${esc(k.titel)}</span></div>`+ttl(t.titel)+fallHTML(k,u,true);
+    let h=`<div class="head">${sessHead(f.name,"Fall")}</div>`+fallHTML(k,u,true);
     if(u.revealed)h+=rateBar("good");
-    app.innerHTML=h;return;
+    app.innerHTML=inject(h,bh(k.titel,t.titel));return;
   }
-  let h=`<div class="head">${sessHead(t.titel,t.karten.length>1?k.titel:"")}${stagesBar(k,it.stage)}</div>`+ttl(t.titel);
+  let h=`<div class="head">${sessHead(f.name,"")}${stagesBar(k,it.stage)}</div>`;
+  const H=bh(t.titel,t.karten.length>1&&k.titel!==t.titel?k.titel:"");
   if(u.peek){
     h+=u.peekOpen?`<div class="card" style="display:flex;flex-direction:column;gap:10px"><div class="muted">${esc(fol(t.folien))}</div>${ansehenHTML(t,it.fid)}</div>`
-      :`<div class="card" style="display:flex;flex-direction:column;gap:10px;align-items:flex-start"><b>Inhalt von Stufe 1</b><span class="muted">Hier steht der komplette Inhalt des Themas. Erst aufdecken, wenn du wirklich nachschauen willst.</span><button data-act="peekopen" style="width:100%">Inhalte ansehen</button></div>`;
-    app.innerHTML=h;return;
+      :`<div class="card" style="display:flex;flex-direction:column;gap:10px;align-items:flex-start"><span class="muted">Hier steht der komplette Inhalt des Themas. Erst aufdecken, wenn du wirklich nachschauen willst.</span><button data-act="peekopen" style="width:100%">Inhalte ansehen</button></div>`;
+    app.innerHTML=inject(h,H);return;
   }
   if(it.stage===1){
     h+=`<div class="card" style="display:flex;flex-direction:column;gap:10px"><div class="muted">${esc(fol(t.folien))}</div>${ansehenHTML(t,it.fid)}</div>
@@ -474,7 +478,7 @@ function renderSession(){
       const r=nOk/kp.length; h+=rateBar(r>=1?"easy":r>=.75?"good":r>=.5?"hard":"again");
     }
   }
-  app.innerHTML=h;
+  app.innerHTML=inject(h,H);
 }
 function parseNum(s){
   s=String(s).replace(/[\s€%]/g,"").replace(/TEUR/i,"");
@@ -486,7 +490,7 @@ function parseNum(s){
 }
 function renderAufgabe(it,f){
   const a=it.a,u=S.ui;
-  let h=`<div class="head">${sessHead(a.titel,"Rechnen")}</div>`+ttl(a.titel);
+  let h=`<div class="head">${sessHead(f.name,"Rechnen")}</div>`;
   h+=`<div class="card" style="display:flex;flex-direction:column;gap:10px"><p class="txt">${esc(a.text)}</p>
   ${a.anlage?`<details><summary>Anlage (wie in der Klausur)</summary><p class="txt muted" style="font-size:13px">${esc(a.anlage)}</p></details>`:""}
   <label class="muted" style="display:flex;flex-direction:column;gap:6px">Dein Ergebnis${a.einheit?" in "+esc(a.einheit):""}<input class="numin" id="num" inputmode="decimal" value="${esc(u.val||"")}" ${u.checked?"readonly":""} autocomplete="off"></label></div>`;
@@ -496,7 +500,7 @@ function renderAufgabe(it,f){
     h+=`<div class="fb ${u.ok?"ok":"bad"}">${u.ok?"Richtig: ":u.skip?"Lösung: ":"Nicht ganz. Richtig ist "}<b>${sol} ${esc(a.einheit||"")}</b></div>
     <div class="card"><b style="font-size:14px">Lösungsweg</b><ol class="steps">${a.weg.map(s=>`<li>${esc(s)}</li>`).join("")}</ol></div>`+rateBar(u.ok?"good":"again");
   }
-  app.innerHTML=h;
+  app.innerHTML=inject(h,bh(a.titel,""));
 }
 const norm=s=>String(s).toLowerCase().replace(/−/g,"-").replace(/[\s.€%]/g,"").replace(/[„“"]/g,"");
 
@@ -512,7 +516,7 @@ document.addEventListener("click",e=>{
   if(a==="startcard"){startSession("card",d.fid,d.tid,d.cid);return}
   if(a==="openfall"){view.fall={fid:d.fid,tid:d.tid,cid:d.cid,revealed:false,y:window.scrollY};render();window.scrollTo(0,0);return}
   if(a==="closefall"){const y=view.fall.y;view.fall=null;render();window.scrollTo(0,y||0);return}
-  if(a==="revealfall"){const tgt=S?S.ui:view.fall;tgt.ans=($("#ans")||{}).value||"";tgt.revealed=true;render();return}
+  if(a==="revealfall"){const tgt=view.fall||S.ui;tgt.ans=($("#ans")||{}).value||"";tgt.revealed=true;render();return}
   if(a==="puzzle"){startPuzzle(d.fid,0);return}
   if(a==="closepuzzle"){view.puzzle=null;render();return}
   if(a==="pnext"){startPuzzle(view.puzzle.fid,view.puzzle.ai+1);return}
