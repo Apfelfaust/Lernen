@@ -62,19 +62,19 @@
      "zuordnen": [
       [
        "Steuer",
-       "ohne konkrete Gegenleistung"
+       "Geldleistung, die der Staat allen auferlegt, bei denen der Tatbestand greift – ohne konkrete Gegenleistung"
       ],
       [
        "Gebühr",
-       "Entgelt für eine konkrete Leistung"
+       "Entgelt für eine konkrete Leistung der Verwaltung, die man tatsächlich in Anspruch nimmt, z. B. einen neuen Ausweis"
       ],
       [
        "Beitrag",
-       "Entgelt für die Nutzungsmöglichkeit"
+       "Entgelt dafür, dass man eine öffentliche Einrichtung nutzen könnte, z. B. der Anliegerbeitrag für eine Straße"
       ],
       [
        "§ 3 Abs. 1 AO",
-       "Definition der Steuer"
+       "Die Vorschrift, in der gesetzlich definiert ist, was eine Steuer ist"
       ]
      ],
      "luecken": [
@@ -158,11 +158,11 @@
      "zuordnen": [
       [
        "Fiskalfunktion",
-       "Einnahmen für die Staatsausgaben"
+       "Der Staat braucht Einnahmen, um Schulen, Straßen und Sozialleistungen zu bezahlen"
       ],
       [
        "Lenkungsfunktion",
-       "Anreize und Rahmenbedingungen setzen"
+       "Der Staat setzt Anreize, damit Bürger und Unternehmen z. B. mehr investieren oder sparen"
       ]
      ],
      "luecken": [
@@ -182,19 +182,19 @@
      "zuordnen": [
       [
        "Neutralität",
-       "Entscheidungen nicht verzerren"
+       "Die Steuer soll nicht beeinflussen, ob man investiert, welche Rechtsform man wählt oder wie man finanziert"
       ],
       [
        "vertikale Gerechtigkeit",
-       "Wer mehr leisten kann, zahlt mehr"
+       "Wer wirtschaftlich mehr leisten kann, soll auch mehr Steuern zahlen"
       ],
       [
        "horizontale Gerechtigkeit",
-       "Gleiche Leistungsfähigkeit, gleiche Steuer"
+       "Zwei Personen mit gleicher Leistungsfähigkeit zahlen gleich viel (Art. 3 GG)"
       ],
       [
        "Einfachheit",
-       "leicht planbar und erhebbar"
+       "Das Steuerrecht soll leicht zu planen, zu erklären und zu erheben sein"
       ]
      ],
      "luecken": [
@@ -263,19 +263,19 @@
      "zuordnen": [
       [
        "Einkommensteuer",
-       "direkte Personensteuer"
+       "Direkte Personensteuer: Der Steuerpflichtige zahlt und trägt sie selbst, persönliche Verhältnisse zählen"
       ],
       [
        "Umsatzsteuer",
-       "indirekte Steuer"
+       "Indirekte Steuer: Das Unternehmen führt sie ab, wirtschaftlich trägt sie aber der Endkunde"
       ],
       [
        "Gewerbesteuer",
-       "Objektsteuer (Realsteuer)"
+       "Objekt- bzw. Realsteuer: knüpft am Gewerbebetrieb an, die persönliche Leistungsfähigkeit ist egal"
       ],
       [
        "Grunderwerbsteuer",
-       "Verkehrsteuer"
+       "Verkehrsteuer: fällt an, weil ein Vorgang stattfindet – hier der Kauf eines Grundstücks"
       ]
      ],
      "luecken": [
@@ -338,19 +338,19 @@
      "zuordnen": [
       [
        "Transparenzsystem",
-       "Einzelunternehmen und Personengesellschaften"
+       "Der Gewinn wird direkt beim Inhaber bzw. bei den Gesellschaftern versteuert – so bei Einzelunternehmen und Personengesellschaften"
       ],
       [
        "Trennungssystem",
-       "Kapitalgesellschaften"
+       "Die Gesellschaft ist selbst Steuersubjekt, Gesellschaft und Gesellschafter werden getrennt besteuert – so bei der GmbH und AG"
       ],
       [
        "Vorbelastung",
-       "KSt, SolZ und GewSt im Unternehmen"
+       "Steuern, die schon im Unternehmen anfallen: Körperschaftsteuer, Solidaritätszuschlag und Gewerbesteuer"
       ],
       [
        "Nachbelastung",
-       "Abgeltungsteuer bzw. ESt beim Anteilseigner"
+       "Steuer, die erst bei der Ausschüttung beim Anteilseigner anfällt: Abgeltungsteuer bzw. Einkommensteuer"
       ]
      ],
      "luecken": [
@@ -426,19 +426,19 @@
      "zuordnen": [
       [
        "Steuerplanungslehre",
-       "Wie soll man entscheiden?"
+       "Gibt eine Empfehlung, wie man sich unter Berücksichtigung von Steuern entscheiden sollte"
       ],
       [
        "Steuerwirkungslehre",
-       "Wie reagieren Menschen tatsächlich?"
+       "Beschreibt, wie Menschen und Unternehmen sich wegen Steuern tatsächlich verhalten"
       ],
       [
        "Kapitalwertkriterium",
-       "Werkzeug der Steuerplanung"
+       "Rechenwerkzeug, mit dem man Investitionen mit und ohne Steuern vergleicht"
       ],
       [
        "Fenstersteuer",
-       "Beispiel einer Steuerwirkung"
+       "Historisches Beispiel: In England wurden Fenster zugemauert, um Steuern zu sparen"
       ]
      ]
     }
@@ -500,19 +500,19 @@
      "zuordnen": [
       [
        "i",
-       "Kapitalmarktzins vor Steuern"
+       "Kapitalmarktzins vor Steuern, also die Rendite der Alternativanlage"
       ],
       [
        "s",
-       "Steuersatz"
+       "Steuersatz, mit dem Rückflüsse und Zinsen besteuert werden"
       ],
       [
        "iₛ",
-       "Zins nach Steuern"
+       "Kalkulationszins nach Steuern, berechnet als i · (1 − s)"
       ],
       [
        "AfA",
-       "Abschreibung"
+       "Absetzung für Abnutzung, also die steuerliche Abschreibung, die die Bemessungsgrundlage mindert"
       ]
      ],
      "luecken": [
@@ -600,19 +600,19 @@
      "zuordnen": [
       [
        "Rechtsformneutralität",
-       "Rechtsform beeinflusst die Steuer nicht"
+       "Ob Einzelunternehmen oder GmbH, die Steuerlast soll gleich sein"
       ],
       [
        "Finanzierungsneutralität",
-       "Eigen- und Fremdkapital gleich behandelt"
+       "Es soll steuerlich egal sein, ob man mit Eigen- oder Fremdkapital finanziert"
       ],
       [
        "Gewinnverwendungsneutralität",
-       "Ausschüttung und Thesaurierung gleich behandelt"
+       "Es soll steuerlich egal sein, ob der Gewinn ausgeschüttet oder im Unternehmen behalten wird"
       ],
       [
        "Standortneutralität",
-       "Ort der Investition egal"
+       "Es soll steuerlich egal sein, in welchem Land oder welcher Gemeinde investiert wird"
       ]
      ]
     },
@@ -689,19 +689,19 @@
      "zuordnen": [
       [
        "Personensteuer",
-       "persönliche Verhältnisse zählen"
+       "Knüpft an die Person an und berücksichtigt ihre persönlichen Verhältnisse, z. B. Familienstand"
       ],
       [
        "direkte Steuer",
-       "Steuerschuldner = Steuerträger"
+       "Wer die Steuer schuldet, trägt sie auch wirtschaftlich selbst"
       ],
       [
        "Jahressteuer",
-       "§ 2 Abs. 7 EStG"
+       "Die Grundlagen werden für ein Kalenderjahr ermittelt (§ 2 Abs. 7 EStG)"
       ],
       [
        "Abzugsteuer",
-       "z. B. Lohnsteuer, Abgeltungsteuer"
+       "Die Steuer wird direkt an der Quelle einbehalten, z. B. Lohnsteuer vom Arbeitgeber oder Abgeltungsteuer von der Bank"
       ]
      ],
      "luecken": [
@@ -782,19 +782,19 @@
      "zuordnen": [
       [
        "§ 1 Abs. 1 EStG",
-       "unbeschränkt: Wohnsitz oder gewöhnlicher Aufenthalt"
+       "Unbeschränkt steuerpflichtig, weil Wohnsitz oder gewöhnlicher Aufenthalt in Deutschland – besteuert wird das Welteinkommen"
       ],
       [
        "§ 1 Abs. 2 EStG",
-       "erweitert: Staatsbedienstete im Ausland"
+       "Erweitert unbeschränkt: deutsche Staatsbedienstete im Ausland, die aus einer inländischen öffentlichen Kasse bezahlt werden"
       ],
       [
        "§ 1 Abs. 3 EStG",
-       "fiktiv: Grenzpendler auf Antrag"
+       "Fiktiv unbeschränkt: Grenzpendler, die fast alles in Deutschland verdienen, auf Antrag"
       ],
       [
        "§ 1 Abs. 4 EStG",
-       "beschränkt: nur inländische Einkünfte"
+       "Beschränkt: weder Wohnsitz noch Aufenthalt, aber inländische Einkünfte – nur diese werden besteuert"
       ]
      ]
     },
@@ -810,20 +810,20 @@
      ],
      "zuordnen": [
       [
-       "Wohnsitz",
-       "§ 8 AO"
+       "Wohnsitz (§ 8 AO)",
+       "Man hat eine Wohnung, behält sie bei und kann sie jederzeit nutzen"
       ],
       [
-       "gewöhnlicher Aufenthalt",
-       "§ 9 AO"
+       "gewöhnlicher Aufenthalt (§ 9 AO)",
+       "Man hält sich nicht nur vorübergehend auf; mehr als 6 Monate am Stück zählen immer"
       ],
       [
        "Welteinkommen",
-       "Folge der unbeschränkten Steuerpflicht"
+       "Alle Einkünfte weltweit – sie werden bei unbeschränkter Steuerpflicht besteuert"
       ],
       [
-       "Katalogeinkünfte",
-       "§ 49 EStG"
+       "Katalogeinkünfte (§ 49 EStG)",
+       "Die abschließende Liste inländischer Einkünfte, die bei beschränkter Steuerpflicht besteuert werden"
       ]
      ],
      "luecken": [
@@ -1091,23 +1091,23 @@
      "zuordnen": [
       [
        "§ 15 EStG",
-       "Gewerbebetrieb"
+       "Gewerbebetrieb, z. B. ein Handwerksbetrieb oder ein Onlinehändler"
       ],
       [
        "§ 18 EStG",
-       "selbständige Arbeit"
+       "Selbständige Arbeit, z. B. Ärzte, Anwälte oder freie Journalisten"
       ],
       [
        "§ 19 EStG",
-       "nichtselbständige Arbeit"
+       "Nichtselbständige Arbeit, also Lohn und Gehalt von Arbeitnehmern"
       ],
       [
        "§ 20 EStG",
-       "Kapitalvermögen"
+       "Kapitalvermögen, z. B. Zinsen und Dividenden"
       ],
       [
        "§ 21 EStG",
-       "Vermietung und Verpachtung"
+       "Vermietung und Verpachtung, z. B. Mieteinnahmen aus einer Wohnung"
       ]
      ],
      "luecken": [
@@ -1193,19 +1193,19 @@
      "zuordnen": [
       [
        "Summe der Einkünfte",
-       "§ 2 Abs. 1 EStG"
+       "Alle sieben Einkunftsarten zusammengerechnet (§ 2 Abs. 1 EStG)"
       ],
       [
        "Gesamtbetrag der Einkünfte",
-       "§ 2 Abs. 3 EStG"
+       "Summe der Einkünfte nach Abzug von Altersentlastungsbetrag und Entlastungsbetrag für Alleinerziehende (§ 2 Abs. 3)"
       ],
       [
        "Einkommen",
-       "§ 2 Abs. 4 EStG"
+       "Gesamtbetrag der Einkünfte nach Verlustabzug, Sonderausgaben und außergewöhnlichen Belastungen (§ 2 Abs. 4)"
       ],
       [
        "zu versteuerndes Einkommen",
-       "§ 2 Abs. 5 EStG"
+       "Einkommen nach Abzug der Freibeträge für Kinder – darauf wird der Tarif angewendet (§ 2 Abs. 5)"
       ]
      ],
      "luecken": [
@@ -1271,19 +1271,19 @@
      "zuordnen": [
       [
        "Veranlagungszeitraum",
-       "Kalenderjahr (§ 25 EStG)"
+       "Das Kalenderjahr, für das die Einkommensteuer festgesetzt wird (§ 25 EStG)"
       ],
       [
        "Zusammenveranlagung",
-       "§ 26 EStG"
+       "Ehegatten werden gemeinsam veranlagt, wenn die Voraussetzungen des § 26 EStG vorliegen"
       ],
       [
        "Splittingtarif",
-       "§ 32a Abs. 5 EStG"
+       "Steuer auf das halbierte gemeinsame zvE, danach verdoppelt (§ 32a Abs. 5 EStG)"
       ],
       [
        "Gnadensplitting",
-       "§ 32a Abs. 6 EStG"
+       "Im Jahr nach dem Tod des Ehegatten gilt für den Verwitweten noch der Splittingtarif (§ 32a Abs. 6 EStG)"
       ]
      ],
      "luecken": [
@@ -1412,19 +1412,19 @@
      "zuordnen": [
       [
        "proportionaler Tarif",
-       "KSt 15 % (§ 23 KStG)"
+       "Fester Steuersatz unabhängig von der Höhe, z. B. die Körperschaftsteuer mit 15 %"
       ],
       [
        "indirekt progressiv",
-       "Abgeltungsteuer mit Sparer-Pauschbetrag"
+       "Fester Satz, aber mit Freibetrag – dadurch steigt die Durchschnittsbelastung, z. B. Abgeltungsteuer mit Sparer-Pauschbetrag"
       ],
       [
        "direkt progressiv",
-       "ESt-Tarif (§ 32a EStG)"
+       "Der Steuersatz selbst steigt mit dem Einkommen – so der Einkommensteuertarif"
       ],
       [
        "Spitzensteuersatz",
-       "42 %, für sehr hohe Einkommen 45 %"
+       "Höchster Grenzsteuersatz: 42 %, für sehr hohe Einkommen 45 % (Reichensteuer)"
       ]
      ]
     },
@@ -1494,19 +1494,19 @@
      "zuordnen": [
       [
        "Schritt 1",
-       "zvE beider Ehegatten addieren"
+       "Die zu versteuernden Einkommen beider Ehegatten werden addiert"
       ],
       [
        "Schritt 2",
-       "Summe halbieren"
+       "Die Summe wird halbiert"
       ],
       [
        "Schritt 3",
-       "Grundtarif anwenden"
+       "Auf die Hälfte wird der normale Grundtarif angewendet"
       ],
       [
        "Schritt 4",
-       "Steuer verdoppeln"
+       "Die so berechnete Steuer wird verdoppelt"
       ]
      ],
      "luecken": [
@@ -1564,19 +1564,19 @@
      "zuordnen": [
       [
        "§ 9 EStG",
-       "Werbungskosten"
+       "Werbungskosten: Ausgaben, um Einnahmen bei Überschusseinkünften zu erzielen, zu sichern und zu erhalten"
       ],
       [
        "§ 4 Abs. 4 EStG",
-       "Betriebsausgaben"
+       "Betriebsausgaben: das Gegenstück bei den Gewinneinkünften, betrieblich veranlasste Aufwendungen"
       ],
       [
        "§ 11 EStG",
-       "Zufluss- und Abflussprinzip"
+       "Zufluss- und Abflussprinzip: Entscheidend ist, wann das Geld tatsächlich fließt"
       ],
       [
        "§ 12 EStG",
-       "private Lebensführung nicht abziehbar"
+       "Kosten der privaten Lebensführung dürfen nicht abgezogen werden"
       ]
      ]
     },
@@ -1678,19 +1678,19 @@
      "zuordnen": [
       [
        "Arbeitnehmer-Pauschbetrag",
-       "1.230 € (§ 9a EStG)"
+       "1.230 € werden immer abgezogen, wenn die echten Werbungskosten niedriger sind (§ 9a EStG)"
       ],
       [
        "Homeoffice-Pauschale",
-       "6 € pro Tag"
+       "6 € für jeden Tag, an dem ausschließlich zu Hause gearbeitet wird"
       ],
       [
        "Homeoffice-Höchstbetrag",
-       "210 Tage = 1.260 €"
+       "Die Pauschale gibt es für höchstens 210 Tage, also maximal 1.260 € im Jahr"
       ],
       [
        "Entfernungspauschale 2026",
-       "0,38 € je km ab dem 1. km"
+       "0,38 € je Kilometer der einfachen Strecke pro Arbeitstag, ab dem ersten Kilometer"
       ]
      ],
      "luecken": [
@@ -1748,19 +1748,19 @@
      "zuordnen": [
       [
        "Abgeltungsteuer",
-       "25 % + 5,5 % SolZ"
+       "Pauschal 25 % plus 5,5 % Solidaritätszuschlag auf Zinsen und Dividenden im Privatvermögen"
       ],
       [
        "Sparer-Pauschbetrag",
-       "1.000 € (Ehepaar 2.000 €)"
+       "1.000 € (Ehepaar 2.000 €) bleiben steuerfrei, echte Werbungskosten zählen nicht"
       ],
       [
        "Teileinkünfteverfahren",
-       "60 % steuerpflichtig"
+       "Nur 60 % der Dividende werden mit dem persönlichen Steuersatz besteuert, 40 % sind steuerfrei"
       ],
       [
        "Günstigerprüfung",
-       "auf Antrag persönlicher Steuersatz"
+       "Auf Antrag wird der persönliche Steuersatz angewendet, wenn er niedriger als 25 % ist"
       ]
      ],
      "luecken": [
@@ -1818,19 +1818,19 @@
      "zuordnen": [
       [
        "Einnahmen",
-       "Kaltmiete + Nebenkosten"
+       "Kaltmiete plus die Nebenkosten, die der Mieter an den Vermieter zahlt"
       ],
       [
        "Werbungskosten",
-       "Zinsen, gezahlte Nebenkosten, AfA"
+       "Schuldzinsen, die an den Versorger weitergezahlten Nebenkosten und die Abschreibung auf das Gebäude"
       ],
       [
        "§ 21 EStG",
-       "Vermietung und Verpachtung"
+       "Die Vorschrift für Einkünfte aus Vermietung und Verpachtung"
       ],
       [
        "durchlaufender Posten",
-       "Nebenkosten heben sich auf"
+       "Die Nebenkosten sind zugleich Einnahme und Werbungskosten und heben sich deshalb auf"
       ]
      ],
      "luecken": [
@@ -1893,19 +1893,19 @@
      "zuordnen": [
       [
        "Kapitalgesellschaft",
-       "immer Gewerbebetrieb kraft Rechtsform"
+       "Ist immer ein Gewerbebetrieb, allein wegen ihrer Rechtsform"
       ],
       [
        "Freiberufler (§ 18 EStG)",
-       "keine Gewerbesteuer"
+       "Zahlt keine Gewerbesteuer, weil selbständige Arbeit kein Gewerbe ist"
       ],
       [
        "Steuerschuldner Personengesellschaft",
-       "die Gesellschaft selbst"
+       "Die Gewerbesteuer schuldet die Gesellschaft selbst, nicht die Gesellschafter"
       ],
       [
        "Beginn Einzelunternehmen",
-       "werbende Tätigkeit nach außen"
+       "Die Pflicht beginnt, sobald das Unternehmen nach außen werbend tätig wird, z. B. mit der Ladeneröffnung"
       ]
      ],
      "luecken": [
@@ -1995,19 +1995,19 @@
      "zuordnen": [
       [
        "Messzahl",
-       "3,5 %"
+       "3,5 % – damit wird aus dem Gewerbeertrag der Steuermessbetrag"
       ],
       [
        "Hebesatz",
-       "mindestens 280 %"
+       "Legt jede Gemeinde selbst fest, mindestens 280 % – damit wird aus dem Messbetrag die Gewerbesteuer"
       ],
       [
        "Anrechnung § 35",
-       "Faktor 4,0"
+       "Die Einkommensteuer sinkt um das 4,0-Fache des Messbetrags"
       ],
       [
        "Freibetrag",
-       "24.500 €"
+       "24.500 € werden vom Gewerbeertrag abgezogen, nur bei Einzelunternehmen und Personengesellschaften"
       ]
      ],
      "luecken": [
@@ -2084,19 +2084,19 @@
      "zuordnen": [
       [
        "§ 1 KStG",
-       "unbeschränkt: Sitz oder Geschäftsleitung im Inland"
+       "Unbeschränkt steuerpflichtig, wenn Sitz oder Geschäftsleitung im Inland liegen – besteuert wird das Welteinkommen"
       ],
       [
        "§ 2 KStG",
-       "beschränkt: nur inländische Einkünfte"
+       "Beschränkt steuerpflichtig: weder Sitz noch Geschäftsleitung im Inland, nur inländische Einkünfte werden besteuert"
       ],
       [
        "§ 10 AO",
-       "Geschäftsleitung"
+       "Geschäftsleitung: der Ort, von dem aus das Unternehmen tatsächlich geführt wird"
       ],
       [
        "§ 11 AO",
-       "Sitz"
+       "Sitz: der Ort, der im Gesellschaftsvertrag oder in der Satzung festgelegt ist"
       ]
      ],
      "luecken": [
@@ -2204,20 +2204,20 @@
      ],
      "zuordnen": [
       [
-       "Privatvermögen",
-       "Abgeltungsteuer 25 %"
+       "Anteile im Privatvermögen",
+       "Die Ausschüttung wird mit 25 % Abgeltungsteuer plus Solidaritätszuschlag besteuert"
       ],
       [
-       "Betriebsvermögen",
-       "Teileinkünfteverfahren 60 %"
+       "Anteile im Betriebsvermögen",
+       "Teileinkünfteverfahren: 60 % der Ausschüttung zum persönlichen Steuersatz"
       ],
       [
        "Vorbelastung",
-       "29,825 bei Gewinn 100"
+       "Bei 100 Gewinn zahlt die GmbH 29,825 an KSt, SolZ und Gewerbesteuer"
       ],
       [
        "Gesamtbelastung Privatvermögen",
-       "48,33 %"
+       "Insgesamt 48,33 % – Vorbelastung plus Abgeltungsteuer auf die Ausschüttung"
       ]
      ],
      "luecken": [
@@ -2275,15 +2275,15 @@
      "zuordnen": [
       [
        "Einzelunternehmen",
-       "44,31 %"
+       "44,31 %, weil die Gewerbesteuer bei 400 % über § 35 vollständig angerechnet wird"
       ],
       [
        "Freiberufler",
-       "44,31 %"
+       "44,31 %, weil überhaupt keine Gewerbesteuer anfällt, nur ESt und SolZ"
       ],
       [
        "Kapitalgesellschaft",
-       "48,33 %"
+       "48,33 %, weil Vorbelastung im Unternehmen und Abgeltungsteuer bei der Ausschüttung zusammenkommen"
       ]
      ],
      "luecken": [
