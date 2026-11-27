@@ -8,31 +8,30 @@
   {
    "id": "rechtsformen",
    "ast": "Aufbau eines VU",
-   "titel": "Rechtsformen von Versicherern",
+   "titel": "Welche Rechtsformen dürfen ein Versicherungsunternehmen betreiben?",
    "folien": "37–39",
    "art": "wissen",
    "relevanz": "kern",
    "ansehen": [
     {
-     "typ": "text",
-     "inhalt": "Nicht jede Rechtsform darf eine Versicherung betreiben. § 8 VAG erlaubt nur Formen, die auf Dauer angelegt sind, ausreichend Kapital haben und streng beaufsichtigt werden – denn Versicherte müssen sich oft jahrzehntelang darauf verlassen können, dass ihr Versicherer zahlt."
+     "typ": "frage",
+     "titel": "Warum ist das überhaupt geregelt?",
+     "inhalt": "Versicherte müssen sich oft jahrzehntelang darauf verlassen können, dass ihr Versicherer zahlt. Deshalb erlaubt § 8 VAG nur Rechtsformen, die auf Dauer angelegt sind, ausreichend Kapital haben und streng beaufsichtigt werden. Das schützt die Versicherten."
     },
     {
-     "typ": "tabelle",
-     "zeilen": [
-      [
-       "erlaubt",
-       "Aktiengesellschaft (auch SE), Versicherungsverein auf Gegenseitigkeit (VVaG), öffentlich-rechtliche Versicherer (Körperschaft, Anstalt)"
-      ],
-      [
-       "nicht erlaubt",
-       "Einzelkaufleute, Personengesellschaften (GbR, OHG, KG), GmbH, Genossenschaften"
-      ],
-      [
-       "Grund",
-       "Dauerhaftigkeit, Kapitalausstattung, Aufsicht – Schutz der Versicherten"
-      ]
-     ]
+     "typ": "frage",
+     "titel": "Welche Rechtsformen sind erlaubt?",
+     "inhalt": "Die Aktiengesellschaft (auch als SE), der Versicherungsverein auf Gegenseitigkeit (VVaG) und öffentlich-rechtliche Versicherer, also Körperschaften und Anstalten."
+    },
+    {
+     "typ": "frage",
+     "titel": "Welche sind nicht erlaubt?",
+     "inhalt": "Einzelkaufleute, Personengesellschaften (GbR, OHG, KG), die GmbH und Genossenschaften."
+    },
+    {
+     "typ": "achtung",
+     "titel": "Achtung: keine GmbH",
+     "inhalt": "Die GmbH ist eine Kapitalgesellschaft, darf aber trotzdem kein Versicherungsunternehmen betreiben. Erlaubt sind nur AG/SE, VVaG und öffentlich-rechtliche Versicherer."
     }
    ],
    "puzzle": [
@@ -78,27 +77,25 @@
   {
    "id": "spartentrennung",
    "ast": "Aufbau eines VU",
-   "titel": "Spartentrennungsprinzip",
+   "titel": "Was regelt das Spartentrennungsprinzip – und warum?",
    "folien": "41–44",
    "art": "wissen",
    "relevanz": "kern",
    "ansehen": [
     {
-     "typ": "text",
-     "inhalt": "Lebensversicherung und substitutive Krankenversicherung dürfen nicht zusammen mit anderen Sparten in einem Unternehmen betrieben werden. Deshalb haben Konzerne eigene Gesellschaften für Leben, Kranken und Schaden/Unfall."
+     "typ": "frage",
+     "titel": "Was ist das Spartentrennungsprinzip?",
+     "inhalt": "Lebensversicherung und substitutive Krankenversicherung dürfen nicht zusammen mit anderen Sparten in einem Unternehmen betrieben werden. Deshalb haben Versicherungskonzerne eigene Gesellschaften für Leben, Kranken und Schaden/Unfall."
     },
     {
-     "typ": "tabelle",
-     "zeilen": [
-      [
-       "Ziel",
-       "die langfristig angesparten Gelder der Lebens- und Krankenversicherten schützen – keine Quersubventionierung anderer Sparten"
-      ],
-      [
-       "Rechtsschutz",
-       "betreibt ein Kompositversicherer Rechtsschutz, muss er die Schadenregulierung an ein unabhängiges Unternehmen auslagern – sonst Interessenkonflikt, wenn er im Streit selbst Gegner ist (z. B. über die Haftpflichtsparte)"
-      ]
-     ]
+     "typ": "frage",
+     "titel": "Warum gibt es die Trennung?",
+     "inhalt": "Die Lebens- und Krankenversicherten sparen über viele Jahre Geld an. Dieses Geld soll geschützt sein und nicht andere Sparten mitfinanzieren. Eine solche Quersubventionierung soll es nicht geben."
+    },
+    {
+     "typ": "frage",
+     "titel": "Was gilt für die Rechtsschutzversicherung?",
+     "inhalt": "Betreibt ein Kompositversicherer, also ein Versicherer mit mehreren Sparten, auch Rechtsschutz, muss er die Schadenregulierung an ein unabhängiges Unternehmen auslagern. Sonst gäbe es einen Interessenkonflikt: Im Streit könnte er selbst der Gegner sein, zum Beispiel über seine Haftpflichtsparte."
     }
    ],
    "puzzle": [
@@ -126,31 +123,30 @@
   {
    "id": "risikomerkmale",
    "ast": "Risiko und Versicherbarkeit",
-   "titel": "Risikomerkmale",
+   "titel": "Was sind Risikomerkmale – und wofür braucht man sie?",
    "folien": "82–83",
    "art": "wissen",
    "relevanz": "kern",
    "ansehen": [
     {
-     "typ": "text",
-     "inhalt": "Risikomerkmale sind Eigenschaften eines Risikos, die mit Schadenhäufigkeit und Schadenhöhe zusammenhängen. Mit ihnen bildet der Versicherer Risikoklassen aus möglichst gleichartigen Risiken – die Grundlage für die Prämie."
+     "typ": "frage",
+     "titel": "Was sind Risikomerkmale?",
+     "inhalt": "Risikomerkmale sind Eigenschaften eines Risikos, die mit der Schadenhäufigkeit und der Schadenhöhe zusammenhängen."
     },
     {
-     "typ": "tabelle",
-     "zeilen": [
-      [
-       "objektive Merkmale",
-       "unabhängig vom Verhalten: Eigenschaften von Sachen (Bauart eines Gebäudes, Wetterlage) oder Personen (Alter)"
-      ],
-      [
-       "subjektive Merkmale",
-       "abhängig vom Verhalten: Fahrverhalten, jährliche Fahrleistung, Abstellplatz"
-      ],
-      [
-       "Moral Hazard",
-       "der Kunde verhält sich wegen der Versicherung anders, z. B. meldet mehr oder höhere Schäden"
-      ]
-     ]
+     "typ": "frage",
+     "titel": "Wofür braucht der Versicherer sie?",
+     "inhalt": "Mit ihnen bildet er Risikoklassen aus möglichst gleichartigen Risiken. Diese Klassen sind die Grundlage für die Prämie."
+    },
+    {
+     "typ": "frage",
+     "titel": "Welche Arten gibt es?",
+     "inhalt": "**Objektive Merkmale** hängen nicht vom Verhalten ab. Das sind Eigenschaften von Sachen, etwa die Bauart eines Gebäudes oder die Wetterlage, oder von Personen, etwa das Alter.\n**Subjektive Merkmale** hängen vom Verhalten ab, zum Beispiel Fahrverhalten, jährliche Fahrleistung oder Abstellplatz."
+    },
+    {
+     "typ": "frage",
+     "titel": "Was hat Moral Hazard damit zu tun?",
+     "inhalt": "Moral Hazard heißt: Der Kunde verhält sich wegen der Versicherung anders, zum Beispiel meldet er mehr oder höhere Schäden. Das betrifft vor allem die subjektiven Merkmale."
     }
    ],
    "puzzle": [
@@ -192,14 +188,15 @@
   {
    "id": "risiken-vu",
    "ast": "Risiko und Versicherbarkeit",
-   "titel": "Risiken im Versicherungsunternehmen",
+   "titel": "Welchen Risiken ist ein Versicherungsunternehmen ausgesetzt?",
    "folien": "85–87",
    "art": "wissen",
    "relevanz": "kern",
    "ansehen": [
     {
-     "typ": "text",
-     "inhalt": "Das Gesamtrisiko eines Versicherers ist die Gefahr, seine Unternehmensziele zu verfehlen. Es setzt sich aus vier Risikoarten zusammen. Das versicherungstechnische Risiko ist das, was trotz Ausgleich im Kollektiv und über die Zeit an Schwankung übrig bleibt."
+     "typ": "frage",
+     "titel": "Was ist das Gesamtrisiko?",
+     "inhalt": "Das Gesamtrisiko eines Versicherers ist die Gefahr, seine Unternehmensziele zu verfehlen. Es setzt sich aus vier Risikoarten zusammen."
     },
     {
      "typ": "tabelle",
@@ -217,7 +214,7 @@
        "angelegte Gelder verlieren an Wert, z. B. durch Kurs- oder Zinsänderungen"
       ],
       [
-       "sonstige/operationelle Risiken",
+       "sonstige / operationelle Risiken",
        "z. B. IT-Ausfälle, rechtliche Risiken"
       ]
      ],
@@ -225,6 +222,11 @@
       "Risikoart",
       "Bedeutung"
      ]
+    },
+    {
+     "typ": "frage",
+     "titel": "Was ist das versicherungstechnische Risiko genau?",
+     "inhalt": "Es ist die Schwankung, die übrig bleibt, obwohl sich Risiken im Kollektiv und über die Zeit ausgleichen. Es hat vier Formen."
     },
     {
      "typ": "tabelle",
@@ -239,16 +241,16 @@
       ],
       [
        "Irrtumsrisiko",
-       "Kalkulation von Anfang an falsch, z. B. falsche Daten"
+       "die Kalkulation ist von Anfang an falsch, z. B. wegen falscher Daten"
       ],
       [
        "asymmetrische Information",
-       "Kunde weiß mehr – Adverse Selektion und Moral Hazard"
+       "der Kunde weiß mehr – Adverse Selektion und Moral Hazard"
       ]
      ],
      "kopf": [
-      "Versicherungstechnisches Risiko",
-      "Form"
+      "Form",
+      "Bedeutung"
      ]
     }
    ],
@@ -324,13 +326,14 @@
   {
    "id": "farny",
    "ast": "Risiko und Versicherbarkeit",
-   "titel": "Versicherbarkeit nach Farny",
+   "titel": "Wann ist ein Risiko versicherbar? (nach Farny)",
    "folien": "95",
    "art": "wissen",
    "relevanz": "kern",
    "ansehen": [
     {
-     "typ": "text",
+     "typ": "frage",
+     "titel": "Was sagt Farny?",
      "inhalt": "Nach Farny ist ein Risiko versicherbar, wenn die Schadenverteilung fünf Merkmale erfüllt. Eine harte Grenze gibt es nicht – am Ende entscheidet der Versicherer."
     },
     {
@@ -346,17 +349,25 @@
       ],
       [
        "Eindeutigkeit",
-       "klar definiert, was versichert ist: Gefahren, Personen, Sachen"
+       "es ist klar, was versichert ist: Gefahren, Personen, Sachen"
       ],
       [
        "Unabhängigkeit",
-       "Schäden treten nicht alle gleichzeitig auf – kein Kumul (z. B. Pandemie)"
+       "Schäden treten nicht alle gleichzeitig auf – kein Kumul, wie z. B. bei einer Pandemie"
       ],
       [
        "Größe",
        "der mögliche Schaden bleibt unter einer Obergrenze, die der Versicherer tragen kann"
       ]
+     ],
+     "kopf": [
+      "Merkmal",
+      "Bedeutung"
      ]
+    },
+    {
+     "typ": "merke",
+     "inhalt": "**Merke:** Zufällig, schätzbar, eindeutig, unabhängig, begrenzt groß."
     }
    ],
    "puzzle": [
@@ -407,31 +418,34 @@
   {
    "id": "asym",
    "ast": "Risiko und Versicherbarkeit",
-   "titel": "Adverse Selektion und Moral Hazard",
+   "titel": "Was sind Adverse Selektion und Moral Hazard – und was hilft dagegen?",
    "folien": "88–89",
    "art": "wissen",
    "relevanz": "kern",
    "ansehen": [
     {
-     "typ": "tabelle",
-     "zeilen": [
-      [
-       "Adverse Selektion",
-       "vor Vertragsabschluss: Kunde kennt sein Risiko besser, Versicherer verlangt Durchschnittspreis, gute Risiken verzichten, schlechte bleiben übrig"
-      ],
-      [
-       "Gegenmaßnahmen AS",
-       "Screening (Gesundheitsfragen), Tarifdifferenzierung nach Risikomerkmalen (z. B. Alter)"
-      ],
-      [
-       "Moral Hazard",
-       "nach Vertragsabschluss: Kunde wird weniger vorsichtig, z. B. das nicht abgeschlossene Fahrrad in der WG"
-      ],
-      [
-       "Gegenmaßnahmen MH",
-       "Selbstbeteiligung, Obliegenheiten (Fahrrad abschließen, sonst Leistungskürzung), Bonus-Malus (Schadenfreiheitsrabatt in Kfz)"
-      ]
-     ]
+     "typ": "frage",
+     "titel": "Was ist Adverse Selektion?",
+     "inhalt": "Sie entsteht **vor** Vertragsabschluss: Der Kunde kennt sein Risiko besser als der Versicherer. Der Versicherer verlangt deshalb einen Durchschnittspreis. Für gute Risiken ist der zu teuer, sie verzichten. Übrig bleiben die schlechten Risiken."
+    },
+    {
+     "typ": "frage",
+     "titel": "Was hilft gegen Adverse Selektion?",
+     "inhalt": "Screening, also zum Beispiel Gesundheitsfragen, und eine Tarifdifferenzierung nach Risikomerkmalen wie dem Alter."
+    },
+    {
+     "typ": "frage",
+     "titel": "Was ist Moral Hazard?",
+     "inhalt": "Er entsteht **nach** Vertragsabschluss: Der Kunde wird weniger vorsichtig, weil er versichert ist. Beispiel: das nicht abgeschlossene Fahrrad in der WG."
+    },
+    {
+     "typ": "frage",
+     "titel": "Was hilft gegen Moral Hazard?",
+     "inhalt": "Eine Selbstbeteiligung, Obliegenheiten (zum Beispiel muss das Fahrrad abgeschlossen werden, sonst wird die Leistung gekürzt) und Bonus-Malus-Systeme wie der Schadenfreiheitsrabatt in der Kfz-Versicherung."
+    },
+    {
+     "typ": "merke",
+     "inhalt": "**Merke:** Adverse Selektion = vor dem Vertrag · Moral Hazard = nach dem Vertrag."
     }
    ],
    "puzzle": [
@@ -489,31 +503,38 @@
   {
    "id": "aequivalenz",
    "ast": "Kalkulation und Steuerung",
-   "titel": "Äquivalenzprinzip",
+   "titel": "Was besagt das Äquivalenzprinzip?",
    "folien": "114–116",
    "art": "rechnen",
    "relevanz": "kern",
    "ansehen": [
     {
-     "typ": "text",
-     "inhalt": "Das Äquivalenzprinzip ist die Grundlage der Prämienkalkulation: Die reine Risikoprämie soll dem Erwartungswert der Schäden entsprechen. Leistung und Gegenleistung sind gleichwertig – eine „faire Wette“."
+     "typ": "frage",
+     "titel": "Was ist das Äquivalenzprinzip?",
+     "inhalt": "Es ist die Grundlage der Prämienkalkulation: Die reine Risikoprämie soll dem Erwartungswert der Schäden entsprechen. Leistung und Gegenleistung sind gleichwertig – wie bei einer „fairen Wette“."
     },
     {
-     "typ": "tabelle",
-     "zeilen": [
+     "typ": "frage",
+     "titel": "Was ist der Unterschied zwischen individuell und kollektiv?",
+     "inhalt": "**Individuell:** Jedes einzelne Risiko zahlt genau seinen eigenen Schadenerwartungswert, nicht mehr und nicht weniger.\n**Kollektiv:** Der ganze Bestand bringt mindestens so viel Prämie auf, wie insgesamt Schäden erwartet werden."
+    },
+    {
+     "typ": "beispiel",
+     "titel": "Beispiel: Glücksrad",
+     "gegeben": [
       [
-       "individuell",
-       "jedes einzelne Risiko zahlt genau seinen eigenen Schadenerwartungswert (gleich, nicht weniger)"
+       "100 Felder",
+       ""
       ],
       [
-       "kollektiv",
-       "der ganze Bestand bringt mindestens so viel Prämie auf, wie insgesamt Schäden erwartet werden"
-      ],
-      [
-       "Beispiel Glücksrad",
-       "100 Felder, bei der 4 gibt es 500 € → fairer Einsatz = 1/100 · 500 € = 5 €"
+       "bei der 4 gibt es 500 €",
+       "ein Gewinnfeld"
       ]
-     ]
+     ],
+     "rechnung": [
+      "fairer Einsatz = 1/100 · 500 € = **5 €**"
+     ],
+     "fazit": "Wer 5 € einsetzt, spielt eine faire Wette – genau so soll die Risikoprämie kalkuliert sein."
     }
    ],
    "puzzle": [
@@ -559,35 +580,76 @@
   {
    "id": "cr",
    "ast": "Kalkulation und Steuerung",
-   "titel": "Combined Ratio",
+   "titel": "Was zeigt die Combined Ratio?",
    "folien": "Kap. 8",
    "art": "rechnen",
    "relevanz": "kern",
    "ansehen": [
     {
-     "typ": "text",
-     "inhalt": "Die Combined Ratio (Schaden-Kosten-Quote) zeigt, ob das reine Versicherungsgeschäft profitabel ist. Sie setzt Schäden und Kosten ins Verhältnis zu den Prämien – Kapitalerträge bleiben bewusst außen vor."
+     "typ": "frage",
+     "titel": "Was ist die Combined Ratio?",
+     "inhalt": "Die Combined Ratio (CR), auch Schaden-Kosten-Quote, zeigt, ob das reine Versicherungsgeschäft profitabel ist. Sie setzt Schäden und Kosten ins Verhältnis zu den Prämien. Kapitalerträge bleiben bewusst außen vor."
     },
     {
      "typ": "formel",
-     "inhalt": "CR = (Schäden + Verwaltungskosten + Abschlusskosten) ÷ Nettoprämien"
+     "teile": [
+      [
+       "CR",
+       "Combined Ratio"
+      ],
+      " = (",
+      [
+       "S",
+       "Schäden"
+      ],
+      " + ",
+      [
+       "VK",
+       "Verwaltungs­kosten"
+      ],
+      " + ",
+      [
+       "AK",
+       "Abschluss­kosten"
+      ],
+      ") ÷ ",
+      [
+       "P",
+       "Netto­prämien"
+      ]
+     ],
+     "inhalt": "CR = (S + VK + AK) ÷ P"
     },
     {
-     "typ": "tabelle",
-     "zeilen": [
+     "typ": "frage",
+     "titel": "Wie lese ich das Ergebnis?",
+     "inhalt": "**CR < 100 %:** Das Versicherungsgeschäft macht Gewinn. Je niedriger, desto profitabler.\n**CR > 100 %:** Das Kerngeschäft macht Verlust. Gewinn gibt es nur über Kapitalerträge (Cashflow Underwriting). Das ist in der Kfz-Versicherung häufig."
+    },
+    {
+     "typ": "beispiel",
+     "titel": "Beispiel",
+     "gegeben": [
       [
-       "CR < 100 %",
-       "das Versicherungsgeschäft macht Gewinn, je niedriger desto profitabler"
+       "Schäden 700",
+       ""
       ],
       [
-       "CR > 100 %",
-       "Verlust im Kerngeschäft, Gewinn nur über Kapitalerträge (Cashflow Underwriting) – in Kfz häufig"
+       "Verwaltungskosten 100",
+       ""
       ],
       [
-       "Beispiel",
-       "(700 + 100 + 180) ÷ 1.000 = 98 %"
+       "Abschlusskosten 180",
+       ""
+      ],
+      [
+       "Nettoprämien 1.000",
+       ""
       ]
-     ]
+     ],
+     "rechnung": [
+      "CR = (700 + 100 + 180) ÷ 1.000 = **98 %**"
+     ],
+     "fazit": "Die CR liegt knapp unter 100 %, das Versicherungsgeschäft ist also knapp profitabel."
     }
    ],
    "puzzle": [
@@ -615,14 +677,25 @@
   {
    "id": "rpa",
    "ast": "Prozesse und RPA",
-   "titel": "Robotic Process Automation (RPA)",
+   "titel": "Was ist Robotic Process Automation (RPA) – und welche Prozesse eignen sich?",
    "folien": "142–148",
    "art": "wissen",
    "relevanz": "kern",
    "ansehen": [
     {
-     "typ": "text",
-     "inhalt": "RPA ist eine Software, kein echter Roboter. Sie bedient Programme über die Benutzeroberfläche wie ein Mensch und übernimmt wiederkehrende, regelbasierte Aufgaben – ohne tiefe Eingriffe in die bestehende IT. Nutzen: mehr Effizienz und Qualität, geringere Kosten, zufriedenere Kunden und Zeit für wichtige Aufgaben."
+     "typ": "frage",
+     "titel": "Was ist RPA?",
+     "inhalt": "RPA ist eine Software, kein echter Roboter. Sie bedient Programme über die Benutzeroberfläche wie ein Mensch und übernimmt wiederkehrende, regelbasierte Aufgaben – ohne tiefe Eingriffe in die bestehende IT."
+    },
+    {
+     "typ": "frage",
+     "titel": "Was bringt RPA?",
+     "inhalt": "Mehr Effizienz und Qualität, geringere Kosten, zufriedenere Kunden und mehr Zeit für wichtige Aufgaben."
+    },
+    {
+     "typ": "frage",
+     "titel": "Wann ist ein Prozess automatisierbar?",
+     "inhalt": ""
     },
     {
      "typ": "tabelle",
@@ -632,11 +705,11 @@
        "häufig, manuell, wiederholend oder fehleranfällig"
       ],
       [
-       "Regelbasiert",
+       "regelbasiert",
        "klare Anweisungen, keine individuellen Entscheidungen"
       ],
       [
-       "Standardisierter Input",
+       "standardisierter Input",
        "einheitlich und digital lesbar"
       ],
       [
@@ -645,12 +718,12 @@
       ],
       [
        "Wirtschaftlichkeit",
-       "Automatisierung spart deutlich (positiver Business Case)"
+       "die Automatisierung spart deutlich (positiver Business Case)"
       ]
      ],
      "kopf": [
-      "Ein Prozess ist automatisierbar, wenn …",
-      ""
+      "Kriterium",
+      "Bedeutung"
      ]
     }
    ],
@@ -697,14 +770,15 @@
   {
    "id": "bpmn",
    "ast": "Prozesse und RPA",
-   "titel": "Prozessnotation GENO-BPMN",
+   "titel": "Mit welchen Bausteinen zeichnet man einen Prozess? (GENO-BPMN)",
    "folien": "150",
    "art": "wissen",
    "relevanz": "kern",
    "ansehen": [
     {
-     "typ": "text",
-     "inhalt": "Folie 150 zeigt die Bausteine, mit denen man einen Prozess als Diagramm zeichnet – zum Beispiel, bevor man ihn mit RPA automatisiert."
+     "typ": "frage",
+     "titel": "Wofür braucht man die Notation?",
+     "inhalt": "Mit ihr zeichnet man einen Prozess als Diagramm, zum Beispiel bevor man ihn mit RPA automatisiert. Folie 150 zeigt die Bausteine."
     },
     {
      "typ": "tabelle",
@@ -730,7 +804,7 @@
        "Dokument wie E-Mail, Brief oder Formular"
       ],
       [
-       "Pool/Lane",
+       "Pool / Lane",
        "Beteiligte bzw. Abteilungen im Prozess"
       ]
      ],

@@ -180,6 +180,30 @@ button:active,.item:active,.sugg:active,.chip:active,.ansb:active,.slot:active{t
 #rdpop .rpseg button.on{background:#fff;color:var(--blue-d);box-shadow:0 1px 3px rgba(0,0,0,.12)}
 #rdpop .rpval{font-size:13px;color:var(--blue);font-weight:700}
 #rdpop .rprow{display:flex;align-items:center;gap:10px;color:var(--sub)}#rdpop .rprow span{line-height:0}#rdpop input[type=range]{flex:1;accent-color:var(--blue)}
+
+@media (min-width:761px){.zbar{margin:0 auto;max-width:732px}}
+@media (min-width:761px) and (pointer:fine){.zbar{position:sticky;bottom:12px;left:auto;right:auto;width:100%;max-width:none;margin:4px 0 0;min-height:0;padding:16px 16px 18px;border-radius:18px}.zspace{display:none}}
+
+.fq{font-weight:700;color:var(--blue-d);font-size:15.5px;margin:6px 0 -6px}
+.fx{background:var(--blue-xl);border:1.5px solid var(--blue-l);border-radius:12px;padding:12px 8px 10px}
+.fxt{font-size:12.5px;color:var(--sub);font-weight:600;margin-bottom:6px;text-align:center}
+.formel .fxt{text-align:left}
+.fxr{display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-start;row-gap:88px;color:var(--blue-d);font-weight:700;font-size:16px;padding:2px 0 80px}
+.fxr.fxl0{padding-bottom:2px}.fxr.fxl1{padding-bottom:30px}.fxr.fxl2{padding-bottom:56px}
+.fxk{position:relative;display:flex;flex-direction:column;align-items:center;padding:0 1px;white-space:pre}
+.fxk i{position:absolute;top:100%;left:50%;transform:translateX(-50%);width:max-content;max-width:80px;font-style:normal;font-size:10.5px;color:var(--sub);font-weight:500;line-height:1.2;text-align:center;margin-top:1px;white-space:normal}
+.fxk i:before{content:"↑";display:block;color:var(--blue);font-size:13px;line-height:1}
+.fxk i.lo2:before{height:60px;background:linear-gradient(var(--blue),var(--blue)) center 11px/1.5px 49px no-repeat}
+.fxk i.lo:before{height:36px;background:linear-gradient(var(--blue),var(--blue)) center 11px/1.5px 25px no-repeat}
+.bsp{background:var(--bg);border-radius:12px;padding:12px 14px;font-size:14.5px;line-height:1.5}
+.bsp .bh,.acht .bh{font-weight:700;color:var(--blue-d);margin-bottom:6px}
+.bsp .bl{margin-top:2px}.bsp ul{margin:2px 0 8px;padding-left:20px}.bsp li{margin:2px 0}
+.bsp .calc{background:#fff;border-radius:8px;padding:8px 10px;margin:4px 0 8px;font-variant-numeric:tabular-nums}
+.acht{background:var(--red-l);border:1px solid var(--red-b);border-radius:12px;padding:12px 14px;font-size:14.5px;line-height:1.5;color:#7A2419}
+.acht .bh{color:var(--red-d)}
+.acht .fr2{display:flex;gap:8px;margin-top:8px}.acht .fr2 div{flex:1;background:#fff;border-radius:8px;padding:7px 9px;font-size:13.5px}.acht .fr2 b{display:block;font-size:12px}
+.acht .ah{font-size:12px;margin-top:6px;opacity:.8}
+.merk{background:var(--bg);border-left:4px solid var(--blue);border-radius:8px;padding:9px 12px;font-size:14.5px;line-height:1.5}
 </style>
 </head>
 <body>
@@ -364,10 +388,17 @@ function renderFach(){
   });
   app.innerHTML=h+`</div>`;
 }
+function sb(x){return x.replace(/_([A-Za-z0-9]+)/g,"<sub>$1</sub>")}
+function rt(x){return sb(esc(x).replace(/\*\*(.+?)\*\*/g,"<b>$1</b>"))}
 function ansehenHTML(t,fid){
   return t.ansehen.map(b=>{
-    if(b.typ==="text")return `<p class="txt">${esc(b.inhalt)}</p>`;
-    if(b.typ==="formel")return `<div class="formel">${esc(b.inhalt)}</div>`;
+    if(b.typ==="text")return `<p class="txt">${rt(b.inhalt)}</p>`;
+    if(b.typ==="frage")return `${b.titel?`<div class="fq">${rt(b.titel)}</div>`:""}${b.inhalt?`<p class="txt">${rt(b.inhalt)}</p>`:""}`;
+    if(b.typ==="formel"&&b.teile)return `<div class="fx">${b.titel?`<div class="fxt">${rt(b.titel)}</div>`:""}<div class="fxr fxl${Math.min(3,b.teile.filter(x=>Array.isArray(x)&&x[1]).length)}">${(()=>{let li=0;return b.teile.map(x=>Array.isArray(x)?`<span class="fxk"><span>${sb(esc(x[0]))}</span>${x[1]?`<i class="${["","lo","lo2"][(li++)%3]}">${rt(x[1])}</i>`:""}</span>`:`<span class="fxk"><span>${sb(esc(x))}</span></span>`).join("")})()}</div></div>`;
+    if(b.typ==="formel")return `<div class="formel">${b.titel?`<div class="fxt">${rt(b.titel)}</div>`:""}${sb(esc(b.inhalt))}</div>`;
+    if(b.typ==="beispiel")return `<div class="bsp"><div class="bh">${rt(b.titel||"Beispiel")}</div>${b.gegeben?`<div class="bl">Gegeben:</div><ul>${b.gegeben.map(g=>`<li>${rt(g[0])}${g[1]?` <span class="muted">(${rt(g[1])})</span>`:""}</li>`).join("")}</ul>`:""}${b.rechnung?`<div class="bl">Rechnung:</div><div class="calc">${b.rechnung.map(rt).join("<br>")}</div>`:""}${b.fazit?`<p class="txt">${rt(b.fazit)}</p>`:""}</div>`;
+    if(b.typ==="achtung")return `<div class="acht"><div class="bh">${rt(b.titel||"Achtung")}</div><p class="txt">${rt(b.inhalt)}</p>${b.falsch?`<div class="fr2"><div><b>falsch</b>${rt(b.falsch)}</div><div><b>richtig</b>${rt(b.richtig)}</div></div>`:""}${b.hinweis?`<div class="ah">${rt(b.hinweis)}</div>`:""}</div>`;
+    if(b.typ==="merke")return `<div class="merk">${rt(b.inhalt)}</div>`;
     if(b.typ==="bild")return `<figure style="margin:0"><img src="content/${esc(b.src)}" alt="${esc(b.alt||"")}" style="width:100%;height:auto;display:block">${b.alt?`<figcaption class="muted" style="margin-top:4px">${esc(b.alt)}</figcaption>`:""}</figure>`;
     if(b.typ==="tabelle")return `<table>${b.kopf?`<tr>${b.kopf.map(k=>`<th>${esc(k)}</th>`).join("")}</tr>`:""}${b.zeilen.map(r=>{
       const link=r[2]&&String(r[2]).startsWith("fall:")?String(r[2]).slice(5):null;
@@ -564,7 +595,7 @@ function renderSession(){
     <div class="ans">${u.right.map(i=>`<button class="ansb ${u.matched[i]?"ok":u.bad===i?"bad":""}" data-act="mright" data-i="${i}" ${u.matched[i]||all?"disabled":""}>${u.matched[i]?`<span class="tag">${esc(k.zuordnen[i][0])}</span><br>`:""}${esc(k.zuordnen[i][1])}</button>`).join("")}</div></div>`;
     if(all)h+=`<div class="fb ${u.err?"bad":"ok"}">${u.err?u.err+" Fehlversuch"+(u.err>1?"e":"")+" – schau dir die Paare nochmal an.":"Alles richtig zugeordnet."}</div>`+rateBar(u.err?"hard":"good");
     else{
-      h+=`<div style="height:240px"></div>`;
+      h+=`<div class="zspace" style="height:240px"></div>`;
       const open=u.order.filter(i=>!u.matched[i]); const ci=u.order[u.pos];
       h+=`<div class="zbar" id="zbar"><div class="zin"><div style="font-size:14px;font-weight:800;text-align:center">Ordne zu:</div>
       <div class="zterm">${esc(k.zuordnen[ci][0])}</div>
