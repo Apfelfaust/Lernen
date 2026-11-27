@@ -623,18 +623,21 @@ document.addEventListener("touchmove",e=>{if(!tg||!view.tour)return;
   if(tg.m==="pinch"&&e.touches.length===2){e.preventDefault();const a=tpt(e.touches[0],tg.b),d=tpt(e.touches[1],tg.b);
     const k=tg.c0.k*Math.hypot(a.x-d.x,a.y-d.y)/tg.d0,cx=(a.x+d.x)/2,cy=(a.y+d.y)/2;
     const px=(tg.cx-tg.c0.tx)/tg.c0.k,py=(tg.cy-tg.c0.ty)/tg.c0.k;tzApply(k,cx-px*k,cy-py*k)}
-  else if(tg.m==="one"&&e.touches.length===1){const a=tpt(e.touches[0],tg.b),dx=a.x-tg.x0,dy=a.y-tg.y0;if(Math.abs(dx)+Math.abs(dy)>8)tg.moved=true;
-    if(tg.uz){e.preventDefault();tzApply(tg.c0.k,tg.c0.tx+dx,tg.c0.ty+dy)}}
+  else if(tg.m==="one"&&e.touches.length===1){const a=tpt(e.touches[0],tg.b),dx=a.x-tg.x0,dy=a.y-tg.y0;tg.lx=a.x;tg.ly=a.y;if(Math.abs(dx)+Math.abs(dy)>8)tg.moved=true;
+    if(tg.uz){e.preventDefault();tzApply(tg.c0.k,tg.c0.tx+dx,tg.c0.ty+dy)}
+    else if(tg.h||(Math.abs(dx)>10&&Math.abs(dx)>Math.abs(dy))){tg.h=true;e.preventDefault()}}
 },{passive:false});
-document.addEventListener("touchend",e=>{if(!tg||!view.tour)return;const g=tg;
+function tEnd(e){if(!tg||!view.tour)return;const g=tg;
   if(g.m==="pinch"){if(e.touches.length===0)tg=null;return}
   tg=null;const zl=$("#tzl");if(zl)zl.style.transition="";
-  const t=e.changedTouches[0],a=tpt(t,g.b),dx=a.x-g.x0,dy=a.y-g.y0;
+  const t=e.changedTouches&&e.changedTouches[0],a=t?tpt(t,g.b):{x:g.lx??g.x0,y:g.ly??g.y0},dx=a.x-g.x0,dy=a.y-g.y0;
   if(!g.uz&&Math.abs(dx)>50&&Math.abs(dx)>Math.abs(dy)*1.5){tourStep(dx<0?1:-1);return}
   if(!g.moved&&Date.now()-g.t0<300){const now=Date.now();
     if(now-tlast<320){tlast=0;const box=$("#tsl");if(box.classList.contains("uz")){tourLayout(false)}else{const c=view.tour.cur,k=Math.max(2.4,c.k*1.8),px=(a.x-c.tx)/c.k,py=(a.y-c.ty)/c.k;tzApply(k,a.x-px*k,a.y-py*k)}}
     else tlast=now}
-},{passive:true});
+}
+document.addEventListener("touchend",tEnd,{passive:true});
+document.addEventListener("touchcancel",tEnd,{passive:true});
 document.addEventListener("gesturestart",e=>{if(view.tour)e.preventDefault()});
 
 /* ============ Häppchen & Teller ============ */
