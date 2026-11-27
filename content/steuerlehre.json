@@ -557,22 +557,58 @@
     },
     {
      "typ": "beispiel",
-     "titel": "Beispiel (Folie 66)",
+     "titel": "Beispiel (Folie 66–69) – wichtig",
      "gegeben": [
       [
-       "i = 10 %",
-       "Kalkulationszins vor Steuern"
+       "Maschine 15.000 €, Nutzungsdauer 3 Jahre",
+       "Investitionsvolumen"
       ],
       [
-       "s = 30 %",
-       "Steuersatz"
+       "AfA linear: 15.000 ÷ 3 = 5.000 € pro Jahr",
+       "Abschreibung"
+      ],
+      [
+       "Rückflüsse 6.100 € pro Jahr",
+       "t₁ bis t₃"
+      ],
+      [
+       "i = 10 %, s = 30 %",
+       "Zins vor Steuern, Steuersatz"
       ]
      ],
      "rechnung": [
-      "iₛ = 10 % · (1 − 0,3)",
-      "iₛ = 10 % · 0,7 = **7 %**"
+      "**Ohne Steuern:** KW = −15.000 + 6.100 · 1,1⁻¹ + 6.100 · 1,1⁻² + 6.100 · 1,1⁻³ = **+169,79**",
+      "**Mit Steuern:** Steuer je Jahr = 0,3 · (6.100 − 5.000) = 330",
+      "Rückfluss nach Steuern = 6.100 − 330 = 5.770",
+      "iₛ = 10 % · (1 − 0,3) = 7 %",
+      "KW = −15.000 + 5.770 · 1,07⁻¹ + 5.770 · 1,07⁻² + 5.770 · 1,07⁻³ = **+142,30**"
      ],
-     "fazit": "Abgezinst wird jetzt mit 7 % statt mit 10 %. Ist der Kapitalwert danach größer als 0, lohnt sich die Investition auch nach Steuern."
+     "fazit": "Beide Kapitalwerte sind größer als 0: X sollte die Investition durchführen – mit und ohne Steuern. Bei genau 0 wäre X indifferent zwischen Maschine und Kapitalmarktanlage."
+    },
+    {
+     "typ": "frage",
+     "titel": "Was ist das Endwertkriterium? (Selbststudium, F. 54–57)",
+     "inhalt": "Statt auf heute (t₀) rechnet man alle Rückflüsse auf das Ende (T) auf. Die Anschaffungsauszahlung bleibt dabei außen vor. Dann vergleicht man mit dem Endwert der Unterlassungsalternative, also was die Anschaffungssumme am Kapitalmarkt gebracht hätte: EVᵤ = I₀ · (1 + i)ᵀ. Ist EV der Investition größer als EVᵤ, lohnt sie sich. Endwert- und Kapitalwertkriterium führen immer zur gleichen Entscheidung."
+    },
+    {
+     "typ": "beispiel",
+     "titel": "Beispiel Endwert (Folie 55–57)",
+     "gegeben": [
+      [
+       "Z = (−1.000; 1.200; 1.500; 1.300)",
+       "Zahlungen t₀ bis t₃"
+      ],
+      [
+       "i = 10 %",
+       ""
+      ]
+     ],
+     "rechnung": [
+      "EV = 1.200 · 1,1² + 1.500 · 1,1 + 1.300 = **4.402**",
+      "EVᵤ = 1.000 · 1,1³ = **1.331**",
+      "4.402 > 1.331 → durchführen",
+      "Abgezinst: (4.402 − 1.331) · 1,1⁻³ = 2.307,29 = Kapitalwert"
+     ]
     },
     {
      "typ": "achtung",
@@ -712,7 +748,7 @@
       "mit Steuern: Anleihe 1.000 + 100 · 0,75 = **1.075 €**",
       "mit Steuern: Wertpapier 1.000 + 100 = **1.100 €**"
      ],
-     "fazit": "Mit Steuern ist das Wertpapier besser, obwohl beide vorher gleich gut waren. Die Steuer ist hier nicht entscheidungsneutral."
+     "fazit": "Mit Steuern ist das Wertpapier besser, obwohl beide vorher gleich gut waren. Die Steuer ist hier nicht entscheidungsneutral. Ertel nennt das einen **Bemessungsgrundlageneffekt**: Die Dividende bleibt bei der Bemessungsgrundlage außen vor."
     },
     {
      "typ": "frage",
@@ -1213,8 +1249,25 @@
     },
     {
      "typ": "frage",
-     "titel": "Was folgt aus der Gruppe?",
-     "inhalt": "Bei Überschusseinkünften zählt, wann das Geld fließt: das Zufluss- und Abflussprinzip nach § 11 EStG. Gewinneinkünfte werden meist über eine Bilanz ermittelt. Dort wird periodengerecht abgegrenzt, also dem Jahr zugeordnet, zu dem der Vorgang wirtschaftlich gehört."
+     "titel": "Was folgt aus der Gruppe? (Folie 92 – wichtige Übersicht)",
+     "inhalt": "Hinter den beiden Gruppen stehen zwei Theorien. Bei den **Gewinneinkünften** gilt die **Reinvermögenszugangstheorie**: Alles wird besteuert, auch Wertänderungen und der Verkauf des Vermögens selbst. Ermittelt wird der Gewinn in der Regel per Betriebsvermögensvergleich (Bilanz), ausnahmsweise per Einnahmen-Überschuss-Rechnung (§ 4 Abs. 3 EStG).\nBei den **Überschusseinkünften** gilt die **Quellentheorie**: Besteuert werden nur die „Früchte“, also Einnahmen aus der Nutzung des Vermögens. Der Verkauf des Vermögens selbst ist nur steuerpflichtig, wenn das Gesetz es ausdrücklich anordnet, z. B. bei privaten Veräußerungsgeschäften. Ermittelt wird per Überschussrechnung nach dem Zufluss- und Abflussprinzip (§ 11 EStG)."
+    },
+    {
+     "typ": "tabelle",
+     "zeilen": [
+      [
+       "Gewinneinkünfte",
+       "Reinvermögenszugangstheorie · Betriebsvermögensvergleich (Ausnahme EÜR) · Verkauf von Vermögen immer steuerpflichtig"
+      ],
+      [
+       "Überschusseinkünfte",
+       "Quellentheorie · Überschussrechnung nach § 11 EStG · Verkauf nur steuerpflichtig, wenn das Gesetz es anordnet"
+      ]
+     ],
+     "kopf": [
+      "Gruppe",
+      "Merkmale"
+     ]
     },
     {
      "typ": "frage",
@@ -1235,7 +1288,8 @@
       "Gewinneinkünfte: Land- und Forstwirtschaft, Gewerbebetrieb, selbständige Arbeit.",
       "Überschusseinkünfte: nichtselbständige Arbeit, Kapitalvermögen, Vermietung und Verpachtung, sonstige Einkünfte.",
       "Gewinn = Betriebseinnahmen − Betriebsausgaben.",
-      "Überschuss = Einnahmen − Werbungskosten; hier gilt das Zufluss- und Abflussprinzip."
+      "Überschuss = Einnahmen − Werbungskosten; hier gilt das Zufluss- und Abflussprinzip.",
+      "Gewinneinkünfte folgen der Reinvermögenszugangstheorie, Überschusseinkünfte der Quellentheorie."
      ],
      "zuordnen": [
       [
@@ -1257,6 +1311,10 @@
       [
        "§ 21 EStG",
        "Vermietung und Verpachtung, z. B. Mieteinnahmen aus einer Wohnung"
+      ],
+      [
+       "Quellentheorie",
+       "Bei Überschusseinkünften werden nur die „Früchte“ aus der Nutzung des Vermögens besteuert"
       ]
      ],
      "luecken": [
@@ -1717,6 +1775,11 @@
     },
     {
      "typ": "frage",
+     "titel": "Welche Werbungskosten nennt das Gesetz? (§ 9 Abs. 1 S. 3 EStG – im Gesetz markieren)",
+     "inhalt": "Werbungskosten sind „auch“ – die Aufzählung ist also **nicht abschließend**: Nr. 1 Schuldzinsen, Nr. 2 Grundsteuer, Nr. 3 Beiträge zu Berufsverbänden, Nr. 4 Wege zur ersten Tätigkeitsstätte, Nr. 5 Mehraufwendungen (doppelte Haushaltsführung, Verpflegung), Nr. 6 Arbeitsmittel, Nr. 7 Abschreibungen (AfA). Kosten für ein Studium sind nach § 9 Abs. 6 EStG nur Werbungskosten, wenn vorher schon eine Erstausbildung abgeschlossen wurde oder das Studium im Rahmen eines Dienstverhältnisses stattfindet."
+    },
+    {
+     "typ": "frage",
      "titel": "In welches Jahr gehört eine Zahlung? (§ 11 EStG)",
      "inhalt": "Es entscheidet der Geldfluss: Einnahmen zählen im Jahr, in dem sie zufließen, Ausgaben im Jahr, in dem sie abfließen."
     },
@@ -1760,7 +1823,8 @@
       "Werbungskosten sind beruflich veranlasste Ausgaben (§ 9 EStG).",
       "Sie werden bei den Überschusseinkünften abgezogen.",
       "Bei Gewinneinkünften heißt das Gegenstück Betriebsausgaben.",
-      "Kosten der privaten Lebensführung sind nicht abziehbar (§ 12 EStG)."
+      "Kosten der privaten Lebensführung sind nicht abziehbar (§ 12 EStG).",
+      "Die Aufzählung in § 9 Abs. 1 S. 3 EStG ist nicht abschließend („auch“)."
      ],
      "zuordnen": [
       [
@@ -1823,6 +1887,30 @@
      ],
      "ergebnis": "Einnahme im VZ 02.",
      "merke": "Zahlung UND Fälligkeit müssen beide in der Zone liegen."
+    },
+    {
+     "id": "fall-zufluss-b2",
+     "typ": "fall",
+     "titel": "Miete zwischen den Jahren – Beispiel 2 („Beherrschen!“)",
+     "folien": "247–251",
+     "sachverhalt": "Miete für Dezember t₁ (Fall 1–4) bzw. Januar t₂ (Fall 5–8). Fälligkeit jeweils am 01. (Variante a) oder am 31. (Variante b) des Monats. Gezahlt wird am 10.12.t₁, 29.12.t₁, 07.01.t₂ oder 16.01.t₂.",
+     "frage": "Welchem Jahr ist die Miete jeweils zuzuordnen?",
+     "loesung": [
+      [
+       "Prüfschema",
+       "Liegen Zahlung UND Fälligkeit beide in der Zone 22.12.–10.01.? Ja → Jahr der wirtschaftlichen Zugehörigkeit (§ 11 Abs. 1 S. 2). Nein → Jahr der Zahlung (§ 11 Abs. 1 S. 1)."
+      ],
+      [
+       "Dezembermiete",
+       "1a/1b (gezahlt 10.12.) → t₁ · 2a/2b (29.12.) → t₁ · 3a (07.01., fällig 01.12.) → t₂, keine Ausnahme · 3b (07.01., fällig 31.12.) → t₁, Ausnahme · 4a/4b (16.01.) → t₂"
+      ],
+      [
+       "Januarmiete",
+       "5a/5b (10.12.) → t₁ · 6a (29.12., fällig 01.01.) → t₂, Ausnahme · 6b (29.12., fällig 31.01.) → t₁, keine Ausnahme · 7a/7b (07.01.) → t₂ · 8a/8b (16.01.) → t₂"
+      ]
+     ],
+     "ergebnis": "Die Ausnahme greift nur in 3b und 6a – dort liegen Zahlung und Fälligkeit beide in der Zone.",
+     "merke": "Erst Zahlungstag prüfen, dann Fälligkeit. Nur wenn beide in 22.12.–10.01. liegen, zählt die wirtschaftliche Zugehörigkeit."
     }
    ]
   },
@@ -2082,9 +2170,37 @@
      ]
     },
     {
+     "typ": "frage",
+     "titel": "Ist die Tilgung eines Kredits Werbungskosten? (Selbststudium, F. 265–266)",
+     "inhalt": "Nein. Nur die **Schuldzinsen** sind Werbungskosten, die Tilgung nicht – genauso wenig wie der Kreditbetrag eine Einnahme ist. Die Zinsen zählen aber nur, wenn der Kredit für die Vermietung verwendet wird, z. B. für die Renovierung der vermieteten Wohnung. Ob V genug eigenes Geld gehabt hätte, ist egal. Verwendet er den Kredit privat, sind die Zinsen nicht abziehbar (Veranlassungsprinzip, § 9 Abs. 1 S. 1 EStG)."
+    },
+    {
+     "typ": "beispiel",
+     "titel": "Beispiel (Folie 265–266)",
+     "gegeben": [
+      [
+       "Mieteinnahmen 20.000 €",
+       ""
+      ],
+      [
+       "Schuldzinsen 3.000 €",
+       "Kredit für Renovierung"
+      ],
+      [
+       "Tilgung 4.000 €",
+       "keine Werbungskosten"
+      ]
+     ],
+     "rechnung": [
+      "Einkünfte: 20.000 € − 3.000 € = **17.000 €**"
+     ]
+    },
+    {
      "typ": "achtung",
      "titel": "Achtung: kommt nur als Text",
-     "inhalt": "In der Klausur kommt der Fall nur als Text, ohne Skizze. Lies genau, welche Beträge Einnahmen und welche Werbungskosten sind."
+     "inhalt": "In der Klausur kommt der Fall nur als Text, ohne Skizze. Ein solcher Fall war schon einmal Klausuraufgabe. Lies genau, welche Beträge Einnahmen und welche Werbungskosten sind.",
+     "falsch": "Werbungskosten = 3.000 Zinsen + 4.000 Tilgung",
+     "richtig": "Werbungskosten = 3.000 Zinsen"
     }
    ],
    "puzzle": [
@@ -2977,6 +3093,66 @@
     "Ausschüttung 70,175; 40 % steuerfrei → BMG 60 % = 42,105",
     "ESt 45 % = 18,947; SolZ 5,5 % = 1,042 → 19,989",
     "Gesamt 29,825 + 19,989 = 49,814 → 49,81 %"
+   ]
+  },
+  {
+   "id": "kw-f66",
+   "thema": "kapitalwert",
+   "titel": "Kapitalwert mit Steuern und AfA (Folie 66–69)",
+   "text": "Maschine 15.000 € in t₀, Nutzungsdauer 3 Jahre, Restbuchwert 0, AfA linear. Rückflüsse je 6.100 € in t₁ bis t₃. Kapitalmarktzins i = 10 %, Steuersatz s = 30 %. Berechne den Kapitalwert mit Steuern (Besteuerung bei Real- und Alternativinvestition, mit AfA).",
+   "antwort": 142.3,
+   "toleranz": 0.5,
+   "einheit": "€",
+   "weg": [
+    "AfA = 15.000 ÷ 3 = 5.000 € pro Jahr",
+    "Steuer = 0,3 · (6.100 − 5.000) = 330 € pro Jahr",
+    "Rückfluss nach Steuern = 6.100 − 330 = 5.770 €",
+    "iₛ = 0,1 · (1 − 0,3) = 7 %",
+    "KW = −15.000 + 5.770 · 1,07⁻¹ + 5.770 · 1,07⁻² + 5.770 · 1,07⁻³ = 142,30 € > 0 → durchführen",
+    "Zum Vergleich ohne Steuern: KW = 169,79 €"
+   ]
+  },
+  {
+   "id": "kw-f66-ohne",
+   "thema": "kapitalwert",
+   "titel": "Kapitalwert ohne Steuern (Folie 66–68)",
+   "text": "Maschine 15.000 € in t₀, Rückflüsse je 6.100 € in t₁ bis t₃, i = 10 %. Berechne den Kapitalwert ohne Steuern und ohne Abschreibung.",
+   "antwort": 169.79,
+   "toleranz": 0.5,
+   "einheit": "€",
+   "weg": [
+    "KW = −15.000 + 6.100 · 1,1⁻¹ + 6.100 · 1,1⁻² + 6.100 · 1,1⁻³",
+    "= −15.000 + 5.545,45 + 5.041,32 + 4.583,02 = 169,79 € > 0 → durchführen"
+   ]
+  },
+  {
+   "id": "ev-f55",
+   "thema": "kapitalwert",
+   "titel": "Endwert (Folie 55–57, Selbststudium)",
+   "text": "Zahlungsvektor Z = (−1.000; 1.200; 1.500; 1.300), i = 10 %. Berechne den Endwert der Investition (ohne die Anschaffungsauszahlung) in T = t₃.",
+   "antwort": 4402,
+   "toleranz": 1,
+   "einheit": "€",
+   "weg": [
+    "EV = 1.200 · 1,1² + 1.500 · 1,1¹ + 1.300 · 1,1⁰",
+    "= 1.452 + 1.650 + 1.300 = 4.402 €",
+    "Unterlassungsalternative: EVᵤ = 1.000 · 1,1³ = 1.331 €",
+    "4.402 > 1.331 → durchführen; (4.402 − 1.331) · 1,1⁻³ = 2.307,29 = Kapitalwert"
+   ]
+  },
+  {
+   "id": "vv-f265",
+   "thema": "vermietung",
+   "titel": "Vermietung mit Kredit und Tilgung (Folie 265–266, Selbststudium)",
+   "text": "V erzielt 20.000 € Mieteinnahmen. Für die Renovierung der vermieteten Wohnung hat er einen Kredit aufgenommen: Schuldzinsen 3.000 €, Tilgung 4.000 €. Wie hoch sind die Einkünfte aus Vermietung und Verpachtung?",
+   "antwort": 17000,
+   "toleranz": 1,
+   "einheit": "€",
+   "weg": [
+    "Einnahmen (§ 8 EStG): 20.000 €",
+    "Werbungskosten (§ 9 Abs. 1 S. 3 Nr. 1 EStG): nur die Schuldzinsen 3.000 €",
+    "Tilgung ist keine Werbungskosten (und der Kredit keine Einnahme)",
+    "Einkünfte § 21 EStG = 20.000 − 3.000 = 17.000 €"
    ]
   }
  ]
