@@ -138,12 +138,12 @@
     {
      "id": "modell-1",
      "titel": "Begriffe des Modells",
-     "frage": "Erkläre Anfangsausstattungspunkt, Sicherheitslinie, Erwartungswertgerade und Versicherungsgerade.",
+     "frage": "Wie ist Beckers Versicherungsmodell aufgebaut? Erkläre Anfangsausstattungspunkt, Sicherheitslinie, Erwartungswertgerade und Versicherungsgerade.",
      "kernpunkte": [
-      "A = (W | W − L): unsichere Lage ohne Versicherung",
-      "SL: Wk = Wg, 45°-Linie, kein Risiko",
-      "EWG: gleicher Erwartungswert wie A, Steigung −(1−k)/k",
-      "VG: mit Versicherung erreichbare Punkte, Steigung −(1−p)/p"
+      "Der Anfangsausstattungspunkt A ist die unsichere Lage ohne Versicherung: gesund W, krank W − L.",
+      "Die Sicherheitslinie enthält alle Punkte mit Wk = Wg – die 45°-Linie ohne Risiko.",
+      "Die Erwartungswertgerade enthält alle Punkte mit demselben Erwartungswert wie A; Steigung −(1 − k) / k.",
+      "Die Versicherungsgerade enthält alle Punkte, die der VN mit Versicherung erreichen kann; Steigung −(1 − p) / p."
      ],
      "zuordnen": [
       [
@@ -164,25 +164,24 @@
       ]
      ],
      "luecken": [
-      "Mit Versicherung gilt: Wg = W − {{pS|p·S|p*S}}",
-      "Im kranken Zustand gilt: Wk = W − L − pS + {{S}}",
+      "Mit Versicherung gilt im gesunden Zustand: Wg = W − {{p·S|pS|p*S}}",
+      "Im kranken Zustand gilt: Wk = W − L − p·S + {{S}}",
       "Die Sicherheitslinie ist die {{45°-Linie|45-Grad-Linie|45°|Winkelhalbierende}}."
      ]
     },
     {
      "id": "modell-2",
      "titel": "Faire Prämie",
-     "frage": "Wann ist eine Versicherung fair, und warum liegt dann die Versicherungsgerade auf der Erwartungswertgeraden?",
+     "frage": "Wann ist eine Prämie fair – und was folgt daraus für die Versicherungsgerade?",
      "kernpunkte": [
-      "Fair heißt p = k: Prämie = erwarteter Schaden",
-      "Bei vollständiger Konkurrenz Nullgewinnbedingung: Π = pS − kS = 0",
-      "Dann haben VG und EWG die gleiche Steigung und gehen beide durch A → sie fallen zusammen",
-      "Liegt p > k (Verwaltungskosten, Oligopol), liegt die VG unter der EWG"
+      "Fair heißt p = k: Das VU macht im Erwartungswert keinen Gewinn.",
+      "Das entspricht der Nullgewinnbedingung bei vollständiger Konkurrenz.",
+      "Dann liegt die Versicherungsgerade genau auf der Erwartungswertgeraden.",
+      "Ist p > k, liegt die Versicherungsgerade darunter."
      ],
      "luecken": [
       "Eine faire Prämie liegt vor, wenn {{p = k|p=k|k = p}} gilt.",
-      "Der Gewinn des VU ist Π = pS − {{kS|k·S|k*S}}.",
-      "Wegen Verwaltungskosten verlangt das VU meist p {{>|größer|größer als}} k."
+      "Bei fairer Prämie liegt die Versicherungsgerade auf der {{Erwartungswertgeraden|EWG}}."
      ]
     }
    ]
@@ -307,12 +306,12 @@
     {
      "id": "eusae-1",
      "titel": "Erwartungsnutzen",
-     "frage": "Wie berechnet man den Erwartungsnutzen, und welcher typische Fehler passiert dabei?",
+     "frage": "Wie berechnest du den Erwartungsnutzen – und welcher Fehler passiert dabei oft?",
      "kernpunkte": [
-      "Erst Nutzen je Zustand berechnen",
-      "dann mit k und (1 − k) gewichten",
-      "nicht die Wurzel aus dem Erwartungswert ziehen",
-      "EW(U) < U(EW) zeigt Risikoaversion"
+      "Zuerst den Nutzen in jedem Zustand berechnen.",
+      "Dann mit k und 1 − k gewichten und addieren: EU = k · u(Wk) + (1 − k) · u(Wg).",
+      "Typischer Fehler: zuerst den Erwartungswert bilden und dann die Wurzel ziehen.",
+      "Risikoprämie = Erwartungswert − Sicherheitsäquivalent."
      ],
      "zuordnen": [
       [
@@ -341,12 +340,12 @@
     {
      "id": "eusae-2",
      "titel": "Sicherheitsäquivalent",
-     "frage": "Was ist das Sicherheitsäquivalent, und wie entscheidest du damit, ob sich eine Versicherung lohnt?",
+     "frage": "Was ist das Sicherheitsäquivalent – und wie entscheidest du damit, ob sich eine Versicherung lohnt?",
      "kernpunkte": [
-      "Sichere Vermögenslage (auf der SL) mit gleichem Nutzen wie die unsichere",
-      "SÄ durch Umkehrung der Nutzenfunktion aus EU",
-      "Zahlungsbereitschaft W − SÄ mit der verlangten Prämie vergleichen",
-      "Gegenprobe: Nutzen mit Versicherung > EU ohne → abschließen"
+      "Das Sicherheitsäquivalent ist das sichere Vermögen, das genauso viel Nutzen bringt wie die unsichere Lage.",
+      "Man findet es, indem man die Nutzenfunktion umkehrt: SÄ = u⁻¹(EU).",
+      "Die höchste Prämie, die der VN zahlt, ist W − SÄ.",
+      "Liegt die verlangte Prämie darunter, lohnt sich die Versicherung."
      ]
     }
    ]
@@ -392,12 +391,12 @@
     {
      "id": "risiko-1",
      "titel": "Drei Risikoeinstellungen",
-     "frage": "Erkläre Risikoaversion, Risikoneutralität und Risikofreude im Versicherungsmodell.",
+     "frage": "Woran erkennt man Risikoaversion, Risikoneutralität und Risikofreude?",
      "kernpunkte": [
-      "avers: SÄ unter EWG, verzichtet auf Erwartungswert für Sicherheit",
-      "neutral: SÄ = EW, IK sind Geraden (Annahme für VU)",
-      "freudig: SÄ über EWG, unsichere Lage mehr wert",
-      "je risikoaverser, desto stärker gekrümmt die IK"
+      "Risikoavers: Das SÄ liegt unter der Erwartungswertgeraden, die Indifferenzkurven sind nach außen gekrümmt.",
+      "Je stärker die Aversion, desto tiefer das SÄ und desto stärker die Krümmung.",
+      "Risikoneutral: SÄ = Erwartungswert, die Indifferenzkurven sind Geraden – übliche Annahme für Versicherer.",
+      "Risikofreudig: Das SÄ liegt über der Erwartungswertgeraden, z. B. bei Casino oder Lotto."
      ],
      "zuordnen": [
       [
@@ -418,9 +417,9 @@
       ]
      ],
      "luecken": [
-      "Bei Risikoaversion liegt das SÄ {{unter|unterhalb}} der EWG.",
-      "Je größer die Risikoaversion, desto stärker ist die {{Krümmung}} der Indifferenzkurve.",
-      "Roulettespielen ist nur mit {{Risikofreude|Risikoliebe}} vereinbar."
+      "Bei Risikoaversion liegt das SÄ {{unter|unterhalb}} der Erwartungswertgeraden.",
+      "Je stärker die Risikoaversion, desto stärker ist die {{Krümmung}} der Indifferenzkurve.",
+      "Roulettespielen erklärt man mit {{Risikofreude|Risikoliebe}}."
      ]
     }
    ]
@@ -467,12 +466,12 @@
     {
      "id": "nachfrage-1",
      "titel": "Drei Fälle",
-     "frage": "Welchen Versicherungsumfang wählt ein risikoaverser VN bei fairer, unfairer und zu niedriger Prämie? Begründe mit dem Modell.",
+     "frage": "Welche Versicherung wählt ein risikoaverser VN bei fairer, unfairer und subventionierter Prämie?",
      "kernpunkte": [
-      "p = k: Vollversicherung S = L auf der SL",
-      "p > k: Teilversicherung S < L, Tangente IK/VG rechts der SL",
-      "p < k: Überversicherung S > L",
-      "Grund: IK hat auf der SL die Steigung der EWG"
+      "Bei p = k wählt er eine Vollversicherung (S = L); das Optimum liegt auf der Sicherheitslinie.",
+      "Bei p > k wählt er eine Teilversicherung (S < L); ein Restrisiko bleibt bei ihm.",
+      "Bei p < k würde er sich überversichern (S > L) – das verbietet das Bereicherungsverbot.",
+      "Grund: Auf der Sicherheitslinie hat die Indifferenzkurve die Steigung der Erwartungswertgeraden."
      ],
      "zuordnen": [
       [
@@ -493,7 +492,7 @@
       ]
      ],
      "luecken": [
-      "Bei fairer Prämie fragt der VN eine {{Vollversicherung}} nach, also S = L.",
+      "Bei fairer Prämie wählt der VN eine {{Vollversicherung}}, also S = L.",
       "Bei unfairer Prämie gilt S {{<|kleiner|kleiner als}} L."
      ]
     }
@@ -561,17 +560,17 @@
     {
      "id": "zeichnen-1",
      "titel": "Zeichnung im Modell",
-     "frage": "Beschreibe Schritt für Schritt, wie du eine vollständige Zeichnung im Versicherungsmodell mit konkreten Werten anfertigst.",
+     "frage": "Wie fertigst du Schritt für Schritt eine Zeichnung im Versicherungsmodell an?",
      "kernpunkte": [
-      "Achsen Wg (waagrecht) und Wk (senkrecht), gleich skaliert",
-      "A = (W | W − L) eintragen, SL als 45°-Linie",
-      "EWG durch A und (W − kL | W − kL), VG durch A und (W − pL | W − pL)",
-      "SÄ auf der SL, Indifferenzkurven durch A/SÄ und durch den Vertragspunkt",
-      "konkrete Werte, Lineal, farbige Stifte"
+      "Beide Achsen gleich skalieren: Wg waagrecht, Wk senkrecht.",
+      "Den Anfangspunkt A eintragen und die Sicherheitslinie als 45°-Linie zeichnen.",
+      "EWG durch A und W − k·L auf der SL, VG durch A und W − p·L auf der SL zeichnen.",
+      "Das SÄ auf der Sicherheitslinie eintragen und Indifferenzkurven durch die Punkte legen.",
+      "Mit den echten Werten, Lineal und farbigen Stiften zeichnen."
      ],
      "luecken": [
-      "Die EWG schneidet die SL im Punkt W − {{kL|k·L|k*L}}.",
-      "Die VG schneidet die SL im Punkt W − {{pL|p·L|p*L}}."
+      "Die EWG schneidet die Sicherheitslinie bei W − {{k·L|kL|k*L}}.",
+      "Die VG schneidet die Sicherheitslinie bei W − {{p·L|pL|p*L}}."
      ]
     },
     {
@@ -781,13 +780,13 @@
     {
      "id": "asym-1",
      "titel": "Prinzipal und Agent",
-     "frage": "Was versteht man unter asymmetrischer Information und einem Agentur-Problem? Nenne zwei Beispiele für Agentur-Beziehungen.",
+     "frage": "Was ist asymmetrische Information – und was ist ein Agentur-Problem?",
      "kernpunkte": [
-      "Zwei Parteien mit unterschiedlichem Informationsstand über vertragsrelevante Dinge",
-      "nur bei Arbeitsteilung",
-      "Prinzipal beauftragt Agenten, kann ihn nicht vollständig beobachten, unvollständiger Vertrag",
-      "Agent hat Anreiz zu opportunistischem Verhalten",
-      "Beispiele: Aktionär–Manager, VU–VN, Autobesitzer–Mechaniker"
+      "Zwei Vertragsparteien wissen unterschiedlich viel über wichtige Dinge.",
+      "Das tritt nur bei Arbeitsteilung auf: Ein Prinzipal beauftragt einen Agenten.",
+      "Der Prinzipal kann das Handeln des Agenten nicht genau beobachten.",
+      "Der Agent hat einen Anreiz, opportunistisch im eigenen Interesse zu handeln.",
+      "Beispiele: VU–VN, Aktionär–Manager, Autobesitzer–Mechaniker."
      ],
      "zuordnen": [
       [
@@ -811,11 +810,11 @@
     {
      "id": "asym-2",
      "titel": "Drei Arten von Agentur-Problemen",
-     "frage": "Grenze Hidden Characteristics, Hidden Action und Hidden Information ab und ordne Adverse Selektion und Moral Hazard zu.",
+     "frage": "Welche drei Formen asymmetrischer Information gibt es – und zu welchem Problem führen sie?",
      "kernpunkte": [
-      "Hidden Characteristics: vor Vertragsschluss, Eigenschaften unbekannt → Adverse Selektion",
-      "Hidden Action: nach Vertragsschluss, Handeln nicht beobachtbar → Moral Hazard",
-      "Hidden Information: Handeln beobachtbar, aber nicht beurteilbar → Moral Hazard"
+      "Hidden Characteristics: Vor Vertragsschluss sind die Eigenschaften unbekannt → Adverse Selektion.",
+      "Hidden Action: Nach Vertragsschluss ist das Handeln nicht beobachtbar → Moral Hazard.",
+      "Hidden Information: Das Handeln ist beobachtbar, aber nicht beurteilbar → Moral Hazard."
      ],
      "zuordnen": [
       [
@@ -840,7 +839,7 @@
       ]
      ],
      "luecken": [
-      "Hidden Characteristics führen zu {{Adverser Selektion|Adverse Selection|adverser Selektion}}.",
+      "Hidden Characteristics führen zu {{Adverser Selektion|Adverse Selektion|adverser Selektion}}.",
       "Hidden Action und Hidden Information führen zu {{Moral Hazard}}."
      ]
     }
@@ -863,6 +862,28 @@
      "typ": "frage",
      "titel": "Was sind Screening und Signaling?",
      "inhalt": "**Screening:** Der schlechter Informierte beschafft sich Informationen, zum Beispiel über Gesundheitsfragen der Versicherung. Nach Vertragsschluss heißt das Monitoring. Es lohnt sich nur, solange der Grenznutzen größer ist als die Grenzkosten.\n**Signaling:** Der besser Informierte gibt glaubwürdig Informationen weiter, zum Beispiel über eine Garantie oder einen Selbstbehalt. Glaubwürdig ist ein Signal nur, wenn ein falsches Signal teurer ist als sein Vorteil. Nach Vertragsschluss heißt das Reporting."
+    },
+    {
+     "typ": "frage",
+     "titel": "Welche Lösung passt zu welchem Problem?",
+     "inhalt": "Als Merkhilfe lassen sich die Lösungen den beiden Problemen zuordnen."
+    },
+    {
+     "typ": "tabelle",
+     "zeilen": [
+      [
+       "Adverse Selektion (vor Vertrag, Hidden Characteristics)",
+       "**Signaling** (Agent sendet Signal, z. B. Abschluss), **Selbstauswahl** (Prinzipal legt mehrere Verträge vor, die Wahl verrät den Typ), **Screening** (Prinzipal prüft, z. B. Assessment Center, Gesundheitsfragen)"
+      ],
+      [
+       "Moral Hazard (nach Vertrag, Hidden Action)",
+       "**Monitoring** (Kontrolle, z. B. Meilensteine), **Bonding** (Pfand oder Selbstbindung), **Anreize** (Erfolgsbeteiligung, Prämien, Strafen)"
+      ]
+     ],
+     "kopf": [
+      "Problem",
+      "Lösungen"
+     ]
     },
     {
      "typ": "frage",
@@ -907,12 +928,13 @@
     {
      "id": "loes-1",
      "titel": "Screening, Signaling, Reputation",
-     "frage": "Erkläre Screening, Signaling und Reputation und nenne je ein Beispiel aus der Versicherung.",
+     "frage": "Was sind Screening, Signaling und Reputation?",
      "kernpunkte": [
-      "Screening: schlechter Informierter beschafft Information (Gesundheitsfragen)",
-      "Grenze: Grenznutzen > Grenzkosten, rationale Ignoranz",
-      "Signaling: besser Informierter sendet glaubwürdiges Signal (Selbstbehalt, Angaben zur Gesundheit)",
-      "Reputation: guter Ruf als schwer fälschbares Signal"
+      "Screening: Der schlechter Informierte beschafft sich Informationen, z. B. Gesundheitsfragen; nach Vertragsschluss heißt das Monitoring.",
+      "Screening lohnt sich nur, solange der Grenznutzen größer ist als die Grenzkosten.",
+      "Signaling: Der besser Informierte gibt glaubwürdig Informationen weiter, z. B. über einen Selbstbehalt.",
+      "Glaubwürdig ist ein Signal nur, wenn ein falsches Signal teurer ist als sein Vorteil.",
+      "Reputation: Ein guter Ruf ist ein starkes, schwer zu fälschendes Signal."
      ],
      "zuordnen": [
       [
@@ -933,19 +955,20 @@
       ]
      ],
      "luecken": [
-      "Ein Signal ist nur glaubwürdig, wenn falsche Signale {{teurer|kostspieliger}} sind als ihr Vorteil.",
-      "Informationsbeschaffung lohnt nur, solange der Grenznutzen größer ist als die {{Grenzkosten}}."
+      "Ein Signal ist nur glaubwürdig, wenn ein falsches Signal {{teurer|kostspieliger}} ist als sein Vorteil.",
+      "Screening lohnt sich nur, solange der Grenznutzen größer ist als die {{Grenzkosten}}."
      ]
     },
     {
      "id": "loes-2",
      "titel": "Anreizkompatible Verträge, Commitment, Bonding",
-     "frage": "Was sind anreizkompatible Verträge? Erkläre Commitment und Bonding mit Beispiel.",
+     "frage": "Welche Lösung passt zu welchem Agentur-Problem? Erkläre auch Commitment und Bonding.",
      "kernpunkte": [
-      "Vertrag, bei dem sich nicht-opportunistisches Verhalten selbst lohnt (sich selbst durchsetzend)",
-      "Selbstauswahl, Belohnung, Bestrafung",
-      "Commitment: Selbstbindung über transaktionsspezifische Investition (Spezialmaschine)",
-      "Bonding: freiwilliges Pfand (Mietkaution, Geld-zurück-Garantie)"
+      "Gegen Adverse Selektion: Signaling, Selbstauswahl und Screening.",
+      "Gegen Moral Hazard: Monitoring, Bonding und Anreize.",
+      "Commitment: Selbstbindung durch eine transaktionsspezifische Investition, z. B. eine Spezialmaschine.",
+      "Bonding: freiwilliges Pfand, das bei Fehlverhalten verfällt, z. B. Mietkaution.",
+      "Der Staat kann zusätzlich eingreifen, z. B. mit Pflichtversicherungen."
      ],
      "zuordnen": [
       [
@@ -964,6 +987,10 @@
        "Pflichtversicherung",
        "Staatliche Maßnahme gegen Marktversagen, z. B. Kfz-Haftpflicht"
       ]
+     ],
+     "luecken": [
+      "Gegen Moral Hazard helfen Monitoring, {{Bonding}} und Anreize.",
+      "Beim {{Bonding}} hinterlegt der Agent freiwillig ein Pfand."
      ]
     }
    ]
@@ -1040,16 +1067,17 @@
     {
      "id": "anreiz-1",
      "titel": "Fester Lohn vs. Profit Sharing",
-     "frage": "Warum ist ein fester Lohn bei Hidden Action nicht anreizoptimal, und wie hilft eine Erfolgsbeteiligung?",
+     "frage": "Warum setzt ein fester Lohn bei Hidden Action keinen Anreiz – und wie hilft eine Erfolgsbeteiligung?",
      "kernpunkte": [
-      "Bei festem Lohn bringt hoher Einsatz dem Agenten nur Kosten",
-      "M wählt geringen Einsatz, E bekommt weniger",
-      "Erfolgsbeteiligung belohnt das Ergebnis hohen Einsatzes",
-      "Beispiel 10 % Beteiligung: M 1.100 statt 750, E 13.500 statt 7.000"
+      "Bei festem Lohn bringt hoher Einsatz dem Mitarbeiter nur Kosten, er wählt geringen Einsatz.",
+      "Der Eigentümer bekommt dann nur 7.000.",
+      "Bei 10 % Erfolgsbeteiligung verdient der Mitarbeiter mit hohem Einsatz 1.100 statt 750.",
+      "Er wählt hohen Einsatz, und der Eigentümer bekommt 13.500.",
+      "Die Erfolgsbeteiligung bringt die Ziele von Prinzipal und Agent in Einklang."
      ],
      "luecken": [
-      "Bei festem Lohn von 500 € wählt M {{geringen|niedrigen}} Einsatz.",
-      "Bei L = 0,1 · Erlös verdient M bei hohem Einsatz {{1.100|1100}} €."
+      "Bei festem Lohn wählt M {{geringen|niedrigen}} Einsatz.",
+      "Bei 10 % Beteiligung verdient M mit hohem Einsatz {{1.100|1100}}."
      ]
     }
    ]
@@ -1096,13 +1124,13 @@
     {
      "id": "akerlof-1",
      "titel": "Warum Lemons den Markt verdrängen",
-     "frage": "Warum werden „Lemons“ nicht einfach zu einem niedrigen, ihrem Wert entsprechenden Preis gehandelt? Welche Art von Marktversagen ist das?",
+     "frage": "Warum verdrängen „Lemons“ die guten Autos – und welche Art von Marktversagen ist das?",
      "kernpunkte": [
-      "Käufer erkennen Qualität nicht (asymmetrische Information)",
-      "zahlen nur Durchschnittspreis",
-      "gute Anbieter ziehen sich zurück → Qualität und Preis sinken weiter",
-      "im Extremfall Marktzusammenbruch",
-      "Marktversagen durch Adverse Selektion"
+      "Käufer erkennen die Qualität nicht und zahlen nur einen Durchschnittspreis.",
+      "Für gute Autos ist der zu niedrig, ihre Besitzer ziehen sich zurück.",
+      "Dadurch sinken Durchschnittsqualität und Preis weiter.",
+      "Am Ende verdrängt schlechte Qualität die gute.",
+      "Das ist Marktversagen durch asymmetrische Information, genauer Adverse Selektion."
      ],
      "zuordnen": [
       [
@@ -1124,18 +1152,18 @@
      ],
      "luecken": [
       "Bei Akerlof verdrängt schlechte Qualität die {{gute|gute Qualität}}.",
-      "Als Gegenmaßnahme nennt Akerlof z. B. {{Garantien|Garantie|Marken|Lizenzen}}."
+      "Käufer zahlen nur einen {{Durchschnittspreis}}."
      ]
     },
     {
      "id": "akerlof-2",
      "titel": "Versicherung, Minderheiten, Gegenmaßnahmen",
-     "frage": "Beschreibe Akerlofs Beobachtungen auf Versicherungsmärkten und auf dem Arbeitsmarkt für Minderheiten und nenne seine Gegenmaßnahmen.",
+     "frage": "Wo zeigt Akerlof das Problem noch – und was hilft dagegen?",
      "kernpunkte": [
-      "Versicherung: über 65-Jährige, Prämie für Durchschnittsrisiko, Gesunde steigen aus, Teufelskreis",
-      "Minderheiten: statistische Diskriminierung über Gruppenmerkmale",
-      "auch Leistungsfähige schlechter bezahlt, Bildung lohnt weniger",
-      "Gegenmaßnahmen: Garantien, Marken, Lizenzen/Zertifikate, Händler/Prüfer"
+      "Krankenversicherung für über 65-Jährige: Die Prämie richtet sich nach dem Durchschnittsrisiko, Gesunde steigen aus, die Prämie steigt.",
+      "Arbeitsmarkt für Minderheiten: Arbeitgeber greifen auf Gruppenmerkmale zurück (statistische Diskriminierung).",
+      "Dadurch werden auch Leistungsfähige schlechter bezahlt, und Bildung lohnt sich weniger.",
+      "Gegenmaßnahmen: Garantien, Marken, Lizenzen und Zertifikate, Händlerketten, unabhängige Prüfer, Gruppenversicherungen."
      ]
     }
    ]
@@ -1187,12 +1215,12 @@
     {
      "id": "as-1",
      "titel": "Separations- und Pool-Gleichgewicht",
-     "frage": "Erkläre Separations- und Pool-Gleichgewicht. Warum sind beide bei symmetrischer Information effizient?",
+     "frage": "Was sind Separations- und Pool-Gleichgewicht – und warum sind beide bei symmetrischer Information effizient?",
      "kernpunkte": [
-      "Separations-GG: jede Gruppe fair voll versichert (pg = κg, ph = κh)",
-      "Pool-GG: eine Durchschnittsprämie p = λκh + (1 − λ)κg für alle",
-      "bei symmetrischer Information wählen alle Vollversicherung zu fairer Prämie",
-      "effizient: kein Risiko bleibt beim risikoaversen VN"
+      "Separationsgleichgewicht: Jede Risikogruppe bekommt eine faire Vollversicherung (pg = κg, ph = κh).",
+      "Pool-Gleichgewicht: Alle zahlen die Durchschnittsprämie p = λκh + (1 − λ)κg.",
+      "Bei symmetrischer Information sind alle voll versichert, und zwar zu fairer Prämie.",
+      "Effizient heißt: Beim risikoaversen VN bleibt kein Risiko."
      ],
      "zuordnen": [
       [
@@ -1220,17 +1248,17 @@
     {
      "id": "as-2",
      "titel": "Warum Adverse Selection zu Marktversagen führt",
-     "frage": "Warum kommt bei asymmetrischer Information weder das effiziente Separations- noch ein stabiles Pool-Gleichgewicht zustande? Welches Gleichgewicht ist bestenfalls möglich?",
+     "frage": "Warum gibt es bei asymmetrischer Information kein effizientes Gleichgewicht?",
      "kernpunkte": [
-      "faires Separations-GG: alle geben sich als g aus, VU bieten g-Vertrag nicht an",
-      "Pool mit freier Deckung: g unter-, h überversichert → Verlust für VU",
-      "Pool mit fester Deckung: Konkurrent lockt g weg, λ steigt → instabil",
-      "bestenfalls ineffizientes Separations-GG: Teilversicherung für g",
-      "bei hohem Anteil g evtl. gar kein stabiles GG"
+      "Faires Separationsgleichgewicht: Alle geben sich als niedriges Risiko aus, das VU bietet den g-Vertrag nicht an.",
+      "Pool mit frei wählbarer Deckung: Niedrige Risiken versichern sich unter, hohe über – die VU machen Verlust.",
+      "Pool mit fester Deckung: Ein Konkurrent lockt die niedrigen Risiken weg, λ steigt – instabil.",
+      "Bestenfalls entsteht ein ineffizientes Separationsgleichgewicht mit Teilversicherung für die niedrigen Risiken.",
+      "Bei hohem Anteil niedriger Risiken gibt es eventuell gar kein stabiles Gleichgewicht."
      ],
      "luecken": [
-      "Im ineffizienten Separations-GG bekommen die g-Typen nur eine {{Teilversicherung}}.",
-      "Bei freier Deckung im Pool wählen die h-Typen eine {{Überversicherung}}."
+      "Im ineffizienten Separationsgleichgewicht bekommen die niedrigen Risiken nur eine {{Teilversicherung}}.",
+      "Bei frei wählbarer Deckung versichern sich die hohen Risiken {{über|Überversicherung}}."
      ]
     },
     {
@@ -1315,12 +1343,13 @@
     {
      "id": "mh-1",
      "titel": "Modell und Marktversagen",
-     "frage": "Erkläre das Moral-Hazard-Modell und warum es bei asymmetrischer Information zum Marktversagen kommt.",
+     "frage": "Warum führt Moral Hazard bei asymmetrischer Information zu Marktversagen?",
      "kernpunkte": [
-      "Alle haben κh, Vorsorge mit Kosten V senkt auf κg",
-      "Vorsorge ist effizient: W − V − κg·L > W − κh·L",
-      "symmetrisch: Vertrag mit Vorsorgepflicht, effizient",
-      "asymmetrisch: VN nehmen g-Vertrag, sparen V → VU Verlust → Angebot eingestellt"
+      "Alle VN haben zunächst das hohe Risiko κh, Vorsorge zu Kosten V senkt es auf κg.",
+      "Vorsorge lohnt sich gesamtwirtschaftlich: W − V − κg·L > W − κh·L.",
+      "Bei symmetrischer Information gibt es einen Vertrag mit Vorsorgepflicht – stabil und effizient.",
+      "Bei asymmetrischer Information schließen die VN den g-Vertrag ab, sparen sich aber V.",
+      "Die VU machen Verlust und stellen das Angebot ein – Marktversagen."
      ],
      "zuordnen": [
       [
@@ -1341,130 +1370,22 @@
       ]
      ],
      "luecken": [
-      "Wenn alle defektieren, macht das VU einen {{Verlust|negativen Gewinn}} von (κg − κh)L.",
-      "Ein anreizkompatibler Vertrag gegen Moral Hazard ist eine {{Teilversicherung}}."
+      "Wenn alle sich die Vorsorge sparen, macht das VU einen {{Verlust}}.",
+      "Das VU sieht nicht, ob der VN vorsorgt – das ist {{Hidden Action}}."
      ]
     },
     {
      "id": "mh-2",
      "titel": "Lösungen und ihre Grenzen",
-     "frage": "Welche Vertragsangebote haben die VU gegen Moral Hazard, und warum bleibt der Markt trotzdem ineffizient?",
+     "frage": "Welche Verträge bleiben den VU gegen Moral Hazard – und warum bleibt der Markt trotzdem ineffizient?",
      "kernpunkte": [
-      "Nur h-Verträge: Nullgewinn, aber kein Vorsorgeanreiz oder Verzicht auf Versicherung",
-      "Teilversicherung: Vorsorge lohnt sich wieder",
-      "aber Nutzen sinkt, Restrisiko beim risikoaversen VN",
-      "→ Marktversagen oder Ineffizienz ist unvermeidbar"
-     ]
-    }
-   ]
-  },
-  {
-   "id": "provisionsabgabeverbot",
-   "ast": "Versicherungsvertrieb",
-   "titel": "Warum gibt es das Provisionsabgabeverbot?",
-   "folien": "127–133 (Folien als Bild, Inhalt ergänzt)",
-   "art": "wissen",
-   "relevanz": "kern",
-   "ansehen": [
-    {
-     "typ": "frage",
-     "titel": "Was ist das Provisionsabgabeverbot?",
-     "inhalt": "Es verbietet Vermittlern, Teile ihrer Provision als Rabatt an den Kunden weiterzugeben. Seit der Umsetzung der Versicherungsvertriebsrichtlinie (IDD) 2017/2018 steht es in § 48b VAG."
-    },
-    {
-     "typ": "frage",
-     "titel": "Was wird in der Klausur verlangt?",
-     "inhalt": "In Probeklausur 1 sollst du als GDV-Präsident ein kurzes Statement für die Beibehaltung halten – mit mindestens fünf Argumenten aus der Literatur (GDV, AVL, Schiller)."
-    },
-    {
-     "typ": "tabelle",
-     "zeilen": [
-      [
-       "Beratungsqualität",
-       "Wettbewerb soll über Beratung und Produktqualität laufen, nicht über Rabatte; sonst lohnt es sich, Verträge mit dem größten Rabattspielraum zu verkaufen statt bedarfsgerecht"
-      ],
-      [
-       "Fehlanreize vermeiden",
-       "Rabatte locken zu Abschlüssen und Umdeckungen um des Rabatts willen; Gefahr von Provisionsschinderei und hohen Stornoquoten"
-      ],
-      [
-       "Gleichbehandlung",
-       "gleiche Prämie für gleiches Risiko; verhandlungsstarke Kunden sollen nicht besser gestellt werden"
-      ],
-      [
-       "Finanzierung der Betreuung",
-       "die Provision bezahlt auch Betreuung und Schadenservice über die Laufzeit; wird sie abgegeben, fehlt das Geld dafür"
-      ],
-      [
-       "Vermittlerlandschaft",
-       "Rabattschlachten gefährden vor allem kleine Vermittler und damit flächendeckende Beratung"
-      ],
-      [
-       "Stabilität und Verbraucherschutz",
-       "kein ruinöser Preiswettbewerb; Kunden werden vor schlecht beratenen Billigabschlüssen geschützt"
-      ]
+      "Nur h-Verträge: Nullgewinn ist möglich, aber es gibt keinen Vorsorgeanreiz.",
+      "Teilversicherung: Mit Restrisiko lohnt sich Vorsorge wieder, der Vertrag ist anreizkompatibel.",
+      "Aber der Nutzen sinkt, weil der risikoaverse VN ein Restrisiko trägt.",
+      "Bei Moral Hazard kommt es zwangsläufig zu Marktversagen oder Ineffizienz."
      ],
-     "kopf": [
-      "Argument dafür",
-      "Inhalt"
-     ]
-    },
-    {
-     "typ": "frage",
-     "titel": "Was sagen die Gegner?",
-     "inhalt": "Der Verbraucherzentrale Bundesverband (VZBV) kritisiert, dass das Verbot den Wettbewerb einschränkt, Kunden nicht über Kosten verhandeln können und die Honorarberatung erschwert wird."
-    },
-    {
-     "typ": "achtung",
-     "titel": "Achtung: Folien noch abgleichen",
-     "inhalt": "Beckers Folien zu Kapitel 4 liegen nur als Bild im Skript vor. Die Argumente stammen aus der Debatte in seiner Literaturliste und sollten mit seinen Folien 127–133 abgeglichen werden."
-    }
-   ],
-   "puzzle": [
-    "Wettbewerb über Beratung, nicht Rabatt",
-    "Provision finanziert Betreuung"
-   ],
-   "karten": [
-    {
-     "id": "pav-1",
-     "titel": "Argumente für das Verbot",
-     "frage": "Halte als GDV-Präsident ein kurzes Statement für die Beibehaltung des Provisionsabgabeverbots mit mindestens fünf Argumenten.",
-     "kernpunkte": [
-      "Beratungsqualität statt Rabattwettbewerb",
-      "Vermeidung von Fehlanreizen, Umdeckungen und Stornos",
-      "Gleichbehandlung der Versicherungsnehmer",
-      "Provision finanziert Betreuung über die Laufzeit",
-      "Schutz der Vermittlerlandschaft/flächendeckende Beratung",
-      "Verbraucherschutz vor ruinösem Preiswettbewerb"
-     ],
-     "zuordnen": [
-      [
-       "Beratungsqualität",
-       "Vermittler sollen nach Bedarf beraten und nicht danach, bei welchem Vertrag der größte Rabatt möglich ist"
-      ],
-      [
-       "Gleichbehandlung",
-       "Gleiches Risiko soll gleich viel kosten, egal wie gut ein Kunde verhandeln kann"
-      ],
-      [
-       "Betreuungsfinanzierung",
-       "Die Provision bezahlt auch Service und Schadenbetreuung während der ganzen Vertragslaufzeit"
-      ],
-      [
-       "Fehlanreize",
-       "Rabatte verleiten zu Abschlüssen und Umdeckungen nur wegen des Preisnachlasses"
-      ]
-     ]
-    },
-    {
-     "id": "pav-2",
-     "titel": "Gegenargumente und Rechtslage",
-     "frage": "Welche Argumente bringen Verbraucherschützer gegen das Provisionsabgabeverbot vor, und wo ist es heute geregelt?",
-     "kernpunkte": [
-      "Einschränkung des Preiswettbewerbs",
-      "Kunden können über die Provision nicht verhandeln",
-      "erschwert Honorarberatung",
-      "seit IDD-Umsetzung gesetzlich in § 48b VAG"
+     "luecken": [
+      "Ein anreizkompatibler Vertrag gegen Moral Hazard ist eine {{Teilversicherung}}."
      ]
     }
    ]

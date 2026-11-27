@@ -47,12 +47,12 @@
     {
      "id": "aktie-1",
      "titel": "Rechte und Risiken",
-     "frage": "Welche Rechte hat ein Aktionär, welche Risiken trägt er, und wie unterscheidet er sich von einem Anleihegläubiger?",
+     "frage": "Welche Rechte hat ein Aktionär, welche Risiken trägt er – und was unterscheidet ihn vom Anleihegläubiger?",
      "kernpunkte": [
-      "Miteigentümer der Firma",
-      "Stimmrecht, Dividende, Bezugsrecht",
-      "Risiken: Kursverlust, Dividendenausfall, Insolvenz",
-      "Gläubiger hat festen Anspruch auf Zins und Rückzahlung, Aktionär nicht"
+      "Wer eine Aktie kauft, ist Miteigentümer der Firma.",
+      "Rechte: Stimmrecht, Anteil am Gewinn (Dividende) und Bezugsrecht.",
+      "Risiken: Der Kurs kann fallen, die Dividende ausfallen, die Firma pleitegehen.",
+      "Ein Anleihegläubiger hat einen festen Anspruch auf Zins und Rückzahlung, ein Aktionär nicht."
      ],
      "zuordnen": [
       [
@@ -71,6 +71,10 @@
        "innerer Wert",
        "Was die Firma wirklich wert ist – unabhängig vom aktuellen Kurs"
       ]
+     ],
+     "luecken": [
+      "Wer eine Aktie kauft, ist {{Miteigentümer|Eigentümer}} der Firma.",
+      "Der {{innere Wert}} ist das, was die Firma wirklich wert ist."
      ]
     }
    ]
@@ -188,12 +192,12 @@
     {
      "id": "index-1",
      "titel": "Gewichtung",
-     "frage": "Erkläre den Unterschied zwischen preis- und kapitalisierungsgewichtetem Index und zwischen Performance- und Kursindex mit je einem Beispiel.",
+     "frage": "Wie unterscheiden sich preis- und kapitalisierungsgewichtete Indizes – und Performance- und Kursindex?",
      "kernpunkte": [
-      "preisgewichtet: nur Kurs zählt (Dow Jones)",
-      "kapitalisierungsgewichtet: Kurs × Anzahl Aktien (DAX)",
-      "Performanceindex: Dividenden reinvestiert (DAX)",
-      "Kursindex: nur Kurse (Euro Stoxx 50)"
+      "Preisgewichtet: Nur der Kurs zählt, teure Aktien bewegen den Index stärker – z. B. Dow Jones.",
+      "Kapitalisierungsgewichtet: Kurs × Anzahl Aktien zählt, große Firmen bewegen den Index – z. B. DAX.",
+      "Performanceindex: Dividenden werden wieder angelegt – z. B. DAX.",
+      "Kursindex: nur die Kurse – z. B. Dow Jones, Euro Stoxx 50."
      ],
      "zuordnen": [
       [
@@ -214,8 +218,8 @@
       ]
      ],
      "luecken": [
-      "Beim preisgewichteten Index gilt: Summe der Kurse ÷ {{Anzahl der Aktien|Anzahl Aktien|Anzahl}}",
-      "Beim kapitalisierungsgewichteten Index zählt Kurs × {{Anzahl der Aktien|Anzahl Aktien|Aktienanzahl}}"
+      "Beim preisgewichteten Index gilt: Summe der Kurse ÷ {{Anzahl|Anzahl der Aktien|Anzahl Aktien}}",
+      "Beim kapitalisierungsgewichteten Index zählt Kurs × {{Anzahl Aktien|Anzahl der Aktien|Aktienanzahl}}"
      ]
     }
    ]
@@ -361,12 +365,12 @@
     {
      "id": "kgv-1",
      "titel": "KGV und PEG deuten",
-     "frage": "Was sagt das KGV aus, und wie beurteilt man mit dem PEG, ob es gerechtfertigt ist?",
+     "frage": "Was sagt das KGV aus – und wie prüfst du mit dem PEG, ob es gerechtfertigt ist?",
      "kernpunkte": [
-      "KGV = Kurs ÷ Gewinn je Aktie",
-      "nach KGV Jahren ist der Preis aus dem Gewinn verdient",
-      "PEG = KGV ÷ Wachstum in %",
-      "PEG < 1 günstig, = 1 fair, > 1 teuer"
+      "Das KGV zeigt, nach wie vielen Jahren der Kaufpreis aus dem Gewinn zurückverdient ist.",
+      "KGV = Marktkapitalisierung ÷ Gewinn = Kurs ÷ Gewinn je Aktie.",
+      "Das PEG setzt das KGV ins Verhältnis zum Wachstum: PEG = KGV ÷ Wachstum in %.",
+      "PEG unter 1 günstig, gleich 1 fair, über 1 überbewertet."
      ],
      "zuordnen": [
       [
@@ -387,7 +391,7 @@
       ]
      ],
      "luecken": [
-      "KGV = Kurs ÷ {{Gewinn je Aktie|EPS|Gewinn pro Aktie}}",
+      "KGV = Kurs ÷ {{Gewinn je Aktie|Gewinn pro Aktie|EPS}}",
       "PEG = KGV ÷ {{Wachstum|Gewinnwachstum}} in %"
      ]
     }
@@ -501,12 +505,12 @@
     {
      "id": "capm-1",
      "titel": "Wertpapierlinie deuten",
-     "frage": "Erkläre CAPM und Wertpapierlinie. Wann ist eine Aktie über- oder unterbewertet?",
+     "frage": "Welche Rendite muss eine Aktie für ihr Risiko bringen? Erkläre CAPM und Wertpapierlinie.",
      "kernpunkte": [
-      "E(r) = r_f + β · MP",
-      "β = Schwankung relativ zum Markt, Markt hat β = 1",
-      "MP = E(r_M) − r_f, nicht die Marktrendite",
-      "über SML unterbewertet, unter SML überbewertet"
+      "β misst, wie stark eine Aktie im Vergleich zum Markt schwankt; der Markt hat β = 1.",
+      "Erwartete Rendite: E(rᵢ) = r_f + βᵢ · MP.",
+      "MP = E(r_M) − r_f ist nur der Aufschlag, nicht die Marktrendite.",
+      "Über der Wertpapierlinie ist eine Aktie unterbewertet, darunter überbewertet."
      ],
      "zuordnen": [
       [
@@ -528,7 +532,8 @@
      ],
      "luecken": [
       "E(r) = r_f + β · {{MP|Marktrisikoprämie}}",
-      "Das Marktportfolio hat ein β von {{1|eins}}."
+      "Der Markt hat ein β von {{1|eins}}.",
+      "Liegt eine Aktie über der Wertpapierlinie, ist sie {{unterbewertet}}."
      ]
     }
    ]
@@ -641,12 +646,12 @@
     {
      "id": "dcf-1",
      "titel": "DCF-Verfahren",
-     "frage": "Erkläre das DCF-Verfahren und die Rolle des Fortführungswerts.",
+     "frage": "Wie berechnest du den Unternehmenswert mit DCF – und welche Rolle spielt der Fortführungswert?",
      "kernpunkte": [
-      "Unternehmenswert = Barwert aller künftigen Cashflows",
-      "Detailphase: jeden CF einzeln abzinsen",
-      "Fortführungswert als ewige Rente mit Wachstum: CFₙ ÷ (i − w)",
-      "FW ebenfalls auf heute abzinsen; höherer Zins → niedrigerer Wert"
+      "Ein Unternehmen ist so viel wert wie alle künftigen Cashflows, abgezinst auf heute.",
+      "Die Cashflows der nächsten Jahre werden einzeln abgezinst.",
+      "Für alles danach kommt der Fortführungswert dazu: FW = CFₙ ÷ (i − w) – meist der größte Teil.",
+      "Auch der FW wird auf heute abgezinst; steigt der Zins, sinkt der Unternehmenswert."
      ],
      "luecken": [
       "Der Fortführungswert ist FW = CFₙ ÷ (i − {{w|Wachstum}})",
@@ -692,11 +697,11 @@
     {
      "id": "analyse-1",
      "titel": "Analysearten",
-     "frage": "Grenze Fundamentalanalyse, technische und quantitative Analyse voneinander ab.",
+     "frage": "Welche drei Arten der Aktienanalyse gibt es?",
      "kernpunkte": [
-      "Fundamental: Wirtschaft → Branche → Firma, fairer Wert",
-      "Technisch: nur Kursverlauf und Muster",
-      "Quantitativ: statistische Modelle auf historischen Daten"
+      "Fundamentalanalyse: von der Wirtschaft über die Branche zur Firma – am Ende steht ein fairer Wert.",
+      "Technische Analyse: Nur der Kursverlauf zählt, man sucht nach Mustern.",
+      "Quantitative Analyse: Rechenmodelle werten viele alte Kursdaten statistisch aus."
      ],
      "zuordnen": [
       [
@@ -795,12 +800,12 @@
     {
      "id": "anleihe-1",
      "titel": "Arten von Anleihen",
-     "frage": "Unterscheide Anleihen nach Verzinsung und nach Emittent.",
+     "frage": "Was ist eine Anleihe – und welche Arten gibt es?",
      "kernpunkte": [
-      "Festzins, Floater (Euribor), Stufenzins, Zerobond",
-      "Staat, Unternehmen, Pfandbrief",
-      "Risiko und Zins hängen vom Emittenten ab",
-      "Zerobond: Ertrag aus Differenz zum Nennwert"
+      "Mit einer Anleihe leiht man Geld und bekommt jedes Jahr den Kupon und am Ende den Nennwert.",
+      "Nach Zinsform: Festzins, Floater, Stufenzins, Zerobond.",
+      "Nach Emittent: Staatsanleihe, Unternehmensanleihe, Pfandbrief.",
+      "Kauf unter pari: Rendite über dem Kupon; über pari: darunter."
      ],
      "zuordnen": [
       [
@@ -822,7 +827,8 @@
      ],
      "luecken": [
       "Kaufst du unter pari, liegt die Rendite {{über|höher als}} dem Kupon.",
-      "Ein Namenspapier wird durch {{Abtretung}} übertragen."
+      "Ein Namenspapier wird durch {{Abtretung}} übertragen.",
+      "Ein {{Zerobond}} zahlt keine laufenden Zinsen."
      ]
     }
    ]
@@ -893,12 +899,12 @@
     {
      "id": "kurs-1",
      "titel": "Kurs und Marktzins",
-     "frage": "Warum fällt der Kurs einer Anleihe, wenn der Marktzins steigt?",
+     "frage": "Wie hängen Kurs und Marktzins einer Anleihe zusammen?",
      "kernpunkte": [
-      "Kurs = Barwert aller Zahlungen",
-      "neue Anleihen zahlen höheren Zins",
-      "alte Anleihe mit festem Kupon nur noch günstiger verkäuflich",
-      "rechnerisch: stärkere Abzinsung mit höherem Marktzins"
+      "Der Kurs ist der Barwert aller künftigen Zahlungen, abgezinst mit dem Marktzins.",
+      "Steigt der Marktzins, zahlen neue Anleihen mehr, und die alte wird stärker abgezinst – ihr Kurs fällt.",
+      "Liegt der Kupon über dem Marktzins, ist der Kurs über 100, sonst darunter.",
+      "Der Nennwert wird nur einmal mit (1 + i)ⁿ abgezinst."
      ],
      "zuordnen": [
       [
@@ -910,8 +916,8 @@
        "Die Anleihe notiert unter 100, weil sie weniger zahlt als der Markt"
       ],
       [
-       "Rentenbarwertfaktor",
-       "Damit werden alle jährlichen Zinszahlungen auf einmal abgezinst"
+       "Nennwert",
+       "Wird am Ende einmal zurückgezahlt und deshalb nur einmal mit (1 + i)ⁿ abgezinst"
       ],
       [
        "Marktzins",
@@ -920,7 +926,7 @@
      ],
      "luecken": [
       "Steigt der Marktzins, {{fällt|sinkt}} der Kurs bestehender Anleihen.",
-      "Die Rückzahlung N wird mit (1 + i) hoch {{n}} abgezinst."
+      "Der Nennwert wird mit (1 + i) hoch {{n}} abgezinst."
      ]
     }
    ]
@@ -1073,12 +1079,13 @@
     {
      "id": "sz-1",
      "titel": "Stückzinsen",
-     "frage": "Was sind Stückzinsen, und wie hängen Dirty und Clean Price zusammen?",
+     "frage": "Was sind Stückzinsen – und wie hängen Dirty und Clean Price zusammen?",
      "kernpunkte": [
-      "Käufer bekommt beim nächsten Termin den vollen Kupon",
-      "zahlt Verkäufer dessen Anteil K · b vorab",
-      "Dirty Price = Clean Price + Stückzinsen",
-      "30/360-Methode bei Möbius"
+      "Wer zwischen zwei Zinsterminen kauft, bekommt beim nächsten Termin den vollen Kupon.",
+      "Deshalb zahlt er dem Verkäufer dessen Anteil vorab: SZ = K · b.",
+      "Dirty Price = Kurs inklusive Stückzinsen, Clean Price = Börsenkurs ohne Stückzinsen.",
+      "Möbius rechnet mit 30 Tagen pro Monat und 360 Tagen pro Jahr.",
+      "n sind alle noch ausstehenden Kupons inklusive des nächsten."
      ],
      "zuordnen": [
       [
@@ -1171,12 +1178,12 @@
     {
      "id": "rendite-1",
      "titel": "Rendite und Kupon",
-     "frage": "Erkläre den Unterschied zwischen Kupon und Rendite und das Vorgehen beim Newton-Verfahren.",
+     "frage": "Was ist die Rendite einer Anleihe – und wie berechnest du sie mit dem Newton-Verfahren?",
      "kernpunkte": [
-      "Kupon = fester Zins auf den Nennwert",
-      "Rendite = tatsächlicher Ertrag auf den Kaufpreis (interner Zinsfuß)",
-      "Newton: PV(i) und PV′(i) aufstellen, Startwert Kupon",
-      "iₖ₊₁ = iₖ − PV/PV′, wiederholen bis PV ≈ 0"
+      "Die Rendite ist der Zins, bei dem der Barwert aller Zahlungen genau dem Kurs entspricht (interner Zinsfuß).",
+      "Ab drei Jahren Laufzeit nähert man sich ihr mit dem Newton-Verfahren an.",
+      "Start mit i₀ = Kupon, dann iₖ₊₁ = iₖ − PV(iₖ) ÷ PV′(iₖ) – meist reichen zwei Schritte.",
+      "Im letzten Jahr kommt Kupon plus Nennwert; PV′ ist immer negativ."
      ],
      "luecken": [
       "Der Newton-Schritt lautet iₖ₊₁ = iₖ − PV(iₖ) ÷ {{PV′(iₖ)|PV'(iₖ)|PV'}}",
@@ -1259,12 +1266,12 @@
     {
      "id": "risiken-1",
      "titel": "Risiken einer Anleihe",
-     "frage": "Nenne die Risiken einer Anleihe und erkläre die Zinsstrukturkurve.",
+     "frage": "Welche Risiken hat eine Anleihe – und was zeigt die Zinsstruktur?",
      "kernpunkte": [
-      "Kursrisiko und Wiederanlagerisiko wirken gegeneinander (Duration)",
-      "Bonitätsrisiko, Rating",
-      "Investment Grade bis BBB, darunter spekulativ",
-      "Zinsstruktur normal, flach, invers"
+      "Kursrisiko: Steigt der Marktzins, fällt der Kurs.",
+      "Wiederanlagerisiko: Fällt der Marktzins, lassen sich die Zinsen schlechter anlegen – beide wirken gegeneinander.",
+      "Bonitätsrisiko: Der Emittent kann nicht zahlen; Ratings bewerten es, ab BB gilt eine Anleihe als spekulativ.",
+      "Zinsstruktur normal (lang = mehr Zins), flach oder invers (kurz = mehr Zins, oft Krisenzeichen)."
      ],
      "zuordnen": [
       [
@@ -1419,12 +1426,12 @@
     {
      "id": "discount-1",
      "titel": "Funktionsweise",
-     "frage": "Erkläre ein Discount-Zertifikat: Wann ist es besser als die Aktie, wann schlechter?",
+     "frage": "Wie funktioniert ein Discount-Zertifikat – und wann ist es besser als die Aktie?",
      "kernpunkte": [
-      "Aktie mit Rabatt (Discount) kaufen",
-      "Gewinn nach oben durch den Cap begrenzt",
-      "unter dem Indifferenzkurs besser als die Aktie, auch bei fallenden Kursen",
-      "über dem Indifferenzkurs ist die Aktie besser"
+      "Man kauft die Aktie mit Rabatt, dafür ist der Gewinn durch den Cap begrenzt.",
+      "Am Ende bekommt man min(Aktienkurs; Cap).",
+      "Bis zum Indifferenzkurs ist das Zertifikat besser als die Aktie, darüber die Aktie.",
+      "Gerechnet wird mit dem Briefkurs; Discount in % vom Aktienkurs, maximaler Ertrag in % vom Zertifikatspreis."
      ],
      "zuordnen": [
       [
@@ -1445,8 +1452,9 @@
       ]
      ],
      "luecken": [
-      "Der maximale Ertrag in % bezieht sich auf den {{Zertifikatspreis|Briefkurs|Kaufpreis des Zertifikats}}.",
-      "Bei Fälligkeit erhältst du min(S_T; {{Cap}})."
+      "Der maximale Ertrag in % bezieht sich auf den {{Zertifikatspreis|Briefkurs}}.",
+      "Bei Fälligkeit erhältst du min(S_T; {{Cap}}).",
+      "Du kaufst, deshalb rechnest du mit dem {{Briefkurs}}."
      ]
     }
    ]

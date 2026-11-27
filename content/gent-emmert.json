@@ -42,12 +42,12 @@
     {
      "id": "rf-1",
      "titel": "Erlaubte Rechtsformen",
-     "frage": "Welche Rechtsformen dürfen nach § 8 VAG eine Versicherung betreiben, welche nicht – und warum?",
+     "frage": "Welche Rechtsformen dürfen ein Versicherungsunternehmen betreiben – und warum ist das geregelt?",
      "kernpunkte": [
-      "erlaubt: AG/SE, VVaG, öffentlich-rechtliche Versicherer",
-      "nicht: Einzelkaufleute, Personengesellschaften, GmbH, Genossenschaften",
-      "Grund: dauerhaft, ausreichend Kapital, streng beaufsichtigt",
-      "Versicherte müssen sich jahrzehntelang verlassen können"
+      "Versicherte müssen sich oft jahrzehntelang auf ihren Versicherer verlassen können.",
+      "Deshalb erlaubt § 8 VAG nur dauerhafte, kapitalstarke und streng beaufsichtigte Rechtsformen.",
+      "Erlaubt sind AG (auch SE), VVaG und öffentlich-rechtliche Versicherer.",
+      "Nicht erlaubt sind Einzelkaufleute, Personengesellschaften, GmbH und Genossenschaften."
      ],
      "zuordnen": [
       [
@@ -106,12 +106,12 @@
     {
      "id": "sp-1",
      "titel": "Spartentrennung",
-     "frage": "Was besagt das Spartentrennungsprinzip, warum gibt es es, und was gilt beim Rechtsschutz?",
+     "frage": "Was regelt das Spartentrennungsprinzip – und warum?",
      "kernpunkte": [
-      "Leben und substitutive Kranken nicht mit anderen Sparten zusammen",
-      "Schutz der angesparten Gelder, keine Quersubventionierung",
-      "Konzerne mit eigenen Gesellschaften je Sparte",
-      "Rechtsschutz: Schadenregulierung an unabhängiges Unternehmen auslagern (Interessenkonflikt)"
+      "Lebensversicherung und substitutive Krankenversicherung dürfen nicht mit anderen Sparten in einem Unternehmen betrieben werden.",
+      "Das angesparte Geld der Versicherten soll keine anderen Sparten mitfinanzieren – keine Quersubventionierung.",
+      "Deshalb haben Konzerne eigene Gesellschaften je Sparte.",
+      "Beim Rechtsschutz muss ein Kompositversicherer die Schadenregulierung auslagern, um Interessenkonflikte zu vermeiden."
      ],
      "luecken": [
       "Lebensversicherung und {{substitutive Krankenversicherung|Krankenversicherung}} müssen getrennt betrieben werden.",
@@ -157,12 +157,12 @@
     {
      "id": "rm-1",
      "titel": "Objektive und subjektive Merkmale",
-     "frage": "Was sind Risikomerkmale, wozu dienen sie, und wie unterscheidet man objektive und subjektive?",
+     "frage": "Was sind Risikomerkmale – und wofür braucht man sie?",
      "kernpunkte": [
-      "Eigenschaften, die mit Schadenhäufigkeit und -höhe zusammenhängen",
-      "Bildung von Risikoklassen aus gleichartigen Risiken → Prämie",
-      "objektiv: unabhängig vom Verhalten (Bauart, Alter)",
-      "subjektiv: vom Verhalten abhängig (Fahrleistung, Abstellplatz)"
+      "Risikomerkmale sind Eigenschaften, die mit Schadenhäufigkeit und Schadenhöhe zusammenhängen.",
+      "Mit ihnen bildet der Versicherer Risikoklassen – die Grundlage für die Prämie.",
+      "Objektive Merkmale hängen nicht vom Verhalten ab, z. B. Alter oder Bauart.",
+      "Subjektive Merkmale hängen vom Verhalten ab, z. B. Fahrleistung – hier spielt Moral Hazard hinein."
      ],
      "zuordnen": [
       [
@@ -181,6 +181,10 @@
        "Moral Hazard",
        "Der Kunde verhält sich wegen der Versicherung weniger vorsichtig"
       ]
+     ],
+     "luecken": [
+      "Mit Risikomerkmalen bildet der Versicherer {{Risikoklassen}}.",
+      "Die jährliche Fahrleistung ist ein {{subjektives}} Risikomerkmal."
      ]
     }
    ]
@@ -264,10 +268,10 @@
      "titel": "Vier Risikoarten",
      "frage": "Aus welchen Risikoarten setzt sich das Gesamtrisiko eines Versicherers zusammen?",
      "kernpunkte": [
-      "allgemeines Unternehmensrisiko",
-      "versicherungstechnisches Risiko",
-      "Kapitalanlagerisiko",
-      "sonstige/operationelle Risiken"
+      "Allgemeines Unternehmensrisiko, z. B. falsche Strategie.",
+      "Versicherungstechnisches Risiko: Die Schäden fallen anders aus als kalkuliert.",
+      "Kapitalanlagerisiko: Angelegte Gelder verlieren an Wert.",
+      "Sonstige bzw. operationelle Risiken, z. B. IT-Ausfälle."
      ],
      "zuordnen": [
       [
@@ -291,12 +295,12 @@
     {
      "id": "rvu-2",
      "titel": "Versicherungstechnisches Risiko",
-     "frage": "Erkläre die vier Formen des versicherungstechnischen Risikos mit Beispiel.",
+     "frage": "Welche vier Formen hat das versicherungstechnische Risiko?",
      "kernpunkte": [
-      "Zufallsrisiko: Anzahl und Höhe schwanken zufällig",
-      "Änderungsrisiko: Bedingungen ändern sich (Klimawandel, Inflation)",
-      "Irrtumsrisiko: Kalkulation von Anfang an falsch",
-      "asymmetrische Information: Adverse Selektion, Moral Hazard"
+      "Zufallsrisiko: Schäden schwanken zufällig in Anzahl und Höhe.",
+      "Änderungsrisiko: Bedingungen ändern sich nach der Kalkulation, z. B. Klimawandel.",
+      "Irrtumsrisiko: Die Kalkulation ist von Anfang an falsch.",
+      "Asymmetrische Information: Adverse Selektion und Moral Hazard."
      ],
      "zuordnen": [
       [
@@ -378,13 +382,13 @@
     {
      "id": "farny-1",
      "titel": "Fünf Kriterien",
-     "frage": "Nenne und erkläre die fünf Kriterien der Versicherbarkeit nach Farny.",
+     "frage": "Wann ist ein Risiko nach Farny versicherbar?",
      "kernpunkte": [
-      "Zufälligkeit",
-      "Schätzbarkeit",
-      "Eindeutigkeit",
-      "Unabhängigkeit (kein Kumul)",
-      "Größe (tragbare Obergrenze)"
+      "Zufälligkeit: Ob, wann und wie hoch ein Schaden entsteht, ist ungewiss.",
+      "Schätzbarkeit: Wahrscheinlichkeit und Höhe lassen sich schätzen.",
+      "Eindeutigkeit: Es ist klar, was versichert ist.",
+      "Unabhängigkeit: Schäden treten nicht alle gleichzeitig auf – kein Kumul.",
+      "Größe: Der mögliche Schaden bleibt unter einer tragbaren Obergrenze."
      ],
      "zuordnen": [
       [
@@ -456,12 +460,12 @@
     {
      "id": "asym-1",
      "titel": "Adverse Selektion",
-     "frage": "Erkläre Adverse Selektion und zwei Gegenmaßnahmen des Versicherers.",
+     "frage": "Was ist Adverse Selektion – und was hilft dagegen?",
      "kernpunkte": [
-      "vor Vertragsabschluss, Kunde kennt Risiko besser",
-      "Durchschnittsprämie zu teuer für gute Risiken",
-      "gute steigen aus, schlechte bleiben",
-      "Screening (Gesundheitsfragen), Tarifdifferenzierung"
+      "Adverse Selektion entsteht vor Vertragsabschluss: Der Kunde kennt sein Risiko besser.",
+      "Der Versicherer verlangt einen Durchschnittspreis, für gute Risiken ist er zu teuer.",
+      "Gute Risiken verzichten, übrig bleiben die schlechten.",
+      "Dagegen helfen Screening, z. B. Gesundheitsfragen, und Tarifdifferenzierung."
      ],
      "zuordnen": [
       [
@@ -480,18 +484,20 @@
        "Bonus-Malus-System",
        "Schadenfreie Kunden zahlen weniger, z. B. über Schadenfreiheitsklassen in Kfz"
       ]
+     ],
+     "luecken": [
+      "Adverse Selektion entsteht {{vor}} Vertragsabschluss.",
+      "Gesundheitsfragen sind ein Beispiel für {{Screening}}."
      ]
     },
     {
      "id": "asym-2",
      "titel": "Moral Hazard",
-     "frage": "Erkläre Moral Hazard mit Beispiel und nenne drei Gegenmaßnahmen.",
+     "frage": "Was ist Moral Hazard – und was hilft dagegen?",
      "kernpunkte": [
-      "nach Vertragsabschluss weniger vorsichtig",
-      "Beispiel: Fahrrad nicht abgeschlossen",
-      "Selbstbeteiligung",
-      "Obliegenheiten mit Leistungskürzung",
-      "Bonus-Malus/Schadenfreiheitsrabatt"
+      "Moral Hazard entsteht nach Vertragsabschluss: Der Kunde wird weniger vorsichtig, weil er versichert ist.",
+      "Beispiel: das nicht abgeschlossene Fahrrad in der WG.",
+      "Dagegen helfen Selbstbeteiligung, Obliegenheiten mit Leistungskürzung und Bonus-Malus-Systeme."
      ],
      "luecken": [
       "Moral Hazard entsteht {{nach}} Vertragsabschluss.",
@@ -545,12 +551,12 @@
     {
      "id": "aeq-1",
      "titel": "Individuell und kollektiv",
-     "frage": "Erkläre das Äquivalenzprinzip und den Unterschied zwischen individueller und kollektiver Äquivalenz.",
+     "frage": "Was besagt das Äquivalenzprinzip – individuell und kollektiv?",
      "kernpunkte": [
-      "reine Risikoprämie = Erwartungswert der Schäden",
-      "Leistung und Gegenleistung gleichwertig",
-      "individuell: jedes Risiko zahlt genau seinen Erwartungswert",
-      "kollektiv: Bestand insgesamt mindestens Erwartungsschaden"
+      "Die reine Risikoprämie soll dem Erwartungswert der Schäden entsprechen – eine faire Wette.",
+      "Individuell: Jedes einzelne Risiko zahlt genau seinen eigenen Schadenerwartungswert.",
+      "Kollektiv: Der ganze Bestand bringt mindestens so viel Prämie auf, wie Schäden erwartet werden.",
+      "Beispiel Glücksrad: 1/100 · 500 € = 5 € fairer Einsatz."
      ],
      "zuordnen": [
       [
@@ -660,15 +666,15 @@
     {
      "id": "cr-1",
      "titel": "Combined Ratio deuten",
-     "frage": "Was misst die Combined Ratio, wie wird sie berechnet und wie deutest du Werte über und unter 100 %?",
+     "frage": "Was zeigt die Combined Ratio – und wie deutest du sie?",
      "kernpunkte": [
-      "(Schäden + Verwaltungs- + Abschlusskosten) ÷ Nettoprämien",
-      "misst Profitabilität des reinen Versicherungsgeschäfts",
-      "Kapitalerträge nicht enthalten",
-      "unter 100 % Gewinn, über 100 % Verlust (Cashflow Underwriting)"
+      "CR = (Schäden + Verwaltungskosten + Abschlusskosten) ÷ Nettoprämien.",
+      "Sie zeigt, ob das reine Versicherungsgeschäft profitabel ist; Kapitalerträge bleiben außen vor.",
+      "Unter 100 %: Das Versicherungsgeschäft macht Gewinn.",
+      "Über 100 %: Das Kerngeschäft macht Verlust, Gewinn nur über Kapitalerträge."
      ],
      "luecken": [
-      "Eine CR über 100 % bedeutet {{Verlust|einen Verlust}} im Kerngeschäft.",
+      "Eine CR über 100 % bedeutet einen {{Verlust}} im Kerngeschäft.",
       "In der Combined Ratio bleiben die {{Kapitalerträge}} außen vor."
      ]
     }
@@ -735,12 +741,12 @@
     {
      "id": "rpa-1",
      "titel": "RPA und Kriterien",
-     "frage": "Was ist RPA, welchen Nutzen bringt es und wann eignet sich ein Prozess dafür?",
+     "frage": "Was ist RPA – und welche Prozesse eignen sich dafür?",
      "kernpunkte": [
-      "Software, die Programme über die Oberfläche bedient wie ein Mensch",
-      "für wiederkehrende, regelbasierte Aufgaben, ohne tiefe IT-Eingriffe",
-      "Nutzen: Effizienz, Qualität, Kosten, Kundenzufriedenheit",
-      "Kriterien: Volumen, regelbasiert, standardisierter Input, Stabilität, Wirtschaftlichkeit"
+      "RPA ist eine Software, die Programme über die Benutzeroberfläche bedient wie ein Mensch.",
+      "Sie übernimmt wiederkehrende, regelbasierte Aufgaben ohne tiefe Eingriffe in die IT.",
+      "Nutzen: mehr Effizienz und Qualität, geringere Kosten, zufriedenere Kunden.",
+      "Geeignet sind Prozesse mit hohem Volumen, klaren Regeln, standardisiertem Input, Stabilität und Wirtschaftlichkeit."
      ],
      "zuordnen": [
       [
@@ -822,13 +828,13 @@
     {
      "id": "bpmn-1",
      "titel": "Symbole",
-     "frage": "Nenne die Symbole der GENO-BPMN-Notation und ihre Bedeutung.",
+     "frage": "Mit welchen Bausteinen zeichnest du einen Prozess in GENO-BPMN?",
      "kernpunkte": [
-      "Aktivität: Rechteck",
-      "Ereignis: Kreis (Start, Zwischen, Ende)",
-      "Teilprozess: Rechteck mit +",
-      "Gateway: Raute (UND/ODER)",
-      "Datenobjekt und Pool/Lane"
+      "Aktivität: eine einzelne Tätigkeit, als Rechteck.",
+      "Ereignis: Start, Zwischenereignis oder Ende, als Kreis.",
+      "Teilprozess: ausgelagerter Prozessteil, Rechteck mit Plus.",
+      "Gateway: UND- oder ODER-Weiche, als Raute.",
+      "Datenobjekt sowie Pool und Lane für Beteiligte und Abteilungen."
      ],
      "zuordnen": [
       [
