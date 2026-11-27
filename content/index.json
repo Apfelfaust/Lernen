@@ -5,7 +5,8 @@
    "id": "steuerlehre",
    "name": "Steuerlehre · Ertel",
    "klausur": "2026-12-14",
-   "datei": "steuerlehre.json"
+   "datei": "steuerlehre.json",
+   "tour": "tour_steuer.json"
   },
   {
    "id": "bilanzierung",

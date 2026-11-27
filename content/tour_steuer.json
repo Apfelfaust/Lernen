@@ -1,0 +1,688 @@
+{
+ "titel": "Folien-Tour Steuerlehre",
+ "modus": "einfuehrung",
+ "w": 841.92004,
+ "h": 595.32001,
+ "kapitel": [
+  {
+   "titel": "Prolog: Steuerplanung und Steuerwirkung",
+   "stops": [
+    {
+     "img": "tour/steuer/s33.jpg",
+     "folie": 36,
+     "spot": [
+      3.06,
+      28.16,
+      92.58,
+      20.7
+     ],
+     "titel": "Steuerplanungslehre: Wie sollte man handeln?",
+     "text": "Die **Steuerplanungslehre** fragt, wie man sich mit Blick auf die Steuern verhalten **sollte**. Ihr Werkzeug ist das **Kapitalwertkriterium**: Investiere, wenn der Kapitalwert auch nach Steuern positiv ist.",
+     "tid": "planung-wirkung"
+    },
+    {
+     "img": "tour/steuer/s33.jpg",
+     "folie": 36,
+     "spot": [
+      2.83,
+      53.54,
+      80.34,
+      20.3
+     ],
+     "titel": "Steuerwirkungslehre: Wie handeln Menschen tatsächlich?",
+     "text": "Die **Steuerwirkungslehre** beobachtet, wie die Besteuerung das Handeln **tatsächlich** verändert. Man ermittelt das entweder rechnerisch (entscheidungslogisch) oder empirisch, zum Beispiel in Experimenten.",
+     "tid": "planung-wirkung"
+    },
+    {
+     "img": "tour/steuer/s36.jpg",
+     "folie": 39,
+     "spot": [
+      32.21,
+      38.07,
+      57.51,
+      40.5
+     ],
+     "titel": "Beispiel: die Fenstersteuer",
+     "text": "In England wurde früher nach der **Zahl der Fenster** besteuert. Die Menschen bauten daraufhin „Blindfenster“ ein, um Steuern zu sparen. Genau das meint Steuerwirkung: Jede Steuernorm löst ein **Ausweichverhalten** aus.",
+     "tid": "planung-wirkung"
+    }
+   ]
+  },
+  {
+   "titel": "I. Steuern und Investitionsentscheidungen",
+   "stops": [
+    {
+     "img": "tour/steuer/s46.jpg",
+     "folie": 49,
+     "spot": [
+      37.77,
+      27.38,
+      24.23,
+      12.6
+     ],
+     "titel": "Die Kapitalwertformel",
+     "text": "Der **Kapitalwert (KW)** zieht von der Anfangsauszahlung I_0 alle abgezinsten Rückflüsse Z_t ab. Abgezinst wird mit dem Zins i der **Alternativanlage am Kapitalmarkt**. Ist der KW größer als 0, ist die Investition besser als diese Anlage.",
+     "tid": "kapitalwert"
+    },
+    {
+     "img": "tour/steuer/s57.jpg",
+     "folie": 60,
+     "spot": [
+      1.93,
+      26.1,
+      95.3,
+      17.15
+     ],
+     "titel": "Entscheidungsneutralität",
+     "text": "Steuern können eine Investition besser oder schlechter machen. Der Grundsatz der **Entscheidungsneutralität** verlangt aber, dass die Steuer die Wahl **nicht verzerrt**, zum Beispiel bei Rechtsform, Finanzierung oder Standort.",
+     "tid": "neutralitaet"
+    },
+    {
+     "img": "tour/steuer/s63.jpg",
+     "folie": 66,
+     "spot": [
+      5.05,
+      77.76,
+      89.25,
+      7.18
+     ],
+     "titel": "Standardmodell: Zins nach Steuern",
+     "text": "Im **Standardmodell** wird der Kapitalwert um Steuern erweitert. Entscheidend ist diese Zeile: Auch die Alternativanlage wird besteuert. Deshalb rechnet man mit dem **Zins nach Steuern i_s = i · (1 − s)**.",
+     "tid": "kapitalwert"
+    },
+    {
+     "img": "tour/steuer/s65.jpg",
+     "folie": 68,
+     "spot": [
+      2.67,
+      32.58,
+      94.63,
+      16.92
+     ],
+     "titel": "Beispiel ohne Steuern",
+     "text": "Die Maschine kostet 15.000 € und bringt drei Jahre lang je 6.100 €. Abgezinst mit 10 % ergibt sich ein **Kapitalwert von +169,79 €**. Die Investition lohnt sich.",
+     "tid": "kapitalwert"
+    },
+    {
+     "img": "tour/steuer/s66.jpg",
+     "folie": 69,
+     "spot": [
+      2.67,
+      41.17,
+      94.65,
+      21.25
+     ],
+     "titel": "Beispiel mit Steuern: die Rückflüsse",
+     "text": "Mit Steuern wird zuerst die **AfA** von 5.000 € pro Jahr abgezogen. Nur 1.100 € sind Bemessungsgrundlage, darauf 30 % Steuer = 330 €. Die Rückflüsse nach Steuern sinken auf **5.770 €**.",
+     "tid": "kapitalwert"
+    },
+    {
+     "img": "tour/steuer/s66.jpg",
+     "folie": 69,
+     "spot": [
+      2.67,
+      62.49,
+      90.86,
+      11.9
+     ],
+     "titel": "Beispiel mit Steuern: das Ergebnis",
+     "text": "Abgezinst wird jetzt mit **i_s = 10 % · (1 − 0,3) = 7 %**. Der **Kapitalwert sinkt auf +142,30 €**, bleibt aber positiv. Die Investition lohnt sich also auch mit Steuern.",
+     "tid": "kapitalwert"
+    },
+    {
+     "img": "tour/steuer/s73.jpg",
+     "folie": 76,
+     "spot": [
+      1.93,
+      55.45,
+      95.42,
+      17.54
+     ],
+     "titel": "Steuern im Zähler und im Nenner",
+     "text": "Steuern stehen im **Zähler** (Rückflüsse) und im **Nenner** (Zins). Das ist **keine doppelte Berücksichtigung**: Realinvestition und Alternativanlage werden beide besteuert, also passt man beide an.",
+     "tid": "kapitalwert"
+    }
+   ]
+  },
+  {
+   "titel": "II. Grundlagen der Besteuerung",
+   "stops": [
+    {
+     "img": "tour/steuer/s78.jpg",
+     "folie": 81,
+     "spot": [
+      52.26,
+      37.63,
+      43.47,
+      47.87
+     ],
+     "titel": "Warum überhaupt Steuern?",
+     "text": "Nach der **Äquivalenztheorie** (links) zahlt man für eine konkrete Leistung des Staates. Deutschland folgt aber der **Opfertheorie** (hier hell): Steuern finanzieren den Staat allgemein, und jeder zahlt nach seiner **Leistungsfähigkeit**.",
+     "tid": "steuerbegriff"
+    },
+    {
+     "img": "tour/steuer/s85.jpg",
+     "folie": 88,
+     "spot": [
+      15.92,
+      27.88,
+      31.83,
+      18.48
+     ],
+     "titel": "Der Steuerbegriff nach § 3 Abs. 1 AO",
+     "text": "Steuern sind **Geldleistungen ohne Gegenleistung**, die ein öffentlich-rechtliches Gemeinwesen zur Erzielung von Einnahmen erhebt. Genau das unterscheidet sie von **Gebühren und Beiträgen**, denen eine Gegenleistung gegenübersteht.",
+     "tid": "steuerbegriff"
+    },
+    {
+     "img": "tour/steuer/s86.jpg",
+     "folie": 89,
+     "spot": [
+      10.93,
+      27.38,
+      78.39,
+      18.48
+     ],
+     "titel": "Zwei Funktionen der Besteuerung",
+     "text": "Die **Fiskalfunktion** bringt dem Staat Einnahmen, um seine Ausgaben zu finanzieren. Die **Ordnungs- und Lenkungsfunktion** setzt Rahmenbedingungen und beeinflusst damit das Verhalten der Bürger.",
+     "tid": "funktionen"
+    },
+    {
+     "img": "tour/steuer/s86.jpg",
+     "folie": 89,
+     "spot": [
+      8.79,
+      50.9,
+      82.43,
+      35.11
+     ],
+     "titel": "Drei Grundsätze der Besteuerung",
+     "text": "Eine gute Steuer soll **neutral**, **einfach** und **gerecht** sein. Gerecht heißt **horizontal**: Gleiche Leistungsfähigkeit führt zu gleicher Steuer. **Vertikal** heißt: Wer mehr leisten kann, zahlt mehr.",
+     "tid": "funktionen"
+    },
+    {
+     "img": "tour/steuer/s97.jpg",
+     "folie": 100,
+     "spot": [
+      9.26,
+      37.29,
+      81.24,
+      43.0
+     ],
+     "titel": "Personensteuern und Objektsteuern",
+     "text": "Bei **Personensteuern** wie der Einkommensteuer zählt die persönliche Leistungsfähigkeit. **Objektsteuern** wie die Gewerbesteuer knüpfen dagegen an eine Sache an, etwa an Ertrag oder Umsatz, egal wem sie gehört.",
+     "tid": "steuerarten"
+    },
+    {
+     "img": "tour/steuer/s80.jpg",
+     "folie": 83,
+     "spot": [
+      14.49,
+      34.27,
+      81.96,
+      20.49
+     ],
+     "titel": "Dualismus der Einkunftsarten",
+     "text": "Die sieben Einkunftsarten teilen sich in zwei Gruppen. Bei den **Gewinneinkünften** (Nr. 1–3) gilt die **Reinvermögenszugangstheorie**: Auch Wertänderungen des Vermögens zählen. Bei den **Überschusseinkünften** (Nr. 4–7) gilt die **Quellentheorie**: Besteuert werden nur die „Früchte“.",
+     "tid": "einkunftsarten"
+    },
+    {
+     "img": "tour/steuer/s80.jpg",
+     "folie": 83,
+     "spot": [
+      14.73,
+      56.78,
+      81.72,
+      27.21
+     ],
+     "titel": "Was aus dem Dualismus folgt",
+     "text": "Gewinne ermittelt man in der Regel per **Betriebsvermögensvergleich**, Überschüsse nach dem **Zufluss-Abfluss-Prinzip** (§ 11 EStG). Der Verkauf von Vermögen ist bei Überschusseinkünften nur steuerpflichtig, wenn das Gesetz es anordnet, etwa bei Aktien.",
+     "tid": "einkunftsarten"
+    },
+    {
+     "img": "tour/steuer/s98.jpg",
+     "folie": 101,
+     "spot": [
+      75.66,
+      63.16,
+      20.79,
+      21.5
+     ],
+     "titel": "Welcher Tarif gilt wo?",
+     "text": "Hier steht, welcher Tarif greift: der **Einkommensteuertarif** nach § 32a EStG, die **Abgeltungsteuer** von 25 % nach § 32d EStG, die **Körperschaftsteuer** von 15 % nach § 23 KStG und die **Gewerbesteuer** mit 3,5 % mal Hebesatz.",
+     "tid": "steuerarten"
+    },
+    {
+     "img": "tour/steuer/s131.jpg",
+     "folie": 134,
+     "spot": [
+      27.79,
+      46.03,
+      66.28,
+      12.09
+     ],
+     "titel": "Transparenz- oder Trennungssystem?",
+     "text": "Bei den Ertragsteuern gibt es zwei Systeme. Im **Transparenzsystem** (Personengesellschaften) wird der Gewinn direkt den Gesellschaftern zugerechnet. Im **Trennungssystem** (Kapitalgesellschaften) zahlt die Gesellschaft selbst Steuern.",
+     "tid": "rechtsformen"
+    },
+    {
+     "img": "tour/steuer/s132.jpg",
+     "folie": 135,
+     "spot": [
+      2.85,
+      43.67,
+      80.29,
+      40.31
+     ],
+     "titel": "Die Rechtsformen im Überblick",
+     "text": "Links stehen die **Personenunternehmen** (Einzelunternehmen, GbR, oHG, KG) im Transparenzsystem, rechts die **Körperschaften** wie GmbH und AG im Trennungssystem. Eine **GmbH & Co. KG** bleibt trotz GmbH eine Personengesellschaft.",
+     "tid": "rechtsformen"
+    }
+   ]
+  },
+  {
+   "titel": "III. Einkommensteuer: Wer, was, wie viel?",
+   "stops": [
+    {
+     "img": "tour/steuer/s141.jpg",
+     "folie": 144,
+     "spot": [
+      1.93,
+      26.56,
+      88.5,
+      31.92
+     ],
+     "titel": "Merkmale der Einkommensteuer",
+     "text": "Die Einkommensteuer ist eine **Personensteuer** für natürliche Personen, eine **direkte Steuer** (wer sie schuldet, trägt sie auch) und eine **Jahressteuer**. Erhoben wird sie per Veranlagung oder als Abzugsteuer, zum Beispiel als Lohnsteuer.",
+     "tid": "est-merkmale"
+    },
+    {
+     "img": "tour/steuer/s145.jpg",
+     "folie": 148,
+     "spot": [
+      9.5,
+      36.45,
+      81.01,
+      40.15
+     ],
+     "titel": "Wer zahlt – und was wird besteuert?",
+     "text": "Die **persönliche Steuerpflicht** (§ 1 EStG) klärt, **wer** Einkommensteuer zahlt. Die **sachliche Steuerpflicht** (§ 2 EStG) klärt, **was** besteuert wird, nämlich die Einkünfte aus den sieben Einkunftsarten.",
+     "tid": "steuerpflicht"
+    },
+    {
+     "img": "tour/steuer/s146.jpg",
+     "folie": 149,
+     "spot": [
+      9.98,
+      36.62,
+      25.66,
+      29.23
+     ],
+     "titel": "Unbeschränkt steuerpflichtig",
+     "text": "Wer im Inland einen **Wohnsitz** (§ 8 AO) oder seinen **gewöhnlichen Aufenthalt** (§ 9 AO, mehr als sechs Monate) hat, ist unbeschränkt steuerpflichtig. Dann gilt das **Welteinkommensprinzip**: Alle Einkünfte weltweit werden erfasst.",
+     "tid": "steuerpflicht"
+    },
+    {
+     "img": "tour/steuer/s181.jpg",
+     "folie": 184,
+     "spot": [
+      8.42,
+      33.46,
+      79.74,
+      49.78
+     ],
+     "titel": "Das Schema zum zu versteuernden Einkommen",
+     "text": "Merk dir die Stufen: **Summe der Einkünfte → Gesamtbetrag der Einkünfte → Einkommen → zu versteuerndes Einkommen (zvE)**. Zwischen den Stufen werden Beträge wie Sonderausgaben und außergewöhnliche Belastungen abgezogen.",
+     "tid": "zve-schema"
+    },
+    {
+     "img": "tour/steuer/s186.jpg",
+     "folie": 189,
+     "spot": [
+      38.25,
+      36.62,
+      51.07,
+      48.38
+     ],
+     "titel": "Zusammenveranlagung von Ehegatten",
+     "text": "Ehegatten dürfen zusammen veranlagt werden, wenn **beide unbeschränkt steuerpflichtig** sind und **nicht dauernd getrennt** leben. Wählen sie nichts anderes, gilt automatisch die **Zusammenveranlagung**.",
+     "tid": "veranlagung"
+    },
+    {
+     "img": "tour/steuer/s193.jpg",
+     "folie": 196,
+     "spot": [
+      2.67,
+      34.84,
+      94.65,
+      38.89
+     ],
+     "titel": "Die fünf Tarifzonen",
+     "text": "Der Tarif hat fünf Zonen: den **Grundfreibetrag** bis 12.348 € (0 %), zwei Progressionszonen von **14 % bis 42 %**, dann **42 %** und ab 277.826 € die **„Reichensteuer“ mit 45 %**.",
+     "tid": "tarif"
+    },
+    {
+     "img": "tour/steuer/s203.jpg",
+     "folie": 206,
+     "spot": [
+      3.33,
+      36.62,
+      91.7,
+      38.3
+     ],
+     "titel": "Grenz- und Durchschnittsteuersatz",
+     "text": "Der **Grenzsteuersatz** zeigt, wie stark der **nächste verdiente Euro** belastet wird. Der **Durchschnittsteuersatz** ist die gesamte Steuer geteilt durch das zvE. Im Beispiel liegt der Grenzsteuersatz bei 45 %, der Durchschnitt nur bei 38,69 %.",
+     "tid": "tarif"
+    },
+    {
+     "img": "tour/steuer/s212.jpg",
+     "folie": 215,
+     "spot": [
+      1.93,
+      30.25,
+      91.34,
+      32.08
+     ],
+     "titel": "Ehegattensplitting",
+     "text": "Beim **Splittingtarif** werden die Einkünfte beider Ehegatten **zusammengerechnet** und halbiert. Die Steuer auf die Hälfte wird dann **verdoppelt**. Das lohnt sich vor allem, wenn die Einkommen sehr unterschiedlich hoch sind.",
+     "tid": "splitting"
+    }
+   ]
+  },
+  {
+   "titel": "III. Einkünfte ermitteln",
+   "stops": [
+    {
+     "img": "tour/steuer/s232.jpg",
+     "folie": 235,
+     "spot": [
+      3.09,
+      28.56,
+      82.67,
+      40.31
+     ],
+     "titel": "Überschuss = Einnahmen − Werbungskosten",
+     "text": "Bei den Überschusseinkünften (Nr. 4–7) gilt immer dasselbe Schema: **Einnahmen (§ 8 EStG) minus Werbungskosten (§ 9 EStG) = Überschuss**.",
+     "tid": "werbungskosten-zufluss"
+    },
+    {
+     "img": "tour/steuer/s238.jpg",
+     "folie": 241,
+     "spot": [
+      5.7,
+      36.95,
+      88.37,
+      23.85
+     ],
+     "titel": "Werbungskosten oder Betriebsausgaben?",
+     "text": "Beruflich veranlasste Ausgaben heißen bei Überschusseinkünften **Werbungskosten**, bei Gewinneinkünften **Betriebsausgaben**. Beide sind grundsätzlich abzugsfähig. **Privat veranlasste** Kosten sind nach § 12 EStG nicht abziehbar.",
+     "tid": "werbungskosten-zufluss"
+    },
+    {
+     "img": "tour/steuer/s240.jpg",
+     "folie": 243,
+     "spot": [
+      1.93,
+      30.43,
+      71.23,
+      38.41
+     ],
+     "titel": "Typische Werbungskosten nach § 9 EStG",
+     "text": "Werbungskosten sind Aufwendungen zur **Erzielung, Sicherung und Erhaltung** der Einnahmen. Satz 3 nennt Beispiele, etwa **Schuldzinsen, Fahrten zur Arbeit, Arbeitsmittel und AfA**. Die Liste ist **nicht abschließend**.",
+     "tid": "werbungskosten-zufluss"
+    },
+    {
+     "img": "tour/steuer/s242.jpg",
+     "folie": 245,
+     "spot": [
+      45.13,
+      28.56,
+      49.89,
+      22.17
+     ],
+     "titel": "Das Zuflussprinzip nach § 11 EStG",
+     "text": "Einnahmen zählen in dem Jahr, in dem sie **zufließen**, Ausgaben in dem Jahr, in dem sie **geleistet** werden. Zu welchem Jahr sie wirtschaftlich gehören, ist grundsätzlich egal.",
+     "tid": "werbungskosten-zufluss"
+    },
+    {
+     "img": "tour/steuer/s244.jpg",
+     "folie": 247,
+     "spot": [
+      1.93,
+      65.75,
+      94.51,
+      18.99
+     ],
+     "titel": "Ausnahme: die „kurze Zeit“",
+     "text": "Bei **regelmäßig wiederkehrenden** Zahlungen wie Miete oder Zinsen gibt es eine Ausnahme. Liegen **Zahlung und Fälligkeit beide** zwischen dem **22.12. und dem 10.1.**, zählt die Zahlung zu dem Jahr, zu dem sie wirtschaftlich gehört.",
+     "tid": "werbungskosten-zufluss"
+    },
+    {
+     "img": "tour/steuer/s251.jpg",
+     "folie": 254,
+     "spot": [
+      2.82,
+      26.79,
+      94.14,
+      24.84
+     ],
+     "titel": "Einkünfte aus nichtselbständiger Arbeit",
+     "text": "Zu den Einkünften nach § 19 EStG gehören **Gehälter, Löhne und andere Vorteile** aus einem Dienstverhältnis, egal ob laufend oder einmalig. Wer sie bezieht, ist **Arbeitnehmer**.",
+     "tid": "nichtselbstaendig"
+    },
+    {
+     "img": "tour/steuer/s262.jpg",
+     "folie": 265,
+     "spot": [
+      2.67,
+      31.64,
+      89.51,
+      31.05
+     ],
+     "titel": "Abschlussbeispiel Arbeitnehmer (VZ 2026)",
+     "text": "Vom Arbeitslohn (60.000 €) gehen die Werbungskosten ab. Die **tatsächlichen Werbungskosten** von 1.645 € (Tagespauschale plus Entfernungspauschale) liegen über dem **Pauschbetrag von 1.230 €**, also werden sie angesetzt. Ergebnis: **58.355 €**.",
+     "tid": "nichtselbstaendig"
+    },
+    {
+     "img": "tour/steuer/s268.jpg",
+     "folie": 271,
+     "spot": [
+      2.85,
+      35.28,
+      93.6,
+      48.38
+     ],
+     "titel": "Dividenden: Abgeltungsteuer oder Teileinkünfteverfahren?",
+     "text": "Im **Regelfall** (rechts) wird die Dividende zu 100 % mit **25 % Abgeltungsteuer** besteuert, statt Werbungskosten gibt es nur den Sparer-Pauschbetrag. Auf **Antrag** (links) gilt das **Teileinkünfteverfahren**: 60 % sind steuerpflichtig, zum persönlichen Steuersatz.",
+     "tid": "kapitaleinkuenfte"
+    },
+    {
+     "img": "tour/steuer/s277.jpg",
+     "folie": 280,
+     "spot": [
+      2.61,
+      37.29,
+      23.28,
+      33.93
+     ],
+     "titel": "Vermietung und Verpachtung",
+     "text": "Im Fokus steht **§ 21 Abs. 1 Nr. 1 EStG**: die Vermietung von **unbeweglichem Vermögen** wie Wohnungen und Grundstücken. Auch hier gilt: Mieteinnahmen minus Werbungskosten = Überschuss.",
+     "tid": "vermietung"
+    },
+    {
+     "img": "tour/steuer/s287.jpg",
+     "folie": 290,
+     "spot": [
+      3.56,
+      51.57,
+      89.32,
+      4.03
+     ],
+     "titel": "Achtung: die Tilgung",
+     "text": "**Schuldzinsen** sind Werbungskosten, die **Tilgung** des Kredits aber nicht. Denn umgekehrt ist auch der erhaltene Kredit keine Einnahme. Im Beispiel ergibt sich 20.000 € − 3.000 € = **17.000 € Überschuss**.",
+     "tid": "vermietung"
+    }
+   ]
+  },
+  {
+   "titel": "IV. Gewerbebetrieb, KSt und Rechtsformvergleich",
+   "stops": [
+    {
+     "img": "tour/steuer/s289.jpg",
+     "folie": 292,
+     "spot": [
+      3.09,
+      62.15,
+      89.79,
+      23.52
+     ],
+     "titel": "Drei Besteuerungssysteme",
+     "text": "Der **Einzelunternehmer** zahlt ESt und GewSt. Bei der **Personengesellschaft** (Transparenz) zahlt die Gesellschaft nur GewSt, die ESt zahlen die Gesellschafter. Bei der **Kapitalgesellschaft** (Trennung) folgt auf die **Vorbelastung** mit KSt und GewSt eine **Nachbelastung** beim Anteilseigner.",
+     "tid": "rechtsformen"
+    },
+    {
+     "img": "tour/steuer/s294.jpg",
+     "folie": 297,
+     "spot": [
+      9.03,
+      60.47,
+      83.62,
+      6.05
+     ],
+     "titel": "Was unterliegt der Gewerbesteuer?",
+     "text": "Gewerbesteuerpflichtig ist jeder **im Inland betriebene stehende Gewerbebetrieb** (§ 2 GewStG). Eine eigene Regel gilt für das Reisegewerbe, zum Beispiel für Schausteller.",
+     "tid": "gewst-grundlagen"
+    },
+    {
+     "img": "tour/steuer/s306.jpg",
+     "folie": 309,
+     "spot": [
+      49.17,
+      30.24,
+      48.7,
+      54.76
+     ],
+     "titel": "Die Gewerbesteuer berechnen",
+     "text": "Vom Gewinn kommt man über **Hinzurechnungen und Kürzungen** zum Gewerbeertrag. Einzelunternehmer und Personengesellschaften haben einen **Freibetrag von 24.500 €**. Dann gilt: **Gewerbeertrag × 3,5 % × Hebesatz** (mindestens 280 %).",
+     "tid": "gewst-berechnen"
+    },
+    {
+     "img": "tour/steuer/s306.jpg",
+     "folie": 309,
+     "spot": [
+      2.38,
+      55.94,
+      46.32,
+      9.57
+     ],
+     "titel": "Die Gewerbesteueranrechnung (§ 35 EStG)",
+     "text": "Damit der Einzelunternehmer nicht doppelt belastet wird, wird die Gewerbesteuer auf seine Einkommensteuer **angerechnet**: mit dem **Faktor 4,0** auf den Messbetrag, höchstens bis zur tatsächlich gezahlten Gewerbesteuer.",
+     "tid": "gewst-berechnen"
+    },
+    {
+     "img": "tour/steuer/s308.jpg",
+     "folie": 311,
+     "spot": [
+      42.05,
+      41.15,
+      55.59,
+      40.48
+     ],
+     "titel": "Beispiel: Einzelunternehmer vs. Freiberufler",
+     "text": "Bei 100.000 € Gewinn und Hebesatz 400 % fallen 14.000 € Gewerbesteuer an. Durch die Anrechnung (4,0 × 3,5 % × 100) kommen sie voll zurück. Der Unternehmer steht also **genauso da wie ein Freiberufler**. Über 400 % Hebesatz wird nicht mehr alles angerechnet.",
+     "tid": "gewst-berechnen"
+    },
+    {
+     "img": "tour/steuer/s332.jpg",
+     "folie": 335,
+     "spot": [
+      1.93,
+      43.84,
+      90.93,
+      20.91
+     ],
+     "titel": "Das Transparenzprinzip",
+     "text": "Eine Personengesellschaft ist für die Einkommensteuer **kein eigenes Steuersubjekt**. Ihr Gewinn wird auf die **Gesellschafter aufgeteilt** und dort besteuert. Nur die **Gewerbesteuer** zahlt die Gesellschaft selbst.",
+     "tid": "personengesellschaft"
+    },
+    {
+     "img": "tour/steuer/s335.jpg",
+     "folie": 338,
+     "spot": [
+      8.92,
+      49.2,
+      83.29,
+      35.54
+     ],
+     "titel": "Die zweistufige Gewinnermittlung",
+     "text": "**Stufe 1** ist das Steuerbilanzergebnis der Gesellschaft, einschließlich Ergänzungsbilanzen. In **Stufe 2** kommen die Ergebnisse der einzelnen Gesellschafter aus ihrem **Sonderbetriebsvermögen** hinzu, zum Beispiel Vergütungen, die sie von der Gesellschaft erhalten.",
+     "tid": "personengesellschaft"
+    },
+    {
+     "img": "tour/steuer/s358.jpg",
+     "folie": 361,
+     "spot": [
+      7.99,
+      74.58,
+      88.44,
+      9.56
+     ],
+     "titel": "Der Körperschaftsteuersatz",
+     "text": "Die Körperschaftsteuer beträgt **15 %** des zu versteuernden Einkommens, dazu **5,5 % Solidaritätszuschlag** auf die KSt. Ab 2028 sinkt der Satz schrittweise bis auf 10 % im Jahr 2032.",
+     "tid": "kst"
+    },
+    {
+     "img": "tour/steuer/s366.jpg",
+     "folie": 369,
+     "spot": [
+      2.85,
+      36.95,
+      93.12,
+      24.52
+     ],
+     "titel": "Nicht abziehbare Aufwendungen (§ 10 KStG)",
+     "text": "Manche Ausgaben mindern zwar den Bilanzgewinn, aber **nicht das zu versteuernde Einkommen**, zum Beispiel **die KSt und GewSt selbst**, Geldstrafen und die Hälfte der **Aufsichtsratsvergütungen**. Sie werden außerhalb der Bilanz wieder **hinzugerechnet**.",
+     "tid": "kst"
+    },
+    {
+     "img": "tour/steuer/s377.jpg",
+     "folie": 380,
+     "spot": [
+      51.07,
+      30.74,
+      45.85,
+      32.08
+     ],
+     "titel": "Steuern auf Ebene der GmbH",
+     "text": "Auf 100.000 € Gewinn zahlt die GmbH **15 % KSt + 0,825 % SolZ + 14 % GewSt = 29,825 %**. Übrig bleiben **70.175 €** für Thesaurierung oder Ausschüttung.",
+     "tid": "kapg-ausschuettung"
+    },
+    {
+     "img": "tour/steuer/s382.jpg",
+     "folie": 385,
+     "spot": [
+      51.07,
+      49.39,
+      45.85,
+      26.2
+     ],
+     "titel": "Ausschüttung an die Gesellschafterin",
+     "text": "Schüttet die GmbH alles aus, zahlt die Gesellschafterin darauf **25 % Abgeltungsteuer plus SolZ = 18.509 €**. Zusammen mit der Vorbelastung ergibt sich eine **Gesamtbelastung von 48,334 %**.",
+     "tid": "kapg-ausschuettung"
+    },
+    {
+     "img": "tour/steuer/s389.jpg",
+     "folie": 392,
+     "spot": [
+      5.23,
+      30.57,
+      92.41,
+      55.6
+     ],
+     "titel": "Der Belastungsvergleich",
+     "text": "Zum Schluss der Vergleich: Einzelunternehmen und Freiberufler tragen **44,31 %**, die voll ausschüttende Kapitalgesellschaft **48,33 %**. Dank der Gewerbesteueranrechnung stehen Einzelunternehmer und Freiberufler gleich da.",
+     "tid": "belastungsvergleich"
+    }
+   ]
+  }
+ ]
+}
