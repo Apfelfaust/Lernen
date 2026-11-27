@@ -113,7 +113,7 @@ details summary{cursor:pointer;font-weight:600;color:var(--blue);font-size:14px;
 .slot.bad{border-color:var(--red);background:var(--red-l)}
 .slot b{font-size:14px}
 .placed{font-size:13px;background:var(--blue-xl);color:var(--blue-d);border-radius:8px;padding:6px 8px;line-height:1.35}
-.toast{position:fixed;left:50%;bottom:90px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:10px 16px;border-radius:12px;font-size:14px;z-index:30;max-width:90vw;text-align:center}
+.toast{position:fixed;left:50%;bottom:90px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:10px 16px;border-radius:12px;font-size:14px;z-index:30;width:max-content;max-width:88vw;text-align:center}
 
 /* Übergänge */
 .stages .wide{flex:2.4;white-space:nowrap;padding:0 6px}
@@ -129,6 +129,28 @@ button:active,.item:active,.sugg:active,.chip:active,.ansb:active,.slot:active{t
 .fb{animation:pop .22s cubic-bezier(.2,.8,.2,1)}@keyframes pop{from{opacity:0;transform:translateY(6px)}}
 .toast{animation:tpop .22s ease}@keyframes tpop{from{opacity:0;transform:translate(-50%,6px)}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* Variante C: große Flächen hell, kräftiges Blau nur für Akzente */
+.stages .cur,.stages .stg.cur{background:var(--blue-l);color:var(--blue-d);box-shadow:inset 0 0 0 1.5px #A9C4F5}
+.stages .done,.stages .stg.done{background:#E9EDF3;color:var(--sub)}
+.zbar{background:#E4ECFB;color:var(--blue-d);box-shadow:0 -4px 16px rgba(29,73,170,.12)}
+.zarr{background:rgba(29,73,170,.08);color:var(--blue-d)}
+.zdots i{background:#BFD0F2}.zdots i.c{background:var(--blue)}.zdots i.d{background:#8EADEB}
+.hero{background:#fff;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--blue-l)}
+.hero .btn-w{background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;gap:8px}
+.burgers{display:flex;gap:4px;align-items:center;flex-wrap:wrap;font-size:13px;color:var(--sub)}
+
+.hcard{background:linear-gradient(135deg,var(--blue-xl),#fff 60%);border-radius:18px;padding:14px;box-shadow:inset 0 0 0 1.5px var(--blue-l);display:flex;gap:12px;align-items:center}
+.hburger{transform:rotate(-12deg);flex:none;line-height:0}
+.ht1{font-size:19px;font-weight:800;line-height:1.15}.ht2{font-size:13px;color:var(--sub);margin-top:4px}
+.hcheck{flex:none;width:76px;height:76px;border-radius:38px;background:#fff;display:flex;align-items:center;justify-content:center;font-size:36px;color:var(--blue);box-shadow:inset 0 0 0 1.5px var(--blue-l)}
+.bite{width:100%;margin-top:10px;font-size:16px;font-weight:700}
+.btn-s{width:100%;margin-top:10px;background:#fff;color:var(--blue-d);border:none;box-shadow:inset 0 0 0 1.5px var(--blue-l);font-weight:600}
+.plate{display:block;width:100%;max-width:420px;margin:6px auto 0}
+.plcap{font-size:12.5px;color:var(--sub);text-align:center;margin-top:2px}
+.reward{min-height:calc(100vh - 60px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:6px;max-width:420px;margin:0 auto;padding:0 8px}
+.rburger{transform:rotate(-10deg);line-height:0;animation:pop .35s cubic-bezier(.2,.8,.2,1)}
+.rt{font-size:30px;font-weight:800;margin-top:6px}.rq{font-size:19px;font-weight:700;margin:20px 0 2px}
 </style>
 </head>
 <body>
@@ -250,6 +272,7 @@ function render(){
   const full=S||view.fall||view.puzzle;
   $("#nav").style.display=full?"none":"flex";
   const bd=$("#badge"); if(bd){const n=(!FS&&store.dirty>0)?store.dirty:0; bd.hidden=!n; bd.textContent=n>99?"99+":n;}
+  if(view.reward&&!S){$("#nav").style.display="none";return renderReward()}
   if(view.fall)return renderFall();
   if(S)return renderSession();
   if(view.puzzle)return renderPuzzle();
@@ -265,9 +288,7 @@ function renderHome(){
   const perF={}; due.forEach(d=>perF[d.fid]=(perF[d.fid]||0)+1);
   let h=`<div class="row between" style="align-items:flex-end"><div><div class="muted">${esc(wd)}</div><h1>Heute</h1></div>${next?`<span class="pill">${daysBetween(t,next)} Tage bis ${fmtDate(next)}</span>`:""}</div>`;
   h+=syncBanner();
-  h+=`<div class="hero"><div style="font-size:13px;opacity:.85">Fällig zum Wiederholen</div>
-  <div class="row" style="align-items:baseline;gap:8px"><span class="big">${due.length}</span><span>Karten · ca. ${Math.max(1,Math.round(due.length*1.5))} Min.</span></div>
-  ${due.length?`<button class="btn-w" data-act="start" data-what="due">Jetzt wiederholen</button>`:`<div style="font-size:14px">Alles erledigt für heute.</div>`}</div>`;
+  h+=heroHTML(due.length);
   h+=`<h2>Fächer</h2><div class="card list" style="padding:2px 14px">`;
   F.forEach(f=>{
     const c=counts(f), n=perF[f.id]||0, tot=c.n+c.w+c.s;
@@ -302,7 +323,7 @@ function renderFach(){
   h+=`<div class="card" style="display:flex;flex-direction:column;gap:8px"><div class="row between"><b>Lernstand</b><span class="muted">${tot} Karten · ${nA} Rechenaufgaben</span></div>${progressBar(c)}
   <div class="row" style="gap:14px;font-size:12px;color:var(--sub);flex-wrap:wrap"><span><i style="display:inline-block;width:10px;height:10px;border-radius:5px;background:var(--blue)"></i> ${c.s} sitzen</span><span><i style="display:inline-block;width:10px;height:10px;border-radius:5px;background:#A9C4F5"></i> ${c.w} in Arbeit</span><span><i style="display:inline-block;width:10px;height:10px;border-radius:5px;background:#D5DAE1"></i> ${c.n} neu</span></div>
   ${f.data.hinweis?`<div class="muted" style="font-size:12px">${esc(f.data.hinweis)}</div>`:""}</div>`;
-  h+=`<button class="btn-p" data-act="start" data-what="fach" data-fid="${esc(fid)}" ${dK?"":"disabled style='opacity:.5'"}>${dK} fällige Karten lernen</button>
+  h+=`<button class="btn-p" data-act="start" data-what="fach" data-fid="${esc(fid)}" ${dK?"":"disabled style='opacity:.5'"}>${dK>HAP?`Häppchen lernen · ${HAP} von ${dK} fälligen`:`${dK} fällige Karten lernen`}</button>
   <div class="row" style="gap:8px"><button style="flex:1" data-act="start" data-what="rechnen" data-fid="${esc(fid)}">Rechnen</button><button style="flex:1" data-act="puzzle" data-fid="${esc(fid)}">Mindmap-Puzzle</button></div>`;
   let ast=null;
   themen(f).forEach(t=>{
@@ -401,7 +422,50 @@ function renderPuzzle(){
   app.innerHTML=h;
 }
 
+
+/* ============ Häppchen & Teller ============ */
+const SPR1=["Hunger auf ein Häppchen?","Zeit für einen Snack?","Kleiner Hunger?"];
+const SPR2=["Da passt noch einer rein.","Ein Burger geht immer.","Nachschlag gefällig?","Lust auf Nachschlag?","Noch ein Bissen?","Der Teller ruft.","Einer geht noch.","Satt? Noch lange nicht."];
+function pick(a){const d=today().replace(/-/g,"");return a[(+d+hapToday()*3)%a.length]}
+function rnd(seed){let x=seed*9301+49297;return()=>{x=(x*9301+49297)%233280;return x/233280}}
+const PL_ORDER=[[96,203,72,1],[170,206,74,1],[244,203,72,1],[118,182,56,1],[170,180,56,1],[222,182,56,1],[133,170,66,0],[207,170,66,0],[170,140,70,0]];
+const PL_DRAW=[3,4,5,0,1,2,6,7,8];
+function plateSVG(left,eaten){
+  let s=`<svg class="plate" viewBox="0 80 340 150" aria-hidden="true"><defs><radialGradient id="pw" cx="50%" cy="40%" r="60%"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#E6EBF2"/></radialGradient><linearGradient id="pr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#EEF2F7"/></linearGradient></defs><ellipse cx="170" cy="200" rx="150" ry="22" fill="#000" opacity=".07"/><ellipse cx="170" cy="191" rx="168" ry="40" fill="#D3DAE5"/><ellipse cx="170" cy="184" rx="168" ry="40" fill="url(#pr)" stroke="#E1E7EF" stroke-width="1.5"/><ellipse cx="170" cy="187" rx="118" ry="25" fill="url(#pw)" stroke="#D9E0EA" stroke-width="2"/><path d="M40 171 a168 40 0 0 1 120 -26" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".9"/>`;
+  const r=rnd(eaten+3);
+  for(let k=0;k<Math.min(eaten,12)*5;k++)s+=`<circle cx="${(170+(r()*200-100)).toFixed(0)}" cy="${(187+(r()*28-14)).toFixed(0)}" r="${(1.6+r()*1.7).toFixed(1)}" fill="#E7B46A"/>`;
+  const n=Math.min(left,9);
+  PL_DRAW.forEach(i=>{if(i>=n)return;const [cx,cy,z,sh]=PL_ORDER[i];
+    if(sh)s+=`<ellipse cx="${cx}" cy="${cy-1}" rx="${(z*.4).toFixed(0)}" ry="${(z*.08).toFixed(0)}" fill="#000" opacity=".10"/>`;
+    s+=BURGER(z).replace("<svg ",`<svg x="${(cx-z/2).toFixed(0)}" y="${(cy-z*.87).toFixed(0)}" `)});
+  if(left>9)s+=`<g><rect x="214" y="84" width="44" height="26" rx="13" fill="#336DE6"/><text x="236" y="102" text-anchor="middle" font-size="14" font-weight="700" fill="#fff" font-family="system-ui,sans-serif">+${left-9}</text></g>`;
+  return s+`</svg>`;
+}
+function heroHTML(nDue){
+  const eaten=hapToday(), left=Math.ceil(nDue/HAP);
+  if(!nDue){
+    return `<div class="hcard"><div class="hcheck">✓</div><div><div class="ht1">${eaten?"Alles aufgegessen!":"Alles erledigt für heute."}</div><div class="ht2">${eaten?`${eaten} Häppchen heute · morgen gibt’s Nachschub`:"Morgen gibt’s Nachschub."}</div></div></div>
+    ${eaten?`<button class="btn-s" data-act="tab" data-tab="faecher">Satt für heute ✓</button>${plateSVG(0,eaten)}<div class="plcap">Nur noch Krümel</div>`:""}`;
+  }
+  const t=eaten?pick(SPR2):pick(SPR1);
+  return `<div class="hcard"><div class="hburger">${BURGER(80)}</div><div><div class="ht1">${t}</div><div class="ht2">${nDue>HAP?`${eaten?"Wieder":"Jetzt"} nur ${HAP} Karten lernen`:`Nur noch ${nDue} Karten`} · ca. ${Math.max(1,Math.round(Math.min(nDue,HAP)*1.5))} Min.</div></div></div>
+  <button class="btn-p bite" data-act="start" data-what="due">Reinbeißen</button>
+  ${plateSVG(left,eaten)}<div class="plcap">${left} Häppchen auf dem Teller${eaten?` · ${eaten} verputzt`:""}</div>`;
+}
+function renderReward(){
+  const r=view.reward, rest=dueCards().length;
+  app.innerHTML=`<div class="reward"><div class="rburger">${BURGER(140)}</div><div class="rt">Mmh, lecker!</div>
+  <div class="ht2" style="font-size:14px">${r.n} Karten weggefuttert · ${r.ok} richtig auf Anhieb</div>
+  ${rest?`<div class="rq">Noch ein Häppchen?</div><button class="btn-p bite" data-act="more">Ja, her damit</button><button class="btn-s" data-act="full">Satt für jetzt</button>`
+        :`<div class="rq">Teller leer – alles geschafft!</div><button class="btn-p bite" data-act="full">Satt für heute ✓</button>`}
+  ${FS?"":`<div class="muted" style="font-size:12px;margin-top:10px">Denk ans Sichern in iCloud (Lernstand).</div>`}</div>`;
+}
+
 /* ============ Lernsitzung ============ */
+const BURGER=(n=22)=>`<svg width="${n}" height="${n}" viewBox="0 0 32 32" aria-hidden="true"><path d="M5 13c0-5 5-8 11-8s11 3 11 8z" fill="#F4B860"/><circle cx="11" cy="9" r=".9" fill="#FFF4DC"/><circle cx="16" cy="7.6" r=".9" fill="#FFF4DC"/><circle cx="21" cy="9" r=".9" fill="#FFF4DC"/><path d="M4 15.5c2-1.6 4 1 6 0s4 1 6 0 4 1 6 0 4-1.6 6 0v1.2H4z" fill="#79C47C"/><path d="M5 17.5h22l-3 3h-16z" fill="#FFD166"/><rect x="4.5" y="19.5" width="23" height="4.2" rx="2.1" fill="#8A5A44"/><path d="M5 25h22c0 1.8-1.4 3-3.2 3H8.2C6.4 28 5 26.8 5 25z" fill="#F4B860"/></svg>`;
+function hapToday(){try{const o=JSON.parse(localStorage.getItem("hap")||"{}");return o.d===today()?o.n:0}catch(e){return 0}}
+function hapPlus(){try{localStorage.setItem("hap",JSON.stringify({d:today(),n:hapToday()+1}))}catch(e){}}
+const HAP=12;
 function startSession(what,fid,tid,extra){
   let q=[];
   if(what==="due")q=dueCards();
@@ -411,7 +475,8 @@ function startSession(what,fid,tid,extra){
   else if(what==="aufgabe")q=[{kind:"a",fid,id:extra}];
   else if(what==="rechnen"){q=dueAufgaben(fid);if(!q.length)F.filter(f=>!fid||f.id===fid).forEach(f=>aufgaben(f).forEach(a=>q.push({kind:"a",fid:f.id,id:a.id})));q=shuffle(q)}
   if(!q.length){toast("Nichts fällig");return}
-  S={q,i:0};prepItem();render();window.scrollTo(0,0);
+  const hap=(what==="due"||what==="fach");if(what==="due"||what==="fach")q=q.slice(0,HAP);
+  S={q,i:0,hap};prepItem();render();window.scrollTo(0,0);
 }
 function cur(){return S.q[S.i]}
 function prepItem(){
@@ -425,7 +490,7 @@ function next(requeue){
   const it=cur();
   if(requeue)S.q.push({kind:it.kind,fid:it.fid,tid:it.tid,cid:it.cid,id:it.id});
   S.i++;
-  if(S.i>=S.q.length){S=null;toast(FS?"Sitzung fertig":"Sitzung fertig – denk ans Sichern in iCloud");render();window.scrollTo(0,0);return}
+  if(S.i>=S.q.length){const wasHap=S.hap,cnt={n:S.nCards||0,ok:S.nOk||0};S=null;if(wasHap){hapPlus();view={tab:"home",reward:cnt};if(document.startViewTransition&&!RM.matches){document.documentElement.dataset.vt="fade"}}else toast("Sitzung fertig"+(FS?"":" – denk ans Sichern in iCloud"));render();window.scrollTo(0,0);return}
   prepItem();render();window.scrollTo(0,0);
 }
 const bh=(t,sub)=>`<div><div style="font-size:17px;font-weight:700;line-height:1.3">${esc(t)}</div>${sub?`<div class="muted" style="margin-top:2px">${esc(sub)}</div>`:""}</div>`;
@@ -472,7 +537,7 @@ function renderSession(){
     else{
       h+=`<div style="height:240px"></div>`;
       const open=u.order.filter(i=>!u.matched[i]); const ci=u.order[u.pos];
-      h+=`<div class="zbar" id="zbar"><div class="zin"><div style="font-size:13px;font-weight:600;opacity:.9;text-align:center">Ordne zu:</div>
+      h+=`<div class="zbar" id="zbar"><div class="zin"><div style="font-size:14px;font-weight:800;text-align:center">Ordne zu:</div>
       <div class="zterm">${esc(k.zuordnen[ci][0])}</div>
       <div class="zrow"><button class="zarr" data-act="zprev" aria-label="Vorheriger Begriff">‹</button><div class="zdots">${u.order.map(i=>`<i class="${i===ci?"c":u.matched[i]?"d":""}"></i>`).join("")}</div><button class="zarr" data-act="znext" aria-label="Nächster Begriff">›</button></div></div></div>`;
     }
@@ -530,7 +595,7 @@ function renderAufgabe(it,f){
 const norm=s=>String(s).toLowerCase().replace(/−/g,"-").replace(/[\s.€%]/g,"").replace(/[„“"]/g,"");
 
 /* ============ Ereignisse ============ */
-const NAV={tab:"fade",openfach:"fwd",openthema:"fwd",up:"back",start:"fwd",startcard:"fwd",openfall:"fwd",closefall:"back",endsession:"back",puzzle:"fwd",closepuzzle:"back",pnext:"fwd",rate:"fwd",peek:"fade",peekback:"fade",peekopen:"fade",revealfall:"fade"};
+const NAV={more:"fwd",full:"fade",tab:"fade",openfach:"fwd",openthema:"fwd",up:"back",start:"fwd",startcard:"fwd",openfall:"fwd",closefall:"back",endsession:"back",puzzle:"fwd",closepuzzle:"back",pnext:"fwd",rate:"fwd",peek:"fade",peekback:"fade",peekopen:"fade",revealfall:"fade"};
 const RM=matchMedia("(prefers-reduced-motion: reduce)");
 document.addEventListener("click",e=>{
   const b=e.target.closest("[data-act]"); if(!b)return;
@@ -540,6 +605,8 @@ document.addEventListener("click",e=>{
 });
 function act(e,b){
   const a=b.dataset.act, d=b.dataset;
+  if(a==="more"){view={tab:"home"};startSession("due");return}
+  if(a==="full"){view={tab:"home"};render();window.scrollTo(0,0);return}
   if(a==="tab"){view={tab:d.tab};S=null;render();window.scrollTo(0,0);return}
   if(a==="openfach"){view={tab:"faecher",fach:d.fid};render();window.scrollTo(0,0);return}
   if(a==="openthema"){view={...view,thema:d.tid};render();window.scrollTo(0,0);return}
@@ -592,7 +659,8 @@ function act(e,b){
     u.ok=!u.skip&&parseNum(u.val).some(x=>Math.abs(x-it.a.antwort)<=(it.a.toleranz??0.01));
     u.checked=true;render();return}
   if(a==="rate"){
-    const r=d.r;
+    const r=d.r, fk=it.kind+":"+it.fid+":"+(it.cid||it.id);
+    S.first=S.first||{}; if(!S.first[fk]){S.first[fk]=1;S.nCards=(S.nCards||0)+1;if(r!=="again")S.nOk=(S.nOk||0)+1}
     const req=it.kind==="a"?rateAufgabe(it.fid,it.id,r):rateCard(it.fid,it.t,it.k,r);
     next(req);return}
 }
