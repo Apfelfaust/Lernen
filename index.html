@@ -138,7 +138,7 @@ body.tourw #app{max-width:1180px;padding-bottom:120px}
 .tgrid{display:block}.tagenda{display:none}
 .tmain{display:flex;flex-direction:column;gap:12px}
 .ttitle{font-size:17px;font-weight:700;line-height:1.25;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.tslide.uz{touch-action:none}@media (pointer:fine){.tslide{cursor:zoom-in}.tslide.mzoom{cursor:grabbing}}.tslide.uz .tmini{display:none!important}
+.tslide.uz{touch-action:none}@media (pointer:fine){.tslide{cursor:zoom-in}.tslide.mzoom{cursor:none}}.tslide.uz .tmini{display:none!important}
 .tslide{position:relative;overflow:hidden;border-radius:12px;background:#fff;box-shadow:0 1px 4px rgba(0,0,0,.08);touch-action:pan-y;user-select:none;-webkit-user-select:none}
 .tzl{position:absolute;left:0;top:0;width:100%;transform-origin:0 0;transition:transform .55s cubic-bezier(.3,.7,.2,1)}
 .tzl img{display:block;width:100%;height:auto}
@@ -609,8 +609,8 @@ document.addEventListener("keydown",e=>{if(!view.tour||S||e.target.matches("inpu
   if(e.key==="ArrowRight"||e.key===" "){e.preventDefault();tourStep(1)}else if(e.key==="ArrowLeft"){e.preventDefault();tourStep(-1)}else if(e.key==="Escape"){const fid=view.tour.fid;view={tab:"faecher",fach:fid};render()}});
 /* Touch auf der Folie: Wischen = blättern, zwei Finger = zoomen, Doppeltipp = Zoom an/aus */
 let tg=null,tlast=0;
-function tzApply(k,tx,ty){const v=view.tour,c=v.cur,zl=$("#tzl"),box=$("#tsl");if(!zl)return;
-  k=Math.max(1,Math.min(5,k));tx=Math.min(0,Math.max(c.W-k*c.W,tx));ty=Math.min(0,Math.max(c.H-k*c.H,ty));
+function tzApply(k,tx,ty,free){const v=view.tour,c=v.cur,zl=$("#tzl"),box=$("#tsl");if(!zl)return;
+  k=Math.max(1,Math.min(5,k));if(!free){tx=Math.min(0,Math.max(c.W-k*c.W,tx));ty=Math.min(0,Math.max(c.H-k*c.H,ty))}
   v.cur={...c,k,tx,ty};zl.style.transform=`translate(${tx}px,${ty}px) scale(${k})`;
   const sp=$("#tspot");if(sp){sp.style.boxShadow=`0 0 0 ${2.5/k}px #336DE6,0 0 0 6000px rgba(40,46,58,.2)`;sp.style.borderRadius=(7/k)+"px"}
   box.classList.add("uz");const ar=$("#tarr");if(ar)ar.style.display="none"}
@@ -679,11 +679,13 @@ document.addEventListener("touchend",cwEnd,{passive:true});document.addEventList
 let mz=null;
 document.addEventListener("pointerdown",e=>{if(!view.tour||e.pointerType!=="mouse"||e.button!==0)return;const box=e.target.closest("#tsl");if(!box)return;
   e.preventDefault();const b=box.getBoundingClientRect(),c=view.tour.cur,x=e.clientX-b.left,y=e.clientY-b.top;
-  mz={id:e.pointerId,b,c0:{...c},k:Math.max(2.5,c.k*2)};try{box.setPointerCapture(e.pointerId)}catch(_){}
-  box.classList.add("mzoom");const zl=$("#tzl");zl.style.transition="transform .18s ease-out";
-  const px=(x-c.tx)/c.k,py=(y-c.ty)/c.k;tzApply(mz.k,x-px*mz.k,y-py*mz.k);setTimeout(()=>{if(mz)zl.style.transition="none"},190)});
-document.addEventListener("pointermove",e=>{if(!mz||e.pointerId!==mz.id)return;const x=e.clientX-mz.b.left,y=e.clientY-mz.b.top,c=mz.c0;
-  const px=(x-c.tx)/c.k,py=(y-c.ty)/c.k;tzApply(mz.k,x-px*mz.k,y-py*mz.k)});
+  mz={id:e.pointerId,b,c0:{...c},k:Math.max(2.5,c.k*2),x0:x,y0:y,px:(x-c.tx)/c.k,py:(y-c.ty)/c.k};try{box.setPointerCapture(e.pointerId)}catch(_){}
+  box.classList.add("mzoom");const zl=$("#tzl");zl.style.transition="transform .2s ease-out";mzPut(x,y);setTimeout(()=>{if(mz)zl.style.transition="none"},210)});
+/* Klickpunkt wandert in die Mitte; Bewegen verschiebt den Mittelpunkt (ganze Breite fahren = ganze Folie) */
+function mzPut(x,y){const c=mz.c0,W=c.W,H=c.H,k=mz.k;
+  const cx=Math.max(0,Math.min(W,mz.px+(x-mz.x0)/c.k)),cy=Math.max(0,Math.min(H,mz.py+(y-mz.y0)/c.k));
+  tzApply(k,W/2-cx*k,H/2-cy*k,true)}
+document.addEventListener("pointermove",e=>{if(!mz||e.pointerId!==mz.id)return;mzPut(e.clientX-mz.b.left,e.clientY-mz.b.top)});
 const mzEnd=e=>{if(!mz||e.pointerId!==mz.id)return;mz=null;const box=$("#tsl"),zl=$("#tzl");if(!box)return;box.classList.remove("mzoom");
   zl.style.transition="transform .22s ease-out";tourLayout(false);setTimeout(()=>{if(zl)zl.style.transition=""},240)};
 document.addEventListener("pointerup",mzEnd);document.addEventListener("pointercancel",mzEnd);
