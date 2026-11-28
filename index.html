@@ -159,8 +159,8 @@ body.tourw #app{max-width:1180px;padding-bottom:120px}
 .tq{font-size:17px;font-weight:700;line-height:1.3}
 .tstrip{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid var(--line);padding:9px 30px calc(12px + env(safe-area-inset-bottom));z-index:20}
 .tsl{font-size:12px;font-weight:700;color:var(--blue);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0;margin-right:8px}
-.tsegs{display:flex;gap:4px;align-items:center;margin:8px 0 4px}
-.tseg{height:6px;min-height:0;padding:0;border:none;border-radius:3px;background:#D5DAE1;position:relative;overflow:visible}
+.tsegs{display:flex;gap:4px;align-items:center;height:36px;margin:0;touch-action:none;cursor:pointer;-webkit-user-select:none;user-select:none}.tsegs.drag .tseg i{transform:scale(1.25)}
+.tseg{height:6px;min-height:0;padding:0;border:none;pointer-events:none;border-radius:3px;background:#D5DAE1;position:relative;overflow:visible}
 .tseg.d{background:var(--blue)}.tseg b{position:absolute;left:0;top:0;bottom:0;background:var(--blue);border-radius:3px}
 .tseg i{position:absolute;top:-5px;width:16px;height:16px;border-radius:8px;background:#fff;box-shadow:0 0 0 3px var(--blue),0 1px 4px rgba(0,0,0,.2)}
 .tsegl{display:flex;gap:4px;font-size:10.5px;font-weight:700;color:var(--sub)}.tsegl span{text-align:center}.tsegl .on{color:var(--blue)}
@@ -565,7 +565,7 @@ function renderTour(){
   const inK=v.i-st0, minLeft=Math.max(1,Math.round((n-v.i)*0.45));
   const ag=K.map((k,ki)=>{const cls=ki<s.ki?"done":ki===s.ki?"cur":"";let b=0;for(let q=0;q<ki;q++)b+=pos[q];
     return `<div class="tch ${cls}">${ki<K.length-1?'<i class="tln"></i>':""}<button class="tnb" data-act="tourjump" data-i="${b}" aria-label="Kapitel ${ki+1}">${ki<s.ki?"✓":ki+1}</button><div style="flex:1;min-width:0"><button class="ttt" data-act="tourjump" data-i="${b}">${esc(k.titel)}</button><div class="tss">${k.stops.length} Stopps</div>${ki===s.ki?`<div class="tstops">${k.stops.map((x,j)=>`<button class="tstop ${j<inK?"d":j===inK?"c":""}" data-act="tourjump" data-i="${b+j}"><i></i><span>F. ${x.folie} · ${esc(x.titel)}</span></button>`).join("")}</div>`:""}</div></div>`}).join("");
-  const strip=`<div class="tstrip"><div class="row between"><span class="tsl">${s.ki+1} · ${esc(K[s.ki].titel)}</span><span class="muted" style="font-size:11.5px;white-space:nowrap">${v.i+1} / ${n}</span></div><div class="tsegs">${K.map((k,ki)=>`<button class="tseg ${ki<s.ki?"d":ki===s.ki?"c":""}" style="flex:${k.stops.length}" data-act="tourjump" data-i="${pos.slice(0,ki).reduce((a,b)=>a+b,0)}" aria-label="Kapitel ${ki+1}">${ki===s.ki?`<b style="width:${(inK+.5)/k.stops.length*100}%"></b><i style="left:calc(${(inK+.5)/k.stops.length*100}% - 8px)"></i>`:""}</button>`).join("")}</div><div class="tsegl">${K.map((k,ki)=>`<span style="flex:${k.stops.length}" class="${ki===s.ki?"on":""}">${ki+1}</span>`).join("")}</div></div>`;
+  const strip=`<div class="tstrip"><div class="row between"><span class="tsl" id="tslab">${s.ki+1} · ${esc(K[s.ki].titel)}</span><span class="muted" style="font-size:11.5px;white-space:nowrap">${v.i+1} / ${n}</span></div><div class="tsegs" id="tscrub" role="slider" aria-label="Stopp wählen" aria-valuemin="1" aria-valuemax="${n}" aria-valuenow="${v.i+1}">${K.map((k,ki)=>`<div class="tseg ${ki<s.ki?"d":ki===s.ki?"c":""}" style="flex:${k.stops.length}">${ki===s.ki?`<b style="width:${(inK+.5)/k.stops.length*100}%"></b><i style="left:calc(${(inK+.5)/k.stops.length*100}% - 8px)"></i>`:""}</div>`).join("")}</div><div class="tsegl">${K.map((k,ki)=>`<span style="flex:${k.stops.length}" class="${ki===s.ki?"on":""}">${ki+1}</span>`).join("")}</div></div>`;
   const last=v.i>=n-1;
   app.innerHTML=`<div class="tgrid"><aside class="tagenda"><div class="tat">Agenda · ${esc(fach(v.fid).name.split(" · ")[0])}</div>${ag}</aside><div class="tmain">
   <div class="row between" style="gap:10px"><div class="row" style="min-width:0"><button class="back" data-act="tourclose" aria-label="Tour schließen">${IC.back}</button><div style="min-width:0"><div class="muted" style="font-size:12px;font-weight:600">Folien-Tour · Stopp ${v.i+1} von ${n}</div><div class="ttitle">${esc(K[s.ki].titel)}</div></div></div><div class="row" style="gap:8px"><span class="pill tpill">Folie ${s.folie}</span>${ringHTML(v.i/n,minLeft)}</div></div>
@@ -586,7 +586,7 @@ function tourLayout(anim){
     let tx=W*.5-k*(l+w/2)*W,ty=H*.5-k*(t+h/2)*H;tx=Math.min(0,Math.max(W-k*W,tx));ty=Math.min(0,Math.max(H-k*H,ty));return {k,tx,ty,l,t,w,h}};
   const put=(c,spot)=>{v.cur={k:c.k,tx:c.tx,ty:c.ty,W,H};zl.style.transform=`translate(${c.tx}px,${c.ty}px) scale(${c.k})`;
     sp.style.left=spot[0]+"%";sp.style.top=spot[1]+"%";sp.style.width=spot[2]+"%";sp.style.height=spot[3]+"%";
-    sp.style.boxShadow=`0 0 0 ${2.5/c.k}px #336DE6,0 0 0 6000px rgba(40,46,58,.3)`;sp.style.borderRadius=(7/c.k)+"px"};
+    sp.style.boxShadow=`0 0 0 ${2.5/c.k}px #336DE6,0 0 0 6000px rgba(40,46,58,.2)`;sp.style.borderRadius=(7/c.k)+"px"};
   const c=calc(s.spot);
   const same=anim&&v.prev&&v.prev.img===s.img&&!RM.matches;
   if(same){zl.style.transition="none";sp.style.transition="none";put(calc(v.prev.spot),v.prev.spot);zl.offsetWidth;zl.style.transition="";sp.style.transition=""}
@@ -610,7 +610,7 @@ let tg=null,tlast=0;
 function tzApply(k,tx,ty){const v=view.tour,c=v.cur,zl=$("#tzl"),box=$("#tsl");if(!zl)return;
   k=Math.max(1,Math.min(5,k));tx=Math.min(0,Math.max(c.W-k*c.W,tx));ty=Math.min(0,Math.max(c.H-k*c.H,ty));
   v.cur={...c,k,tx,ty};zl.style.transform=`translate(${tx}px,${ty}px) scale(${k})`;
-  const sp=$("#tspot");if(sp){sp.style.boxShadow=`0 0 0 ${2.5/k}px #336DE6,0 0 0 6000px rgba(40,46,58,.3)`;sp.style.borderRadius=(7/k)+"px"}
+  const sp=$("#tspot");if(sp){sp.style.boxShadow=`0 0 0 ${2.5/k}px #336DE6,0 0 0 6000px rgba(40,46,58,.2)`;sp.style.borderRadius=(7/k)+"px"}
   box.classList.add("uz");const ar=$("#tarr");if(ar)ar.style.display="none"}
 const tpt=(t,b)=>({x:t.clientX-b.left,y:t.clientY-b.top});
 document.addEventListener("touchstart",e=>{
@@ -631,7 +631,7 @@ function tEnd(e){if(!tg||!view.tour)return;const g=tg;
   if(g.m==="pinch"){if(e.touches.length===0)tg=null;return}
   tg=null;const zl=$("#tzl");if(zl)zl.style.transition="";
   const t=e.changedTouches&&e.changedTouches[0],a=t?tpt(t,g.b):{x:g.lx??g.x0,y:g.ly??g.y0},dx=a.x-g.x0,dy=a.y-g.y0;
-  if(!g.uz&&Math.abs(dx)>50&&Math.abs(dx)>Math.abs(dy)*1.5){tourStep(dx<0?1:-1);return}
+  if(!g.uz&&Math.abs(dx)>50&&Math.abs(dx)>Math.abs(dy)*1.5){tourNav(dx<0?1:-1);return}
   if(!g.moved&&Date.now()-g.t0<300){const now=Date.now();
     if(now-tlast<320){tlast=0;const box=$("#tsl");if(box.classList.contains("uz")){tourLayout(false)}else{const c=view.tour.cur,k=Math.max(2.4,c.k*1.8),px=(a.x-c.tx)/c.k,py=(a.y-c.ty)/c.k;tzApply(k,a.x-px*k,a.y-py*k)}}
     else tlast=now}
@@ -639,6 +639,27 @@ function tEnd(e){if(!tg||!view.tour)return;const g=tg;
 document.addEventListener("touchend",tEnd,{passive:true});
 document.addEventListener("touchcancel",tEnd,{passive:true});
 document.addEventListener("gesturestart",e=>{if(view.tour)e.preventDefault()});
+
+
+/* Robust für iOS: Wischen zusätzlich über Pointer-Events, Zahlenstrahl als Schieberegler */
+let tnavT=0;function tourNav(d){const now=Date.now();if(now-tnavT<450)return;tnavT=now;tourStep(d)}
+let ps=null;
+document.addEventListener("pointerdown",e=>{if(!view.tour||e.pointerType==="mouse")return;
+  if(ps&&ps.id!==e.pointerId){ps.multi=true;return}
+  if(e.target.closest("#tsl"))ps={x:e.clientX,y:e.clientY,id:e.pointerId,multi:false}},true);
+const psEnd=e=>{if(!ps||e.pointerId!==ps.id)return;const g=ps;ps=null;if(g.multi||e.type==="pointercancel")return;
+  const box=$("#tsl");if(box&&box.classList.contains("uz"))return;
+  const dx=e.clientX-g.x,dy=e.clientY-g.y;if(Math.abs(dx)>50&&Math.abs(dx)>Math.abs(dy)*1.5)tourNav(dx<0?1:-1)};
+document.addEventListener("pointerup",psEnd,true);document.addEventListener("pointercancel",e=>{if(ps&&e.pointerId===ps.id&&ps.multi)ps=null},true);
+let sc=null;
+function scrubAt(x){const z=$("#tscrub"),T=TOURS[view.tour.fid],n=T.flat.length,r=z.getBoundingClientRect();
+  const i=Math.max(0,Math.min(n-1,Math.floor((x-r.left)/r.width*n)));const st=T.flat[i];
+  const lab=$("#tslab");if(lab)lab.textContent=`${st.ki+1} · Stopp ${i+1}: ${st.titel}`;return i}
+document.addEventListener("pointerdown",e=>{if(!view.tour)return;const z=e.target.closest("#tscrub");if(!z)return;e.preventDefault();
+  try{z.setPointerCapture(e.pointerId)}catch(_){}z.classList.add("drag");sc={id:e.pointerId,i:scrubAt(e.clientX)}});
+document.addEventListener("pointermove",e=>{if(sc&&e.pointerId===sc.id)sc.i=scrubAt(e.clientX)});
+document.addEventListener("pointerup",e=>{if(!sc||e.pointerId!==sc.id)return;const i=sc.i;sc=null;tourGo(i)});
+document.addEventListener("pointercancel",e=>{if(sc&&e.pointerId===sc.id){sc=null;render()}});
 
 /* ============ Häppchen & Teller ============ */
 const SPR1=["Hunger auf ein Häppchen?","Zeit für einen Snack?","Kleiner Hunger?"];
