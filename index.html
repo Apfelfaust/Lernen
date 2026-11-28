@@ -153,7 +153,7 @@ body.tourw #app{max-width:1180px;padding-bottom:120px}
 .tmini{position:absolute;right:8px;bottom:8px;width:86px;border-radius:5px;overflow:hidden;box-shadow:0 1px 6px rgba(0,0,0,.35);border:1.5px solid #fff;z-index:3}
 .tmini img{display:block;width:100%;filter:brightness(.78)}
 .tmini b{position:absolute;border:1.5px solid #FFD84D;border-radius:2px}
-.tcard{display:flex;flex-direction:column;gap:6px}
+.tcard{display:flex;flex-direction:column;gap:6px;touch-action:pan-y}
 .tql{font-size:12px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.04em}
 .tpill{}@media (max-width:480px){.tpill{display:none}.tarr{width:34px;height:42px}}
 .tq{font-size:17px;font-weight:700;line-height:1.3}
@@ -559,13 +559,15 @@ function tourStep(d){const v=view.tour,T=TOURS[v.fid];
   if(d>0&&v.i>=T.flat.length-1){lsSet("tour:"+v.fid,0);lsSet("tourdone:"+v.fid,1);const fid=v.fid;view={tab:"faecher",fach:fid};render();window.scrollTo(0,0);toast("Tour geschafft – jetzt mit den Karten weiter");return}
   if(d<0&&v.i<=0)return;tourGo(v.i+d)}
 const tourWide=()=>matchMedia("(min-width:900px)").matches;
+function segsHTML(T,i){const st=T.flat[i];let b=0;for(let q=0;q<st.ki;q++)b+=T.kapitel[q].stops.length;const inK=i-b;
+  return T.kapitel.map((k,ki)=>`<div class="tseg ${ki<st.ki?"d":ki===st.ki?"c":""}" style="flex:${k.stops.length}">${ki===st.ki?`<b style="width:${(inK+.5)/k.stops.length*100}%"></b><i style="left:calc(${(inK+.5)/k.stops.length*100}% - 8px)"></i>`:""}</div>`).join("")}
 function renderTour(){
   const v=view.tour,T=TOURS[v.fid],n=T.flat.length,s=T.flat[v.i],K=T.kapitel;
   const pos=K.map(k=>k.stops.length);let st0=0;for(let q=0;q<s.ki;q++)st0+=pos[q];
   const inK=v.i-st0, minLeft=Math.max(1,Math.round((n-v.i)*0.45));
   const ag=K.map((k,ki)=>{const cls=ki<s.ki?"done":ki===s.ki?"cur":"";let b=0;for(let q=0;q<ki;q++)b+=pos[q];
     return `<div class="tch ${cls}">${ki<K.length-1?'<i class="tln"></i>':""}<button class="tnb" data-act="tourjump" data-i="${b}" aria-label="Kapitel ${ki+1}">${ki<s.ki?"✓":ki+1}</button><div style="flex:1;min-width:0"><button class="ttt" data-act="tourjump" data-i="${b}">${esc(k.titel)}</button><div class="tss">${k.stops.length} Stopps</div>${ki===s.ki?`<div class="tstops">${k.stops.map((x,j)=>`<button class="tstop ${j<inK?"d":j===inK?"c":""}" data-act="tourjump" data-i="${b+j}"><i></i><span>F. ${x.folie} · ${esc(x.titel)}</span></button>`).join("")}</div>`:""}</div></div>`}).join("");
-  const strip=`<div class="tstrip"><div class="row between"><span class="tsl" id="tslab">${s.ki+1} · ${esc(K[s.ki].titel)}</span><span class="muted" style="font-size:11.5px;white-space:nowrap">${v.i+1} / ${n}</span></div><div class="tsegs" id="tscrub" role="slider" aria-label="Stopp wählen" aria-valuemin="1" aria-valuemax="${n}" aria-valuenow="${v.i+1}">${K.map((k,ki)=>`<div class="tseg ${ki<s.ki?"d":ki===s.ki?"c":""}" style="flex:${k.stops.length}">${ki===s.ki?`<b style="width:${(inK+.5)/k.stops.length*100}%"></b><i style="left:calc(${(inK+.5)/k.stops.length*100}% - 8px)"></i>`:""}</div>`).join("")}</div><div class="tsegl">${K.map((k,ki)=>`<span style="flex:${k.stops.length}" class="${ki===s.ki?"on":""}">${ki+1}</span>`).join("")}</div></div>`;
+  const strip=`<div class="tstrip"><div class="row between"><span class="tsl" id="tslab">${s.ki+1} · ${esc(K[s.ki].titel)}</span><span class="muted" style="font-size:11.5px;white-space:nowrap">${v.i+1} / ${n}</span></div><div class="tsegs" id="tscrub" role="slider" aria-label="Stopp wählen" aria-valuemin="1" aria-valuemax="${n}" aria-valuenow="${v.i+1}">${segsHTML(T,v.i)}</div><div class="tsegl">${K.map((k,ki)=>`<span style="flex:${k.stops.length}" class="${ki===s.ki?"on":""}">${ki+1}</span>`).join("")}</div></div>`;
   const last=v.i>=n-1;
   app.innerHTML=`<div class="tgrid"><aside class="tagenda"><div class="tat">Agenda · ${esc(fach(v.fid).name.split(" · ")[0])}</div>${ag}</aside><div class="tmain">
   <div class="row between" style="gap:10px"><div class="row" style="min-width:0"><button class="back" data-act="tourclose" aria-label="Tour schließen">${IC.back}</button><div style="min-width:0"><div class="muted" style="font-size:12px;font-weight:600">Folien-Tour · Stopp ${v.i+1} von ${n}</div><div class="ttitle">${esc(K[s.ki].titel)}</div></div></div><div class="row" style="gap:8px"><span class="pill tpill">Folie ${s.folie}</span>${ringHTML(v.i/n,minLeft)}</div></div>
@@ -646,7 +648,7 @@ let tnavT=0;function tourNav(d){const now=Date.now();if(now-tnavT<450)return;tna
 let ps=null;
 document.addEventListener("pointerdown",e=>{if(!view.tour||e.pointerType==="mouse")return;
   if(ps&&ps.id!==e.pointerId){ps.multi=true;return}
-  if(e.target.closest("#tsl"))ps={x:e.clientX,y:e.clientY,id:e.pointerId,multi:false}},true);
+  if(e.target.closest("#tsl,.tcard"))ps={x:e.clientX,y:e.clientY,id:e.pointerId,multi:false}},true);
 const psEnd=e=>{if(!ps||e.pointerId!==ps.id)return;const g=ps;ps=null;if(g.multi||e.type==="pointercancel")return;
   const box=$("#tsl");if(box&&box.classList.contains("uz"))return;
   const dx=e.clientX-g.x,dy=e.clientY-g.y;if(Math.abs(dx)>50&&Math.abs(dx)>Math.abs(dy)*1.5)tourNav(dx<0?1:-1)};
@@ -654,12 +656,23 @@ document.addEventListener("pointerup",psEnd,true);document.addEventListener("poi
 let sc=null;
 function scrubAt(x){const z=$("#tscrub"),T=TOURS[view.tour.fid],n=T.flat.length,r=z.getBoundingClientRect();
   const i=Math.max(0,Math.min(n-1,Math.floor((x-r.left)/r.width*n)));const st=T.flat[i];
-  const lab=$("#tslab");if(lab)lab.textContent=`${st.ki+1} · Stopp ${i+1}: ${st.titel}`;return i}
+  const lab=$("#tslab");if(lab)lab.textContent=`${st.ki+1} · Stopp ${i+1}: ${st.titel}`;
+  if(!sc||sc.i!==i)z.innerHTML=segsHTML(T,i);return i}
 document.addEventListener("pointerdown",e=>{if(!view.tour)return;const z=e.target.closest("#tscrub");if(!z)return;e.preventDefault();
   try{z.setPointerCapture(e.pointerId)}catch(_){}z.classList.add("drag");sc={id:e.pointerId,i:scrubAt(e.clientX)}});
 document.addEventListener("pointermove",e=>{if(sc&&e.pointerId===sc.id)sc.i=scrubAt(e.clientX)});
 document.addEventListener("pointerup",e=>{if(!sc||e.pointerId!==sc.id)return;const i=sc.i;sc=null;tourGo(i)});
 document.addEventListener("pointercancel",e=>{if(sc&&e.pointerId===sc.id){sc=null;render()}});
+
+
+/* Wischen auch im Textbereich unter der Folie (Touch-Weg, falls Pointer-Events auf iOS nicht greifen) */
+let cw=null;
+document.addEventListener("touchstart",e=>{cw=view.tour&&e.touches.length===1&&e.target.closest(".tcard")?{x:e.touches[0].clientX,y:e.touches[0].clientY,h:false}:null},{passive:true});
+document.addEventListener("touchmove",e=>{if(!cw)return;if(e.touches.length>1){cw=null;return}const dx=e.touches[0].clientX-cw.x,dy=e.touches[0].clientY-cw.y;
+  if(cw.h||(Math.abs(dx)>10&&Math.abs(dx)>Math.abs(dy))){cw.h=true;e.preventDefault()}},{passive:false});
+const cwEnd=e=>{if(!cw)return;const g=cw;cw=null;const t=e.changedTouches&&e.changedTouches[0];if(!t)return;const dx=t.clientX-g.x,dy=t.clientY-g.y;
+  if(Math.abs(dx)>50&&Math.abs(dx)>Math.abs(dy)*1.5)tourNav(dx<0?1:-1)};
+document.addEventListener("touchend",cwEnd,{passive:true});document.addEventListener("touchcancel",cwEnd,{passive:true});
 
 /* ============ Häppchen & Teller ============ */
 const SPR1=["Hunger auf ein Häppchen?","Zeit für einen Snack?","Kleiner Hunger?"];
