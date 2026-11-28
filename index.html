@@ -138,7 +138,7 @@ body.tourw #app{max-width:1180px;padding-bottom:120px}
 .tgrid{display:block}.tagenda{display:none}
 .tmain{display:flex;flex-direction:column;gap:12px}
 .ttitle{font-size:17px;font-weight:700;line-height:1.25;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.tslide.uz{touch-action:none}.tslide.uz .tmini{display:none!important}
+.tslide.uz{touch-action:none}@media (pointer:fine){.tslide{cursor:zoom-in}.tslide.mzoom{cursor:grabbing}}.tslide.uz .tmini{display:none!important}
 .tslide{position:relative;overflow:hidden;border-radius:12px;background:#fff;box-shadow:0 1px 4px rgba(0,0,0,.08);touch-action:pan-y;user-select:none;-webkit-user-select:none}
 .tzl{position:absolute;left:0;top:0;width:100%;transform-origin:0 0;transition:transform .55s cubic-bezier(.3,.7,.2,1)}
 .tzl img{display:block;width:100%;height:auto}
@@ -673,6 +673,20 @@ document.addEventListener("touchmove",e=>{if(!cw)return;if(e.touches.length>1){c
 const cwEnd=e=>{if(!cw)return;const g=cw;cw=null;const t=e.changedTouches&&e.changedTouches[0];if(!t)return;const dx=t.clientX-g.x,dy=t.clientY-g.y;
   if(Math.abs(dx)>50&&Math.abs(dx)>Math.abs(dy)*1.5)tourNav(dx<0?1:-1)};
 document.addEventListener("touchend",cwEnd,{passive:true});document.addEventListener("touchcancel",cwEnd,{passive:true});
+
+
+/* Mac: gedrückt halten = 2,5-fach zoomen an der Klickstelle, Maus/Touchpad bewegen = Ausschnitt verschieben, loslassen = zurück */
+let mz=null;
+document.addEventListener("pointerdown",e=>{if(!view.tour||e.pointerType!=="mouse"||e.button!==0)return;const box=e.target.closest("#tsl");if(!box)return;
+  e.preventDefault();const b=box.getBoundingClientRect(),c=view.tour.cur,x=e.clientX-b.left,y=e.clientY-b.top;
+  mz={id:e.pointerId,b,c0:{...c},k:Math.max(2.5,c.k*2)};try{box.setPointerCapture(e.pointerId)}catch(_){}
+  box.classList.add("mzoom");const zl=$("#tzl");zl.style.transition="transform .18s ease-out";
+  const px=(x-c.tx)/c.k,py=(y-c.ty)/c.k;tzApply(mz.k,x-px*mz.k,y-py*mz.k);setTimeout(()=>{if(mz)zl.style.transition="none"},190)});
+document.addEventListener("pointermove",e=>{if(!mz||e.pointerId!==mz.id)return;const x=e.clientX-mz.b.left,y=e.clientY-mz.b.top,c=mz.c0;
+  const px=(x-c.tx)/c.k,py=(y-c.ty)/c.k;tzApply(mz.k,x-px*mz.k,y-py*mz.k)});
+const mzEnd=e=>{if(!mz||e.pointerId!==mz.id)return;mz=null;const box=$("#tsl"),zl=$("#tzl");if(!box)return;box.classList.remove("mzoom");
+  zl.style.transition="transform .22s ease-out";tourLayout(false);setTimeout(()=>{if(zl)zl.style.transition=""},240)};
+document.addEventListener("pointerup",mzEnd);document.addEventListener("pointercancel",mzEnd);
 
 /* ============ Häppchen & Teller ============ */
 const SPR1=["Hunger auf ein Häppchen?","Zeit für einen Snack?","Kleiner Hunger?"];
